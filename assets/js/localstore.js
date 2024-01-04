@@ -1,9 +1,10 @@
 var myData = localStorage.getItem('myData');
 
 let user = "";
+let url = domain + "server/client/authorization/index.php";
 
 $.ajax({
-         url: "https://indusind.indusindnet.com/server/clients/authorization/index.php",
+         url: url,
          method: "POST",
          data: {
                   myData,
@@ -11,13 +12,15 @@ $.ajax({
          },
          success(respone) {
 
+                  console.log(respone);
+
 
                   const data = JSON.parse('[' + respone.trim().replace(/}{/g, '},{') + ']');
+console.log(data);
+                  // let user_name_span = $('.user_name_span');
+                  // user_name_span[0].innerHTML = data[0].fullname
 
-                  let user_name_span = $('.user_name_span');
-                  user_name_span[0].innerHTML = data[0].fullname
-
-                  console.log(user_name_span[0])
+                  // console.log(user_name_span[0])
 
                   value(data)
 
@@ -27,6 +30,6 @@ $.ajax({
 
          },
          error(error) {
-                  console.log(error);
+                  console.log("error:" + error);
          }
 })

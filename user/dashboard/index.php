@@ -58,8 +58,13 @@ include('../../server/database.php');
 
          <script>
                   let domain = "<?php echo $domain ?>";
+
+                  function value(data){
+
+                  }
          </script>
          <script src="../../assets/js/localstore.js"></script>
+         
 </body>
 
 </html>

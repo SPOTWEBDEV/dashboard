@@ -1,8 +1,10 @@
 <?php
-include('../../database.php');
+include('../apis/dbconfig.php');
 session_start();
 if (isset($_POST['from'])) {
          $id = $_POST['myData'];
+
+         
 
          $sql = "SELECT * FROM clients WHERE id = $id";
          $result = mysqli_query($connection, $sql);
