@@ -13,7 +13,7 @@ include('../../server/database.php');
     <title>Document</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
 </head>
-<style>
+<!-- <style>
     #logo-sidebar2 {
         background-color: #832625;
         height: 70px;
@@ -27,7 +27,7 @@ include('../../server/database.php');
     #links_stuff{
         margin-top: 20px;
     }
-</style>
+</style> -->
 
 <body>
 

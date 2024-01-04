@@ -1,3 +1,21 @@
+<style>
+    #logo-sidebar2 {
+        background-color: #832625;
+        height: 70px;
+    }
+
+    #box_balance {
+        margin-top: 40px;
+    }
+
+    #links_side {
+        margin-top: 15px;
+    }
+
+    #links_stuff {
+        margin-top: 20px;
+    }
+</style>
 <nav id="logo-sidebar2" class="fixed top-0 z-50 h-100px w-full bg-red border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
     <div class="px-3 py-3 lg:px-5 lg:pl-3">
         <div class="flex items-center justify-between">
@@ -10,7 +28,7 @@
                     </svg>
                 </button>
                 <a href="#" class="flex ms-2 md:me-24">
-                    
+
                     <span class="self-center text-3xl font-semibold sm:text-3xl whitespace-nowrap dark:text-white">Indusind Bank</span>
                 </a>
             </div>
