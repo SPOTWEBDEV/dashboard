@@ -1,6 +1,49 @@
 <?php
+include('../../server/database.php');
+
+session_start();
 
 
+if (isset($_POST['submit'])) {
+
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $statement = "SELECT *  FROM `admin` WHERE `email`='$email' AND `password`='$password'";
+
+    $query = mysqli_query($connection, $statement);
+
+    if ($query) {
+        if (mysqli_num_rows($query) > 0) {
+            $row = mysqli_fetch_assoc($query);
+            $admin_email = $row['email'];
+            $_SESSION['email'] = $admin_email;
+            echo 'done';
+            // echo "<script>alert('success username and password')</script>";
+            // header("location: ");
+        } else {
+            echo '<script>
+            window.onload = ()=>{
+             Swal.fire({
+                 title: "ERROR",
+                 text: "Invalid email and password",
+                 icon: "error"
+               });
+            }
+          </script>';
+        }
+    } else {
+        echo '<script>
+        window.onload = ()=>{
+         Swal.fire({
+             title: "ERROR",
+             text: "Unexpexted error occured",
+             icon: "error"
+           });
+        }
+      </script>';
+    }
+}
 ?>
 
 
