@@ -16,6 +16,7 @@ include('../../server/database.php');
 <style>
     #logo-sidebar2 {
         background-color: rgba(153, 1, 0, 255);
+        height: 70px;
     }
 </style>
 
