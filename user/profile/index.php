@@ -1,3 +1,9 @@
+<?php
+
+include('../../server/database.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,26 +23,35 @@
 
 
          <div class="p-4 sm:ml-64">
-                  <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
 
+                  <div class="p-4  rounded-lg dark:border-gray-700 mt-14">
 
-                           <form class="max-w-sm mx-auto">
-                                    <div class="mb-5">
-                                             <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                                             <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com" required>
-                                    </div>
-                                    <div class="mb-5">
-                                             <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
-                                             <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
-                                    </div>
-                                    <div class="flex items-start mb-5">
-                                             <div class="flex items-center h-5">
-                                                      <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required>
+                           <div class="relative overflow-x-auto">
+
+                                    <section class="bg-gray-50 dark:bg-gray-900 p-3 sm:p-5">
+                                             <div class="mx-auto max-w-screen-xl px-4 lg:px-12">
+                                                      <p class="text-xl">Profile</p>
+                                                      <form class="max-w-sm  bg-white mt-4 py-3 px-6">
+                                                               <div class="mb-5">
+                                                                        <label for="fullname" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fullname</label>
+                                                                        <input type="text" id="fullname" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required readonly>
+                                                               </div>
+                                                               <div class="mb-5">
+                                                                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                                                                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required readonly>
+                                                               </div>
+                                                               <div class="mb-5">
+                                                                        <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone Number</label>
+                                                                        <input type="text" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required readonly>
+                                                               </div>
+
+                                                      </form>
                                              </div>
-                                             <label for="remember" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
-                                    </div>
-                                    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
-                           </form>
+                                    </section>
+                           </div>
+
+
+
 
 
                   </div>
@@ -46,6 +61,19 @@
 
 
          <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+         <script>
+                  let domain = "<?php echo $domain ?>";
+
+                  function value(data) {
+                           console.log(data);
+                           $('#fullname').val(data[0].fullname)
+                           $('#email').val(data[0].email)
+                           $('#phone').val(data[0].phone)
+                  }
+         </script>
+         <script src="../../assets/js/localstore.js"></script>
 </body>
 
 </html>
