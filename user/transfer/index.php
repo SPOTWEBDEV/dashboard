@@ -128,6 +128,7 @@ include('../../server/database.php');
 
 
          <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
          <script>
                   // let transferInput = document.querySelectorAll('.transferInput');
                   // transferInput.forEach(el => {
@@ -157,7 +158,7 @@ include('../../server/database.php');
 
                                     $(() => {
 
-                                             let url = "<?php echo $domain ?>" + "server/clients/apis/transfer.php"
+                                             let url = "<?php echo $domain ?>" + "server/client/apis/transfer.php"
 
                                              $.ajax({
                                                       url: url,
