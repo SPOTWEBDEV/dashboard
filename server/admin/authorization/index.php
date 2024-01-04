@@ -3,8 +3,8 @@ include('../../../server/database.php');
 
 
 session_start();
-if(isset($_SESSION['admin_email'])){
-    $email = $_SESSION['admin_email'];
+if(isset($_SESSION['admin_id'])){
+    $email = $_SESSION['admin_id'];
     $statement = "SELECT * FROM `admin` WHERE `email`='$email'";
     $query = mysqli_query($connection, $sql);
 
