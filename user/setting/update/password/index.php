@@ -59,6 +59,7 @@ include('../../../../server/database.php');
 
                         if (isset($_POST['change'])) {
                             $old_password = $_POST['old_password'];
+                            $id = $_POST['id'];
                             $cpassword = $_POST['cpassword'];
                             $new_password = $_POST['new_password'];
                             $stored_password = $_POST['password'];
@@ -97,6 +98,7 @@ include('../../../../server/database.php');
                                 <div class="col-span-2">
                                     <label for="name" class="transferInput block mb-2 text-sm font-medium text-gray-900 dark:text-white ">Old password</label>
                                     <input type="hidden" class="initailpassword" name="password">
+                                    <input type="hidden" class="id" name="id">
                                     <input type="text" name="old_password" id="name" class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type Old password" required="">
                                 </div>
                                 <div class="col-span-2">
@@ -141,6 +143,7 @@ include('../../../../server/database.php');
 
         function value(data) {
             $('.initailpassword').val(data[0].password)
+            $('.id').val(data[0].id)
             console.log(data[0].email);
         }
     </script>
