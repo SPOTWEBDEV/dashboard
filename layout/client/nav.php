@@ -15,6 +15,9 @@
     #links_stuff {
         margin-top: 20px;
     }
+    #indusind{
+        color: white;
+    }
 </style>
 <nav id="logo-sidebar2" class="fixed top-0 z-50 h-100px w-full bg-red border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
     <div class="px-3 py-3 lg:px-5 lg:pl-3">
@@ -29,7 +32,7 @@
                 </button>
                 <a href="#" class="flex ms-2 md:me-24">
 
-                    <span class="self-center text-3xl font-semibold sm:text-3xl whitespace-nowrap white:text-white ">Indusind Bank</span>
+                    <span class="self-center text-3xl font-semibold sm:text-3xl whitespace-nowrap white:text-white" id="indusind">Indusind Bank</span>
                 </a>
             </div>
         </div>

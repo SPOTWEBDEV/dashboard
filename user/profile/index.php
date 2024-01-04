@@ -13,6 +13,11 @@ include('../../server/database.php');
     <title>Document</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
 </head>
+<style>
+    #crid_m {
+        color: #832625;
+    }
+</style>
 
 <body>
 
@@ -30,7 +35,7 @@ include('../../server/database.php');
 
                 <section class="bg-gray-50 dark:bg-gray-900 p-3 sm:p-5">
                     <div class="mx-auto max-w-screen-xl px-4 lg:px-12">
-                        <p class="text-xl">Profile</p>
+                        <p class="text-xl" id="crid_m">Profile</p>
                         <form class="max-w-sm  bg-white mt-4 py-3 px-6">
                             <div class="mb-5">
                                 <label for="fullname" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fullname</label>
