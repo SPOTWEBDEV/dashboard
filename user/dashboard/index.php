@@ -13,6 +13,11 @@ include('../../server/database.php');
          <title>Document</title>
          <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
 </head>
+<style>
+         #logo-sidebar {
+                  background-color: rgba(153, 1, 0, 255);
+         }
+</style>
 
 <body>
 
@@ -47,7 +52,7 @@ include('../../server/database.php');
                                              </p>
                                     </div>
                            </div>
-                           
+
                   </div>
          </div>
 
@@ -59,12 +64,12 @@ include('../../server/database.php');
          <script>
                   let domain = "<?php echo $domain ?>";
 
-                  function value(data){
+                  function value(data) {
 
                   }
          </script>
          <script src="../../assets/js/localstore.js"></script>
-         
+
 </body>
 
 </html>
