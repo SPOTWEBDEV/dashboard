@@ -34,21 +34,21 @@ include('../../../../server/database.php');
 
 
     <div class="p-4 sm:ml-64">
-        <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14" id="crid_mode">
+        <div class="p-4  rounded-lg dark:border-gray-700 mt-14" id="crid_mode">
 
 
 
 
 
             <!-- Main modal -->
-            <div id="crud-modal" tabindex="-1" aria-hidden="true" class="flex overflow-y-auto overflow-x-hidden  z-50 justify-center items-center w-full md:inset-0  max-h-full border">
+            <div id="crud-modal" tabindex="-1" aria-hidden="true" class="flex overflow-y-auto overflow-x-hidden  z-50 justify-center items-center w-full md:inset-0  max-h-full ">
                 <div class="relative p-4 w-full max-w-md max-h-full">
                     <!-- Modal content -->
-                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <div class="relative bg-white rounded-lg shadow border dark:bg-gray-700">
                         <!-- Modal header -->
                         <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                             <h3 class="text-lg font-semibold text-red-900 dark:text-white">
-                                Change password
+                                Change Password
                             </h3>
 
                         </div>
