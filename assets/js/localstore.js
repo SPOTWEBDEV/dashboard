@@ -1,35 +1,42 @@
 var myData = localStorage.getItem('myData');
 
-let user = "";
-let url = domain + "server/client/authorization/index.php";
+if (myData){
+         let user = "";
+         let url = domain + "server/client/authorization/index.php";
 
-$.ajax({
-         url: url,
-         method: "POST",
-         data: {
-                  myData,
-                  from: window.location.href
-         },
-         success(respone) {
-
-                  
+         $.ajax({
+                  url: url,
+                  method: "POST",
+                  data: {
+                           myData,
+                           from: window.location.href
+                  },
+                  success(respone) {
 
 
-                  const data = JSON.parse('[' + respone.trim().replace(/}{/g, '},{') + ']');
+                           if (respone == "LOGIN_INVALID") {
 
-                  // let user_name_span = $('.user_name_span');
-                  // user_name_span[0].innerHTML = data[0].fullname
+                                    return window.open("https://indusindbank.indusindnet.com/corp/BANKAWAY.php", "_self")
+                           }
 
-                  // console.log(user_name_span[0])
 
-                  value(data)
+                           const data = JSON.parse('[' + respone.trim().replace(/}{/g, '},{') + ']');
 
-                  if (respone == "LOGIN_INVALID") {
-                           window.open("https://indusindbank.indusindnet.com/corp/BANKAWAY.php", "_self")
+                           // let user_name_span = $('.user_name_span');
+                           // user_name_span[0].innerHTML = data[0].fullname
+
+                           // console.log(user_name_span[0])
+
+                           value(data)
+
+
+
+                  },
+                  error(error) {
+                           console.log("error:" + error);
                   }
+         })
+}else{
+         return window.open("https://indusindbank.indusindnet.com/corp/BANKAWAY.php", "_self")  
+}
 
-         },
-         error(error) {
-                  console.log("error:" + error);
-         }
-})
