@@ -3,14 +3,14 @@
         <ul class="space-y-2 font-medium">
             <li>
                 <!-- class="" -->
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" id="links_stuff">
+                <a href="<?php echo $domain ?>/user/domain/" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" id="links_stuff">
                     <img width="27" height="27" src="https://img.icons8.com/ios-filled/50/health-data.png" alt="health-data" />
                     <span class="flex-1 ms-3 whitespace-nowrap text-xl text-xl">Dashboard</span>
                 </a>
             </li>
             <li>
 
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" id="links_stuff">
+                <a href="<?php echo $domain ?>/user/profile/" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" id="links_stuff">
                     <img width="27" height="27" src="https://img.icons8.com/ios-filled/50/user.png" alt="user" />
                     <span class="flex-1 ms-3 whitespace-nowrap text-xl">Profile</span>
                 </a>
@@ -40,7 +40,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" id="links_stuff">
+                <a href="<?php echo $domain ?>/user/transfer" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" id="links_stuff">
                     <img width="27" height="27" src="https://img.icons8.com/android/24/money.png" alt="money" />
                     <span class="flex-1 ms-3 whitespace-nowrap text-xl">Transfer</span>
                 </a>
