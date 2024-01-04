@@ -17,7 +17,7 @@
 
 
     <?php
-    include('../layouts/navbar.php');
+    include('../../layout/admin/navbar.php');
     ?>
 
 
