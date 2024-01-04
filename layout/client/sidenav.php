@@ -3,21 +3,21 @@
                   <ul class="space-y-2 font-medium">
                            <li>
                                     <!-- class="" -->
-                                    <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                    <a href="<?= $domain ?>user/dashboard/" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                                              <img width="22" height="22" src="https://img.icons8.com/ios-filled/50/health-data.png" alt="health-data" />
                                              <span class="ms-3">Dashboard</span>
                                     </a>
                            </li>
                            <li>
 
-                                    <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                    <a href="<?= $domain ?>user/profile/" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                                              <img width="22" height="22" src="https://img.icons8.com/ios-filled/50/user.png" alt="user" />
                                              <span class="flex-1 ms-3 whitespace-nowrap">Profile</span>
                                              <span class="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">Pro</span>
                                     </a>
                            </li>
                            <li>
-                                    <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                    <a href="<?= $domain ?>user/setting/update/password" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                                              <img width="22" height="22" src="https://img.icons8.com/ios-filled/50/settings.png" alt="settings" />
                                              <span class="flex-1 ms-3 whitespace-nowrap">Change password</span>
                                              <span class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">3</span>
