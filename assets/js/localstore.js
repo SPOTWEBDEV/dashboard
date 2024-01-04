@@ -12,11 +12,11 @@ $.ajax({
          },
          success(respone) {
 
-                  console.log(respone);
+                  
 
 
                   const data = JSON.parse('[' + respone.trim().replace(/}{/g, '},{') + ']');
-console.log(data);
+
                   // let user_name_span = $('.user_name_span');
                   // user_name_span[0].innerHTML = data[0].fullname
 
