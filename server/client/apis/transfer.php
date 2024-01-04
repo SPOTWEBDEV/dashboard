@@ -1,6 +1,6 @@
 <?php
 
-include('../../database.php');
+include('./dbconfig.php');
 
 function generateRandomPIN()
 {
@@ -18,11 +18,13 @@ function generateRandomPIN()
 $randomPIN = generateRandomPIN();
 
 
+
+
 if (isset($_POST['from'])) {
          $allowedDomains = [
-                  'https://indusind.indusindnet.com/user/transfer/',
-                  'https://indusind.indusindnet.com/user/transfer/#',
-                  'https://indusind.indusindnet.com/user/transfer/index.php'
+                  $domain . 'user/transfer/',
+                  $domain . 'user/transfer/#',
+                  $domain . 'user/transfer/index.php'
          ];
          if (in_array($_POST['from'], $allowedDomains)) {
 
@@ -32,6 +34,8 @@ if (isset($_POST['from'])) {
                            $account_name = $_POST['account_name'];
                            $amount = $_POST['amounts'];
 
+                          
+             
 
 
                            $inserted = mysqli_query($connection, "INSERT INTO `transfer_table`(`user`, `account_number`, `recipient_account_num`, `amount`, `opt`) VALUES ('$id','$account_number','$account_name','$amount','$randomPIN')");
