@@ -15,7 +15,7 @@ include('../../server/database.php');
 </head>
 <style>
     #logo-sidebar2 {
-        background-color: rgba(153, 1, 0, 255);
+        background-color: #832625;
         height: 70px;
     }
     #box_balance{
@@ -23,6 +23,9 @@ include('../../server/database.php');
     }
     #links_side{
         margin-top: 15px;
+    }
+    #links_stuff{
+        margin-top: 20px;
     }
 </style>
 
