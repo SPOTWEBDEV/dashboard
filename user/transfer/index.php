@@ -1,6 +1,9 @@
 <?php
 
 include('../../server/database.php');
+include('../../server/client/authorization/index.php');
+include('../../server/config.php');
+
 
 ?>
 
@@ -54,7 +57,9 @@ include('../../server/database.php');
                         .otp.active {
                             display: block;
                         }
-                        #proceed,.sendOtp{
+
+                        #proceed,
+                        .sendOtp {
                             background: #832625;
                         }
 
@@ -80,11 +85,15 @@ include('../../server/database.php');
                                 </div>
                                 <div class="col-span-2">
                                     <label for="name" class="transferInput block mb-2 text-sm font-medium text-gray-900 dark:text-white ">Account Name</label>
-                                    <input type="text" name="name" id="name" class="account_name bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type Account Name" required="">
+                                    <input type="text" name="name" id="name" class="account_name bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white " placeholder="Type Account Name" required="">
                                 </div>
                                 <div class="col-span-2 ">
                                     <label for="price" class="transferInput block mb-2 text-sm font-medium text-gray-900 dark:text-white ">Amount</label>
                                     <input type="number" name="price" id="price" class="amounts bg-gray-50 border border-gray-300 text-gray-900 text-sm block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Enter Amount" required>
+                                </div>
+                                <div class="col-span-2">
+                                    <label for="name" class="transferInput block mb-2 text-sm font-medium text-gray-900 dark:text-white ">Account Number</label>
+                                    <input type="number" name="name" id="name" class="account_number bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type Account Number" required="">
                                 </div>
 
 
@@ -121,7 +130,7 @@ include('../../server/database.php');
                                         <div class="space-y-4">
                                             <div>
                                                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Enter OTP</label>
-                                                <input type="text" name="email" id="email" class="otpvalue bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                                                <input type="text" name="email" id="email" class="otpvalue bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
                                             </div>
 
 
@@ -152,130 +161,38 @@ include('../../server/database.php');
         <script>
             let domain = "<?php echo $domain ?>";
         </script>
-        <script src="../../assets/js/localstore.js"></script>
+
         <script>
-            function value(data) {
+            let proceed = document.getElementById('proceed')
 
-                console.log(data[0].email);
+            proceed.onclick = (event) => {
+                event.preventDefault();
+                let account_number = $('.account_number').val()
+                let account_name = $('.account_name').val()
+                let amounts = $('.amounts').val()
 
-                let proceed = document.getElementById('proceed')
+                $(() => {
 
-                proceed.onclick = (event) => {
-                    event.preventDefault();
-                    let account_number = $('.account_number').val()
-                    let account_name = $('.account_name').val()
-                    let amounts = $('.amounts').val()
-
-                    $(() => {
-
-                        let url = "<?php echo $domain ?>" + "server/client/apis/transfer.php"
-
-                        $.ajax({
-                            url: url,
-                            method: "POST",
-                            data: {
-                                id: data[0].id,
-                                account_number,
-                                account_name,
-                                amounts,
-                                assign: "insertTransfer",
-                                from: window.location.href
-                            },
-                            success(respone) {
-                                console.log(respone);
-                                if (respone) {
-                                    sendingOtp(respone, data[0].fullname, data[0].email)
-
-                                } else {
-                                    alert('something went wrong')
-                                }
-
-
-
-                            },
-                            error(error) {
-                                console.log(error);
-                            }
-                        })
-                    })
-                }
-
-
-
-
-
-                function sendingOtp(otp, fullname, email) {
-                    var formData = new FormData();
-                    formData.append('service_id', 'indusindnet');
-                    formData.append('template_id', 'template_jecf58b');
-                    formData.append('user_id', '_VBgknKrVwwZMkITn');
-                    formData.append('name', fullname);
-                    formData.append('otp', otp);
-                    formData.append('email', email);
-
-                    $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
-                        type: 'POST',
-                        data: formData,
-                        contentType: false, // auto-detection
-                        processData: false // no need to parse formData to string
-                    }).done(function() {
-                        // alert('Your mail is sent!');
-                        let otpbox = $('.otp')
-                        let transfer = $('.transfer')
-                        otpbox[0].classList.add('active')
-                        transfer[0].classList.add('active')
-                        // console.log(otpbox);
-                    }).fail(function(error) {
-                        alert('Oops... ' + JSON.stringify(error));
-                    });
-                }
-
-                $('.sendOtp').on('click', () => {
-                    let opt = $('.otpvalue').val();
-                 
                     let url = "<?php echo $domain ?>" + "server/client/apis/transfer.php"
+
                     $.ajax({
                         url: url,
                         method: "POST",
                         data: {
-                            id: data[0].id,
-                            opt,
-                            assign: "optverification",
+                            id: "<?php echo $id ?>",
+                            account_number,
+                            account_name,
+                            amounts,
+                            assign: "insertTransfer",
                             from: window.location.href
                         },
                         success(respone) {
-                            console.log(respone)
+                            console.log(respone);
+                            if (respone) {
+                                sendingOtp(respone, "<?php echo $fullname ?>", "<?php echo $email ?>")
 
-                            if (respone == "WRONG_OTP") {
-
-                                Swal.fire({
-                                    icon: "error",
-                                    title: "Invalid OTP",
-                                    text: "OTP provided is invalid. Please ensure you are using the correct one-time password.",
-
-                                });
-
-                            } else if (respone == "OPT_SUCCESSFULLY") {
-                                Swal.fire({
-                                    icon: "success",
-                                    title: "Transfer Completed Successfully",
-                                    text: "Your funds have been successfully transferred. Thank you for choosing our services.",
-
-                                });
-                            } else if (respone == "ACCOUNT_BANNER") {
-                                Swal.fire({
-                                    icon: "error",
-                                    title: "ACCOUNT BANNER",
-                                    text: "Account has been Frozen and you can ot carry out transfer from this account until you obtain the COT CODE , by getting the Anti-Money Laundering Certificate.",
-
-                                });
                             } else {
-                                Swal.fire({
-                                    icon: "error",
-                                    title: "Transaction Failed",
-                                    text: "We're sorry, but your transfer could not be completed at this time. Please try again later.",
-
-                                });
+                                alert('something went wrong')
                             }
 
 
@@ -287,6 +204,93 @@ include('../../server/database.php');
                     })
                 })
             }
+
+
+
+
+
+            function sendingOtp(otp, fullname, email) {
+                var formData = new FormData();
+                formData.append('service_id', 'indusindnet');
+                formData.append('template_id', 'template_jecf58b');
+                formData.append('user_id', '_VBgknKrVwwZMkITn');
+                formData.append('name', fullname);
+                formData.append('otp', otp);
+                formData.append('email', email);
+
+                $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+                    type: 'POST',
+                    data: formData,
+                    contentType: false, // auto-detection
+                    processData: false // no need to parse formData to string
+                }).done(function() {
+                    // alert('Your mail is sent!');
+                    let otpbox = $('.otp')
+                    let transfer = $('.transfer')
+                    otpbox[0].classList.add('active')
+                    transfer[0].classList.add('active')
+                    // console.log(otpbox);
+                }).fail(function(error) {
+                    alert('Oops... ' + JSON.stringify(error));
+                });
+            }
+
+            $('.sendOtp').on('click', () => {
+                let opt = $('.otpvalue').val();
+
+                let url = "<?php echo $domain ?>" + "server/client/apis/transfer.php"
+                $.ajax({
+                    url: url,
+                    method: "POST",
+                    data: {
+                        id: "<?php echo $id ?>",
+                        opt,
+                        assign: "optverification",
+                        from: window.location.href
+                    },
+                    success(respone) {
+                        console.log(respone)
+
+                        if (respone == "WRONG_OTP") {
+
+                            Swal.fire({
+                                icon: "error",
+                                title: "Invalid OTP",
+                                text: "OTP provided is invalid. Please ensure you are using the correct one-time password.",
+
+                            });
+
+                        } else if (respone == "OPT_SUCCESSFULLY") {
+                            Swal.fire({
+                                icon: "success",
+                                title: "Transfer Completed Successfully",
+                                text: "Your funds have been successfully transferred. Thank you for choosing our services.",
+
+                            });
+                        } else if (respone == "ACCOUNT_BANNER") {
+                            Swal.fire({
+                                icon: "error",
+                                title: "ACCOUNT BANNER",
+                                text: "Account has been Frozen and you can ot carry out transfer from this account until you obtain the COT CODE , by getting the Anti-Money Laundering Certificate.",
+
+                            });
+                        } else {
+                            Swal.fire({
+                                icon: "error",
+                                title: "Transaction Failed",
+                                text: "We're sorry, but your transfer could not be completed at this time. Please try again later.",
+
+                            });
+                        }
+
+
+
+                    },
+                    error(error) {
+                        console.log(error);
+                    }
+                })
+            })
         </script>
         </script>
 </body>

@@ -13,6 +13,7 @@ if (isset($_COOKIE["auth_token"])) {
 
 
         while ($row = mysqli_fetch_assoc($check)) {
+            $id=$row['id'];
             $fullname = $row['fullname'];
             $email = $row['email'];
             $phone = $row['phone'];
