@@ -13,7 +13,7 @@ if (isset($_POST['transfer_status'])) {
         $updated = mysqli_query($connection, "UPDATE `clients` SET `transfer_status`='1' WHERE `id`='$input_id'");
     }
 
-    if($updated){
+    if ($updated) {
         header('location: ./index.php');
     }
 }
@@ -153,16 +153,16 @@ if (isset($_POST['transfer_status'])) {
                     from: window.location.href
                 },
                 success(respone) {
-                    console.log(respone);
+                   
 
                     const data = JSON.parse('[' + respone.trim().replace(/}{/g, '},{') + ']');
-                    console.log(data);
+
                     loadTable(data)
 
                     document.querySelector("#simple-search").addEventListener('keyup', (event) => {
-                        const newdata = data.filter(str => str.name.includes(event.target.value) || str.email.includes(event.target.value));
+                        const newdata = data.filter(str => str.fullname.includes(event.target.value) || str.email.includes(event.target.value) || str.phone.includes(event.target.value));
 
-                        console.log(newdata);
+                      
 
                         loadTable(newdata)
                     })
