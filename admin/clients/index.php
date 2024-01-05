@@ -1,8 +1,24 @@
 <?php
 include('../../server/database.php');
 // include('../../server/admin/authorization/index.php');
+
+if (isset($_POST['transfer_status'])) {
+    $input_transfer_status = $_POST['input_transfer_status'];
+    $input_id = $_POST['input_id'];
+
+    $updated = "";
+    if ($input_transfer_status == 1) {
+        $updated = mysqli_query($connection, "UPDATE `clients` SET `transfer_status`='0' WHERE `id`='$input_id'");
+    } else {
+        $updated = mysqli_query($connection, "UPDATE `clients` SET `transfer_status`='1' WHERE `id`='$input_id'");
+    }
+
+    if($updated){
+        header('location: ./index.php');
+    }
+}
 ?>
-<!-- <a href="../../server/"></a> -->
+
 
 
 
@@ -26,7 +42,7 @@ include('../../server/database.php');
 
         <!-- Sidebar -->
 
-        <?php include('../../layout/admin/sidenav.php')  ?>
+        <?php include('../../layout/admin/sidebar.php')  ?>
         <!-- <a href="../../"></a> -->
 
         <main class="p-4 md:ml-64 h-auto pt-20">
@@ -71,6 +87,7 @@ include('../../server/database.php');
                                                 <th scope="col" class="px-4 py-3">#</th>
                                                 <th scope="col" class="px-4 py-3">Name</th>
                                                 <th scope="col" class="px-4 py-3">Email</th>
+                                                <th scope="col" class="px-4 py-3">Phone Number</th>
                                                 <th scope="col" class="px-4 py-3">
                                                     <span class="">Actions</span>
                                                 </th>
@@ -130,7 +147,7 @@ include('../../server/database.php');
         $(() => {
 
             $.ajax({
-                url: "<?= $domain ?>/server/admin/api/getAllUser.php",
+                url: "<?= $domain ?>server/admin/apis/getAllUsers.php",
                 method: "GET",
                 data: {
                     from: window.location.href
@@ -156,20 +173,32 @@ include('../../server/database.php');
             })
         })
 
-        function generateTable(data) {
+        function loadTable(data) {
             document.querySelector('tbody').innerHTML = ''
             if (data.length > 0) {
                 for (var i = 0; i < data.length; i++) {
 
+                    if (data[i].transfer_status == 1) {
+                        transfer_status = 'Active'
+                        transfer_status_color = 'bg-green-400'
+                    } else {
+                        transfer_status = 'Not-Active'
+                        transfer_status_color = 'bg-red-400'
+                    }
+
 
                     const html = ` <tr class="border-b dark:border-gray-700">
                                                 <td class="px-4 py-3">${i+1}</td>
-                                                <td class="px-4 py-3">${data[i].name}</td>
+                                                <td class="px-4 py-3">${data[i].fullname}</td>
                                                 <td class="px-4 py-3">${data[i].email}</td>
-                                                <td class="px-4 py-3">${data[i].uselink}</td>
+                                                <td class="px-4 py-3">${data[i].phone}</td>
                                             
                                                 <td class="px-4 py-3">
-                                                <button onclick="getDownlines(${data[i].id})"  class="py-2 px-6  text-white rounded-lg bg-green-400">Downlines</button>
+                                                    <form method="POST">
+                                                    <input name="input_transfer_status" type="hidden" value="${data[i].transfer_status}" />
+                                                    <input name="input_id" type="hidden" value="${data[i].id}" />
+                                                    <button name="transfer_status" type="submit" class="py-2 px-6  text-white rounded-lg ${transfer_status_color}">${transfer_status}</button>
+                                                    </form>
                                                 </td>
                                             </tr>`;
                     document.querySelector('tbody').insertAdjacentHTML("beforeend", html)

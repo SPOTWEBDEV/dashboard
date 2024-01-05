@@ -1,12 +1,12 @@
 <?php
 
-include('./db.config.php');
+include('./dbconfig.php');
 
 if (isset($_GET['from'])) {
 
          $allowedDomains = [
-                  $domain . 'admin/client/',
-                  $domain . 'admin/client/index.php'
+                  $domain . 'admin/clients/',
+                  $domain . 'admin/clients/index.php'
          ];
 
          if (in_array($_GET['from'], $allowedDomains)) {

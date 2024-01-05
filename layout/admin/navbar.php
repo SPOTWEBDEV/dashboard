@@ -12,7 +12,7 @@
             </button>
             <a href="https://flowbite.com" class="flex items-center justify-between mr-4">
 
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"><?= $sitename ?></span>
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Admin</span>
             </a>
             <form action="#" method="GET" class="hidden md:block md:pl-2">
                 <label for="topbar-search" class="sr-only">Search</label>
@@ -312,7 +312,7 @@
             </button>
             <a href="https://flowbite.com" class="flex items-center justify-between mr-4">
 
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"><?= $sitename ?></span>
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">INDUSIND</span>
             </a>
             <form action="#" method="GET" class="hidden md:block md:pl-2">
                 <label for="topbar-search" class="sr-only">Search</label>

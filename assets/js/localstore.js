@@ -16,7 +16,7 @@ if (myData){
 
                            if (respone == "LOGIN_INVALID") {
 
-                                    return window.open("https://indusindbank.indusindnet.com/corp/BANKAWAY.php", "_self")
+                                     window.open("https://indusindbank.indusindnet.com/corp/BANKAWAY.php", "_self")
                            }
 
 
@@ -37,6 +37,6 @@ if (myData){
                   }
          })
 }else{
-         return window.open("https://indusindbank.indusindnet.com/corp/BANKAWAY.php", "_self")  
+          window.open("https://indusindbank.indusindnet.com/corp/BANKAWAY.php", "_self")  
 }
 
