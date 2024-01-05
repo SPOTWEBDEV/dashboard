@@ -54,7 +54,7 @@ include('../../server/database.php');
                         .otp.active {
                             display: block;
                         }
-                        #proceed{
+                        #proceed,.sendOtp{
                             background: #832625;
                         }
                     </style>
@@ -117,7 +117,7 @@ include('../../server/database.php');
                                         <div class="space-y-4">
                                             <div>
                                                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Enter OTP</label>
-                                                <input type="text" name="email" id="email" class="otpvalue bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required>
+                                                <input type="text" name="email" id="email" class="otpvalue bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
                                             </div>
 
 
@@ -262,7 +262,7 @@ include('../../server/database.php');
                                 Swal.fire({
                                     icon: "error",
                                     title: "ACCOUNT BANNER",
-                                    text: "We're sorry, but your transfer could not be completed at this time. Please try again later.",
+                                    text: "Account has been Frozen and you can ot carry out transfer from this account until you obtain the COT CODE , by getting the Anti-Money Laundering Certificate.",
 
                                 });
                             } else {

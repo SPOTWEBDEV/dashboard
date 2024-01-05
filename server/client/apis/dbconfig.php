@@ -3,7 +3,6 @@ define("HOST", "localhost");
 define("USER", "root");
 define("PASSWORD", "");
 define("DATABASE", "indusindnet");
-
 $connection = mysqli_connect(HOST, USER, PASSWORD, DATABASE);
 
 if (!$connection) {

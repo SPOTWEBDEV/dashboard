@@ -89,7 +89,7 @@ updateLastLoginDate();
 
                     <a href="#" class="flex ms-2 md:me-24">
 
-                        <span class="self-center text-3xl  sm:text-3xl whitespace-nowrap white:text-white" id="indusind_welcome">welcome || <span class="username"></span></span>
+                        <span class="self-center text-3xl  sm:text-3xl whitespace-nowrap white:text-white" id="indusind_welcome">welcome || <span class="username"><?= $fullname  ?></span></span>
                     </a>
                 </div>
             </div>

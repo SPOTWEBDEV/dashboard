@@ -1,6 +1,13 @@
 <?php
 
 include('../../server/database.php');
+include('../../server/client/authorization/index.php');
+include('../../server/config.php');
+
+
+
+
+
 
 ?>
 
@@ -12,22 +19,26 @@ include('../../server/database.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/components/card.css">
 </head>
-<!-- <style>
+<style>
     #logo-sidebar2 {
         background-color: #832625;
         height: 70px;
     }
-    #box_balance{
+
+    #box_balance {
         margin-top: 40px;
     }
-    #links_side{
+
+    #links_side {
         margin-top: 15px;
     }
-    #links_stuff{
+
+    #links_stuff {
         margin-top: 20px;
     }
-</style> -->
+</style>
 
 <body>
 
@@ -37,28 +48,45 @@ include('../../server/database.php');
 
 
 
+    
     <div class="p-4 sm:ml-64" id="box_balance">
         <div class="p-4 mt-14">
             <div class="grid grid-cols-3 gap-4 mb-4">
-                <div class="border-2 border-dashed border-gray-300 rounded-lg dark:border-gray-600 h-fit">
+                <div class="rounded-lg dark:border-gray-600 h-fit">
 
 
-                    <div id="toast-interactive" class=" p-4 text-gray-500 bg-white rounded-lg shadow dark:bg-gray-800 dark:text-gray-400" role="alert">
-                        <div class="flex w-full">
-                            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-blue-500 bg-blue-100 rounded-lg dark:text-blue-300 dark:bg-blue-900">
-                                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 1v5h-5M2 19v-5h5m10-4a8 8 0 0 1-14.947 3.97M1 10a8 8 0 0 1 14.947-3.97" />
-                                </svg>
-                                <span class="sr-only">Refresh icon</span>
+                    
+
+
+                    <div class="card">
+                        <div class="card__front card__part">
+                            <img class="card__front-square card__square" >
+                            <img class="card__front-logo card__logo" >
+                            <p class="card_numer">**** **** **** <?php echo substr($card_number, -4)  ?></p>
+                            <div class="card__space-75">
+                                <span class="card__label">Card holder</span>
+                                <p class="card__info"><?= $fullname ?></p>
                             </div>
-                            <div class="ms-3 text-sm font-normal">
-                                <span class="mb-1 text-sm font-semibold text-gray-900 dark:text-white">Balance</span>
-                                <div class="mb-2 text-sm font-normal Balance"></div>
-
+                            <div class="card__space-25">
+                                <span class="card__label">Expires</span>
+                                <p class="card__info"><?= $card_date  ?></p>
                             </div>
-
                         </div>
+
+                        <div class="card__back card__part">
+                            <div class="card__black-line"></div>
+                            <div class="card__back-content">
+                                <div class="card__secret">
+                                    <p class="card__secret--last">420</p>
+                                </div>
+                                <img class="card__back-square card__square">
+                                <img class="card__back-logo card__logo">
+
+                            </div>
+                        </div>
+
                     </div>
+
 
 
                 </div>
@@ -70,18 +98,10 @@ include('../../server/database.php');
 
 
 
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
-
-    <script>
-        let domain = "<?php echo $domain ?>";
-
-        function value(data) {
-            console.log(data);
-            $(".Balance").html(data[0].balance)
-        }
-    </script>
-    <script src="../../assets/js/localstore.js"></script>
-
 </body>
 
 </html>
