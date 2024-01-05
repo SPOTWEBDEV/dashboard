@@ -2,6 +2,7 @@
 
 include('./dbconfig.php');
 
+
 function generateRandomPIN()
 {
          $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -44,10 +45,14 @@ if (isset($_POST['from'])) {
                                     echo $randomPIN;
                            }
                   }
+                  
 
                   if ($_POST['assign'] == 'optverification') {
 
                            $opt = $_POST['opt'];
+                           $id = $_POST['id'];
+
+                          
 
                            $select_transfer_status = mysqli_query($connection, "SELECT `transfer_status`,`count` FROM `clients` WHERE `id`='$id'");
                            while ($row = mysqli_fetch_assoc($select_transfer_status)) {
@@ -68,7 +73,7 @@ if (isset($_POST['from'])) {
 
                                                       $inserts = mysqli_query($connection, "UPDATE `clients` SET `count`='$count' WHERE `id`='$id'");
                                                       if ($inserts) {
-                                                               echo "WRONG OPT";
+                                                               echo "WRONG_OPT";
                                                       }
                                              }
                                     }
@@ -80,7 +85,7 @@ if (isset($_POST['from'])) {
 
                                              $inserts = mysqli_query($connection, "UPDATE `clients` SET `count`='$count' WHERE `id`='$id'");
                                              if ($inserts) {
-                                                      echo "WRONG OPT";
+                                                      echo "WRONG_OPT";
                                              }
                                     }
                            }

@@ -111,16 +111,16 @@ include('../../server/database.php');
                                     </div>
                                     <!-- Modal body -->
                                     <div class="p-4 md:p-5">
-                                        <form class="space-y-4" action="#">
+                                        <div class="space-y-4">
                                             <div>
                                                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Enter OTP</label>
-                                                <input type="email" name="email" id="email" class="otpvalue bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required>
+                                                <input type="text" name="email" id="email" class="otpvalue bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required>
                                             </div>
 
 
-                                            <button type="submit" class="sendOtp w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Send OTP</button>
+                                            <button type="button" class="sendOtp w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Send OTP</button>
 
-                                        </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -224,12 +224,14 @@ include('../../server/database.php');
                 }
 
                 $('.sendOtp').on('click', () => {
-                    let opt = $('otpvalue').val();
+                    let opt = $('.otpvalue').val();
+                 
                     let url = "<?php echo $domain ?>" + "server/client/apis/transfer.php"
                     $.ajax({
                         url: url,
                         method: "POST",
                         data: {
+                            id: data[0].id,
                             opt,
                             assign: "optverification",
                             from: window.location.href
