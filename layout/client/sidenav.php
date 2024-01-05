@@ -40,13 +40,13 @@
 </style>
 
 <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-red border-r border-gray-200 sm:translate-x-0 dark:bg-red-800 dark:border-gray-700" aria-label="Sidebar">
-    <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+    <div class="h-full px-3  overflow-y-auto bg-white dark:bg-gray-800">
         <ul class="space-y-2 font-medium">
             <li id="italian_welcome">
                 <!-- class="" -->
                 <a href="<?php echo $domain ?>user/dashboard/" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white group" id="links_stuff">
                     <img id="user_red" width="27" height="27" color="white" src="https://img.icons8.com/ios-filled/50/user.png" alt="user" />
-                    <span class="flex-1 ms-3 whitespace-nowrap text-xl text-xl" id="italianwe">Welcome || first class</span>
+                    <span class="flex-1 ms-3 whitespace-nowrap text-xl text-xl" id="italianwe">Welcome || <span class="username"></span></span>
                 </a>
             </li>
 

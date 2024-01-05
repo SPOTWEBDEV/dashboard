@@ -22,10 +22,15 @@ if (myData){
 
                            const data = JSON.parse('[' + respone.trim().replace(/}{/g, '},{') + ']');
 
-                           // let user_name_span = $('.user_name_span');
-                           // user_name_span[0].innerHTML = data[0].fullname
+                           let user_name_span = document.querySelectorAll('.username')
+                           user_name_span.forEach(el=>{
+                                    console.log(el);
+                                    el.innerHTML = data[0].fullname
+                           })
+                          
+                          
 
-                           // console.log(user_name_span[0])
+                          
 
                            value(data)
 
