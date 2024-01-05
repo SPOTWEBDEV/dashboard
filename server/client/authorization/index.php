@@ -1,24 +1,43 @@
 <?php
-include('../apis/dbconfig.php');
-session_start();
-if (isset($_POST['from'])) {
-         $id = $_POST['myData'];
 
-         
 
-         $sql = "SELECT * FROM clients WHERE id = $id";
-         $result = mysqli_query($connection, $sql);
+// Check if the user is authenticated by validating the cookie
+$url = "Location:" .$redirect ;
 
-         if ($result) {
-                  if (mysqli_num_rows($result)) {
-                           $row = mysqli_fetch_assoc($result);
-                           echo json_encode($row, JSON_PRETTY_PRINT);
-                  }else{
-                           echo "LOGIN_INVALID";  
+if (isset($_COOKIE["auth_token"])) {
+         $authToken = $_COOKIE["auth_token"];
+
+         if (verifyAuthToken($authToken)) {
+                  echo "User is authenticated. Welcome to the dashboard!";
+                  $check = mysqli_query($connection, "SELECT * FROM `clients` WHERE `id`='$token'");
+                  while ($row = mysqli_num_rows($check)) {
+                           $fullname = $row['fullname'];
+                           $email = $row['email'];
+                           $phone = $row['phone'];
+                           $balance = $row['balance'];
                   }
+         } else {
+                  echo "Authentication failed. Redirect to login.";
+                  header($url);
+                  exit();
+                  
          }
 } else {
-         echo "LOGIN_INVALID";
+         echo "User not authenticated. Redirect to login.";
+         // Redirect the user to the login page
+             header($url);
+         exit();
 }
 
+function verifyAuthToken($token)
+{
+         // Implement your token verification logic here (e.g., check against a database)
+         global $connection;
+         $check = mysqli_query($connection, "SELECT * FROM `clients` WHERE `id`='$token'");
 
+         if (!mysqli_num_rows($check)) {
+                  return false;
+         }
+
+         return true;
+}
