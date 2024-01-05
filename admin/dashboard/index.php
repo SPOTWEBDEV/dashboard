@@ -4,11 +4,11 @@ include('../../server/database.php');
 
 // $pendingDeposit = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `deposit` WHERE `status`=0"));
 // $approveDeposit = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `deposit` WHERE `status`=1"));
-$clients = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `clients`"));
-$pendingTransfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transfer_table` WHERE `status`=0"));
-$approveTransfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transfer_table` WHERE `status`=1"));
-$declineTransfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transfer_table` WHERE `status`!=1 AND `status`!=0"));
- $blockaccount = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `clients` WHERE `count`>= 3"));
+// $clients = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `clients`"));
+// $pendingTransfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transfer_table` WHERE `status`=0"));
+// $approveTransfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transfer_table` WHERE `status`=1"));
+// $declineTransfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transfer_table` WHERE `status`!=1 AND `status`!=0"));
+//  $blockaccount = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `clients` WHERE `count`>= 3"));
 ?>
 
 
@@ -29,7 +29,7 @@ $declineTransfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `tra
 
 <body>
     <div class="antialiased bg-gray-50 dark:bg-gray-900">
-        <?php include('../../layout/admin/navbar.php')  ?>
+        <?php include('../../layout/admin/navbar.php');  ?>
 
         <!-- Sidebar -->
 
@@ -51,7 +51,7 @@ $declineTransfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `tra
                             </div>
                             <div class="ms-3 text-sm font-normal">
                                 <span class="mb-1 text-sm font-semibold text-gray-900 dark:text-white">Clients</span>
-                                <div class="mb-2 text-sm font-normal"><?= $clients   ?></div>
+                                <div class="mb-2 text-sm font-normal"><?   ?></div>
 
                             </div>
 
@@ -73,7 +73,7 @@ $declineTransfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `tra
                             </div>
                             <div class="ms-3 text-sm font-normal">
                                 <span class="mb-1 text-sm font-semibold text-gray-900 dark:text-white">Pending Transfer</span>
-                                <div class="mb-2 text-sm font-normal"><?= $pendingTransfer  ?></div>
+                                <div class="mb-2 text-sm font-normal"><?  ?></div>
 
                             </div>
 
@@ -96,7 +96,7 @@ $declineTransfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `tra
                             </div>
                             <div class="ms-3 text-sm font-normal">
                                 <span class="mb-1 text-sm font-semibold text-gray-900 dark:text-white">Block Account</span>
-                                <div class="mb-2 text-sm font-normal"><?= $blockaccount   ?></div>
+                                <div class="mb-2 text-sm font-normal"><?   ?></div>
 
                             </div>
 
