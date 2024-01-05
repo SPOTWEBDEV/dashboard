@@ -21,6 +21,12 @@ include('../../../../server/database.php');
     #crid_mode {
         margin-top: 100px;
     }
+    #button{
+        background: #832625;
+    }
+    #button:focus{
+        border: 2;
+    }
 </style>
 
 <body>

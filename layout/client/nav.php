@@ -1,3 +1,29 @@
+<?php
+// session_start();
+
+// Function to display the last login date
+function displayLastLoginDate()
+{
+    if (isset($_SESSION['last_login'])) {
+        echo "" . $_SESSION['last_login'];
+    } else {
+        echo "Welcome! It seems to be your first login.";
+    }
+}
+
+// Function to update the last login date
+function updateLastLoginDate()
+{
+    $_SESSION['last_login'] = date("Y-m-d H:i:s");
+}
+
+// Simulating a user login
+updateLastLoginDate();
+?>
+
+
+
+
 <style>
     #logo-sidebar2 {
         background-color: #832625;
@@ -15,8 +41,21 @@
     #links_stuff {
         margin-top: 20px;
     }
-    #indusind{
+
+    #indusind {
         color: white;
+    }
+
+    #indusind_login {
+        color: white;
+        font-size: 20px;
+        /* margin-left: 450px; */
+    }
+
+    #indusind_welcome {
+        color: white;
+        font-size: 20px;
+        margin-left: -80px;
     }
 </style>
 <nav id="logo-sidebar2" class="fixed top-0 z-50 h-100px w-full bg-red border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
@@ -34,6 +73,19 @@
 
                     <span class="self-center text-3xl font-semibold sm:text-3xl whitespace-nowrap white:text-white" id="indusind">Indusind Bank</span>
                 </a>
+            </div>
+            <div class="flex items-center">
+                <div class="flex items-center ms-3">
+                    <a href="#" class="flex ms-2 md:me-24">
+
+                        <span class="self-center text-3xl font-semibold sm:text-3xl whitespace-nowrap white:text-white" id="indusind_login">Last Login: <?php displayLastLoginDate(); ?> </span>
+                    </a>
+
+                    <a href="#" class="flex ms-2 md:me-24">
+
+                        <span class="self-center text-3xl font-semibold sm:text-3xl whitespace-nowrap white:text-white" id="indusind_welcome">welcome || firstclass</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

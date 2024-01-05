@@ -54,11 +54,14 @@ include('../../server/database.php');
                         .otp.active {
                             display: block;
                         }
+                        #proceed{
+                            background: #832625;
+                        }
                     </style>
                     <!-- Modal content -->
-                    <div class="relative  rounded-lg shadow dark:bg-gray-700 transfer">
+                    <div class="relative  rounded-lg shadow dark:bg-gray-900 transfer">
                         <!-- Modal header -->
-                        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-900">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
                                 Transfer
                             </h3>
@@ -82,7 +85,7 @@ include('../../server/database.php');
 
 
                             </div>
-                            <button id="proceed" type=" button" class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            <button id="proceed" type=" button" class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600  ">
 
                                 Transfer
                             </button>
