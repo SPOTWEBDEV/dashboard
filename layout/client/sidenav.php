@@ -46,7 +46,7 @@
                 <!-- class="" -->
                 <a href="<?php echo $domain ?>user/dashboard/" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white group" id="links_stuff">
                     <img id="user_red" width="27" height="27" color="white" src="https://img.icons8.com/ios-filled/50/user.png" alt="user" />
-                    <span class="flex-1 ms-3 whitespace-nowrap text-xl text-xl" id="italianwe">Welcome || username</span>
+                    <span class="flex-1 ms-3 whitespace-nowrap text-xl text-xl" id="italianwe">Welcome || first class</span>
                 </a>
             </li>
 
