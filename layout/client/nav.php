@@ -48,13 +48,13 @@ updateLastLoginDate();
 
     #indusind_login {
         color: white;
-        font-size: 20px;
+        font-size: 15px;
         /* margin-left: 450px; */
     }
 
     #indusind_welcome {
         color: white;
-        font-size: 20px;
+        font-size: 15px;
         margin-left: -80px;
     }
 </style>
