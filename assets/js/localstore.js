@@ -13,6 +13,8 @@ if (myData){
                   },
                   success(respone) {
 
+                           console.log(respone);
+
 
                            if (respone == "LOGIN_INVALID") {
 
