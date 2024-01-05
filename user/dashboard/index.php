@@ -38,7 +38,7 @@ include('../../server/database.php');
 
 
     <div class="p-4 sm:ml-64" id="box_balance">
-        <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
+        <div class="p-4 mt-14">
             <div class="grid grid-cols-3 gap-4 mb-4">
                 <div class="border-2 border-dashed border-gray-300 rounded-lg dark:border-gray-600 h-fit">
 
