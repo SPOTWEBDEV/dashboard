@@ -15,6 +15,7 @@
     #links_stuff {
         margin-top: 20px;
     }
+
     /* #italian{
         font-style: ;
         font-size: 40px;
@@ -69,7 +70,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" id="links_stuff">
+                <a href="<?php echo $domain ?>user/logout/" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" id="links_stuff">
                     <img width="27" height="27" src="https://img.icons8.com/material-outlined/24/exit.png" alt="exit" />
                     <span class="flex-1 ms-3 whitespace-nowrap text-xl">Logout</span>
                 </a>
