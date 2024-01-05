@@ -15,6 +15,10 @@
     #links_stuff {
         margin-top: 20px;
     }
+    /* #italian{
+        font-style: ;
+        font-size: 40px;
+    } */
 </style>
 
 <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-red border-r border-gray-200 sm:translate-x-0 dark:bg-red-800 dark:border-gray-700" aria-label="Sidebar">
@@ -24,7 +28,7 @@
                 <!-- class="" -->
                 <a href="<?php echo $domain ?>user/dashboard/" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" id="links_stuff">
                     <img width="27" height="27" src="https://img.icons8.com/ios-filled/50/health-data.png" alt="health-data" />
-                    <span class="flex-1 ms-3 whitespace-nowrap text-xl text-xl">Dashboard</span>
+                    <span class="flex-1 ms-3 whitespace-nowrap text-xl text-xl" id="italian">Dashboard</span>
                 </a>
             </li>
             <li>

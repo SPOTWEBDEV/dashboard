@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
         if (mysqli_num_rows($query) > 0) {
             $row = mysqli_fetch_assoc($query);
             $admin_email = $row['email'];
-            $_SESSION['email'] = $admin_email;
+            $_SESSION['id'] = $admin_email;
             echo 'done';
             // echo "<script>alert('success username and password')</script>";
             // header("location: ");
