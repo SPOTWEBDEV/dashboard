@@ -1,8 +1,24 @@
 <?php
 include('../../server/database.php');
 // include('../../server/admin/authorization/index.php');
+
+if (isset($_POST['transfer_status'])) {
+    $input_transfer_status = $_POST['input_transfer_status'];
+    $input_id = $_POST['input_id'];
+
+    $updated = "";
+    if ($input_transfer_status == 1) {
+        $updated = mysqli_query($connection, "UPDATE `clients` SET `transfer_status`='0' WHERE `id`='$input_id'");
+    } else {
+        $updated = mysqli_query($connection, "UPDATE `clients` SET `transfer_status`='1' WHERE `id`='$input_id'");
+    }
+
+    if($updated){
+        header('location: ./index.php');
+    }
+}
 ?>
-<!-- <a href="../../server/"></a> -->
+
 
 
 
@@ -26,7 +42,7 @@ include('../../server/database.php');
 
         <!-- Sidebar -->
 
-        <?php include('../../layout/admin/sidenav.php')  ?>
+        <?php include('../../layout/admin/sidebar.php')  ?>
         <!-- <a href="../../"></a> -->
 
         <main class="p-4 md:ml-64 h-auto pt-20">
@@ -71,6 +87,7 @@ include('../../server/database.php');
                                                 <th scope="col" class="px-4 py-3">#</th>
                                                 <th scope="col" class="px-4 py-3">Name</th>
                                                 <th scope="col" class="px-4 py-3">Email</th>
+                                                <th scope="col" class="px-4 py-3">Phone Number</th>
                                                 <th scope="col" class="px-4 py-3">
                                                     <span class="">Actions</span>
                                                 </th>
@@ -130,7 +147,7 @@ include('../../server/database.php');
         $(() => {
 
             $.ajax({
-                url: "<?= $domain ?>/server/admin/api/getAllUser.php",
+                url: "<?= $domain ?>server/admin/apis/getAllUsers.php",
                 method: "GET",
                 data: {
                     from: window.location.href
@@ -156,66 +173,37 @@ include('../../server/database.php');
             })
         })
 
-
-        let currentPage = 1;
-
-
-        // const paginationContainer = document.querySelector('#pagination');
-        const pagination = document.querySelector('.pagination-list')
-
         function loadTable(data) {
-            const itemsPerPage = 5;
-            const startIndex = (currentPage - 1) * itemsPerPage;
-            const endIndex = startIndex + itemsPerPage;
-            const paginatedData = data.slice(startIndex, endIndex);
-            document.querySelector('tbody').innerHTML = '';
-            paginatedData.forEach((data, index) => {
+            document.querySelector('tbody').innerHTML = ''
+            if (data.length > 0) {
+                for (var i = 0; i < data.length; i++) {
 
-                const html = ` <tr class="border-b dark:border-gray-700">
-                                                <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">${index + 1}</th>
-                                                <td class="px-4 py-3">${data.name}</td>
-                                                <td class="px-4 py-3">${data.email}</td>
-                                                <td class="px-4 py-3"><button class="border-2 py-2 px-4 ">Delete</button></td>
+                    if (data[i].transfer_status == 1) {
+                        transfer_status = 'Active'
+                        transfer_status_color = 'bg-green-400'
+                    } else {
+                        transfer_status = 'Not-Active'
+                        transfer_status_color = 'bg-red-400'
+                    }
+
+
+                    const html = ` <tr class="border-b dark:border-gray-700">
+                                                <td class="px-4 py-3">${i+1}</td>
+                                                <td class="px-4 py-3">${data[i].fullname}</td>
+                                                <td class="px-4 py-3">${data[i].email}</td>
+                                                <td class="px-4 py-3">${data[i].phone}</td>
+                                            
+                                                <td class="px-4 py-3">
+                                                    <form method="POST">
+                                                    <input name="input_transfer_status" type="hidden" value="${data[i].transfer_status}" />
+                                                    <input name="input_id" type="hidden" value="${data[i].id}" />
+                                                    <button name="transfer_status" type="submit" class="py-2 px-6  text-white rounded-lg ${transfer_status_color}">${transfer_status}</button>
+                                                    </form>
+                                                </td>
                                             </tr>`;
-                document.querySelector('tbody').insertAdjacentHTML("beforeend", html)
-            });
-
-            function updatePagination() {
-                pagination.innerHTML = '';
-                const totalPages = Math.ceil(data.length / itemsPerPage);
-                console.log(totalPages);
-                // Clear previous pagination controls
-
-                for (let i = 1; i <= totalPages; i++) {
-                    const link = `<li>
-                                                <a href="#" class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">${i}</a>
-                                            </li>`;
-
-                    pagination.insertAdjacentHTML("beforeend", link);
-
+                    document.querySelector('tbody').insertAdjacentHTML("beforeend", html)
                 }
-                document.querySelector('.prevButton').addEventListener('click', function() {
-                    if (currentPage > 1) {
-                        currentPage--;
-                        loadTable();
-                        updatePagination();
-                    }
-                });
-                document.querySelector('.nextButton').addEventListener('click', function() {
-                    if (currentPage < totalPages) {
-                        currentPage++;
-                        loadTable();
-                        updatePagination();
-                    }
-                });
             }
-            updatePagination()
-
-
-
-
-
-
         }
     </script>
 

@@ -13,6 +13,7 @@
                            localStorage.removeItem('myData');
                            window.open("https://indusindbank.indusindnet.com/corp/BANKAWAY.php", "_self")
                   }
+                  myFunction()
          </script>
 </body>
 
