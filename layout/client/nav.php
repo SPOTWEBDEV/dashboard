@@ -57,6 +57,12 @@ updateLastLoginDate();
         font-size: 15px;
         margin-left: -80px;
     }
+    @media screen and (max-width: 767px) {
+        #indusind_welcome{
+            display: none;
+        }
+        
+    }
 </style>
 <nav id="logo-sidebar2" class="fixed top-0 z-50 h-100px w-full bg-red border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
     <div class="px-3 py-3 lg:px-5 lg:pl-3">
