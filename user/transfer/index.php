@@ -29,11 +29,7 @@ include('../../server/database.php');
 
 
     <div class="p-4 sm:ml-64">
-<<<<<<< HEAD
-        <div class="p-4 rounded-lg dark:border-gray-700 mt-14" id="crid_mode">
-=======
         <div class="p-4  rounded-lg dark:border-gray-700 mt-14" id="crid_mode">
->>>>>>> c7a91437965d69ef405c293d8f72d8c044aab495
 
 
 
