@@ -1,0 +1,170 @@
+.map_wrap {
+    padding: 0 15px;
+}
+
+.map_wrap .map_box {
+    padding: 10px;
+    background: #fff;
+    width: 485px;
+    top: 9px;
+    left: 24px;
+}
+
+.map_wrap .map_box .card-header {
+    background: #f7f7f7;
+    border-bottom: solid 1px #832625;
+}
+
+.search_box input {
+    box-shadow: none;
+}
+
+.search_box input:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+.search_box .input-group-text {
+    padding: 0 .7rem;
+    position: relative;
+}
+
+.search_box .input-group-text:first-child:after {
+    position: absolute;
+    height: 25px;
+    width: 1px;
+    background-color: #e4e4e4;
+    content: "";
+    top: 10px;
+    right: 0;
+}
+
+.map_wrap .address_box {
+    border-bottom: solid 1px #f1f1f1;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.map_wrap .address_box:last-child {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.map_wrap .search_results address {
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.map_wrap .search_results address:last-child {
+    margin-bottom: 0;
+}
+
+.map_wrap .search_results address i {
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+.map_wrap .scrollable_div {
+    max-height: 340px;
+    overflow: hidden;
+    overflow-y: auto;
+    margin-top: 15px;
+}
+
+.map_wrap .card-header .filter_link {
+    padding-right: 35px;
+    padding-left: 20px;
+    font-weight: bold;
+    color: #832625;
+}
+
+.map_wrap .card-header .filter_link .right-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -10px;
+}
+
+.map_wrap .card-header .filter_link.active {
+    background-color: #832625;
+    color: #fff;
+}
+
+.map_wrap .card-header .filter_link.active .right-icon {
+    transform: rotate(180deg);
+}
+
+.filter_wrapper {
+    display: none;
+}
+
+.filter_wrapper .filter_box {
+    margin-bottom: 10px;
+}
+
+.filter_wrapper .filter_box:last-child {
+    margin: 0;
+}
+
+.map_wrap .filtered_items {
+    display: none;
+}
+
+.map_wrap .filtered_items .badge {
+    background: #832625;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.map_wrap .filtered_items .badge .close_btn {
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .map_wrap .map_box {
+        width: 100%;
+        position: relative !important;
+        left: 0;
+        top: -8px;
+        border: none;
+    }
+    .map_wrap .map_box .card-header {
+        border-radius: 0px;
+    }
+    .map_wrap iframe {
+        height: 300px;
+    }
+    .map_wrap #map {
+        height: 300px !important;
+    }
+    .map_wrap .card-header .filter_link span {
+        display: none;
+    }
+    .map_section .container,
+    .map_section .map_wrap {
+        padding: 0;
+    }
+    .map_wrap .scrollable_div {
+        max-height: 280px;
+    }
+}
+
+.map-loader-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background: url(../../../../../content/dam/indusind-platform-images/home/desktop-img/map_loader.gif) center no-repeat #fff;
+}
+
+.mCSB_inside>.mCSB_container {
+    margin-right: 0;
+    padding-right: 15px;
+}

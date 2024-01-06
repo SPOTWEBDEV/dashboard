@@ -1,0 +1,321 @@
+/*********************** For Global CSS *****************************/
+
+/*********************** For Reach us Page  CSS *****************************/
+
+.inclusive_call_back .controls .form-group {
+    margin-bottom: 2rem;
+}
+
+.inclusive_call_back .controls .form-group .form-control {
+    border-bottom: 2px solid #e5e5e5 !important;
+    border-radius: 0px;
+    padding-left: 0px;
+    height: calc(2rem + .125rem) !important;
+    padding: 0px !important;
+    background: none;
+}
+
+.inclusive_call_back .controls .form-group .ptype {
+    font-size: 1rem;
+    padding: 0px;
+    border-bottom: 2px solid #e5e5e5 !important;
+    height: calc(2.35rem + .125rem) !important;
+    color: #495057;
+}
+
+.select_wrap .select-full.ptype:after {
+    right: 5px;
+    top: 45%;
+    padding: 3px;
+}
+
+@media (max-width: 1169px) {}
+
+@media (max-width: 990px) {}
+
+@media (max-width: 767px) {}
+
+@media (max-width: 599px) {}
+
+@media (max-width: 479px) {}
+
+@media (max-width: 359px) {}
+
+.customer_enq_wrp .form-row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.customer_enq_wrp .input-field,
+.customer_enq_wrp .form-group {
+    position: relative;
+    padding: 0 15px;
+    margin-bottom: 2.5rem;
+}
+
+.customer_enq_wrp label {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 100%;
+    color: #000;
+    transition: 0.2s all;
+    cursor: text;
+}
+
+.customer_enq_wrp input[type="text"] {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 14px 0;
+    line-height: normal;
+    border-bottom: 2px solid #d3d3d3;
+    box-shadow: none;
+    color: #000;
+    padding-right: 25px;
+}
+
+.customer_enq_wrp input[type="text"]:invalid {
+    outline: 0;
+    color: #ff2300;
+    border-color: #e5e5e5;
+}
+
+.customer_enq_wrp input[type="text"]:focus,
+.customer_enq_wrp input[type="text"]:valid {
+    border-color: #ffb241;
+}
+
+.customer_enq_wrp input[type="text"]:focus~label,
+.customer_enq_wrp input[type="text"]:valid~label {
+    font-size: 14px;
+    top: -15px;
+    color: #000;
+}
+
+.customer_enq_wrp textarea~label {
+    top: 5px;
+    left: 25px;
+    width: 85%;
+}
+
+.customer_enq_wrp textarea {
+    width: 100%;
+    border-radius: 3px;
+    outline: 0;
+    padding: 5px 10px;
+    border: 2px solid #d3d3d3;
+    box-shadow: none;
+    color: #000;
+}
+
+.customer_enq_wrp textarea:focus,
+.customer_enq_wrp textarea:valid {
+    border-color: #ffb241;
+}
+
+.customer_enq_wrp textarea:focus~label,
+.customer_enq_wrp textarea:valid~label {
+    font-size: 14px;
+    left: 15px;
+    top: -20px;
+    color: #000;
+}
+
+.customer_enq_wrp .filetype .btnupload {
+    position: absolute;
+    top: 6px;
+    right: 15px;
+    line-height: normal;
+    font-weight: 400;
+    border: 1px solid;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile+label {
+    font-size: 1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: visible;
+    padding: 0.625rem 1.25rem;
+}
+
+.no-js .inputfile+label {
+    display: none;
+}
+
+.inputfile:focus+label,
+.inputfile.has-focus+label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile-6+label {
+    color: #000;
+}
+
+.inputfile-6+label {
+    border-bottom: 2px solid #e5e5e5;
+    top: 0 !important;
+    padding: 7px 0;
+    width: 100%;
+    position: relative !important;
+    left: 0px !important;
+}
+
+.inputfile-6+label span {
+    width: 70%;
+    min-height: 2em;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.customer_enq_wrp .custom-control-label {
+    position: relative;
+    left: 0;
+    top: 0px;
+}
+
+.customer_enq_wrp label.custom_select_wrap {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 0px;
+}
+
+.customer_enq_wrp label.custom_select_wrap select {
+    border-color: #e5e5e5;
+    width: 100%;
+    padding-left: 0;
+    color: #000;
+    font-weight: normal;
+}
+
+.customer_enq_wrp .radio-group label {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+    margin-right: 25px;
+}
+
+.customer_enq_wrp .input_field_error input[type="text"] {
+    border-color: #ff0000;
+}
+
+.customer_enq_wrp .input_field_valid input[type="text"] {
+    border-color: #e5e5e5;
+}
+
+.customer_enq_wrp .radio-group label input[type="text"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+.customer_enq_wrp .custom-radio label,
+.customer_enq_wrp .custom-radio input {
+    cursor: pointer;
+}
+
+.customer_enq_wrp .form-group i {
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    color: #ff0000;
+}
+
+.customer_enq_wrp .input_field_valid i {
+    color: #4a9807;
+}
+
+.customer_enq_wrp .input_field_error i {
+    color: #ff0000;
+}
+
+.error_input {
+    color: #ff000b;
+    font-size: 0.75rem;
+    position: absolute;
+    top: 52px;
+    left: 15px;
+}
+
+.global_error {
+    color: #ff000b;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+@media (max-width: 990px) {
+    .inputfile-6+label span {
+        width: 65%;
+    }
+}
+
+.gradientColour {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(244, 244, 244, 1) 100%);
+}
+
+.boxEffect {
+    padding: 25px;
+    border: 2px solid transparent;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    border: solid 2px transparent;
+}
+
+.boxEffect:hover,
+.boxEffect.active {
+    border: solid 2px #832625;
+    box-shadow: 0px 0px 8px 0px rgba(176, 173, 176, 1);
+    background: #fff;
+}
+
+.noBackground {
+    background: none
+}
+
+@media (max-width: 990px) {
+    .inputfile-6+label span {
+        width: 65%;
+    }
+}
+
+.customer_enq_thankyou {
+    width: 100%;
+}
+
+.customer_enq_thankyou .right_icon {
+    font-size: 48px;
+    color: #FFB241;
+}
+
+.customer_enq_thankyou .right_icon span {
+    border: 3px solid #832625;
+    width: 90px;
+    display: inline-block;
+    border-radius: 50%;
+    height: 90px;
+    line-height: 90px;
+}
+
+.customer_enq_thankyou a.backbtn {
+    font-size: 12px;
+}
