@@ -7,6 +7,8 @@ include('../../server/client/authorization/index.php');
 // include('../../server/config.php');
 
 
+
+
 ?>
 
 
@@ -57,7 +59,7 @@ include('../../server/client/authorization/index.php');
     .profile_box {
         border: 1px solid rgb(0, 0, 0, 0.2);
         width: 100%;
-        height: 50vh;
+        height: 48vh;
         border-radius: 10px;
         box-shadow: 0em 0em 0.2em rgb(0, 0, 0, 0.2);
     }
@@ -78,7 +80,7 @@ include('../../server/client/authorization/index.php');
     }
 
     .line2 {
-        width: 13%;
+        width: 118px;
         height: 4px;
         background: #832625;
         margin-top: 10px;
@@ -87,27 +89,33 @@ include('../../server/client/authorization/index.php');
         margin-left: 27px;
     }
 
-    .inputs_holder{
+    .inputs_holder {
         display: flex;
         justify-content: space-between;
+        margin-top: 10px;
+        /* width: 100%; */
     }
 
     form {
         margin-left: 40px;
         margin-top: 15px;
+        /* width: 100%; */
     }
 
     .input_box1 {
         margin-left: 30px;
     }
+
     .input_box2 {
         display: flex;
         align-items: center;
     }
+
     .input_box3 {
         display: flex;
         align-items: center;
     }
+
     .input_box4 {
         display: flex;
         align-items: center;
@@ -134,6 +142,7 @@ include('../../server/client/authorization/index.php');
         border: 1px solid #832625;
         margin-left: 60px;
         margin-top: 25px;
+        letter-spacing: 1px;
     }
 
     .input_box3 input {
@@ -145,6 +154,7 @@ include('../../server/client/authorization/index.php');
         border: 1px solid #832625;
         margin-left: 60px;
         margin-top: 25px;
+        letter-spacing: 1px;
     }
 
     .input_box4 input {
@@ -156,6 +166,7 @@ include('../../server/client/authorization/index.php');
         border: 1px solid #832625;
         margin-left: 60px;
         margin-top: 25px;
+        letter-spacing: 1px;
     }
 
     .input_box1 label {
@@ -165,16 +176,19 @@ include('../../server/client/authorization/index.php');
     .input_box2 label {
         font-weight: 600;
         margin-bottom: -20px;
+        letter-spacing: 1px;
     }
 
     .input_box3 label {
         font-weight: 600;
         margin-bottom: -20px;
+        letter-spacing: 1px;
     }
 
     .input_box4 label {
         font-weight: 600;
         margin-bottom: -20px;
+        letter-spacing: 1px;
     }
 
 
@@ -184,24 +198,77 @@ include('../../server/client/authorization/index.php');
         margin-top: 80px;
         margin-right: 40px;
         border: 1px solid #832625;
-        background: #832625;
+        background: rgb(184, 126, 125);
         color: white;
         text-align: center;
         border-radius: 10px;
     }
-    .step_P1{
+
+    .step_P1 {
         font-weight: 600;
         font-size: 24px;
     }
-    .steps_num{
+
+    .steps_num {
         display: flex;
-        justify-content: space-around;
-        text-align: center;
-        margin-top: 28px;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 8px;
+        margin-left: 10px;
     }
-    .steps_num p{
+
+    .steps_num p {
         font-size: 17px;
         font-weight: 600;
+    }
+
+    @media screen and (max-width: 1268px) {
+        .profile_spec {
+            margin-right: 10px;
+        }
+    }
+
+    @media screen and (max-width: 1163px) {
+        .profile_spec {
+            width: 30%;
+        }
+
+        .step_P1 {
+            font-size: 20px;
+        }
+
+        .steps_num p {
+            font-size: 15px;
+        }
+    }
+
+    @media screen and (max-width: 1059px) {
+        .section_holder {
+            margin-left: 32%;
+        }
+    }
+
+    @media screen and (max-width: 1016px) {
+        .profile_spec {
+            display: none;
+        }
+
+        .input_box2 input {
+            width: 100%;
+        }
+
+        .inputs_holder {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        form {
+            margin-left: 40px;
+            margin-top: 15px;
+            width: 100%;
+        }
     }
 </style>
 
@@ -241,30 +308,31 @@ include('../../server/client/authorization/index.php');
 
                     <div class="input_box2">
                         <label>Name</label>
-                        <input type="text">
+                        <input type="text" name="name">
                     </div>
 
                     <div class="input_box3">
                         <label>Phone</label>
-                        <input type="text">
+                        <input type="text" name="phone">
                     </div>
 
                     <div class="input_box4">
                         <label>Email</label>
-                        <input type="text">
+                        <input type="text" name="email">
                     </div>
+
                 </form>
 
 
 
                 <div class="profile_spec">
                     <div class="steps">
-                        <p class="step_P1">Steps</p>
+                        <p class="step_P1">Requirement</p>
 
                         <div class="steps_num">
-                            <p>1: number</p>
-                            <p>2 : number</p>
-                            <p>3 : number</p>
+                            <p>1: input real Name</p>
+                            <p>2 : Verified Number</p>
+                            <p>3 : input correct Email</p>
                         </div>
                     </div>
                 </div>
