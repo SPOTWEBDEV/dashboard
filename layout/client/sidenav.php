@@ -23,7 +23,7 @@
     #italian_welcome{
         display: none;
     }
-    @media screen and (max-width: 639px) {
+    @media screen and (max-width: 767px) {
         #italian_welcome{
             display: block;
             font-size: 20px;
@@ -101,6 +101,12 @@
                     <span class="flex-1 ms-3 whitespace-nowrap text-xl">Logout</span>
                 </a>
             </li>
+            <!-- <li>
+                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white group" id="links_stuff">
+                    <img width="27" height="27" src="https://img.icons8.com/ios-filled/50/exit.png" alt="exit" />
+                    <span class="flex-1 ms-3 whitespace-nowrap text-xl">Reset verify app</span>
+                </a>
+            </li> -->
         </ul>
     </div>
 </aside>

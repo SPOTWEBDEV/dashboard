@@ -38,10 +38,9 @@ include('../../server/client/authorization/index.php');
         row-gap: 40px;
         width: 65%;
         margin-left: 27%;
-        margin-top: 5%;
+        margin-top: 12.5%;
         /* background-color: blue;   */
         font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        ;
     }
 
     .profile_settings {
@@ -54,6 +53,21 @@ include('../../server/client/authorization/index.php');
     .ps_p p {
         font-size: 25px;
         font-weight: 600;
+    }
+
+    .ps_btn button {
+        width: 110px;
+        font-size: 15px;
+        border: 1px solid #832625;
+        width: 110px;
+        height: 40px;
+        border-radius: 5px;
+        background: #832625;
+        color: white;
+    }
+    .ps_btn:hover button {
+        background: white;
+        color: #832625;
     }
 
     .profile_box {
@@ -93,6 +107,7 @@ include('../../server/client/authorization/index.php');
         display: flex;
         justify-content: space-between;
         margin-top: 10px;
+        /* padding-bottom: 100px; */
         /* width: 100%; */
     }
 
@@ -131,6 +146,19 @@ include('../../server/client/authorization/index.php');
         background: rgb(131, 38, 37, 0.1);
         border: 3px solid #832625;
         margin-left: 30px;
+    }
+
+    .input_none {
+        border-radius: 8px;
+        width: 40%;
+        height: 35px;
+        font-weight: 600;
+        text-align: center;
+        color: #832625;
+        background: rgb(131, 38, 37, 0.1);
+        border: 3px solid #832625;
+        margin-left: 30px;
+        display: none;
     }
 
     .input_box2 input {
@@ -262,12 +290,136 @@ include('../../server/client/authorization/index.php');
             justify-content: space-between;
             margin-top: 10px;
             width: 100%;
+            padding-right: 10px;
         }
 
         form {
             margin-left: 40px;
             margin-top: 15px;
             width: 100%;
+        }
+        .section_holder{
+            margin-top: 20%;
+        }
+    }
+
+    @media screen and (max-width: 843px) {
+        .section_holder {
+            margin-left: 34%;
+        }
+    }
+
+    @media screen and (max-width: 788px) {
+        .section_holder {
+            width: 57%;
+            margin-left: 38%;
+        }
+    }
+
+    @media screen and (max-width: 752px) {
+        .section_holder {
+            /* width: 57%; */
+            margin-left: 40%;
+            margin-top: 26%;
+        }
+    }
+
+    @media screen and (max-width: 680px) {
+        .section_holder {
+            width: 50%;
+            margin-left: 43%;
+        }
+    }
+
+    @media screen and (max-width: 662px) {
+        .section_holder {
+            /* width: 57%; */
+            margin-left: 46%;
+        }
+    }
+
+    @media screen and (max-width: 639px) {
+        .section_holder {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            margin-top: 20%;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 100px;
+            /* padding-top: 30%; */
+
+            /* margin-left: 38%; */
+        }
+    }
+
+    @media screen and (max-width: 463px) {
+        .input_box1 input {
+            width: 44%;
+        }
+
+        .section_holder {
+            margin-top: 32%;
+        }
+    }
+
+    @media screen and (max-width: 427px) {
+        .input_box1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-left: -50px;
+        }
+    }
+
+    @media screen and (max-width: 347px) {
+        .input_box2 input {
+            margin-left: 5px;
+        }
+
+        .input_box3 input {
+            margin-left: 5px;
+        }
+
+        .input_box4 input {
+            margin-left: 5px;
+        }
+
+        .input_none {
+            display: block;
+        }
+
+        .input_duk {
+            display: none;
+        }
+
+        .ps_p p {
+            font-size: 21px;
+        }
+
+        .ps_btn button {
+            width: 110px;
+            font-size: 15px;
+            border: 1px solid #832625;
+            width: 110px;
+            height: 40px;
+            border-radius: 5px;
+            background: #832625;
+            color: white;
+        }
+    }
+    @media screen and (max-width: 294px) {
+        .input_box2{
+            margin-left: -30px;
+        }
+        .input_box3{
+            margin-left: -30px;
+        }
+        .input_box4{
+            margin-left: -30px;
         }
     }
 </style>
@@ -303,7 +455,8 @@ include('../../server/client/authorization/index.php');
                 <form method="POST">
                     <div class="input_box1">
                         <label>Edit profile</label>
-                        <input type="text" value="Change Profile" readonly>
+                        <input class="input_duk" type="text" value="Change Profile" readonly>
+                        <input class="input_none" type="text" value="Profile" readonly>
                     </div>
 
                     <div class="input_box2">

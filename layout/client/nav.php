@@ -63,6 +63,28 @@ updateLastLoginDate();
         }
         
     }
+    @media screen and (max-width: 490px) {
+        #indusind_login{
+            width: 200px;
+            white-space: wrap;
+            line-height: 20px;
+            display: flex;
+            align-items: center;
+        }
+    }
+    @media screen and (max-width: 426px) {
+        #indusind_login{
+            display: none;
+        }
+    }
+    @media screen and (max-width: 256px) {
+        #indusind{
+            font-size: 20px;
+        }
+        #indusind_login{
+            display: none;
+        }
+    }
 </style>
 <nav id="logo-sidebar2" class="fixed top-0 z-50 h-100px w-full bg-red border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
     <div class="px-3 py-3 lg:px-5 lg:pl-3">
@@ -89,7 +111,7 @@ updateLastLoginDate();
 
                     <a href="#" class="flex ms-2 md:me-24">
 
-                        <span class="self-center text-3xl  sm:text-3xl whitespace-nowrap white:text-white" id="indusind_welcome">welcome || <span class="username"><?= $fullname  ?></span></span>
+                        <span class="self-center text-3xl  sm:text-3xl whitespace-nowrap white:text-white" id="indusind_welcome">welcome || <span class="username"><?  ?></span></span>
                     </a>
                 </div>
             </div>
