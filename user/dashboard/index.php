@@ -18,12 +18,18 @@ include('../../server/config.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/png" href="/assets/css/components/img/favicon.ico"
+    <link rel="icon" type="image/png" href="../../assets/css/components/img/favicon.ico" sizes="32x32">
+
+    <link rel="icon" type="image/png" href="../../assets/css/components/img/favicon.ico" sizes="64x64">
+
+    <link rel="icon" type="image/png" href="../../assets/css/components/img/favicon.ico" sizes="128x128">
+
+    <!-- <link rel="icon" type="image/png" href="/assets/css/components/img/favicon.ico"
         sizes="32x32" />
     <link rel="icon" type="image/png" href="/assets/css/components/img/favicon.ico"
         sizes="64x64" />
     <link rel="icon" type="image/png" href="/assets/css/components/img/favicon.ico"
-        sizes="128x128" />
+        sizes="128x128" /> -->
 
     <title>Document</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
