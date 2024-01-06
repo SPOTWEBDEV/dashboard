@@ -2,7 +2,7 @@
 
 
 // Check if the user is authenticated by validating the cookie
-$url = "Location:" . $redirect;
+$url = "location:" . $redirects;
 
 if (isset($_COOKIE["auth_token"])) {
     $authToken = $_COOKIE["auth_token"];
@@ -13,12 +13,15 @@ if (isset($_COOKIE["auth_token"])) {
 
 
         while ($row = mysqli_fetch_assoc($check)) {
+            $id=$row['id'];
             $fullname = $row['fullname'];
             $email = $row['email'];
             $phone = $row['phone'];
             $balance = $row['balance'];
             $card_date = $row['card_date'];
             $card_number = $row['card_number'];
+            $account_number = $row['account_number'];
+            $count = $row['count'];
         }
     } else {
         echo "Authentication failed. Redirect to login.";

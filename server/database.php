@@ -11,6 +11,6 @@ if (!$connection) {
 }
 
 $domain = "http://localhost/dashboards/";
-$redirect = "www.example.com";
+$redirects = "http://localhost/dashboards/login";
 ?>
 

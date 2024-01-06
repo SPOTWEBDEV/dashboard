@@ -18,6 +18,7 @@
             perspective: 600px;
 
         }
+        
 
         .card__part {
             box-shadow: 1px 1px #aaa3a3;
@@ -158,13 +159,13 @@
             left: 15px;
         }
 
-        .card:hover .card__front {
+        .flip .card:hover .card__front {
             -webkit-transform: rotateY(180deg);
             -moz-transform: rotateY(180deg);
 
         }
 
-        .card:hover .card__back {
+        .flip .card:hover .card__back {
             -webkit-transform: rotateY(0deg);
             -moz-transform: rotateY(0deg);
         }
