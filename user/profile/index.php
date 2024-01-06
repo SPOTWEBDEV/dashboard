@@ -86,13 +86,36 @@ include('../../server/client/authorization/index.php');
         margin-bottom: -16px;
         margin-left: 27px;
     }
-    form{
+
+    .inputs_holder{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    form {
         margin-left: 40px;
         margin-top: 15px;
     }
-    .input_box1 input{
+
+    .input_box1 {
+        margin-left: 30px;
+    }
+    .input_box2 {
+        display: flex;
+        align-items: center;
+    }
+    .input_box3 {
+        display: flex;
+        align-items: center;
+    }
+    .input_box4 {
+        display: flex;
+        align-items: center;
+    }
+
+    .input_box1 input {
         border-radius: 8px;
-        width: 17%;
+        width: 40%;
         height: 35px;
         font-weight: 600;
         text-align: center;
@@ -101,49 +124,83 @@ include('../../server/client/authorization/index.php');
         border: 3px solid #832625;
         margin-left: 30px;
     }
-    .input_box2 input{
+
+    .input_box2 input {
         border-radius: 5px;
-        width: 40%;
-        height: 35px;
+        width: 100%;
+        height: 30px;
         font-weight: 600;
-        text-align: center;
         color: #832625;
-        background: rgb(131, 38, 37, 0.1);
         border: 1px solid #832625;
         margin-left: 60px;
+        margin-top: 25px;
     }
-    .input_box3 input{
+
+    .input_box3 input {
         border-radius: 5px;
-        width: 40%;
-        height: 35px;
+        width: 100%;
+        height: 30px;
         font-weight: 600;
-        text-align: center;
         color: #832625;
-        background: rgb(131, 38, 37, 0.1);
         border: 1px solid #832625;
         margin-left: 60px;
+        margin-top: 25px;
     }
-    .input_box4 input{
+
+    .input_box4 input {
         border-radius: 5px;
-        width: 40%;
-        height: 35px;
+        width: 100%;
+        height: 30px;
         font-weight: 600;
-        text-align: center;
         color: #832625;
-        background: rgb(131, 38, 37, 0.1);
         border: 1px solid #832625;
         margin-left: 60px;
+        margin-top: 25px;
     }
-    .input_box1 label{
+
+    .input_box1 label {
         font-weight: 600;
     }
-    .input_box2 label{
+
+    .input_box2 label {
         font-weight: 600;
+        margin-bottom: -20px;
     }
-    .input_box3 label{
+
+    .input_box3 label {
         font-weight: 600;
+        margin-bottom: -20px;
     }
-    .input_box4 label{
+
+    .input_box4 label {
+        font-weight: 600;
+        margin-bottom: -20px;
+    }
+
+
+    .profile_spec {
+        width: 40%;
+        height: 20vh;
+        margin-top: 80px;
+        margin-right: 40px;
+        border: 1px solid #832625;
+        background: #832625;
+        color: white;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .step_P1{
+        font-weight: 600;
+        font-size: 24px;
+    }
+    .steps_num{
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        margin-top: 28px;
+    }
+    .steps_num p{
+        font-size: 17px;
         font-weight: 600;
     }
 </style>
@@ -183,20 +240,34 @@ include('../../server/client/authorization/index.php');
                     </div>
 
                     <div class="input_box2">
-                        <label>Edit profile</label>
+                        <label>Name</label>
                         <input type="text">
                     </div>
 
                     <div class="input_box3">
-                        <label>Edit profile</label>
+                        <label>Phone</label>
                         <input type="text">
                     </div>
 
                     <div class="input_box4">
-                        <label>Edit profile</label>
+                        <label>Email</label>
                         <input type="text">
                     </div>
                 </form>
+
+
+
+                <div class="profile_spec">
+                    <div class="steps">
+                        <p class="step_P1">Steps</p>
+
+                        <div class="steps_num">
+                            <p>1: number</p>
+                            <p>2 : number</p>
+                            <p>3 : number</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
