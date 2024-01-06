@@ -1,0 +1,495 @@
+.about-weare .bg-grey-sdark {
+    background: #f8f8f8;
+}
+
+.about-history-wrp {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-history {
+    position: relative;
+}
+
+.about-history .swiper-container {
+    width: 100%;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-history .swiper-button-next {
+    margin-top: 0px;
+    position: absolute;
+    top: auto;
+    right: 50%;
+    width: 45px;
+    height: 45px;
+    transform: translate(50%, 0%) rotate(90deg);
+    background-size: 20px;
+}
+
+.about-history .swiper-button-prev {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    left: 50%;
+    width: 45px;
+    height: 45px;
+    transform: translate(-50%, 0%) rotate(90deg);
+    margin-top: 0px;
+    background-size: 20px;
+}
+
+.about-history .swiper-slide {
+    background: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.about-history .swiper-slide:after,
+.about-history .swiper-slide:before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    transform: translate(-50%, 0%);
+    height: 28%;
+    width: 2px;
+    background: #ff9a00;
+}
+
+.about-history .swiper-slide:after {
+    bottom: 0px;
+}
+
+.about-history .swiper-slide:before {
+    top: 0px;
+}
+
+.about-history .about-thumbs .swiper-slide-thumb-active {
+    color: #ff9a00;
+    font-weight: 400;
+}
+
+.journey_slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.swiper-wrapper {
+    perspective: 1px;
+}
+
+.milestone-wrp {
+    color: #fff;
+}
+
+.milestone-wrp .headding {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: baseline;
+    color: #fff;
+    line-height: 30px;
+}
+
+.milestone-wrp .headding span {
+    position: relative;
+    font-size: 1.25rem;
+    padding-left: 10px;
+    margin-left: 7px;
+    color: #a6a6a6;
+}
+
+.milestone-wrp .headding span:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    content: '';
+    border-left: 1px solid #ff9a00;
+    height: 100%;
+    width: 1px;
+}
+
+/* .milestone-wrp .milestoneslider{overflow: hidden;} */
+
+.milestone-wrp .milestoneslider .slidermile {
+    min-height: 395px;
+}
+
+.milestone-wrp .milestoneslider .slidermile h5 {
+    color: #ff9a00;
+    font-family: 'Myriad Pro' !important;
+}
+
+.milestone-wrp .milestoneslider .slidermile .imgbx {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.milestone-wrp .milestoneslider .slidermile .imgbx img {
+    max-width: 100% !important;
+    width: auto !important;
+}
+
+.milestone-wrp .milestoneslider .slidermile p {
+    width: 85%;
+}
+
+.milestone-wrp .milestoneslider .slidermile .btn-card {
+    font-size: 12px;
+}
+
+.milestone-wrp .milestoneslider .slidermile figure .awards-bg li {
+    background: url(../../assets/img/aboutus/award-box.png) no-repeat;
+    background-size: 100%;
+    margin: 0 40px 0 0;
+    font-size: 10px;
+    width: 122px;
+    height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 30px;
+    text-align: center;
+    line-height: normal;
+}
+
+.history_inner .swiper-pagination {
+    display: flex;
+}
+
+.history_inner .swiper-pagination-bullet {
+    border-radius: 0px;
+    width: 30%;
+    position: relative;
+    height: 1px;
+    background: #6d7175;
+    opacity: 1;
+}
+
+.history_inner .swiper-pagination-bullet:after {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    content: '';
+    z-index: -1;
+}
+
+.history_inner .swiper-pagination-bullet-active {
+    background: #6d7175;
+    opacity: 1;
+}
+
+.history_inner .swiper-pagination-bullet-active:after {
+    height: 1px;
+    width: 100%;
+    bottom: 0px;
+    opacity: 1;
+    z-index: 1;
+    animation: bg 4.8s linear infinite;
+}
+
+.history_inner .swiper-pagination-bullet-active.pauseanimation:after {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+@keyframes bg {
+    0% {
+        background: #ff9a00;
+        width: 0%;
+    }
+    25% {
+        background: #ff9a00;
+        width: 25%;
+    }
+    50% {
+        background: #ff9a00;
+        width: 50%;
+    }
+    100% {
+        background: #ff9a00;
+        width: 100%;
+    }
+}
+
+.modal_milestone .modal-lg {
+    max-width: 1135px;
+}
+
+.modal_milestone .headding {
+    font-size: 24px;
+    display: flex;
+    align-items: baseline;
+    color: #000000;
+    margin-left: -8px;
+}
+
+.modal_milestone .headding span {
+    position: relative;
+    font-size: 42px;
+    padding-right: 10px;
+    margin-right: 7px;
+    font-weight: 700;
+    color: #000000;
+    line-height: 40px;
+}
+
+.modal_milestone .headding span:after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    content: '';
+    border-left: 1px solid #ff9a00;
+    height: 100%;
+    width: 1px;
+}
+
+.modal_milestone .slidermile .imgbx {
+    min-width: 312px;
+}
+
+.modal_milestone .slidermile .imgbx img {
+    max-width: 100% !important;
+    width: auto !important;
+}
+
+.modal_milestone .slidermile figure .awards-bg {
+    justify-content: space-between;
+}
+
+.modal_milestone .slidermile figure .awards-bg li {
+    background: url(../../assets/img/aboutus/award-box.png) no-repeat;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    width: 197px;
+    height: 136px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 30px;
+    text-align: center;
+    line-height: normal;
+}
+
+.journey_slider picture img {
+    width: 100%;
+}
+
+.slidework {
+    cursor: pointer;
+}
+
+@media (max-width: 1169px) {
+    .milestone-wrp .milestoneslider .slidermile {
+        min-height: 360px;
+    }
+    .about-history {
+        margin: 60px 0 0 0;
+    }
+    .about-history .swiper-container {
+        height: 350px;
+    }
+    .modal_milestone .modal-lg {
+        width: 100%;
+    }
+}
+
+@media (max-width: 990px) {
+    .milestone-wrp .milestoneslider .slidermile {
+        min-height: 385px;
+    }
+    .meetbtns a {
+        font-size: 12px;
+    }
+    .allmember .memberbox .namewish h6 {
+        font-size: 18px;
+    }
+    .modal_milestone .slidermile figure .awards-bg li {
+        width: 23%;
+        height: auto;
+        background-size: 100%;
+        padding: 28px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-history .swiper-container {
+        height: auto;
+        width: 90%;
+    }
+    .journey_slider {
+        position: relative;
+    }
+    .about-history .swiper-button-next {
+        top: 14px;
+        right: 0;
+        transform: translate(50%, 0%) rotate(0deg);
+    }
+    .about-history .swiper-button-prev {
+        top: 14px;
+        left: 0px;
+        transform: translate(-50%, 0%) rotate(0deg);
+    }
+    .milestone-wrp .milestoneslider .slidermile h5 {
+        min-height: auto;
+    }
+    .milestone-wrp .milestoneslider .slidermile p {
+        width: 100%;
+    }
+    .milestone-wrp .milestoneslider .slidermile {
+        min-height: 340px;
+    }
+    .about-history {
+        margin: 20px 0 0 0;
+    }
+    .about-history-wrp {
+        height: auto;
+    }
+    .slidework {
+        height: 48px;
+        font-weight: 400;
+        font-size: 12px;
+    }
+    .about-history .swiper-slide:after,
+    .about-history .swiper-slide:before {
+        left: 0;
+        transform: translate(0%, -50%);
+        height: 2px;
+        width: 101%;
+    }
+    .about-history .swiper-slide:after {
+        bottom: 9px;
+        top: auto;
+        right: 0px;
+        left: auto;
+    }
+    .about-history .swiper-slide:before {
+        top: auto;
+        bottom: 1px;
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        border-radius: 5px;
+        z-index: 1;
+        left: 50%;
+    }
+    .about-history .swiper-slide-thumb-active:before {
+        width: 6px;
+        height: 6px;
+        bottom: 5px;
+        background: #832625;
+        border-radius: 5px;
+        z-index: 1;
+        left: 50%;
+        box-shadow: 0 0 0px 6px #ff9a00;
+    }
+    .about-history .swiper-slide-thumb-active .slidework {
+        font-size: 16px;
+    }
+    .journey_slider {
+        position: relative;
+        min-height: 465px;
+        background: #0c0c0c;
+    }
+    .modal_milestone .slidermile figure .awards-bg li {
+        padding: 21px;
+        font-size: 12px;
+    }
+    .modal_milestone .flex-sm-wrap-modal {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 599px) {
+    .milestone-wrp .milestoneslider .slidermile {
+        min-height: 295px;
+    }
+    .modal_milestone .modal-lg {
+        margin: 0px;
+    }
+    .modal_milestone .slidermile figure .awards-bg {
+        flex-wrap: wrap;
+    }
+    .modal_milestone .slidermile figure .awards-bg li {
+        padding: 25px;
+        width: 32%;
+        margin-bottom: 10px;
+    }
+    .modal_milestone .slidermile figure {
+        padding: 0px !important;
+    }
+}
+
+@media (max-width: 479px) {
+    .journey_slider {
+        min-height: 880px;
+    }
+    .milestone-wrp .milestoneslider .slidermile {
+        min-height: 325px;
+    }
+    .modal_milestone .slidermile .imgbx {
+        margin: 0px !important;
+        padding-bottom: 10px;
+        min-width: 295px;
+    }
+    .modal_milestone .slidermile .mileimgtxt p {
+        font-size: 14px;
+        line-height: normal;
+    }
+    .modal_milestone .headding span {
+        font-size: 36px;
+    }
+    .modal_milestone .slidermile figure .awards-bg li {
+        width: 46%;
+    }
+}
+
+.award_list_carousel ul {
+    margin: 0;
+    padding: 0;
+}
+
+.award_list_carousel ul li {
+    padding: 0 0 0 30px;
+    margin: 0 0 10px;
+    position: relative;
+}
+
+.award_list_carousel ul li:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "\f105";
+    font-family: "Font Awesome 5 Pro";
+    color: #fff;
+}
+
+.award_list_carousel {
+    padding-bottom: 45px;
+}
+
+.swiper-container.history_inner {
+    padding-bottom: 40px;
+}
+
+.history_inner .swiper-pagination {
+    bottom: 0;
+}

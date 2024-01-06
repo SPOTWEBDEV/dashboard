@@ -1,0 +1,95 @@
+.contact-top .contactblock p {
+    min-height: 45px;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+
+.contact-top .contactblock p span {
+    display: block;
+}
+
+.contact-top .contactblock a {
+    font-family: 'Lucida Sans' !important;
+    font-size: 12px;
+    font-weight: 600;
+    color: #832625;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6px
+}
+
+.contactblock .iconblock {
+    margin-bottom: 15px;
+    height: 72px;
+    display: flex
+}
+
+.contactblock .iconblock img {
+    width: auto;
+    max-height: 72px;
+    margin: 0 auto;
+    max-width: 120px
+}
+
+@media (max-width: 990px) {
+    .contact-top>.row>.col {
+        width: 33%;
+        max-width: 33%;
+        min-width: 185px;
+    }
+    .contact-top>.row>.col:nth-child(4) .contactblock p,
+    .contact-top>.row>.col:nth-child(5) .contactblock p {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-top>.row>.col {
+        width: 50%;
+        max-width: 50%;
+    }
+    .contact-top>.row>.col:nth-child(4) .contactblock p {
+        min-height: 45px;
+    }
+}
+
+@media (max-width: 599px) {
+    .contact-top .contactblock .iconblock {
+        width: 99%;
+        margin: 0 auto;
+    }
+    .contact-top .contactblock.c-office p {
+        min-height: auto;
+        font-size: 14px;
+        padding-bottom: 5px;
+    }
+}
+
+@media (max-width: 479px) {
+    .contact-top .contactblock p {
+        min-height: 36px;
+        line-height: normal;
+        margin-bottom: 5px;
+        font-size: 13px;
+    }
+    .contact-top>.row>.col:nth-child(4) .contactblock p {
+        min-height: 36px;
+    }
+    .contact-top>.row>.col {
+        min-width: 50%;
+    }
+    .contact-top .contactblock.c-office p {
+        font-size: 13px;
+    }
+}
+
+#ReachUs {
+    border-top: solid 1px #832625;
+    padding-top: 20px;
+}
+
+#ReachUs.bg-grey {
+    border-top: none;
+    padding-top: 0;
+}

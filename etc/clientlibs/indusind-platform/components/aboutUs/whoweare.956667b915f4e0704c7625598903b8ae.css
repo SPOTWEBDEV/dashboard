@@ -1,0 +1,27 @@
+.about-weare .bg-grey-sdark {
+    background: #f8f8f8;
+}
+
+.about_vision figure img {
+    height: 56px;
+}
+
+.about_mission figure img {
+    height: auto;
+    width: 60%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1169px) {}
+
+@media (max-width: 990px) {}
+
+@media (max-width: 767px) {
+    .about_mission {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 599px) {}
+
+@media (max-width: 479px) {}

@@ -1,0 +1,28 @@
+figure.aword {
+    background: url(../../assets/icons/award-box.png) no-repeat;
+    margin: 15px auto;
+    font-size: 10px;
+    font-weight: 600;
+    width: 125px;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 30px;
+    text-align: center;
+    line-height: normal;
+    background-size: 100%;
+}
+
+.arrowaligntxt {
+    margin-right: 100px;
+}
+
+@media (max-width:767px) {
+    .arrowaligntxt {
+        margin-right: 0px;
+        margin-bottom: 35px;
+    }
+    /*.privileges_section.benefitCarousels .heading h2{padding-right: 80px}*/
+}

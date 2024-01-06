@@ -1,0 +1,186 @@
+.financial_filters .select_wrap .select-full {
+    padding: 12px 30px 10px 10px;
+    border: solid 1px #d9d9d9;
+    margin: 0;
+    border-radius: 5px;
+    color: #000;
+}
+
+.financial_filters .select_wrap .select-full:after {
+    top: 12px;
+    right: 15px;
+}
+
+.statement_table thead th {
+    padding: 7px 15px;
+    background-color: #832625;
+    color: #fff;
+    border: none;
+}
+
+.statement_table thead th:first-child {
+    border-top-left-radius: 5px;
+}
+
+.statement_table thead th:last-child {
+    border-top-right-radius: 5px;
+}
+
+.statement_table tbody th,
+.statement_table tbody td {
+    padding: 2px 15px;
+    border: none;
+}
+
+.statement_table tbody th {
+    padding: 6px 15px;
+}
+
+.statement_table tbody th {
+    color: #832625;
+}
+
+.statement_table tbody td {
+    color: #000;
+    border: none;
+}
+
+.statement_table tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.blank_row {
+    background-color: #fff !important;
+}
+
+.statement_table .total_row td {
+    font-weight: bold;
+}
+
+.graph_card.top-mrgn {
+    margin-top: 55px;
+}
+
+.card_tabs_lists .link_row {
+    padding: 0;
+}
+
+.card_tabs_lists .link_row li {
+    list-style: none;
+}
+
+.card_tabs_lists .link_row li a {
+    display: flex;
+    position: relative;
+    align-items: top;
+}
+
+.card_tabs_lists .link_row li a img {
+    width: 30px;
+    height: 35px;
+    margin-right: 15px;
+}
+
+.investor_announcements {
+    background: url(img/investors/announcement_bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.bg_stockexchng {
+    background: #fff url(img/backgrounds/stock_bg.png) no-repeat center top;
+}
+
+.investor_announcements .stock_chart .stockval {
+    font-size: 1.5rem;
+}
+
+.list_with_line li {
+    margin: 0 0 20px;
+    padding: 0 0 20px;
+    border-bottom: solid 1px #ccc;
+}
+
+.list_with_line li:first-child {
+    margin-top: 10px;
+}
+
+.list_with_line li:last-child {
+    padding: 0;
+    border: none;
+}
+
+.report_list li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+    border-bottom: solid 1px #ccc;
+    padding-left: 90px;
+    min-height: 80px;
+}
+
+.report_list li:first-child {
+    margin-top: 10px;
+}
+
+.report_list li:last-child {
+    border: none;
+}
+
+.report_list li figure {
+    width: 80px;
+    margin-right: 12px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.report_list li figure img {
+    width: 100%;
+}
+
+.report_list li a {
+    position: relative;
+    padding-left: 40px;
+    line-height: 1.4;
+    word-wrap: anywhere;
+}
+
+.report_list li a img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+}
+
+.corp_governance .col_brdr {
+    border-right: solid 1px #ccc;
+    margin-bottom: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.corp_governance .col_brdr:nth-child(3n),
+.corp_governance .col_brdr:last-child {
+    border: none;
+}
+
+@media (max-width: 992px) {
+    .corp_governance .col_brdr {
+        border-right: none;
+    }
+    .corp_governance .col_brdr:nth-child(odd) {
+        border-right: solid 1px #ccc;
+    }
+    .corp_governance .col_brdr:last-child {
+        border: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .corp_governance .col_brdr,
+    .corp_governance .col_brdr:nth-child(odd) {
+        border: none;
+    }
+}
