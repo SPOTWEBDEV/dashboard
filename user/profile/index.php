@@ -18,14 +18,29 @@ if (isset($_POST['save'])) {
 
         $update = mysqli_query($connection, "UPDATE `clients` SET `fullname`='$name' , `phone`='$number' , `email`='$email' WHERE `id`='$id'");
 
-        if ($update) {
-            echo '<script>alert("Profile changed succsessfully")</script>';
-        } else {
-            echo '<script>alert("Error changing profile: Try again later")</script>';
-        }
-    } else {
-        echo '<script>alert("Error changing profile: Try again later")</script>';
-    }
+        if ($update) {?>
+            <script>
+                alert(' The IndusNet Profile changed successfully. ');
+
+                // location.reload();
+                window.open('./index.php', '_self')
+            </script>
+       <?php } else {?>
+            <script>
+                alert(' The IndusNet Profile cannot be edited. Please re-enter ');
+
+                // location.reload();
+                window.open('./index.php', '_self')
+            </script>
+    <?php  }
+    } else {?>
+        <script>
+                alert(' The IndusNet Input is empty please input something. ');
+
+                // location.reload();
+                window.open('./index.php', '_self')
+        </script>
+<?php }
 }
 
 
