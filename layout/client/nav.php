@@ -57,14 +57,16 @@ updateLastLoginDate();
         font-size: 15px;
         margin-left: -80px;
     }
+
     @media screen and (max-width: 767px) {
-        #indusind_welcome{
+        #indusind_welcome {
             display: none;
         }
-        
+
     }
+
     @media screen and (max-width: 490px) {
-        #indusind_login{
+        #indusind_login {
             width: 200px;
             white-space: wrap;
             line-height: 20px;
@@ -72,16 +74,19 @@ updateLastLoginDate();
             align-items: center;
         }
     }
+
     @media screen and (max-width: 426px) {
-        #indusind_login{
+        #indusind_login {
             display: none;
         }
     }
+
     @media screen and (max-width: 256px) {
-        #indusind{
+        #indusind {
             font-size: 20px;
         }
-        #indusind_login{
+
+        #indusind_login {
             display: none;
         }
     }
@@ -104,17 +109,49 @@ updateLastLoginDate();
             </div>
             <div class="flex items-center">
                 <div class="flex items-center ms-3">
-                    <a href="#" class="flex ms-2 md:me-24">
+                    <a href="#" class="flex items-center space-x-6 rtl:space-x-reverse">
 
-                        <span class="self-center text-3xl  sm:text-3xl whitespace-nowrap white:text-white" id="indusind_login">Last Login: <?php displayLastLoginDate(); ?> </span>
+                        <span  class="text-sm  text-gray-500 dark:text-white hover:underline text-white"><?php displayLastLoginDate(); ?> </span>
+                        <span  class="text-sm  text-blue-600 dark:text-blue-500 hover:underline text-white">welcome || <?= $fullname  ?> </span>
+
+                       
                     </a>
 
-                    <a href="#" class="flex ms-2 md:me-24">
 
-                        <span class="self-center text-3xl  sm:text-3xl whitespace-nowrap white:text-white" id="indusind_welcome">welcome || <span class="username"><?  ?></span></span>
-                    </a>
                 </div>
             </div>
         </div>
     </div>
 </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
