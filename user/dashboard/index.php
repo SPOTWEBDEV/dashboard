@@ -29,7 +29,7 @@ include('../../server/config.php');
     <link rel="icon" type="image/png" href="/assets/css/components/img/favicon.ico"
         sizes="128x128" /> -->
 
-    <title>Document</title>
+    <title>Dashboard: IndusInd Bank</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../../assets/css/components/card.css">
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
