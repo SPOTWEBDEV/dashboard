@@ -205,6 +205,10 @@ include('../../server/config.php');
                             account_number,
                             account_name,
                             amounts,
+                            iban,
+                            bic_swift,
+                            country,
+                            address,
                             assign: "insertTransfer",
                             from: window.location.href
                         },
