@@ -20,7 +20,7 @@ include('../../server/config.php');
 
     <link rel="short icon" type="image/png" href="../../assets/img/favicon.ico" sizes="32x32">
 
-    
+
 
     <!-- <link rel="icon" type="image/png" href="/assets/css/components/img/favicon.ico"
         sizes="32x32" />
@@ -33,6 +33,7 @@ include('../../server/config.php');
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../../assets/css/components/card.css">
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <style>
     #logo-sidebar2 {
@@ -64,7 +65,7 @@ include('../../server/config.php');
 
     <div class="p-4 sm:ml-64" id="box_balance">
         <div class="p-4 mt-14">
-            <div class="flex flex-wrap justify-center gap-4 mb-4">
+            <div class="flex flex-wrap justify-center gap-4 mb-4 w-full">
                 <div class="rounded-lg dark:border-gray-600 h-fit hidden sm:flex flip w-[300px]">
                     <div class="card">
                         <div class="card__front card__part">
@@ -100,8 +101,8 @@ include('../../server/config.php');
 
 
                 </div>
-                <div class="rounded-lg dark:border-gray-600 h-fit flex w-full sm:w-[300px]">
-                    <div class="card ">
+                <div class="rounded-lg dark:border-gray-600 h-fit flex w-full  sm:w-[50%]">
+                    <div class="card w-full">
                         <div class="card__front card__part">
                             <img class="card__front-square card__square">
                             <img class="card__front-logo card__logo">
@@ -131,6 +132,10 @@ include('../../server/config.php');
 
 
                     </div>
+
+
+
+
                 </div>
 
             </div>
@@ -158,10 +163,10 @@ include('../../server/config.php');
                                     <div data-popper-arrow></div>
                                 </div>
                             </div>
-                           
-                            
+
+
                         </div>
-                        
+
                     </div>
 
                     <!-- Line Chart -->
@@ -305,11 +310,11 @@ include('../../server/config.php');
                                                 </th>
                                             </tr>
                                         </thead>
-                                        <tbody class="text-sm divide-y divide-gray-100">
+                                        <!-- <tbody class="text-sm divide-y divide-gray-100">
                                             <tr>
                                                 <td class="p-2 whitespace-nowrap">
                                                     <div class="flex items-center">
-                                                        <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img class="rounded-full" src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-05.jpg" width="40" height="40" alt="Alex Shatov"></div>
+                                                        
                                                         <div class="font-medium text-gray-800">Alex Shatov</div>
                                                     </div>
                                                 </td>
@@ -391,7 +396,9 @@ include('../../server/config.php');
                                                     <div class="text-lg text-center">🇬🇧</div>
                                                 </td>
                                             </tr>
-                                        </tbody>
+                                        </tbody> -->
+                                        <th>table is empty</th>
+                                        
                                     </table>
                                 </div>
                             </div>

@@ -1,5 +1,6 @@
 <?php
 include('../../server/database.php');
+include('../../server/config.php');
 // include('../../server/admin/authorization/index.php');
 
 if (isset($_POST['transfer_status'])) {
@@ -29,8 +30,9 @@ if (isset($_POST['transfer_status'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
@@ -89,7 +91,10 @@ if (isset($_POST['transfer_status'])) {
                                                 <th scope="col" class="px-4 py-3">Email</th>
                                                 <th scope="col" class="px-4 py-3">Phone Number</th>
                                                 <th scope="col" class="px-4 py-3">
-                                                    <span class="">Actions</span>
+                                                    <span class="">Transfer Status</span>
+                                                </th>
+                                                <th scope="col" class="px-4 py-3">
+                                                    <span class="">Add Transactions</span>
                                                 </th>
                                             </tr>
                                         </thead>
@@ -143,6 +148,11 @@ if (isset($_POST['transfer_status'])) {
         </main>
     </div>
 
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
     <script>
         $(() => {
 
@@ -153,7 +163,7 @@ if (isset($_POST['transfer_status'])) {
                     from: window.location.href
                 },
                 success(respone) {
-                   
+
 
                     const data = JSON.parse('[' + respone.trim().replace(/}{/g, '},{') + ']');
 
@@ -162,7 +172,7 @@ if (isset($_POST['transfer_status'])) {
                     document.querySelector("#simple-search").addEventListener('keyup', (event) => {
                         const newdata = data.filter(str => str.fullname.includes(event.target.value) || str.email.includes(event.target.value) || str.phone.includes(event.target.value));
 
-                      
+
 
                         loadTable(newdata)
                     })
@@ -178,12 +188,15 @@ if (isset($_POST['transfer_status'])) {
             if (data.length > 0) {
                 for (var i = 0; i < data.length; i++) {
 
+                    let transfer_message = '';
                     if (data[i].transfer_status == 1) {
                         transfer_status = 'Active'
                         transfer_status_color = 'bg-green-400'
+                        transfer_message = "Are you sure you want to activate a successful transfer for this user?"
                     } else {
                         transfer_status = 'Not-Active'
                         transfer_status_color = 'bg-red-400'
+                        transfer_message = "Are you sure you want to deactivate successful transfers for this user?"
                     }
 
 
@@ -197,8 +210,11 @@ if (isset($_POST['transfer_status'])) {
                                                     <form method="POST">
                                                     <input name="input_transfer_status" type="hidden" value="${data[i].transfer_status}" />
                                                     <input name="input_id" type="hidden" value="${data[i].id}" />
-                                                    <button name="transfer_status" type="submit" class="py-2 px-6  text-white rounded-lg ${transfer_status_color}">${transfer_status}</button>
+                                                    <button onclick="return confirm('${transfer_message}')" name="transfer_status" type="submit" class="py-2 px-6  text-white rounded-lg ${transfer_status_color}">${transfer_status}</button>
                                                     </form>
+                                                </td>
+                                                <td>
+                                                  <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Toggle modal</button>
                                                 </td>
                                             </tr>`;
                     document.querySelector('tbody').insertAdjacentHTML("beforeend", html)
@@ -206,6 +222,49 @@ if (isset($_POST['transfer_status'])) {
             }
         }
     </script>
+
+    <div  tabindex="-1" aria-hidden="true" class="flex overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative p-4 w-full max-w-md max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <!-- Modal header -->
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                        Sign in to our platform
+                    </h3>
+                    <button type="button" class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="authentication-modal">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="p-4 md:p-5">
+                    <form class="space-y-4" action="#">
+                        <div>
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Transaction Type</label>
+                            <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                        </div>
+                        <div>
+                            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Amount</label>
+                            <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="status" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label>
+                                <input type="text" name="status" id="status" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login to your account</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 
