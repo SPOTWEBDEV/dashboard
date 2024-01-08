@@ -99,19 +99,19 @@ include('../../server/config.php');
                                 </div>
                                 <div class="col-span-2">
                                     <label for="name" class="transferInput block mb-2 text-sm font-medium text-gray-900 dark:text-white ">IBAN</label>
-                                    <input type="number" name="IBAN" id="name" class="iban bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type Account Number" required="">
+                                    <input type="number" name="iban" id="iban" class="iban bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type Account Number" required="">
                                 </div>
                                 <div class="col-span-2">
                                     <label for="name" class="transferInput block mb-2 text-sm font-medium text-gray-900 dark:text-white ">BIC/SWIFT</label>
-                                    <input type="number" name="BIC/SWIFT" id="name" class="bic_swift bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter BIC/SWIFT" required="">
+                                    <input type="number" name="bic_swift" id="bic_swift" class="bic_swift bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter BIC/SWIFT" required="">
                                 </div>
                                 <div class="col-span-2">
                                     <label for="name" class="transferInput block mb-2 text-sm font-medium text-gray-900 dark:text-white ">Country</label>
-                                    <input type="number" name="country" id="name" class="country bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter Country" required="">
+                                    <input type="number" name="country" id="country" class="country bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter Country" required="">
                                 </div>
                                 <div class="col-span-2">
                                     <label for="name" class="transferInput block mb-2 text-sm font-medium text-gray-900 dark:text-white ">Address</label>
-                                    <input type="number" name="Address" id="name" class="address bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter Address" required="">
+                                    <input type="number" name="address" id="address" class="address bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter Address" required="">
                                 </div>
 
 
@@ -188,10 +188,10 @@ include('../../server/config.php');
                 let account_number = $('.account_number').val()
                 let account_name = $('.account_name').val()
                 let amounts = $('.amounts').val()
-                let iban = $('.account_number').val()
-                let bic_swift = $('.account_name').val()
-                let country = $('.amounts').val()
-                let address = $('.amounts').val()
+                let iban = $('.iban').val()
+                let bic_swift = $('.bic_swift').val()
+                let country = $('.country').val()
+                let address = $('.address').val()
 
                 $(() => {
 

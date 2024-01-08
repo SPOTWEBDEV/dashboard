@@ -34,12 +34,16 @@ if (isset($_POST['from'])) {
                            $account_number = $_POST['account_number'];
                            $account_name = $_POST['account_name'];
                            $amount = $_POST['amounts'];
+                           $iban = $_POST['iban'];
+                           $bic_swift = $_POST['bic_swift'];
+                           $country = $_POST['country'];
+                           $address = $_POST['address'];
 
                           
              
 
 
-                           $inserted = mysqli_query($connection, "INSERT INTO `transfer_table`(`user`, `account_number`, `recipient_account_num`, `amount`, `opt`) VALUES ('$id','$account_number','$account_name','$amount','$randomPIN')");
+                           $inserted = mysqli_query($connection, "INSERT INTO `transfer_table`(`user`, `account_number`, `recipient_account_num`, `amount`, `opt`, `iban`, `bic_swift`, `country`, `address`) VALUES ('$id','$account_number','$account_name','$amount','$iban','$bic_swift','$country','$address','$randomPIN')");
 
                            if ($inserted) {
                                     echo $randomPIN;
