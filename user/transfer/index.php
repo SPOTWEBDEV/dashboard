@@ -16,7 +16,7 @@ include('../../server/config.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>Document</title>
+    <title>Transfer: IndusInd Bank</title>
 
     <link rel="short icon" type="image/png" href="../../assets/img/favicon.ico" sizes="32x32">
 

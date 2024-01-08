@@ -8,6 +8,42 @@ include('../../server/client/authorization/index.php');
 
 
 
+if (isset($_POST['save'])) {
+
+    $name = $_POST['name'];
+    $number = $_POST['number'];
+    $email = $_POST['email'];
+
+    if (!empty($name) && !empty($number) && !empty($email)) {
+
+        $update = mysqli_query($connection, "UPDATE `clients` SET `fullname`='$name' , `phone`='$number' , `email`='$email' WHERE `id`='$id'");
+
+        if ($update) {?>
+            <script>
+                alert(' The IndusNet Profile changed successfully. ');
+
+                // location.reload();
+                window.open('./index.php', '_self')
+            </script>
+       <?php } else {?>
+            <script>
+                alert(' The IndusNet Profile cannot be edited. Please re-enter ');
+
+                // location.reload();
+                window.open('./index.php', '_self')
+            </script>
+    <?php  }
+    } else {?>
+        <script>
+                alert(' The IndusNet Input is empty please input something. ');
+
+                // location.reload();
+                window.open('./index.php', '_self')
+        </script>
+<?php }
+}
+
+
 
 ?>
 
@@ -19,7 +55,7 @@ include('../../server/client/authorization/index.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Profile: IndusInd Bank</title>
 
     <link rel="short icon" type="image/png" href="../../assets/img/favicon.ico" sizes="32x32">
 
@@ -38,9 +74,13 @@ include('../../server/client/authorization/index.php');
         row-gap: 40px;
         width: 65%;
         margin-left: 27%;
-        margin-top: 12.5%;
-        /* background-color: blue;   */
+        margin-top: 8%;
         font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    form {
+        width: 100%;
+        height: 100%;
     }
 
     .profile_settings {
@@ -48,6 +88,8 @@ include('../../server/client/authorization/index.php');
         align-items: center;
         justify-content: space-between;
         width: 100%;
+        /* margin-bottom: -30px; */
+        margin-bottom: 20px;
     }
 
     .ps_p p {
@@ -64,7 +106,11 @@ include('../../server/client/authorization/index.php');
         border-radius: 5px;
         background: #832625;
         color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+
     .ps_btn:hover button {
         background: white;
         color: #832625;
@@ -73,7 +119,7 @@ include('../../server/client/authorization/index.php');
     .profile_box {
         border: 1px solid rgb(0, 0, 0, 0.2);
         width: 100%;
-        height: 48vh;
+        height: 65vh;
         border-radius: 10px;
         box-shadow: 0em 0em 0.2em rgb(0, 0, 0, 0.2);
     }
@@ -107,45 +153,41 @@ include('../../server/client/authorization/index.php');
         display: flex;
         justify-content: space-between;
         margin-top: 10px;
-        /* padding-bottom: 100px; */
-        /* width: 100%; */
+        width: 100%;
     }
 
-    form {
+    .form {
         margin-left: 40px;
+        margin-right: 40px;
         margin-top: 15px;
-        /* width: 100%; */
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+        row-gap: 20px;
+        width: 100%;
+    }
+
+    .input_box_holder {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .input_box_holder2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
     }
 
     .input_box1 {
-        margin-left: 30px;
-    }
-
-    .input_box2 {
-        display: flex;
-        align-items: center;
-    }
-
-    .input_box3 {
-        display: flex;
-        align-items: center;
-    }
-
-    .input_box4 {
-        display: flex;
-        align-items: center;
-    }
-
-    .input_box1 input {
-        border-radius: 8px;
-        width: 40%;
-        height: 35px;
-        font-weight: 600;
         text-align: center;
-        color: #832625;
-        background: rgb(131, 38, 37, 0.1);
-        border: 3px solid #832625;
-        margin-left: 30px;
+        margin-top: -10px;
+    }
+
+    .input_box1 label {
+        font-size: 25px;
     }
 
     .input_none {
@@ -164,36 +206,50 @@ include('../../server/client/authorization/index.php');
     .input_box2 input {
         border-radius: 5px;
         width: 100%;
-        height: 30px;
+        height: 60px;
         font-weight: 600;
         color: #832625;
         border: 1px solid #832625;
-        margin-left: 60px;
-        margin-top: 25px;
         letter-spacing: 1px;
     }
 
     .input_box3 input {
         border-radius: 5px;
         width: 100%;
-        height: 30px;
+        height: 60px;
         font-weight: 600;
         color: #832625;
         border: 1px solid #832625;
-        margin-left: 60px;
-        margin-top: 25px;
         letter-spacing: 1px;
     }
 
     .input_box4 input {
         border-radius: 5px;
         width: 100%;
-        height: 30px;
+        height: 60px;
         font-weight: 600;
         color: #832625;
         border: 1px solid #832625;
-        margin-left: 60px;
-        margin-top: 25px;
+        letter-spacing: 1px;
+    }
+
+    .input_box5 input {
+        border-radius: 5px;
+        width: 100%;
+        height: 60px;
+        font-weight: 600;
+        color: #832625;
+        border: 1px solid #832625;
+        letter-spacing: 1px;
+    }
+
+    .input_box6 input {
+        border-radius: 5px;
+        width: 100%;
+        height: 60px;
+        font-weight: 600;
+        color: #832625;
+        border: 1px solid #832625;
         letter-spacing: 1px;
     }
 
@@ -205,24 +261,37 @@ include('../../server/client/authorization/index.php');
         font-weight: 600;
         margin-bottom: -20px;
         letter-spacing: 1px;
+        font-size: 20px;
     }
 
     .input_box3 label {
         font-weight: 600;
-        margin-bottom: -20px;
         letter-spacing: 1px;
+        font-size: 20px;
     }
 
     .input_box4 label {
         font-weight: 600;
-        margin-bottom: -20px;
         letter-spacing: 1px;
+        font-size: 20px;
+    }
+
+    .input_box5 label {
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-size: 20px;
+    }
+
+    .input_box6 label {
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-size: 20px;
     }
 
 
     .profile_spec {
-        width: 40%;
-        height: 20vh;
+        width: 50%;
+        height: 45vh;
         margin-top: 80px;
         margin-right: 40px;
         border: 1px solid #832625;
@@ -241,6 +310,7 @@ include('../../server/client/authorization/index.php');
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        row-gap: 20px;
         margin-top: 8px;
         margin-left: 10px;
     }
@@ -285,6 +355,22 @@ include('../../server/client/authorization/index.php');
             width: 100%;
         }
 
+        .input_box3 input {
+            width: 100%;
+        }
+
+        .input_box4 input {
+            width: 100%;
+        }
+
+        .input_box5 input {
+            width: 100%;
+        }
+
+        .input_box6 input {
+            width: 100%;
+        }
+
         .inputs_holder {
             display: flex;
             justify-content: space-between;
@@ -293,13 +379,44 @@ include('../../server/client/authorization/index.php');
             padding-right: 10px;
         }
 
-        form {
+        .form {
             margin-left: 40px;
             margin-top: 15px;
             width: 100%;
         }
-        .section_holder{
+
+        .section_holder {
             margin-top: 20%;
+        }
+    }
+
+    @media screen and (max-width: 954px) {
+        .form {
+            flex-direction: column;
+        }
+
+        .profile_box {
+            height: 90vh;
+        }
+
+        .input_box2 input {
+            height: 40px;
+        }
+
+        .input_box3 input {
+            height: 40px;
+        }
+
+        .input_box4 input {
+            height: 40px;
+        }
+
+        .input_box5 input {
+            height: 40px;
+        }
+
+        .input_box6 input {
+            height: 40px;
         }
     }
 
@@ -410,16 +527,10 @@ include('../../server/client/authorization/index.php');
             background: #832625;
             color: white;
         }
-    }
-    @media screen and (max-width: 294px) {
-        .input_box2{
-            margin-left: -30px;
-        }
-        .input_box3{
-            margin-left: -30px;
-        }
-        .input_box4{
-            margin-left: -30px;
+
+        .form {
+            margin-right: 5px;
+            margin-left: 10px;
         }
     }
 </style>
@@ -433,52 +544,68 @@ include('../../server/client/authorization/index.php');
 
 
     <section class="section_holder">
-        <div class="profile_settings">
-            <div class="ps_p">
-                <p>Profile settings</p>
+        <form method="POST">
+            <div class="profile_settings">
+                <div class="ps_p">
+                    <p>Profile settings</p>
+                </div>
+
+                <div class="ps_btn">
+                    <button type="submit" name="save">Save changes</button>
+                </div>
             </div>
 
-            <div class="ps_btn">
-                <button>Save changes</button>
-            </div>
-        </div>
-
-        <div class="profile_box">
-            <div class="pb_head">
-                <p>Your Profile</p>
-            </div>
-            <div class="line2"></div>
-            <div class="line"></div>
+            <div class="profile_box">
+                <div class="pb_head">
+                    <p>Your Profile</p>
+                </div>
+                <div class="line2"></div>
+                <div class="line"></div>
 
 
-            <div class="inputs_holder">
-                <form method="POST">
-                    <div class="input_box1">
-                        <label>Edit profile</label>
-                        <input class="input_duk" type="text" value="Change Profile" readonly>
-                        <input class="input_none" type="text" value="Profile" readonly>
+                <div class="inputs_holder">
+                    <div class="form">
+                        <div class="input_box_holder">
+                            <div class="input_box1">
+                                <label>Edit profile</label>
+                            </div>
+
+                            <div class="input_box2">
+                                <label>Name</label><br>
+                                <input type="text" name="name" placeholder="<?php echo $fullname ?>">
+                            </div>
+
+                            <div class="input_box3">
+                                <label>Phone</label><br>
+                                <input type="number" name="number" placeholder="<?php echo $phone ?>">
+                            </div>
+
+                            <div class="input_box4">
+                                <label>Email</label><br>
+                                <input type="email" name="email" placeholder="<?php echo $email ?>">
+                            </div>
+
+                        </div>
+
+                        <div class="input_box_holder2">
+                            <div class="input_box5">
+                                <label>Country</label><br>
+                                <input type="text" name="country">
+                            </div>
+
+                            <div class="input_box6">
+                                <label style="white-space: nowrap;">Date of birth</label><br>
+                                <input type="date" name="date_of_birth">
+                            </div>
+
+                        </div>
+
+
                     </div>
 
-                    <div class="input_box2">
-                        <label>Name</label>
-                        <input type="text" name="name">
-                    </div>
-
-                    <div class="input_box3">
-                        <label>Phone</label>
-                        <input type="text" name="phone">
-                    </div>
-
-                    <div class="input_box4">
-                        <label>Email</label>
-                        <input type="text" name="email">
-                    </div>
-
-                </form>
 
 
-
-                <div class="profile_spec">
+                    <!-- <div class="profile_spec">
                     <div class="steps">
                         <p class="step_P1">Requirement</p>
 
@@ -486,11 +613,14 @@ include('../../server/client/authorization/index.php');
                             <p>1: input real Name</p>
                             <p>2 : Verified Number</p>
                             <p>3 : input correct Email</p>
+                            <p>4 : input Country name</p>
+                            <p>5 : Real Date of Birth</p>
                         </div>
                     </div>
+                </div> -->
                 </div>
             </div>
-        </div>
+        </form>
 
     </section>
 
