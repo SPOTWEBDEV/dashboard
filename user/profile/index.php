@@ -18,27 +18,27 @@ if (isset($_POST['save'])) {
 
         $update = mysqli_query($connection, "UPDATE `clients` SET `fullname`='$name' , `phone`='$number' , `email`='$email' WHERE `id`='$id'");
 
-        if ($update) {?>
+        if ($update) { ?>
             <script>
                 alert(' The IndusNet Profile changed successfully. ');
 
                 // location.reload();
                 window.open('./index.php', '_self')
             </script>
-       <?php } else {?>
+        <?php } else { ?>
             <script>
                 alert(' The IndusNet Profile cannot be edited. Please re-enter ');
 
                 // location.reload();
                 window.open('./index.php', '_self')
             </script>
-    <?php  }
-    } else {?>
+        <?php  }
+    } else { ?>
         <script>
-                alert(' The IndusNet Input is empty please input something. ');
+            alert(' The IndusNet Input is empty please input something. ');
 
-                // location.reload();
-                window.open('./index.php', '_self')
+            // location.reload();
+            window.open('./index.php', '_self')
         </script>
 <?php }
 }
@@ -94,7 +94,7 @@ if (isset($_POST['save'])) {
 
     .ps_p p {
         font-size: 25px;
-        
+
     }
 
     .ps_btn button {
@@ -126,7 +126,7 @@ if (isset($_POST['save'])) {
 
     .pb_head p {
         color: #832625;
-        
+
         margin-left: 40px;
         margin-top: 10px;
         margin-bottom: 5px;
@@ -194,7 +194,7 @@ if (isset($_POST['save'])) {
         border-radius: 8px;
         width: 40%;
         height: 35px;
-        
+
         text-align: center;
         color: #832625;
         background: rgb(131, 38, 37, 0.1);
@@ -207,7 +207,7 @@ if (isset($_POST['save'])) {
         border-radius: 5px;
         width: 100%;
         height: 60px;
-        
+
         color: #832625;
         border: 1px solid #832625;
         letter-spacing: 1px;
@@ -217,7 +217,7 @@ if (isset($_POST['save'])) {
         border-radius: 5px;
         width: 100%;
         height: 60px;
-        
+
         color: #832625;
         border: 1px solid #832625;
         letter-spacing: 1px;
@@ -227,7 +227,7 @@ if (isset($_POST['save'])) {
         border-radius: 5px;
         width: 100%;
         height: 60px;
-        
+
         color: #832625;
         border: 1px solid #832625;
         letter-spacing: 1px;
@@ -237,7 +237,7 @@ if (isset($_POST['save'])) {
         border-radius: 5px;
         width: 100%;
         height: 60px;
-        
+
         color: #832625;
         border: 1px solid #832625;
         letter-spacing: 1px;
@@ -247,41 +247,41 @@ if (isset($_POST['save'])) {
         border-radius: 5px;
         width: 100%;
         height: 60px;
-        
+
         color: #832625;
         border: 1px solid #832625;
         letter-spacing: 1px;
     }
 
-   
+
 
     .input_box2 label {
-        
+
         margin-bottom: -20px;
         letter-spacing: 1px;
         font-size: 20px;
     }
 
     .input_box3 label {
-        
+
         letter-spacing: 1px;
         font-size: 20px;
     }
 
     .input_box4 label {
-        
+
         letter-spacing: 1px;
         font-size: 20px;
     }
 
     .input_box5 label {
-        
+
         letter-spacing: 1px;
         font-size: 20px;
     }
 
     .input_box6 label {
-        
+
         letter-spacing: 1px;
         font-size: 20px;
     }
@@ -300,7 +300,7 @@ if (isset($_POST['save'])) {
     }
 
     .step_P1 {
-        
+
         font-size: 24px;
     }
 
@@ -315,7 +315,7 @@ if (isset($_POST['save'])) {
 
     .steps_num p {
         font-size: 17px;
-        
+
     }
 
     @media screen and (max-width: 1268px) {
@@ -564,23 +564,21 @@ if (isset($_POST['save'])) {
                 <div class="inputs_holder">
                     <div class="form">
                         <div class="input_box_holder">
-                            <div class="input_box1">
-                                <label>Edit profile</label>
-                            </div>
+
 
                             <div class="input_box2">
                                 <label>Name</label><br>
-                                <input type="text" name="name" placeholder="<?php echo $fullname ?>">
+                                <input type="text" name="name" value="<?php echo $fullname ?>">
                             </div>
 
                             <div class="input_box3">
                                 <label>Phone</label><br>
-                                <input type="number" name="number" placeholder="<?php echo $phone ?>">
+                                <input type="number" name="number" value="<?php echo $phone ?>">
                             </div>
 
                             <div class="input_box4">
                                 <label>Email</label><br>
-                                <input type="email" name="email" placeholder="<?php echo $email ?>">
+                                <input type="email" name="email" value="<?php echo $email ?>">
                             </div>
 
                         </div>
@@ -588,12 +586,12 @@ if (isset($_POST['save'])) {
                         <div class="input_box_holder2">
                             <div class="input_box5">
                                 <label>Country</label><br>
-                                <input type="text" name="country">
+                                <input type="text" name="country" value="<?php echo $country ?>">
                             </div>
 
                             <div class="input_box6">
                                 <label style="white-space: nowrap;">Date of birth</label><br>
-                                <input type="date" name="date_of_birth">
+                                <input type="date" name="date_of_birth" value="<?php echo $date_of_birth ?>">
                             </div>
 
                         </div>
@@ -602,20 +600,6 @@ if (isset($_POST['save'])) {
                     </div>
 
 
-
-                    <!-- <div class="profile_spec">
-                    <div class="steps">
-                        <p class="step_P1">Requirement</p>
-
-                        <div class="steps_num">
-                            <p>1: input real Name</p>
-                            <p>2 : Verified Number</p>
-                            <p>3 : input correct Email</p>
-                            <p>4 : input Country name</p>
-                            <p>5 : Real Date of Birth</p>
-                        </div>
-                    </div>
-                </div> -->
                 </div>
             </div>
         </form>

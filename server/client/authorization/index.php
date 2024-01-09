@@ -22,6 +22,8 @@ if (isset($_COOKIE["auth_token"])) {
             $card_number = $row['card_number'];
             $account_number = $row['account_number'];
             $count = $row['count'];
+            $country= $row['country'];
+            $date_of_birth = $row['date_of_birth'];
         }
     } else {
         echo "Authentication failed. Redirect to login.";
