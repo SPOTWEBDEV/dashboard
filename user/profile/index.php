@@ -4,7 +4,7 @@
 
 include('../../server/database.php');
 include('../../server/client/authorization/index.php');
-// include('../../server/config.php');
+include('../../server/config.php');
 
 
 
@@ -75,7 +75,7 @@ if (isset($_POST['save'])) {
         width: 65%;
         margin-left: 27%;
         margin-top: 8%;
-        font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        /* font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
     }
 
     form {
@@ -94,7 +94,7 @@ if (isset($_POST['save'])) {
 
     .ps_p p {
         font-size: 25px;
-        font-weight: 600;
+        
     }
 
     .ps_btn button {
@@ -126,7 +126,7 @@ if (isset($_POST['save'])) {
 
     .pb_head p {
         color: #832625;
-        font-weight: 600;
+        
         margin-left: 40px;
         margin-top: 10px;
         margin-bottom: 5px;
@@ -194,7 +194,7 @@ if (isset($_POST['save'])) {
         border-radius: 8px;
         width: 40%;
         height: 35px;
-        font-weight: 600;
+        
         text-align: center;
         color: #832625;
         background: rgb(131, 38, 37, 0.1);
@@ -207,7 +207,7 @@ if (isset($_POST['save'])) {
         border-radius: 5px;
         width: 100%;
         height: 60px;
-        font-weight: 600;
+        
         color: #832625;
         border: 1px solid #832625;
         letter-spacing: 1px;
@@ -217,7 +217,7 @@ if (isset($_POST['save'])) {
         border-radius: 5px;
         width: 100%;
         height: 60px;
-        font-weight: 600;
+        
         color: #832625;
         border: 1px solid #832625;
         letter-spacing: 1px;
@@ -227,7 +227,7 @@ if (isset($_POST['save'])) {
         border-radius: 5px;
         width: 100%;
         height: 60px;
-        font-weight: 600;
+        
         color: #832625;
         border: 1px solid #832625;
         letter-spacing: 1px;
@@ -237,7 +237,7 @@ if (isset($_POST['save'])) {
         border-radius: 5px;
         width: 100%;
         height: 60px;
-        font-weight: 600;
+        
         color: #832625;
         border: 1px solid #832625;
         letter-spacing: 1px;
@@ -247,43 +247,43 @@ if (isset($_POST['save'])) {
         border-radius: 5px;
         width: 100%;
         height: 60px;
-        font-weight: 600;
+        
         color: #832625;
         border: 1px solid #832625;
         letter-spacing: 1px;
     }
 
     .input_box1 label {
-        font-weight: 600;
+        
     }
 
     .input_box2 label {
-        font-weight: 600;
+        
         margin-bottom: -20px;
         letter-spacing: 1px;
         font-size: 20px;
     }
 
     .input_box3 label {
-        font-weight: 600;
+        
         letter-spacing: 1px;
         font-size: 20px;
     }
 
     .input_box4 label {
-        font-weight: 600;
+        
         letter-spacing: 1px;
         font-size: 20px;
     }
 
     .input_box5 label {
-        font-weight: 600;
+        
         letter-spacing: 1px;
         font-size: 20px;
     }
 
     .input_box6 label {
-        font-weight: 600;
+        
         letter-spacing: 1px;
         font-size: 20px;
     }
@@ -302,7 +302,7 @@ if (isset($_POST['save'])) {
     }
 
     .step_P1 {
-        font-weight: 600;
+        
         font-size: 24px;
     }
 
@@ -317,7 +317,7 @@ if (isset($_POST['save'])) {
 
     .steps_num p {
         font-size: 17px;
-        font-weight: 600;
+        
     }
 
     @media screen and (max-width: 1268px) {

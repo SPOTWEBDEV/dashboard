@@ -6,4 +6,23 @@
          body {
                   font-family: 'Roboto', sans-serif;
          }
+
+         /* .skiptranslate{
+                  display: none;
+         } */
+         .skiptranslate iframe{
+                  z-index: 30;
+         }
 </style>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+         function googleTranslateElementInit() {
+                  new google.translate.TranslateElement({
+                                    pageLanguage: 'zh'
+                           },
+                           'google_translate-element'
+                  )
+         }
+         googleTranslateElementInit()
+</script>

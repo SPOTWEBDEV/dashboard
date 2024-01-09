@@ -111,10 +111,16 @@ updateLastLoginDate();
                 <div class="flex items-center ms-3">
                     <a href="#" class="flex items-center space-x-6 rtl:space-x-reverse">
 
-                        <span  class="text-sm  text-gray-500 dark:text-white hover:underline text-white"><?php displayLastLoginDate(); ?> </span>
-                        <span  class="text-sm  text-blue-600 dark:text-blue-500 hover:underline text-white">welcome || <?= $fullname  ?> </span>
+                        <span class="text-sm  text-gray-500 dark:text-white hover:underline text-white"><?php displayLastLoginDate(); ?> </span>
+                        <span class="text-sm  text-blue-600 dark:text-blue-500 hover:underline text-white">welcome || <?= $fullname  ?> </span>
 
-                       
+                        <span>
+                            <div id="google_translate-element">
+
+                            </div>
+                        </span>
+
+
                     </a>
 
 
@@ -123,35 +129,3 @@ updateLastLoginDate();
         </div>
     </div>
 </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
