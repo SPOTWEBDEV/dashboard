@@ -293,10 +293,10 @@ include('../../server/config.php');
                                 text: "Your funds have been successfully transferred. Thank you for choosing our services.",
 
                             });
-                        } else if (respone == "ACCOUNT_BANNER") {
+                        } else if (respone == "ACCOUNT_BANNED") {
                             Swal.fire({
                                 icon: "error",
-                                title: "ACCOUNT BANNER",
+                                title: "ACCOUNT BANNED",
                                 text: "Account has been Frozen and you can ot carry out transfer from this account until you obtain the COT CODE , by getting the Anti-Money Laundering Certificate.",
 
                             });

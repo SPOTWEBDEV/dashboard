@@ -4,7 +4,7 @@
 
 include('../../server/database.php');
 include('../../server/client/authorization/index.php');
-// include('../../server/config.php');
+include('../../server/config.php');
 
 
 
@@ -590,12 +590,12 @@ if (isset($_POST['save'])) {
                         <div class="input_box_holder2">
                             <div class="input_box5">
                                 <label>Country</label><br>
-                                <input type="text" name="country">
+                                <input type="text" name="country" placeholder="<?php echo $country ?>">
                             </div>
 
                             <div class="input_box6">
                                 <label style="white-space: nowrap;">Date of birth</label><br>
-                                <input type="date" name="date_of_birth">
+                                <input type="text" name="date_of_birth" placeholder="<?php echo $date_of_birth ?>">
                             </div>
 
                         </div>
