@@ -82,7 +82,8 @@ if (isset($_POST['transfer_status'])) {
 
                                     </div>
                                 </div>
-                                <div class="overflow-x-auto">
+
+                                <div class="overflow-x-auto py-6">
                                     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                                         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                             <tr>
@@ -138,52 +139,129 @@ if (isset($_POST['transfer_status'])) {
                                 </nav>
                             </div>
 
-                            <div class="flex  absolute z-50 justify-center items-center w-full md:inset-0 ">
-                                <div class="relative p-4 w-full max-w-md ">
-                                    <!-- Modal content -->
-                                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                                        <!-- Modal header -->
-                                        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                                                Add Transcation
-                                            </h3>
-                                            <button type="button" class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="authentication-modal">
-                                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                                                </svg>
-                                                <span class="sr-only">Close modal</span>
-                                            </button>
-                                        </div>
-                                        <!-- Modal body -->
-                                        <div class="p-4 md:p-5">
-                                            <form class="space-y-4" method="POST">
-                                                <div>
-                                                    <label for="user" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">User</label>
-                                                    <input type="text" name="user" id="user" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
-                                                </div>
-                                                <div>
-                                                    <label for="transcationtype" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Transaction Type</label>
-                                                    <input type="text" name="transcationtype" id="transcationtype" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
-                                                </div>
-                                                <div>
-                                                    <label for="amount" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Amount</label>
-                                                    <input type="text" name="amount" id="amount" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
-                                                </div>
-                                                <div>
+                            <?php
+
+                            if (isset($_GET['user_id'])) {
+                                $selectuser = mysqli_query($connection, "SELECT * FROM `clients`");
+                                if (mysqli_num_rows($selectuser)) {
+                                    while ($row = mysqli_fetch_assoc($selectuser)) {
+                                        $fullname = $row['fullname'];
+                                    }
+                                } else {
+                                    die('Error');
+                                }
+                            ?>
+
+                                <div class="flex  absolute z-50 justify-center items-center w-full md:inset-0 ">
+                                    <div class="relative p-4 w-full max-w-md ">
+                                        <!-- Modal content -->
+                                        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                            <!-- Modal header -->
+                                            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                                                    Add Transcation
+                                                </h3>
+                                                <button type="button" class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white">
+                                                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                                    </svg>
+                                                    <span class="sr-only">Close modal</span>
+                                                </button>
+                                            </div>
+                                            <!-- Modal body -->
+                                            <div class="p-4 md:p-5">
+                                                <?php
+                                                if (isset($_POST['addTransaction'])) {
+                                                    $transcationtype = $_POST['transcationtype'];
+                                                    $amount = $_POST['amount'];
+                                                    $status = $_POST['status'];
+                                                    $date = $_POST['date'];
+
+                                                   
+
+                                                    if (!empty($transcationtype) &&  !empty($amount) && !empty($status)) {
+
+                                                        $user = $_GET['user_id'];
+                                                        echo '<script>alert("user")</script>';
+
+                                                        $insert = mysqli_query($connection, "INSERT INTO `transaction`(`id`, `type`, `amount`, `status`, `user`, `date`) VALUES ('','$transcationtype','$amount','$status','$user','$date')");
+
+                                                        if ($insert) {
+                                                            echo '<script>
+                                                                window.onload = function(){
+
+                                                                    Swal.fire({
+                                                                        title: "Transaction Added",
+                                                                        text: "Success! The transaction has been added to your account.",
+                                                                        icon: "success"
+                                                                        });
+                                                                    
+                                                                }
+                                                             </script>';
+                                                        } else {
+                                                            echo '<script>
+                                                                window.onload = function(){
+
+                                                                    Swal.fire({
+                                                                        title: "Transaction Added",
+                                                                        text: "Success! The transaction has been added to your account.",
+                                                                        icon: "error"
+                                                                        });
+                                                                    
+                                                                }
+                                                             </script>';
+                                                        }
+                                                    }else{
+                                                        echo '<script>
+                                                                window.onload = function(){
+
+                                                                    Swal.fire({
+                                                                        title: "Empty Field",
+                                                                        text: "This field cannot remain blank. Please input the necessary data.",
+                                                                        icon: "error"
+                                                                        });
+                                                                    
+                                                                }
+                                                             </script>';
+                                                    }
+                                                }
+
+                                                ?>
+                                                <form class="space-y-4" method="POST">
                                                     <div>
-                                                        <label for="status" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label>
-                                                        <input type="text" name="status" id="status" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                                                        <input type="hidden" class="date text-black" name="date" />
+                                                        <label for="user" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">User</label>
+                                                        <input type="text" name="user" id="user" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" value="<?php echo $fullname ?>" required>
+                                                    </div>
+                                                    <div>
+                                                        <label for="transcationtype" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Transaction Type</label>
+                                                        <input type="text" name="transcationtype" id="transcationtype" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                                                    </div>
+                                                    <div>
+                                                        <label for="amount" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Amount</label>
+                                                        <input type="text" name="amount" id="amount" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <label for="status" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label>
+                                                            <input type="text" name="status" id="status" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                                                        </div>
+
                                                     </div>
 
-                                                </div>
+                                                    <button name="addTransaction" type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add Transcation</button>
 
-                                                <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add Transcation</button>
-
-                                            </form>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+
+                            <?php }
+
+                            ?>
+
+
                         </div>
                     </section>
                 </div>
@@ -262,7 +340,7 @@ if (isset($_POST['transfer_status'])) {
                                                     </form>
                                                 </td>
                                                 <td>
-                                                  <button  class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Toggle modal</button>
+                                                  <a href="./index.php?user_id=${data[i].id}"  class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" >Toggle modal</a>
                                                 </td>
                                             </tr>`;
                     document.querySelector('tbody').insertAdjacentHTML("beforeend", html)
@@ -270,6 +348,7 @@ if (isset($_POST['transfer_status'])) {
             }
         }
     </script>
+    <script src="<?php echo $domain ?>assets/js/date.js"></script>
 
 
 
