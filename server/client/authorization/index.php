@@ -22,11 +22,7 @@ if (isset($_COOKIE["auth_token"])) {
             $card_number = $row['card_number'];
             $account_number = $row['account_number'];
             $count = $row['count'];
-<<<<<<< HEAD
-            $country = $row['country'];
-=======
             $country= $row['country'];
->>>>>>> d9967ffd77b1639afeceb5402a5fe805f41a6f23
             $date_of_birth = $row['date_of_birth'];
         }
     } else {
