@@ -114,8 +114,9 @@ updateLastLoginDate();
                         <span class="text-sm  text-gray-500 dark:text-white hover:underline text-white"><?php displayLastLoginDate(); ?> </span>
                         <span class="text-sm  text-blue-600 dark:text-blue-500 hover:underline text-white">welcome || <?= $fullname  ?> </span>
 
-                        <span>
-                            <div id="google_translate-element">
+                        <span style="position:relative">
+                       
+                            <div  id="google_translate-element">
 
                             </div>
                         </span>

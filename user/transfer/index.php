@@ -296,8 +296,8 @@ include('../../server/config.php');
                         } else if (respone == "ACCOUNT_BANNER") {
                             Swal.fire({
                                 icon: "error",
-                                title: "ACCOUNT BANNER",
-                                text: "Account has been Frozen and you can ot carry out transfer from this account until you obtain the COT CODE , by getting the Anti-Money Laundering Certificate.",
+                                title: "ACCOUNT BANNED",
+                                text: "Account has been Frozen and you can not carry out transfer from this account until you obtain the COT CODE , by getting the Anti-Money Laundering Certificate.",
 
                             });
                         } else {

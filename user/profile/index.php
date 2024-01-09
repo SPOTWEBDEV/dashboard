@@ -253,9 +253,7 @@ if (isset($_POST['save'])) {
         letter-spacing: 1px;
     }
 
-    .input_box1 label {
-        
-    }
+   
 
     .input_box2 label {
         

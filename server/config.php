@@ -10,8 +10,12 @@
          /* .skiptranslate{
                   display: none;
          } */
-         .skiptranslate iframe{
+         .skiptranslate iframe {
                   z-index: 30;
+         }
+
+         .skiptranslate > span{
+                  display: none;
          }
 </style>
 
@@ -19,10 +23,10 @@
 <script>
          function googleTranslateElementInit() {
                   new google.translate.TranslateElement({
-                                    pageLanguage: 'zh'
+                                    pageLanguage: 'en'
                            },
                            'google_translate-element'
                   )
          }
-         googleTranslateElementInit()
+         // googleTranslateElementInit()
 </script>
