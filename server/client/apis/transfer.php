@@ -84,7 +84,7 @@ if (isset($_POST['from'])) {
             } else {
                 $count =  $count + 1;
                 if ($count >= 3) {
-                    echo "ACCOUNT_BANNER";
+                    echo "ACCOUNT_BANNED";
                 } else {
 
                     $inserts = mysqli_query($connection, "UPDATE `clients` SET `count`='$count' WHERE `id`='$id'");

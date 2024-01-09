@@ -591,7 +591,7 @@ if (isset($_POST['save'])) {
 
                             <div class="input_box6">
                                 <label style="white-space: nowrap;">Date of birth</label><br>
-                                <input type="date" name="date_of_birth" value="<?php echo $date_of_birth ?>">
+                                <input type="text" name="date_of_birth" value="<?php echo $date_of_birth ?>">
                             </div>
 
                         </div>
