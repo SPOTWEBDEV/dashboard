@@ -310,25 +310,22 @@ include('../../server/config.php');
                                                 </th>
                                             </tr>
                                         </thead>
-                                        <!-- <tbody class="text-sm divide-y divide-gray-100">
-                                            <tr>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="flex items-center">
-                                                        
-                                                        <div class="font-medium text-gray-800">Alex Shatov</div>
-                                                    </div>
-                                                </td>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="text-left">alexshatov@gmail.com</div>
-                                                </td>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="text-left font-medium text-green-500">$2,890.66</div>
-                                                </td>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="text-lg text-center">🇺🇸</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
+                                        <tbody class="text-sm divide-y divide-gray-100">
+                                            <?php
+                                                $query = mysqli_query($connection, "SELECT * FROM `transaction`");
+                                                if(mysqli_num_rows($query)){
+                                                    while($row = mysqli_fetch_assoc($query)){ ?>
+
+                                                            <tr>
+                                                                <td><?php echo $row['date'] ?></td>
+                                                                <td><?php echo $row['type'] ?></td>
+                                                                <td><?php echo $row['amount'] ?></td>
+                                                                <td><?php echo $row['status'] ?></td>
+                                                            </tr>
+                                                <?php }
+                                                }
+                                            ?>
+                                            <!-- <tr>
                                                 <td class="p-2 whitespace-nowrap">
                                                     <div class="flex items-center">
                                                         <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img class="rounded-full" src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-06.jpg" width="40" height="40" alt="Philip Harbach"></div>
@@ -395,8 +392,8 @@ include('../../server/config.php');
                                                 <td class="p-2 whitespace-nowrap">
                                                     <div class="text-lg text-center">🇬🇧</div>
                                                 </td>
-                                            </tr>
-                                        </tbody> -->
+                                            </tr> -->
+                                        </tbody>
                                         <th>table is empty</th>
 
                                     </table>
