@@ -63,28 +63,26 @@ if (isset($_POST['from'])) {
                 $count = $row['count'];
             }
 
-            if ($transfer_status == 1) {
-                $select = mysqli_query($connection, "SELECT * FROM `transfer_table` WHERE `opt`='$opt'");
-                if (mysqli_num_rows($select)) {
-                    $insert = mysqli_query($connection, "UPDATE `transfer_table` SET `opt_status`='1' WHERE `user`='$id'");
-                    echo "OPT_SUCCESSFULLY";
-                } else {
-                    $count =  $count + 1;
-                    if ($count >= 3) {
-                        echo "ACCOUNT_BANNER";
+            $count =  $count + 1;
+            if ($count >= 3) {
+                echo "ACCOUNT_BANNED";
+            } else {
+                if ($transfer_status == 1) {
+                    $select = mysqli_query($connection, "SELECT * FROM `transfer_table` WHERE `opt`='$opt'");
+                    if (mysqli_num_rows($select)) {
+                        $insert = mysqli_query($connection, "UPDATE `transfer_table` SET `opt_status`='1' WHERE `user`='$id'");
+                        echo "OPT_SUCCESSFULLY";
                     } else {
+                        $count =  $count + 1;
+
 
                         $inserts = mysqli_query($connection, "UPDATE `clients` SET `count`='$count' WHERE `id`='$id'");
                         if ($inserts) {
                             echo "WRONG_OPT";
                         }
                     }
-                }
-            } else {
-                $count =  $count + 1;
-                if ($count >= 3) {
-                    echo "ACCOUNT_BANNED";
                 } else {
+                    $count =  $count + 1;
 
                     $inserts = mysqli_query($connection, "UPDATE `clients` SET `count`='$count' WHERE `id`='$id'");
                     if ($inserts) {
