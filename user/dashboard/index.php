@@ -5,6 +5,23 @@ include('../../server/client/authorization/index.php');
 include('../../server/config.php');
 
 
+$pending = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transaction` WHERE `user`='$id' AND `status`='0'"));
+$approved = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transaction` WHERE `user`='$id' AND `status`='1'"));
+$declined = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transaction` WHERE `user`='$id' AND `status`='2'"));
+$credited = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transaction` WHERE `user`='$id' AND `status`='3'"));
+
+if ($pending = '') {
+    $pending = 0;
+}
+if ($approved = '') {
+    $approved = 0;
+}
+if ($declined = '') {
+    $declined = 0;
+}
+
+
+
 
 
 
@@ -215,7 +232,7 @@ include('../../server/config.php');
                     window.addEventListener("load", function() {
                         const getChartOptions = () => {
                             return {
-                                series: [52.8, 26.8, 20.4],
+                                series: ["<?= $approved ?>", "<?= $declined ?>", "<?= $pending ?>"],
                                 colors: ["#1C64F2", "#16BDCA", "#9061F9"],
                                 chart: {
                                     height: 420,
