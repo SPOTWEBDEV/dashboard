@@ -312,89 +312,49 @@ include('../../server/config.php');
                                         </thead>
                                         <tbody class="text-sm divide-y divide-gray-100">
                                             <?php
-                                                $query = mysqli_query($connection, "SELECT * FROM `transaction`");
-                                                if(mysqli_num_rows($query)){
-                                                    while($row = mysqli_fetch_assoc($query)){ ?>
+                                            $query = mysqli_query($connection, "SELECT * FROM `transaction`");
+                                            if (mysqli_num_rows($query)) {
+                                                while ($row = mysqli_fetch_assoc($query)) { ?>
 
-                                                            <tr>
-                                                                <td><?php echo $row['date'] ?></td>
-                                                                <td><?php echo $row['type'] ?></td>
-                                                                <td><?php echo $row['amount'] ?></td>
-                                                                <td><?php echo $row['status'] ?></td>
-                                                            </tr>
-                                                <?php }
-                                                }
+                                                    <tr class="text-left">
+                                                        <td class="p-2 whitespace-nowrap">
+
+                                                            <time class="timeago" datetime="<?php echo $row['date'] ?>"></time>
+                                                        </td>
+                                                        <td class="p-2 whitespace-nowrap"><?php echo $row['type'] ?></td>
+                                                        <td class="p-2 whitespace-nowrap">
+                                                            <div class="text-left font-medium text-green-500">$<?php echo $row['amount'] ?></div>
+
+                                                        </td>
+                                                        <td class="p-2 whitespace-nowrap">
+                                                            <?php
+
+                                                            if ($row['status'] == 0) { ?>
+                                                                <button type="button" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Pending</button>
+                                                            <?php } else if ($row['status'] == 1) { ?>
+                                                                <button type="button" class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Approved</button>
+
+                                                            <?php } else if ($row['status'] == 2) { ?>
+                                                                <button type="button" class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900">Declined</button>
+
+                                                            <?php } else if ($row['status'] == 3) { ?>
+
+                                                                <button type="button" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Purple</button>
+                                                            <?php } ?>
+
+
+
+
+
+
+                                                        </td>
+                                                    </tr>
+                                            <?php }
+                                            }
                                             ?>
-                                            <!-- <tr>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="flex items-center">
-                                                        <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img class="rounded-full" src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-06.jpg" width="40" height="40" alt="Philip Harbach"></div>
-                                                        <div class="font-medium text-gray-800">Philip Harbach</div>
-                                                    </div>
-                                                </td>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="text-left">philip.h@gmail.com</div>
-                                                </td>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="text-left font-medium text-green-500">$2,767.04</div>
-                                                </td>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="text-lg text-center">🇩🇪</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="flex items-center">
-                                                        <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img class="rounded-full" src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-07.jpg" width="40" height="40" alt="Mirko Fisuk"></div>
-                                                        <div class="font-medium text-gray-800">Mirko Fisuk</div>
-                                                    </div>
-                                                </td>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="text-left">mirkofisuk@gmail.com</div>
-                                                </td>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="text-left font-medium text-green-500">$2,996.00</div>
-                                                </td>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="text-lg text-center">🇫🇷</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="flex items-center">
-                                                        <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img class="rounded-full" src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-08.jpg" width="40" height="40" alt="Olga Semklo"></div>
-                                                        <div class="font-medium text-gray-800">Olga Semklo</div>
-                                                    </div>
-                                                </td>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="text-left">olga.s@cool.design</div>
-                                                </td>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="text-left font-medium text-green-500">$1,220.66</div>
-                                                </td>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="text-lg text-center">🇮🇹</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="flex items-center">
-                                                        <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img class="rounded-full" src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-09.jpg" width="40" height="40" alt="Burak Long"></div>
-                                                        <div class="font-medium text-gray-800">Burak Long</div>
-                                                    </div>
-                                                </td>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="text-left">longburak@gmail.com</div>
-                                                </td>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="text-left font-medium text-green-500">$1,890.66</div>
-                                                </td>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="text-lg text-center">🇬🇧</div>
-                                                </td>
-                                            </tr> -->
+
                                         </tbody>
-                                        <th>table is empty</th>
+
 
                                     </table>
                                 </div>
@@ -416,6 +376,7 @@ include('../../server/config.php');
 
     <script type="text/javascript" src="../../assets/js/tawk.js"></script>
     <script src="<?php echo $domain ?>assets/js/translate.js"></script>
+    <script src="<?php echo $domain ?>assets/js/timeago.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 </body>
 

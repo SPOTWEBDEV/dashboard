@@ -5,3 +5,4 @@ function googleTranslateElementInit() {
                   'google_translate-element'
          )
 }
+googleTranslateElementInit()

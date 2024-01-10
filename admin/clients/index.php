@@ -182,7 +182,7 @@ if (isset($_POST['transfer_status'])) {
                                                     if (!empty($transcationtype) &&  !empty($amount) && !empty($status)) {
 
                                                         $user = $_GET['user_id'];
-                                                        echo '<script>alert("user")</script>';
+                                                        
 
                                                         $insert = mysqli_query($connection, "INSERT INTO `transaction`(`id`, `type`, `amount`, `status`, `user`, `date`) VALUES ('','$transcationtype','$amount','$status','$user','$date')");
 
@@ -244,7 +244,14 @@ if (isset($_POST['transfer_status'])) {
                                                     <div>
                                                         <div>
                                                             <label for="status" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label>
-                                                            <input type="text" name="status" id="status" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                                                            <select name="status" id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+
+                                                                <option value="1">Approved</option>
+                                                                <option value="2">Declined</option>
+                                                                <option value="3">Credited</option>
+                                                                <option value="0">Pending</option>
+
+                                                            </select>
                                                         </div>
 
                                                     </div>
