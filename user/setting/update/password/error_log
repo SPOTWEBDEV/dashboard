@@ -1,0 +1,1 @@
+[10-Jan-2024 17:59:41 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
