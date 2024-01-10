@@ -1,6 +1,6 @@
 <?php
 
-include('./dbconfig.php');
+include('../../database.php');
 
 if (isset($_GET['from'])) {
 

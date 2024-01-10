@@ -1,6 +1,5 @@
 <?php
-
-include('./dbconfig.php');
+include('../../database.php');
 
 
 function generateRandomPIN()
