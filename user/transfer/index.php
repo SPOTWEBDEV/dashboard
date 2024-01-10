@@ -173,9 +173,10 @@ include('../../server/config.php');
 
 
 
-        <script type="text/javascript" src="../../assets/js//tawk.js"></script>
+        <script type="text/javascript" src="../../assets/js/tawk.js"></script>
+        <script src="<?php echo $domain ?>assets/js/translate.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
-        
+
         <script>
             let domain = "<?php echo $domain ?>";
         </script>
@@ -297,11 +298,7 @@ include('../../server/config.php');
                             Swal.fire({
                                 icon: "error",
                                 title: "ACCOUNT BANNED",
-<<<<<<< HEAD
-                                text: "Account has been Frozen and you can ot carry out transfer from this account until you obtain the COT CODE , by getting the Anti-Money Laundering Certificate.",
-=======
                                 text: "Account has been Frozen and you can not carry out transfer from this account until you obtain the COT CODE , by getting the Anti-Money Laundering Certificate.",
->>>>>>> d9967ffd77b1639afeceb5402a5fe805f41a6f23
 
                             });
                         } else {

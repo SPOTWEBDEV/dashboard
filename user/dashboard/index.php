@@ -417,11 +417,7 @@ include('../../server/config.php');
 
 
 
-    <script type="text/javascript" src="../../assets/js//tawk.js"></script>
-
-
-
-
+    <script type="text/javascript" src="../../assets/js/tawk.js"></script>
     <script src="<?php echo $domain ?>assets/js/translate.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 </body>
