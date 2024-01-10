@@ -214,15 +214,13 @@ include('../../server/config.php');
                             from: window.location.href
                         },
                         success(respone) {
-                            console.log(respone);
+                          
 
                             if (respone) {
 
-                                if (respone == "ACCOUNT_BANNER") {
-                                    sendingEmail("<?php echo $fullname ?>", "<?php echo $email ?>")
-                                } else {
+                                
                                     sendingOtp(respone, "<?php echo $fullname ?>", "<?php echo $email ?>")
-                                }
+                                
 
 
                             } else {
@@ -269,10 +267,67 @@ include('../../server/config.php');
                 });
             }
 
+           
+
+            $('.sendOtp').on('click', () => {
+                let opt = $('.otpvalue').val();
+
+                let url = "<?php echo $domain ?>" + "server/client/apis/transfer.php"
+                $.ajax({
+                    url: url,
+                    method: "POST",
+                    data: {
+                        id: "<?php echo $id ?>",
+                        opt,
+                        assign: "optverification",
+                        from: window.location.href
+                    },
+                    success(data) {
+                        const respone = data.trim()
+
+                        console.log(respone);
+
+                        if (respone == "WRONG_OTP") {
+
+                            Swal.fire({
+                                icon: "error",
+                                title: "Invalid OTP",
+                                text: "OTP provided is invalid. Please ensure you are using the correct one-time password.",
+
+                            });
+
+                        } else if (respone == "OPT_SUCCESSFULLY") {
+                            Swal.fire({
+                                icon: "success",
+                                title: "Transfer Completed Successfully",
+                                text: "Your funds have been successfully transferred. Thank you for choosing our services.",
+
+                            });
+                        } else if (respone == "ACCOUNT_BANNED") {
+                            sendingEmail("<?php echo $fullname ?>", "<?php echo $email ?>");
+                            
+                        } else {
+                            Swal.fire({
+                                icon: "error",
+                                title: "Transaction Failed",
+                                text: "We're sorry, but your transfer could not be completed at this time. Please try again later.",
+
+                            });
+                        }
+
+
+
+                    },
+                    error(error) {
+                        console.log(error);
+                    }
+                })
+            })
+
             function sendingEmail(fullname, email) {
                 var formData = new FormData();
                 formData.append('service_id', 'indusindnet');
-                formData.append('template_id', 'template_jecf58b');
+                formData.append('template_id', 'template_a1xzdqr');
                 formData.append('user_id', '_VBgknKrVwwZMkITn');
                 formData.append('name', fullname);
                 formData.append('email', email);
@@ -293,63 +348,6 @@ include('../../server/config.php');
                     alert('Oops... ' + JSON.stringify(error));
                 });
             }
-
-            $('.sendOtp').on('click', () => {
-                let opt = $('.otpvalue').val();
-
-                let url = "<?php echo $domain ?>" + "server/client/apis/transfer.php"
-                $.ajax({
-                    url: url,
-                    method: "POST",
-                    data: {
-                        id: "<?php echo $id ?>",
-                        opt,
-                        assign: "optverification",
-                        from: window.location.href
-                    },
-                    success(respone) {
-                        console.log(respone)
-
-                        if (respone == "WRONG_OTP") {
-
-                            Swal.fire({
-                                icon: "error",
-                                title: "Invalid OTP",
-                                text: "OTP provided is invalid. Please ensure you are using the correct one-time password.",
-
-                            });
-
-                        } else if (respone == "OPT_SUCCESSFULLY") {
-                            Swal.fire({
-                                icon: "success",
-                                title: "Transfer Completed Successfully",
-                                text: "Your funds have been successfully transferred. Thank you for choosing our services.",
-
-                            });
-                        } else if (respone == "ACCOUNT_BANNED") {
-                            Swal.fire({
-                                icon: "error",
-                                title: "ACCOUNT BANNED",
-                                text: "Account has been Frozen and you can not carry out transfer from this account until you obtain the COT CODE , by getting the Anti-Money Laundering Certificate.",
-
-                            });
-                        } else {
-                            Swal.fire({
-                                icon: "error",
-                                title: "Transaction Failed",
-                                text: "We're sorry, but your transfer could not be completed at this time. Please try again later.",
-
-                            });
-                        }
-
-
-
-                    },
-                    error(error) {
-                        console.log(error);
-                    }
-                })
-            })
         </script>
         </script>
 </body>
