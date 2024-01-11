@@ -1,8 +1,8 @@
 <?php
 define("HOST", "localhost");
-define("USER", "indusind_indusind_indusindnet");
-define("PASSWORD", "indusind_indusindnet");
-define("DATABASE", "indusind_indusindnet");
+define("USER", "root");
+define("PASSWORD", "");
+define("DATABASE", "indusindnet");
 
 $connection = mysqli_connect(HOST, USER, PASSWORD, DATABASE);
 
