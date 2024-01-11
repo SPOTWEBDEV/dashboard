@@ -1,0 +1,105 @@
+<?php
+// session_start();
+
+// Function to display the last login date
+function displayLastLoginDate()
+{
+    if (isset($_SESSION['last_login'])) {
+        echo "" . $_SESSION['last_login'];
+    } else {
+        echo "Welcome! It seems to be your first login.";
+    }
+}
+
+// Function to update the last login date
+function updateLastLoginDate()
+{
+    $_SESSION['last_login'] = date("Y-m-d H:i:s");
+}
+
+// Simulating a user login
+updateLastLoginDate();
+?>
+
+
+
+
+<style>
+    #logo-sidebar2 {
+        background-color: #832625;
+        color: white;
+    }
+
+   
+</style>
+
+
+
+
+<!-- <img src="" alt=""> -->
+
+
+<nav id="logo-sidebar2" class="bg-white border-gray-200  z-50 fixed top-0 w-full py-6">
+    <div class="w-full flex h-full flex-wrap items-center justify-between px-6 gap-y-6">
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+
+            <span class="self-center text-2xl font-semibold whitespace-nowrap ">Indusind Bank</span>
+        </a>
+        <div class="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
+
+            <style>
+                #google_translate-element .skiptranslate {
+                    font-size: 0;
+                    /* Set font size to 0 to hide the text */
+                }
+
+                /* Reset font size for the select element inside the div */
+                #google_translate-element select {
+                    font-size: initial;
+                }
+            </style>
+
+
+
+            <div id="google_translate-element">
+
+            </div>
+            <script>
+                setTimeout(() => {
+                    let select = document.querySelector('#google_translate-element .skiptranslate div select');
+                    if (select) {
+                        select.className = 'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg   block w-full p-2.5  dark:placeholder-gray-400'
+
+                    }
+                }, 2000);
+            </script>
+
+
+            <button data-collapse-toggle="navbar-language" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="navbar-language" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-language">
+            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:hidden md:mt-0 md:border-0 md:bg-white">
+                <li>
+                    <a href="<?php echo $domain ?>user/dashboard/" class="block py-2 px-3 text-gray-900 rounded md:bg-transparent md:text-blue-700 md:p-0 " aria-current="page">Dashboard</a>
+                </li>
+                <li>
+                    <a href="<?php echo $domain ?>user/profile/" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700">Profile</a>
+                </li>
+                <li>
+                    <a href="<?php echo $domain ?>user/setting/update/password/" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 ">Change password</a>
+                </li>
+                <li>
+                    <a href="<?php echo $domain ?>user/transfer" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700">Transfer</a>
+                </li>
+                <li>
+                    <a href="<?php echo $domain ?>user/logout/" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
