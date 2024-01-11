@@ -45,24 +45,7 @@ $credited = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transactio
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<style>
-    #logo-sidebar2 {
-        background-color: #832625;
-        height: 70px;
-    }
 
-    #box_balance {
-        margin-top: 40px;
-    }
-
-    #links_side {
-        margin-top: 15px;
-    }
-
-    #links_stuff {
-        margin-top: 20px;
-    }
-</style>
 
 <body>
 
@@ -73,12 +56,15 @@ $credited = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transactio
 
 
 
-    <div class="p-4 sm:ml-64" id="box_balance">
-        <div class="p-4 mt-14">
+    <div class="sm:px-4 sm:ml-64  mt-64" id="box_balance">
+        <div class="py-3 sm:p-4  w-full">
             <div class="flex flex-wrap justify-center gap-4 mb-4 w-full">
-                <div class="rounded-lg dark:border-gray-600 h-fit hidden sm:flex flip w-[300px]">
+                <div class="sm:rounded-lg dark:border-gray-600 h-fit hidden sm:flex flip w-[300px]">
                     <div class="card">
                         <div class="card__front card__part">
+                            <div class="" style="color: white;margin-left: 130px;font-size: 20px;display: flex;">
+                                <p><img src="../../assets/img/favicon.ico"> Indusind Bank</p>
+                            </div>
                             <img class="card__front-square card__square">
                             <img class="card__front-logo card__logo">
                             <p class="card_numer">**** **** **** <?php echo substr($card_number, -4)  ?></p>
@@ -111,16 +97,21 @@ $credited = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transactio
 
 
                 </div>
-                <div class="rounded-lg dark:border-gray-600 h-fit flex w-full  sm:w-[50%]">
+                <div class="rounded-lg dark:border-gray-600 h-fit flex w-full  md:w-[70%] lg:w-[50%]">
                     <div class="card w-full">
                         <div class="card__front card__part">
                             <img class="card__front-square card__square">
                             <img class="card__front-logo card__logo">
 
 
-                            <p class="text-center text-white mb-4 text-2xl">$<?php echo $balance ?></p>
+                            <p class="text-center text-white mb-4 text-2xl">$<?php if ($balance == "") {
+                                                                                    echo "0.00";
+                                                                                } else {
+                                                                                    echo number_format($balance, 2, '.', ',');
+                                                                                }
+                                                                                ?></p>
 
-                            <span class="text-white mt-4">Account Number <?php echo $account_number ?></span>
+                            <span class="text-white mt-4 text-center">Account Number <?php echo $account_number ?></span>
 
 
                             <div class="card__space-75 mt-5">
@@ -130,10 +121,10 @@ $credited = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transactio
                             <div class="card__space-25 mt-5">
                                 <span class="card__label">Status</span>
                                 <p class="card__info">
-                                    <?php if ($count > 3) { ?>
-                                        <button>Banner</button>
+                                    <?php if ($count >= 3) { ?>
+                                        <button class="text-sm">Account Frozen</button>
                                     <?php } else { ?>
-                                        <button>Active</button>
+                                        <button class="text-sm" >Account Active</button>
                                     <?php }  ?>
 
                                 </p>
@@ -150,7 +141,7 @@ $credited = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transactio
 
             </div>
 
-           
+
 
 
 

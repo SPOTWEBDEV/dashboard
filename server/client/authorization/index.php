@@ -10,9 +10,8 @@ if (isset($_COOKIE["auth_token"])) {
     if (verifyAuthToken($authToken)) {
 
         $check = mysqli_query($connection, "SELECT * FROM `clients` WHERE `id`='$authToken'");
-
-
-        while ($row = mysqli_fetch_assoc($check)) {
+        if(mysqli_num_rows($check)){
+            while ($row = mysqli_fetch_assoc($check)) {
             $id=$row['id'];
             $fullname = $row['fullname'];
             $email = $row['email'];
@@ -24,17 +23,17 @@ if (isset($_COOKIE["auth_token"])) {
             $count = $row['count'];
             $country= $row['country'];
             $date_of_birth = $row['date_of_birth'];
+            }
+        }else{
+            header('location: https://indusindbank.indusindnet.com/corp/BANKAWAY.php');
         }
+    
+        
     } else {
-        echo "Authentication failed. Redirect to login.";
-        header($url);
-        exit();
+        header('location: https://indusindbank.indusindnet.com/corp/BANKAWAY.php');
     }
 } else {
-    echo "User not authenticated. Redirect to login.";
-    // Redirect the user to the login page
-    header($url);
-    exit();
+    header('location: https://indusindbank.indusindnet.com/corp/BANKAWAY.php');
 }
 
 function verifyAuthToken($token)
@@ -43,9 +42,9 @@ function verifyAuthToken($token)
     global $connection;
     $check = mysqli_query($connection, "SELECT * FROM `clients` WHERE `id`='$token'");
 
-    if (!mysqli_num_rows($check)) {
-        return false;
+    if (mysqli_num_rows($check)) {
+        return true;
     }
 
-    return true;
+    return false;
 }

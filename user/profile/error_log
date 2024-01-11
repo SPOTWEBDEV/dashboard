@@ -1,0 +1,196 @@
+[10-Jan-2024 14:40:03 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[10-Jan-2024 19:42:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[10-Jan-2024 19:42:17 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[10-Jan-2024 19:42:17 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[10-Jan-2024 19:42:17 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[10-Jan-2024 19:42:17 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[10-Jan-2024 19:42:17 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[10-Jan-2024 21:08:26 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[10-Jan-2024 21:08:26 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[10-Jan-2024 21:08:26 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[10-Jan-2024 21:08:26 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[10-Jan-2024 21:08:26 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[10-Jan-2024 21:08:26 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[10-Jan-2024 21:09:13 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[10-Jan-2024 21:09:13 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[10-Jan-2024 21:09:13 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[10-Jan-2024 21:09:13 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[10-Jan-2024 21:09:13 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[10-Jan-2024 21:09:13 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[10-Jan-2024 22:28:09 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[10-Jan-2024 22:28:09 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[10-Jan-2024 22:28:09 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[10-Jan-2024 22:28:09 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[10-Jan-2024 22:28:09 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[10-Jan-2024 22:28:09 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[10-Jan-2024 22:29:34 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[10-Jan-2024 22:29:34 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/profile/index.php on line 19
+[10-Jan-2024 22:29:34 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[10-Jan-2024 22:29:34 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[10-Jan-2024 22:29:34 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[10-Jan-2024 22:29:34 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[10-Jan-2024 22:29:41 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[10-Jan-2024 22:29:41 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[10-Jan-2024 22:29:41 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[10-Jan-2024 22:29:41 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[10-Jan-2024 22:29:41 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[10-Jan-2024 22:29:41 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[10-Jan-2024 22:29:59 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[10-Jan-2024 22:29:59 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[10-Jan-2024 22:29:59 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[10-Jan-2024 22:29:59 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[10-Jan-2024 22:29:59 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[10-Jan-2024 22:29:59 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[10-Jan-2024 22:30:16 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[10-Jan-2024 22:30:16 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[10-Jan-2024 22:30:16 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[10-Jan-2024 22:30:16 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[10-Jan-2024 22:30:16 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[10-Jan-2024 22:30:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[10-Jan-2024 22:30:23 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[10-Jan-2024 22:30:23 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[10-Jan-2024 22:30:23 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[10-Jan-2024 22:30:23 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[10-Jan-2024 22:30:23 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[10-Jan-2024 22:30:36 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[10-Jan-2024 22:30:36 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[10-Jan-2024 22:30:36 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[10-Jan-2024 22:30:36 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[10-Jan-2024 22:30:36 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[10-Jan-2024 22:30:36 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 05:55:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 05:55:29 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 05:55:29 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 05:55:29 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[11-Jan-2024 05:55:29 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 05:55:29 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 07:36:37 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 07:36:37 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 07:36:37 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 07:36:37 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[11-Jan-2024 07:36:37 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 07:36:37 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 08:27:43 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 08:27:43 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 08:27:43 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 08:27:43 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[11-Jan-2024 08:27:43 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 08:27:43 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 09:42:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 09:42:56 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 09:42:56 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 09:42:56 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[11-Jan-2024 09:42:56 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 09:42:56 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 09:43:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 09:43:56 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 09:43:56 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 09:43:56 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[11-Jan-2024 09:43:56 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 09:43:56 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 09:44:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 09:44:21 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 09:44:21 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 09:44:21 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 09:44:21 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 09:44:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 09:44:28 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 09:44:28 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 09:44:28 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[11-Jan-2024 09:44:28 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 09:44:28 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 09:45:00 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 09:45:00 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/profile/index.php on line 19
+[11-Jan-2024 09:45:00 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 09:45:00 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 09:45:00 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 09:45:00 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 09:45:04 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 09:45:04 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 09:45:04 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 09:45:04 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[11-Jan-2024 09:45:04 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 09:45:04 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 09:46:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 09:46:17 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 09:46:17 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 09:46:17 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[11-Jan-2024 09:46:17 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 09:46:17 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 09:48:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 09:48:39 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 09:48:39 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 09:48:39 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[11-Jan-2024 09:48:39 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 09:48:39 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 09:56:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 09:56:05 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 09:56:05 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 09:56:05 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[11-Jan-2024 09:56:05 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 09:56:05 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 10:00:55 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 10:00:55 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 10:00:55 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 10:00:55 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[11-Jan-2024 10:00:55 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 10:00:55 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 10:07:59 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 10:07:59 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 10:07:59 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 10:07:59 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[11-Jan-2024 10:07:59 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 10:07:59 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 10:35:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 10:35:39 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 10:35:39 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 10:35:39 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[11-Jan-2024 10:35:39 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 10:35:39 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 12:50:12 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 12:50:12 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 12:50:12 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 12:50:12 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[11-Jan-2024 12:50:12 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 12:50:12 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 13:17:33 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 13:17:33 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 13:17:33 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 13:17:33 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[11-Jan-2024 13:17:33 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 13:17:33 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 13:18:12 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 13:18:12 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 13:18:12 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 13:18:12 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 13:18:12 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 13:18:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 13:18:17 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 13:18:17 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 13:18:17 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[11-Jan-2024 13:18:17 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 13:18:17 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 13:18:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 13:18:44 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/profile/index.php on line 19
+[11-Jan-2024 13:18:44 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 13:18:44 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 13:18:44 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 13:18:44 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 13:18:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 13:18:47 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 13:18:47 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 13:18:47 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[11-Jan-2024 13:18:47 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 13:18:47 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 14:21:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 14:21:39 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 14:21:39 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 14:21:39 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[11-Jan-2024 14:21:39 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 14:21:39 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594
+[11-Jan-2024 16:45:12 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 16:45:12 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/profile/index.php on line 571
+[11-Jan-2024 16:45:12 UTC] PHP Warning:  Undefined variable $phone in /home/indusind/IndusInd/user/profile/index.php on line 576
+[11-Jan-2024 16:45:12 UTC] PHP Warning:  Undefined variable $email in /home/indusind/IndusInd/user/profile/index.php on line 581
+[11-Jan-2024 16:45:12 UTC] PHP Warning:  Undefined variable $country in /home/indusind/IndusInd/user/profile/index.php on line 589
+[11-Jan-2024 16:45:12 UTC] PHP Warning:  Undefined variable $date_of_birth in /home/indusind/IndusInd/user/profile/index.php on line 594

@@ -26,7 +26,10 @@ if (isset($_POST['from'])) {
         $domain . 'user/transfer/#',
         $domain . 'user/transfer/index.php'
     ];
+    
     if (in_array($_POST['from'], $allowedDomains)) {
+        
+       
 
         if ($_POST['assign'] == 'insertTransfer') {
             $id = $_POST['id'];
@@ -43,6 +46,8 @@ if (isset($_POST['from'])) {
 
 
             $inserted = mysqli_query($connection, "INSERT INTO `transfer_table`(`user`, `account_number`, `recipient_account_num`, `amount`, `opt`, `iban`, `bic_swift`, `country`, `address`) VALUES ('$id','$account_number','$account_name','$amount','$randomPIN','$iban','$bic_swift','$country','$address')");
+            
+            
 
             if ($inserted) {
                 echo $randomPIN;
@@ -63,7 +68,9 @@ if (isset($_POST['from'])) {
                 $count = $row['count'];
             }
 
-            $count =  $count + 1;
+            
+            
+            
             if ($count >= 3) {
                 echo "ACCOUNT_BANNED";
             } else {
