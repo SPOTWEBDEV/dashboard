@@ -45,6 +45,18 @@ $credited = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transactio
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<style>
+    .bank_name_icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 20px;
+    }
+    .bank_name_icon_img{
+        width: 18px;
+        height: 18px;
+    }
+</style>
 
 
 <body>
@@ -62,8 +74,11 @@ $credited = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transactio
                 <div class="sm:rounded-lg dark:border-gray-600 h-fit hidden sm:flex flip w-[300px]">
                     <div class="card">
                         <div class="card__front card__part">
-                            <div class="" style="color: white;margin-left: 130px;font-size: 20px;display: flex;">
-                                <p><img src="../../assets/img/favicon.ico"> Indusind Bank</p>
+                            <div class="" style="color: white;margin-left: 90px;font-size: 20px;display: flex;">
+                                <div class="bank_name_icon">
+                                    <img class="bank_name_icon_img" src="../../assets/img/favicon.ico">
+                                    <p>Indusind Bank</p>
+                                </div>
                             </div>
                             <img class="card__front-square card__square">
                             <img class="card__front-logo card__logo">
@@ -124,7 +139,7 @@ $credited = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transactio
                                     <?php if ($count >= 3) { ?>
                                         <button class="text-sm">Account Frozen</button>
                                     <?php } else { ?>
-                                        <button class="text-sm" >Account Active</button>
+                                        <button class="text-sm">Account Active</button>
                                     <?php }  ?>
 
                                 </p>
