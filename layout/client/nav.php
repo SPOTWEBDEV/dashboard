@@ -1,6 +1,6 @@
 
 
-<nav class="bg-white border-gray-200 ">
+<nav class="bg-red-400 border-gray-200 fixed w-full top-0 z-10">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
       

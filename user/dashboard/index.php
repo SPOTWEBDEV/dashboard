@@ -56,7 +56,7 @@ $credited = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transactio
 
 
 
-    <div class="py-3 sm:p-4 sm:ml-64" id="box_balance">
+    <div class="sm:px-4 sm:ml-64  mt-64" id="box_balance">
         <div class="py-3 sm:p-4  w-full">
             <div class="flex flex-wrap justify-center gap-4 mb-4 w-full">
                 <div class="sm:rounded-lg dark:border-gray-600 h-fit hidden sm:flex flip w-[300px]">
@@ -124,7 +124,7 @@ $credited = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transactio
                                     <?php if ($count >= 3) { ?>
                                         <button class="text-sm">Account Frozen</button>
                                     <?php } else { ?>
-                                        <button>Active</button>
+                                        <button class="text-sm" >Account Active</button>
                                     <?php }  ?>
 
                                 </p>
