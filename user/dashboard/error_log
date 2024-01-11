@@ -179,3 +179,688 @@
 [10-Jan-2024 20:12:19 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 106
 [10-Jan-2024 20:12:19 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 111
 [10-Jan-2024 20:12:19 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[10-Jan-2024 21:02:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[10-Jan-2024 21:02:50 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[10-Jan-2024 21:02:50 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[10-Jan-2024 21:02:50 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[10-Jan-2024 21:02:50 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[10-Jan-2024 21:02:50 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[10-Jan-2024 21:02:50 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[10-Jan-2024 21:02:50 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[10-Jan-2024 21:02:50 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[10-Jan-2024 21:02:50 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[10-Jan-2024 21:02:50 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 106
+[10-Jan-2024 21:02:50 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[10-Jan-2024 21:02:50 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[10-Jan-2024 21:09:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[10-Jan-2024 21:09:14 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[10-Jan-2024 21:09:14 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[10-Jan-2024 21:09:14 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[10-Jan-2024 21:09:14 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[10-Jan-2024 21:09:14 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[10-Jan-2024 21:09:14 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[10-Jan-2024 21:09:14 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[10-Jan-2024 21:09:14 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[10-Jan-2024 21:09:14 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[10-Jan-2024 21:09:14 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 106
+[10-Jan-2024 21:09:14 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[10-Jan-2024 21:09:14 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[10-Jan-2024 21:46:34 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[10-Jan-2024 21:46:34 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[10-Jan-2024 21:46:34 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[10-Jan-2024 21:46:34 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[10-Jan-2024 21:46:34 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[10-Jan-2024 21:46:34 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[10-Jan-2024 21:46:34 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[10-Jan-2024 21:46:34 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[10-Jan-2024 21:46:34 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[10-Jan-2024 21:46:34 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[10-Jan-2024 21:46:34 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 106
+[10-Jan-2024 21:46:34 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[10-Jan-2024 21:46:34 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[10-Jan-2024 22:24:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[10-Jan-2024 22:24:39 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[10-Jan-2024 22:24:39 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[10-Jan-2024 22:24:39 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[10-Jan-2024 22:24:39 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[10-Jan-2024 22:24:39 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[10-Jan-2024 22:24:39 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[10-Jan-2024 22:24:39 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[10-Jan-2024 22:24:39 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[10-Jan-2024 22:24:39 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[10-Jan-2024 22:24:39 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 106
+[10-Jan-2024 22:24:39 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[10-Jan-2024 22:24:39 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[10-Jan-2024 22:25:18 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[10-Jan-2024 22:25:18 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[10-Jan-2024 22:25:18 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[10-Jan-2024 22:25:18 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[10-Jan-2024 22:25:18 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[10-Jan-2024 22:25:18 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[10-Jan-2024 22:25:18 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[10-Jan-2024 22:25:18 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[10-Jan-2024 22:25:18 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[10-Jan-2024 22:25:18 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[10-Jan-2024 22:25:18 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 106
+[10-Jan-2024 22:25:18 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[10-Jan-2024 22:25:18 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[10-Jan-2024 22:27:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[10-Jan-2024 22:27:31 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[10-Jan-2024 22:27:31 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[10-Jan-2024 22:27:31 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[10-Jan-2024 22:27:31 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[10-Jan-2024 22:27:31 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[10-Jan-2024 22:27:31 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[10-Jan-2024 22:27:31 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[10-Jan-2024 22:27:31 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[10-Jan-2024 22:27:31 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[10-Jan-2024 22:27:31 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 106
+[10-Jan-2024 22:27:31 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[10-Jan-2024 22:27:31 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[10-Jan-2024 22:29:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[10-Jan-2024 22:29:49 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[10-Jan-2024 22:29:49 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[10-Jan-2024 22:29:49 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[10-Jan-2024 22:29:49 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[10-Jan-2024 22:29:49 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[10-Jan-2024 22:29:49 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[10-Jan-2024 22:29:49 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[10-Jan-2024 22:29:49 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[10-Jan-2024 22:29:49 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[10-Jan-2024 22:29:49 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 106
+[10-Jan-2024 22:29:49 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[10-Jan-2024 22:29:49 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[10-Jan-2024 22:30:40 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[10-Jan-2024 22:30:40 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[10-Jan-2024 22:30:40 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[10-Jan-2024 22:30:40 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[10-Jan-2024 22:30:40 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[10-Jan-2024 22:30:40 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[10-Jan-2024 22:30:40 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[10-Jan-2024 22:30:40 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[10-Jan-2024 22:30:40 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[10-Jan-2024 22:30:40 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[10-Jan-2024 22:30:40 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 106
+[10-Jan-2024 22:30:40 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[10-Jan-2024 22:30:40 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[11-Jan-2024 05:54:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 05:54:27 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 05:54:27 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 05:54:27 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 05:54:27 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 05:54:27 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 05:54:27 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 05:54:27 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[11-Jan-2024 05:54:27 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[11-Jan-2024 05:54:27 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 05:54:27 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 106
+[11-Jan-2024 05:54:27 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[11-Jan-2024 05:54:27 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[11-Jan-2024 05:57:06 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 05:57:06 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 05:57:06 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 05:57:06 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 05:57:06 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 05:57:06 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 05:57:06 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 05:57:06 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[11-Jan-2024 05:57:06 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[11-Jan-2024 05:57:06 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 05:57:06 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 106
+[11-Jan-2024 05:57:06 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[11-Jan-2024 05:57:06 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 06:06:31 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 106
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 06:06:31 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 106
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[11-Jan-2024 06:06:31 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[11-Jan-2024 06:25:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 06:25:11 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 06:25:11 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 06:25:11 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 06:25:11 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 06:25:11 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 06:25:11 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 06:25:11 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[11-Jan-2024 06:25:11 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[11-Jan-2024 06:25:11 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 06:25:11 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 106
+[11-Jan-2024 06:25:11 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[11-Jan-2024 06:25:11 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[11-Jan-2024 06:28:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 06:28:14 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 06:28:14 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 06:28:14 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 06:28:14 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 06:28:14 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 06:28:14 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 06:28:14 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[11-Jan-2024 06:28:14 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[11-Jan-2024 06:28:14 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 06:28:14 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 106
+[11-Jan-2024 06:28:14 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[11-Jan-2024 06:28:14 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[11-Jan-2024 07:06:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 07:06:25 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 07:06:25 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 07:06:25 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 07:06:25 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 07:06:25 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 07:06:25 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 07:06:25 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[11-Jan-2024 07:06:25 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[11-Jan-2024 07:06:25 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 07:06:25 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 106
+[11-Jan-2024 07:06:25 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[11-Jan-2024 07:06:25 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[11-Jan-2024 07:36:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 07:36:25 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 07:36:25 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 07:36:25 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 07:36:25 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 07:36:25 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 07:36:25 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 07:36:25 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[11-Jan-2024 07:36:25 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[11-Jan-2024 07:36:25 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 07:36:25 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 106
+[11-Jan-2024 07:36:25 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[11-Jan-2024 07:36:25 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[11-Jan-2024 09:39:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 09:39:47 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 09:39:47 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 09:39:47 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 09:39:47 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 09:39:47 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 09:39:47 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 09:39:47 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[11-Jan-2024 09:39:47 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[11-Jan-2024 09:39:47 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 09:39:47 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 09:39:47 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 106
+[11-Jan-2024 09:39:47 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[11-Jan-2024 09:39:47 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[11-Jan-2024 09:43:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 09:43:05 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 09:43:05 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 09:43:05 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 09:43:05 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 09:43:05 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 09:43:05 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 09:43:05 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[11-Jan-2024 09:43:05 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[11-Jan-2024 09:43:05 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 09:43:05 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 09:43:05 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 106
+[11-Jan-2024 09:43:05 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[11-Jan-2024 09:43:05 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[11-Jan-2024 09:45:58 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 09:45:58 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 09:45:58 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 09:45:58 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 09:45:58 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 09:45:58 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 09:45:58 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 09:45:58 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[11-Jan-2024 09:45:58 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[11-Jan-2024 09:45:58 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 09:45:58 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 09:45:58 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 106
+[11-Jan-2024 09:45:58 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[11-Jan-2024 09:45:58 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[11-Jan-2024 09:46:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 09:46:56 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 09:46:56 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 09:46:56 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 09:46:56 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 09:46:56 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 09:46:56 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 09:46:56 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[11-Jan-2024 09:46:56 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[11-Jan-2024 09:46:56 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 09:46:56 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 09:46:56 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 106
+[11-Jan-2024 09:46:56 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[11-Jan-2024 09:46:56 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[11-Jan-2024 09:47:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function number_formate() in /home/indusind/IndusInd/user/dashboard/index.php:104
+Stack trace:
+#0 {main}
+  thrown in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 09:49:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 09:49:44 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 09:49:44 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 09:49:44 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 09:49:44 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 09:49:44 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 09:49:44 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 09:49:44 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[11-Jan-2024 09:49:44 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[11-Jan-2024 09:49:44 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 09:49:44 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 09:49:44 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[11-Jan-2024 09:49:44 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[11-Jan-2024 09:49:44 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 121
+[11-Jan-2024 09:55:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 09:55:51 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 09:55:51 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 09:55:51 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 09:55:51 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 09:55:51 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 09:55:51 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 09:55:51 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[11-Jan-2024 09:55:51 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[11-Jan-2024 09:55:51 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 09:55:51 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[11-Jan-2024 09:55:51 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[11-Jan-2024 09:55:51 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 121
+[11-Jan-2024 09:59:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 09:59:56 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 09:59:56 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 09:59:56 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 09:59:56 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 09:59:56 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 09:59:56 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 09:59:56 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[11-Jan-2024 09:59:56 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[11-Jan-2024 09:59:56 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 09:59:56 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[11-Jan-2024 09:59:56 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[11-Jan-2024 09:59:56 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 121
+[11-Jan-2024 10:01:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 10:01:11 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 10:01:11 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 10:01:11 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 10:01:11 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 10:01:11 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 10:01:11 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 10:01:11 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[11-Jan-2024 10:01:11 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[11-Jan-2024 10:01:11 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 10:01:11 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[11-Jan-2024 10:01:11 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[11-Jan-2024 10:01:11 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 121
+[11-Jan-2024 10:01:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 10:01:27 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 10:01:27 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 10:01:27 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 10:01:27 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 10:01:27 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 10:01:27 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 10:01:27 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[11-Jan-2024 10:01:27 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[11-Jan-2024 10:01:27 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 10:01:27 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[11-Jan-2024 10:01:27 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[11-Jan-2024 10:01:27 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 121
+[11-Jan-2024 10:05:00 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 10:05:00 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 10:05:00 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 10:05:00 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 10:05:00 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 10:05:00 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 10:05:00 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 10:05:00 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[11-Jan-2024 10:05:00 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[11-Jan-2024 10:05:00 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 10:05:00 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[11-Jan-2024 10:05:00 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[11-Jan-2024 10:05:00 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 121
+[11-Jan-2024 10:05:26 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 10:05:26 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 10:05:26 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 10:05:26 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 10:05:26 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 10:05:26 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 10:05:26 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 10:05:26 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[11-Jan-2024 10:05:26 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[11-Jan-2024 10:05:26 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 10:05:26 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[11-Jan-2024 10:05:26 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[11-Jan-2024 10:05:26 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 121
+[11-Jan-2024 10:07:24 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 10:07:24 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 10:07:24 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 10:07:24 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 10:07:24 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 10:07:24 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 10:07:24 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 10:07:24 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[11-Jan-2024 10:07:24 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[11-Jan-2024 10:07:24 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 10:07:24 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[11-Jan-2024 10:07:24 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[11-Jan-2024 10:07:24 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 121
+[11-Jan-2024 10:08:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 10:08:05 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 10:08:05 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 10:08:05 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 10:08:05 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 10:08:05 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 10:08:05 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 67
+[11-Jan-2024 10:08:05 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 70
+[11-Jan-2024 10:08:05 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 74
+[11-Jan-2024 10:08:05 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 104
+[11-Jan-2024 10:08:05 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 111
+[11-Jan-2024 10:08:05 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 116
+[11-Jan-2024 10:08:05 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 121
+[11-Jan-2024 10:35:12 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 10:35:12 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 10:35:12 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 10:35:12 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 10:35:12 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 10:35:12 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 10:35:12 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 10:35:12 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 10:35:12 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 10:35:12 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 10:35:12 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 10:35:12 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 10:35:12 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122
+[11-Jan-2024 10:35:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 10:35:50 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 10:35:50 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 10:35:50 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 10:35:50 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 10:35:50 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 10:35:50 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 10:35:50 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 10:35:50 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 10:35:50 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 10:35:50 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 10:35:50 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 10:35:50 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122
+[11-Jan-2024 10:37:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 10:37:52 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 10:37:52 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 10:37:52 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 10:37:52 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 10:37:52 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 10:37:52 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 10:37:52 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 10:37:52 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 10:37:52 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 10:37:52 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 10:37:52 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 10:37:52 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122
+[11-Jan-2024 11:05:45 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 11:05:45 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 11:05:45 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 11:05:45 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 11:05:45 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 11:05:45 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 11:05:45 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 11:05:45 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 11:05:45 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 11:05:45 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 11:05:45 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 11:05:45 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 11:05:45 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122
+[11-Jan-2024 11:28:55 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 11:28:55 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 11:28:55 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 11:28:55 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 11:28:55 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 11:28:55 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 11:28:55 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 11:28:55 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 11:28:55 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 11:28:55 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 11:28:55 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 11:28:55 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 11:28:55 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122
+[11-Jan-2024 11:30:54 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 11:30:54 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 11:30:54 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 11:30:54 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 11:30:54 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 11:30:54 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 11:30:54 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 11:30:54 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 11:30:54 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 11:30:54 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 11:30:54 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 11:30:54 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 11:30:54 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122
+[11-Jan-2024 11:32:48 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 11:32:48 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 11:32:48 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 11:32:48 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 11:32:48 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 11:32:48 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 11:32:48 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 11:32:48 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 11:32:48 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 11:32:48 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 11:32:48 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 11:32:48 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 11:32:48 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122
+[11-Jan-2024 11:38:00 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 11:38:00 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 11:38:00 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 11:38:00 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 11:38:00 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 11:38:00 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 11:38:00 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 11:38:00 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 11:38:00 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 11:38:00 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 11:38:00 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 11:38:00 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 11:38:00 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122
+[11-Jan-2024 11:38:08 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 11:38:08 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 11:38:08 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 11:38:08 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 11:38:08 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 11:38:08 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 11:38:08 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 11:38:08 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 11:38:08 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 11:38:08 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 11:38:08 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 11:38:08 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 11:38:08 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122
+[11-Jan-2024 11:38:12 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 11:38:12 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 11:38:12 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 11:38:12 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 11:38:12 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 11:38:12 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 11:38:12 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 11:38:12 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 11:38:12 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 11:38:12 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 11:38:12 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 11:38:12 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 11:38:12 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122
+[11-Jan-2024 12:49:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 12:49:31 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 12:49:31 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 12:49:31 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 12:49:31 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 12:49:31 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 12:49:31 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 12:49:31 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 12:49:31 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 12:49:31 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 12:49:31 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 12:49:31 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 12:49:31 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122
+[11-Jan-2024 12:50:07 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 12:50:07 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 12:50:07 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 12:50:07 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 12:50:07 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 12:50:07 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 12:50:07 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 12:50:07 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 12:50:07 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 12:50:07 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 12:50:07 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 12:50:07 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 12:50:07 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122
+[11-Jan-2024 12:50:32 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 12:50:32 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 12:50:32 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 12:50:32 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 12:50:32 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 12:50:32 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 12:50:32 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 12:50:32 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 12:50:32 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 12:50:32 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 12:50:32 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 12:50:32 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 12:50:32 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122
+[11-Jan-2024 13:02:07 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 13:02:07 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 13:02:07 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 13:02:07 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 13:02:07 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 13:02:07 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 13:02:07 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 13:02:07 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 13:02:07 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 13:02:07 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 13:02:07 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 13:02:07 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 13:02:07 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122
+[11-Jan-2024 13:15:43 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 13:15:43 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 13:15:43 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 13:15:43 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 13:15:43 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 13:15:43 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 13:15:43 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 13:15:43 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 13:15:43 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 13:15:43 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 13:15:43 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 13:15:43 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 13:15:43 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122
+[11-Jan-2024 13:18:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 13:18:51 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 13:18:51 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 13:18:51 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 13:18:51 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 13:18:51 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 13:18:51 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 13:18:51 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 13:18:51 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 13:18:51 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 13:18:51 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 13:18:51 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 13:18:51 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122
+[11-Jan-2024 13:19:24 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 13:19:24 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 13:19:24 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 13:19:24 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 13:19:24 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 13:19:24 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 13:19:24 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 13:19:24 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 13:19:24 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 13:19:24 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 13:19:24 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 13:19:24 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 13:19:24 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122
+[11-Jan-2024 13:57:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 13:57:27 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 13:57:27 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 13:57:27 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 13:57:27 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 13:57:27 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 13:57:27 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 13:57:27 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 13:57:27 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 13:57:27 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 13:57:27 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 13:57:27 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 13:57:27 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122
+[11-Jan-2024 14:20:15 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 14:20:15 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 14:20:15 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 14:20:15 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 14:20:15 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 14:20:15 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 14:20:15 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 14:20:15 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 14:20:15 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 14:20:15 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 14:20:15 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 14:20:15 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 14:20:15 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122
+[11-Jan-2024 14:21:45 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 14:21:45 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 14:21:45 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 14:21:45 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 14:21:45 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 14:21:45 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 14:21:45 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 14:21:45 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 14:21:45 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 14:21:45 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 14:21:45 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 14:21:45 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 14:21:45 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122
+[11-Jan-2024 14:21:58 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 14:21:58 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 14:21:58 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 14:21:58 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 14:21:58 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 14:21:58 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 14:21:58 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 14:21:58 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 14:21:58 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 14:21:58 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 14:21:58 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 14:21:58 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 14:21:58 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122
+[11-Jan-2024 16:45:03 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 16:45:03 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 16:45:03 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 16:45:03 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 16:45:03 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 16:45:03 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 16:45:03 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 16:45:03 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 16:45:03 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 16:45:03 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 16:45:03 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 16:45:03 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 16:45:03 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122
+[11-Jan-2024 17:02:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/indusind/IndusInd/server/database.php:16) in /home/indusind/IndusInd/server/client/authorization/index.php on line 36
+[11-Jan-2024 17:02:56 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 8
+[11-Jan-2024 17:02:56 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 9
+[11-Jan-2024 17:02:56 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 10
+[11-Jan-2024 17:02:56 UTC] PHP Warning:  Undefined variable $id in /home/indusind/IndusInd/user/dashboard/index.php on line 11
+[11-Jan-2024 17:02:56 UTC] PHP Warning:  Undefined variable $card_number in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 17:02:56 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/indusind/IndusInd/user/dashboard/index.php on line 68
+[11-Jan-2024 17:02:56 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 71
+[11-Jan-2024 17:02:56 UTC] PHP Warning:  Undefined variable $card_date in /home/indusind/IndusInd/user/dashboard/index.php on line 75
+[11-Jan-2024 17:02:56 UTC] PHP Warning:  Undefined variable $balance in /home/indusind/IndusInd/user/dashboard/index.php on line 105
+[11-Jan-2024 17:02:56 UTC] PHP Warning:  Undefined variable $account_number in /home/indusind/IndusInd/user/dashboard/index.php on line 112
+[11-Jan-2024 17:02:56 UTC] PHP Warning:  Undefined variable $fullname in /home/indusind/IndusInd/user/dashboard/index.php on line 117
+[11-Jan-2024 17:02:56 UTC] PHP Warning:  Undefined variable $count in /home/indusind/IndusInd/user/dashboard/index.php on line 122

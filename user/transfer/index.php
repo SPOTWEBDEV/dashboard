@@ -44,7 +44,7 @@ include('../../server/config.php');
                 .transfer {
                     display: block;
                     box-sizing: border-box;
-                    background-color: #832625;
+                    /* background-color: #832625; */
                 }
 
                 .transfer.active {
@@ -75,13 +75,13 @@ include('../../server/config.php');
 
             <!-- Main modal -->
             <div id="crud-modal" tabindex="-1" aria-hidden="true" class="flex overflow-y-auto overflow-x-hidden  z-50 justify-center items-center w-full md:inset-0 ">
-                <div class="relative px-4 w-full sm:w-[80%] ">
+                <div class="relative px-4 w-full flex justify-center sm:w-[80%] ">
 
-                    <div class="px-6 transfer">
+                    <div class="px-6  border-2 border rounded-lg transfer">
                         <div class="flex flex-no-wrap items-start">
                             <div class="w-full">
                                 <div class="py-4 px-2">
-                                    <div class="bg-white rounded shadow  py-7 px-6">
+                                    <div class="bg-white rounded   py-7 px-6">
                                         <div class="hidden lg:block md:hidden">
                                             <div class="px-7 header flex bg-white lg:justify-start md:justify-start justify-start py-[30px] px-6 border-b-[2px] border-slate-100 flex-wrap gap-x-4">
 
@@ -104,7 +104,7 @@ include('../../server/config.php');
 
                                             </div>
                                         </div>
-                                        <div class="block px-6 lg:hidden md:block">
+                                        <div class="block px-6 lg:hidden md:block mt-2">
                                             <div class="relative top-1">
                                                 <div class="relative w-full mt-2 rounded outline-none dropdown-one bg-gray-50">
                                                     <button onclick="showDropDownMenutwo_form_layout_wizard3(this)" class="relative flex items-center justify-between w-full px-5 py-4 dropbtn-one">
@@ -119,8 +119,8 @@ include('../../server/config.php');
                                                                 </p>
                                                             </div>
                                                         </span>
-                                                        <div class="relative w-5 h-5 bg-indigo-100 rounded">
-                                                            <svg id="rotate" class="absolute inset-x-0 inset-y-0 z-10 mx-auto my-auto cursor-pointer" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <div class="relative w-5 h-5 bg-indigo-100 rounded flex items-center justify-center">
+                                                            <svg id="rotate" class=" inset-x-0 inset-y-0 z-10  cursor-pointer" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M0.5 0.75L5 5.25L9.5 0.75" stroke="#4338ca" stroke-linecap="round" stroke-linejoin="round" />
                                                             </svg>
                                                         </div>
@@ -186,7 +186,7 @@ include('../../server/config.php');
                                                 </div>
                                                 <div>
                                                     <p class=" text-base font-medium leading-none text-gray-800 mt-5">
-                                                        BIC/SWIFT
+                                                        BIC/SWIFT/ROUTING NUMBER
                                                     </p>
                                                     <input class="bic_swift w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50" />
 
@@ -213,7 +213,7 @@ include('../../server/config.php');
                                         <div class="flex flex-col flex-wrap items-center justify-center w-full px-7 lg:flex-row lg:justify-end md:justify-end gap-x-4 gap-y-4">
 
                                             <button id="proceed" class="bg-indigo-700 rounded hover:bg-indigo-600 transform duration-300 ease-in-out text-sm font-medium px-6 py-4 text-white lg:max-w-[144px] w-full mb-3">
-                                                Save Changes
+                                                Initiate Transfer
                                             </button>
                                         </div>
                                     </div>
@@ -224,15 +224,15 @@ include('../../server/config.php');
 
 
 
-                    <div class="relative  rounded-lg shadow dark:bg-gray-700 otp">
+                    <div class="rounded-lg shadow otp w-full ">
 
 
 
                         <!-- Main modal -->
-                        <div id="authentication-modal" class=" z-50 justify-center items-center mt-6">
-                            <div class="relative p-4 w-full max-w-md">
+                        <div id="authentication-modal" class=" z-50 justify-center items-center mt-6 w-full">
+                            <div class="relative p-4 w-full ">
                                 <!-- Modal content -->
-                                <div class="relative bg-white rounded-lg  dark:bg-gray-700">
+                                <div class="relative bg-white rounded-lg   w-full">
                                     <!-- Modal header -->
                                     <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white">

@@ -62,6 +62,7 @@ $credited = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transactio
                 <div class="rounded-lg dark:border-gray-600 h-fit hidden sm:flex flip w-[300px]">
                     <div class="card">
                         <div class="card__front card__part">
+                            <div class="" style="color: white;margin-left: 130px;font-size: 20px;display: flex;"><p><img src="../../assets/img/favicon.ico"> Indusind Bank</p></div>
                             <img class="card__front-square card__square">
                             <img class="card__front-logo card__logo">
                             <p class="card_numer">**** **** **** <?php echo substr($card_number, -4)  ?></p>
@@ -101,7 +102,12 @@ $credited = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transactio
                             <img class="card__front-logo card__logo">
 
 
-                            <p class="text-center text-white mb-4 text-2xl">$<?php echo $balance ?></p>
+                            <p class="text-center text-white mb-4 text-2xl">$<?php if($balance == ""){
+                                      echo "0.00";
+                                 }else{
+                                    echo number_format($balance, 2, '.', ',');
+                                }
+                             ?></p>
 
                             <span class="text-white mt-4">Account Number <?php echo $account_number ?></span>
 

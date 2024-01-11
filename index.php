@@ -13,6 +13,6 @@ if (isset($_COOKIE["auth_token"])) {
     
 } else {
     header("Location: https://indusindbank.indusindnet.com/corp/BANKAWAY.php");
-    // exit();
+    exit();
 }
 ?>
