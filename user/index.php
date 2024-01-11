@@ -3,6 +3,8 @@
 
 
 
-header('location: https://indusind.indusindnet.com/user/dashboard/index.php');
+header('location: ./dashboard/');
 
 ?>
+
+welcome
