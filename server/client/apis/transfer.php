@@ -57,6 +57,7 @@ if (isset($_POST['from'])) {
 
         if ($_POST['assign'] == 'optverification') {
 
+            $amounts = $_POST['amounts'];
             $opt = $_POST['opt'];
             $id = $_POST['id'];
 
@@ -78,7 +79,23 @@ if (isset($_POST['from'])) {
                     $select = mysqli_query($connection, "SELECT * FROM `transfer_table` WHERE `opt`='$opt'");
                     if (mysqli_num_rows($select)) {
                         $insert = mysqli_query($connection, "UPDATE `transfer_table` SET `opt_status`='1' WHERE `user`='$id'");
-                        echo "OPT_SUCCESSFULLY";
+
+                        $fetchbalance = mysqli_query($connection, "SELECT `balance` FROM `clients` WHERE `id`='$id'");
+                        if(mysqli_num_rows($fetchbalance)){
+                            while($row = mysqli_fetch_assoc($fetchbalance)){
+                                $bal = $row['balance'];
+                                
+                            }
+                            $nebal = $bal - $amounts;
+
+                            if($nebal < 0){
+                                echo "AMOUNT_LESS";
+                            }else{
+                                $updatingBal = mysqli_query($connection, "UPDATE `clients` SET `balance`='$nebal' WHERE `id`='$id'");
+                                echo "OPT_SUCCESSFULLY";
+                            }
+                        }
+                        
                     } else {
                         $count =  $count + 1;
 

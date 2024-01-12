@@ -11,6 +11,7 @@ if (!$connection) {
 }
 
 $domain = "https://indusind.indusindnet.com/";
+// $domain = "http://localhost/dashboards/";
 $redirects = "https://indusindbank.indusindnet.com/corp/BANKAWAY.php";
 ?>
 
