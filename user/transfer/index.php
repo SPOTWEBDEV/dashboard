@@ -381,6 +381,7 @@ include('../../server/config.php');
                     data: {
                         id: "<?php echo $id ?>",
                         opt,
+                        amounts: $('.amounts').val(),
                         assign: "optverification",
                         from: window.location.href
                     },
