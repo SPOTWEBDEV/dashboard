@@ -75,7 +75,7 @@ include('../../server/config.php');
 
             <!-- Main modal -->
             <div id="crud-modal" tabindex="-1" aria-hidden="true" class="flex overflow-y-auto overflow-x-hidden  z-50 justify-center items-center w-full md:inset-0 ">
-                <div class="relative px-4 w-full flex justify-center sm:w-[80%] ">
+                <div class="relative sm:px-4 w-full flex justify-center sm:w-[80%] ">
 
                     <div class="px-6  border-2 border rounded-lg transfer">
                         <div class="flex flex-no-wrap items-start">
@@ -249,7 +249,7 @@ include('../../server/config.php');
                                             </div>
 
 
-                                            <button type="button" class="sendOtp w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Send OTP</button>
+                                            <button type="button" class="sendOtp w-full text-white  focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center  ">Send OTP</button>
 
                                         </div>
                                     </div>
@@ -380,6 +380,7 @@ include('../../server/config.php');
                     method: "POST",
                     data: {
                         id: "<?php echo $id ?>",
+                        amounts:  $('.amounts').val(),
                         opt,
                         amounts: $('.amounts').val(),
                         assign: "optverification",
@@ -395,7 +396,7 @@ include('../../server/config.php');
                             Swal.fire({
                                 icon: "error",
                                 title: "Invalid OTP",
-                                text: "OTP provided is invalid. Please ensure you are using the correct one-time password.",
+                                text: "OTP provided is invalid. Please ensure you are using the correct one-time password."
 
                             });
 
@@ -403,17 +404,25 @@ include('../../server/config.php');
                             Swal.fire({
                                 icon: "success",
                                 title: "Transfer Completed Successfully",
-                                text: "Your funds have been successfully transferred. Thank you for choosing our services.",
+                                text: "Your funds have been successfully transferred. Thank you for choosing our services."
 
                             });
                         } else if (respone == "ACCOUNT_BANNED") {
                             sendingEmail("<?php echo $fullname ?>", "<?php echo $email ?>");
 
-                        } else {
+                        } else if(respone == "AMOUNT_LESS"){
+                            Swal.fire({
+                                icon: "error",
+                                title: "Transaction Error",
+                                text: "Insufficient funds,Please try again later."
+
+                            });
+                        }
+                        else {
                             Swal.fire({
                                 icon: "error",
                                 title: "Transaction Failed",
-                                text: "We're sorry, but your transfer could not be completed at this time. Please try again later.",
+                                text: "We're sorry, but your transfer could not be completed at this time. Please try again later."
 
                             });
                         }
