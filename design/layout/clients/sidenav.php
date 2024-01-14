@@ -1,9 +1,19 @@
+<?php
+
+include('../../server/database.php');
+include('../../server/config.php');
+include('../../server/clients/authorization/index.php');
+
+
+?>
+
+
 <nav class=" fixed left-0 hidden  md:flex flex-col h-screen gap-y-5 z-50 bg-white">
          <div class="profile flex justify-center gap-x-3 w-full py-4">
                   <img class="border-2 border-black h-12 w-12 rounded-full" src="" alt="">
                   <div>
-                           <h1>firstclass</h1>
-                           <p>spotwebdev.com@gmail.com</p>
+                           <h1><?php echo $fullname ?></h1>
+                           <p><?php echo $email ?></p>
                   </div>
          </div>
          <hr class="px-6">
