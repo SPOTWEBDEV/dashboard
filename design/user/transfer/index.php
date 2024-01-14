@@ -95,23 +95,15 @@ if (isset($_POST['transfer'])) {
                     $bal = $row['balance'];
                 }
 
-                $fetchamount = mysqli_query($connection, "SELECT `amount` FROM `transfer` WHERE `id`='$id'");
-                if (mysqli_num_rows($fetchamount)) {
-                    while ($row = mysqli_fetch_assoc($fetchamount)) {
-                        $amounts = $row['amount'];
-                    }
+                $nebal = $bal - $amount;
 
-                    // $nebal = $bal - $amounts;
+                if ($nebal < 0) {
+                    echo "<script>alert('AMOUNT_LESS');</script>";
+                } else {
 
-                    if ($nebal < 0) {
-                        echo "<script>alert('AMOUNT_LESS');</script>";
-                    } else {
+                    echo "Generated PIN: $randomPin";
 
-                        echo "Generated PIN: $randomPin";
-
-                        echo "generateTransferId: $randomUniqueCode";
-
-                    }
+                    echo "generateTransferId: $randomUniqueCode";
                 }
             }
         }
