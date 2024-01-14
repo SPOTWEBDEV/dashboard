@@ -230,12 +230,7 @@ include('../../server/clients/authorization/index.php');
                                                         <th scope="col" class="px-6 py-3">
                                                                Beneficiary
                                                         </th>
-                                                        <th scope="col" class="px-6 py-3">
-                                                               credit
-                                                        </th>
-                                                        <th scope="col" class="px-6 py-3">
-                                                               debit
-                                                        </th>
+                                                        
                                                         <th scope="col" class="px-6 py-3">
                                                                amount
                                                         </th>
@@ -249,7 +244,7 @@ include('../../server/clients/authorization/index.php');
                                                  </tr>
                                           </thead>
                                           <tbody>
-                                                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                 <!-- <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                                         <td class="w-4 p-4">
                                                                <div class="flex items-center">
                                                                       <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
@@ -277,119 +272,8 @@ include('../../server/clients/authorization/index.php');
                                                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit
                                                                       user</a>
                                                         </td>
-                                                 </tr>
-                                                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                                        <td class="w-4 p-4">
-                                                               <div class="flex items-center">
-                                                                      <input id="checkbox-table-search-2" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                                                      <label for="checkbox-table-search-2" class="sr-only">checkbox</label>
-                                                               </div>
-                                                        </td>
-                                                        <th scope="row" class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                               <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image">
-                                                               <div class="ps-3">
-                                                                      <div class="text-base font-semibold">Bonnie Green</div>
-                                                                      <div class="font-normal text-gray-500">bonnie@flowbite.com</div>
-                                                               </div>
-                                                        </th>
-                                                        <td class="px-6 py-4">
-                                                               Designer
-                                                        </td>
-                                                        <td class="px-6 py-4">
-                                                               <div class="flex items-center">
-                                                                      <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
-                                                                      Online
-                                                               </div>
-                                                        </td>
-                                                        <td class="px-6 py-4">
-                                                               <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit
-                                                                      user</a>
-                                                        </td>
-                                                 </tr>
-                                                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                                        <td class="w-4 p-4">
-                                                               <div class="flex items-center">
-                                                                      <input id="checkbox-table-search-2" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                                                      <label for="checkbox-table-search-2" class="sr-only">checkbox</label>
-                                                               </div>
-                                                        </td>
-                                                        <th scope="row" class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                               <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-2.jpg" alt="Jese image">
-                                                               <div class="ps-3">
-                                                                      <div class="text-base font-semibold">Jese Leos</div>
-                                                                      <div class="font-normal text-gray-500">jese@flowbite.com</div>
-                                                               </div>
-                                                        </th>
-                                                        <td class="px-6 py-4">
-                                                               Vue JS Developer
-                                                        </td>
-                                                        <td class="px-6 py-4">
-                                                               <div class="flex items-center">
-                                                                      <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
-                                                                      Online
-                                                               </div>
-                                                        </td>
-                                                        <td class="px-6 py-4">
-                                                               <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit
-                                                                      user</a>
-                                                        </td>
-                                                 </tr>
-                                                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                                        <td class="w-4 p-4">
-                                                               <div class="flex items-center">
-                                                                      <input id="checkbox-table-search-2" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                                                      <label for="checkbox-table-search-2" class="sr-only">checkbox</label>
-                                                               </div>
-                                                        </td>
-                                                        <th scope="row" class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                               <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-5.jpg" alt="Jese image">
-                                                               <div class="ps-3">
-                                                                      <div class="text-base font-semibold">Thomas Lean</div>
-                                                                      <div class="font-normal text-gray-500">thomes@flowbite.com</div>
-                                                               </div>
-                                                        </th>
-                                                        <td class="px-6 py-4">
-                                                               UI/UX Engineer
-                                                        </td>
-                                                        <td class="px-6 py-4">
-                                                               <div class="flex items-center">
-                                                                      <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
-                                                                      Online
-                                                               </div>
-                                                        </td>
-                                                        <td class="px-6 py-4">
-                                                               <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit
-                                                                      user</a>
-                                                        </td>
-                                                 </tr>
-                                                 <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                                        <td class="w-4 p-4">
-                                                               <div class="flex items-center">
-                                                                      <input id="checkbox-table-search-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                                                      <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
-                                                               </div>
-                                                        </td>
-                                                        <th scope="row" class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                               <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-4.jpg" alt="Jese image">
-                                                               <div class="ps-3">
-                                                                      <div class="text-base font-semibold">Leslie Livingston</div>
-                                                                      <div class="font-normal text-gray-500">leslie@flowbite.com</div>
-                                                               </div>
-                                                        </th>
-                                                        <td class="px-6 py-4">
-                                                               SEO Specialist
-                                                        </td>
-                                                        <td class="px-6 py-4">
-                                                               <div class="flex items-center">
-                                                                      <div class="h-2.5 w-2.5 rounded-full bg-red-500 me-2"></div>
-                                                                      Offline
-                                                               </div>
-                                                        </td>
-                                                        <td class="px-6 py-4">
-                                                               <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit
-                                                                      user</a>
-                                                        </td>
-                                                 </tr>
+                                                 </tr> -->
+
                                           </tbody>
                                    </table>
                             </div>
@@ -401,7 +285,7 @@ include('../../server/clients/authorization/index.php');
               $(() => {
 
                      $.ajax({
-                            url: "<?= $domain ?>server/clients/apis/getTransaction.php",
+                            url: "<?= $domain ?>design/server/clients/apis/getTransaction.php",
                             method: "GET",
                             data: {
                                    from: window.location.href
@@ -413,15 +297,15 @@ include('../../server/clients/authorization/index.php');
 
                                    console.log(data);
 
-                                   // loadTable(data)
+                                   loadTable(data)
 
-                                   document.querySelector("#simple-search").addEventListener('keyup', (event) => {
-                                          const newdata = data.filter(str => str.fullname.includes(event.target.value) || str.email.includes(event.target.value) || str.phone.includes(event.target.value));
+                                   // document.querySelector("#simple-search").addEventListener('keyup', (event) => {
+                                   //        const newdata = data.filter(str => str.fullname.includes(event.target.value) || str.email.includes(event.target.value) || str.phone.includes(event.target.value));
 
 
 
-                                          loadTable(newdata)
-                                   })
+                                   //        loadTable(newdata)
+                                   // })
                             },
                             error(error) {
                                    console.log(error);
@@ -435,34 +319,44 @@ include('../../server/clients/authorization/index.php');
                             for (var i = 0; i < data.length; i++) {
                                    console.log(data[i]);
 
-                                   let transfer_message = '';
-                                   if (data[i].transfer_status == 1) {
-                                          transfer_status = 'Active'
-                                          transfer_status_color = 'bg-green-400'
-                                          transfer_message = "Are you sure you want to activate a successful transfer for this user?"
-                                   } else {
-                                          transfer_status = 'Not-Active'
-                                          transfer_status_color = 'bg-red-400'
-                                          transfer_message = "Are you sure you want to deactivate successful transfers for this user?"
-                                   }
+                                   // let transfer_message = '';
+                                   // if (data[i].transfer_status == 1) {
+                                   //        transfer_status = 'Active'
+                                   //        transfer_status_color = 'bg-green-400'
+                                   //        transfer_message = "Are you sure you want to activate a successful transfer for this user?"
+                                   // } else {
+                                   //        transfer_status = 'Not-Active'
+                                   //        transfer_status_color = 'bg-red-400'
+                                   //        transfer_message = "Are you sure you want to deactivate successful transfers for this user?"
+                                   // }
 
 
-                                   const html = ` <tr class="border-b dark:border-gray-700">
-                                                <td class="px-4 py-3">${i+1}</td>
-                                                <td class="px-4 py-3">${data[i].fullname}</td>
-                                                <td class="px-4 py-3">${data[i].email}</td>
-                                                <td class="px-4 py-3">${data[i].phone}</td>
-                                            
-                                                <td class="px-4 py-3">
-                                                    <form method="POST">
-                                                    <input name="input_transfer_status" type="hidden" value="${data[i].transfer_status}" />
-                                                    <input name="input_id" type="hidden" value="${data[i].id}" />
-                                                    <button onclick="return confirm('${transfer_message}')" name="transfer_status" type="submit" class="py-2 px-6  text-white rounded-lg ${transfer_status_color}">${transfer_status}</button>
-                                                    </form>
-                                                </td>
-                                                <td>
-                                                  <a href="./index.php?user_id=${data[i].id}"  class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" >Add Transaction</a>
-                                                </td>
+                                   const html = ` <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                <td class="w-4 p-4">
+                                                               ${data[i].transaction_unique_code}
+                                                        </td>
+                                                        <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                                               
+                                                               <div class="ps-3">
+                                                                      <div class="text-base font-semibold">${data[i].account_name}</div>
+                                                                      <div class="font-normal text-gray-500">${data[i].account_number}
+                                                                      </div>
+                                                               </div>
+                                                        </th>
+                                                        <td class="px-6 py-4">
+                                                               ${data[i].amount}
+                                                        </td>
+                                                        <td class="px-6 py-4">
+                                                               <div class="flex items-center">
+                                                                      <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
+                                                                      Online
+                                                               </div>
+                                                        </td>
+                                                        <td class="px-6 py-4">
+                                                               <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">${data[i].date}
+                                                                      </a>
+                                                        </td>
+                                                        
                                             </tr>`;
                                    document.querySelector('tbody').insertAdjacentHTML("beforeend", html)
                             }

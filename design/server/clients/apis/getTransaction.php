@@ -1,7 +1,7 @@
 <?php
 include('../../database.php');
 
-echo 'send';
+
 
 $allowedDomains = [
          $domain . 'design/user/dashboard/',

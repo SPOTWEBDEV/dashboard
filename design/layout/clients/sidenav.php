@@ -9,10 +9,10 @@
          <hr class="px-6">
          <div class="px-4">
                   <p>Account</p>
-                  <div class="w-full flex items-center gap-x-2 text-lg mt-2">
+                  <a href="<?php echo $domain ?>design/user/dashboard/" class="w-full flex items-center gap-x-2 text-lg mt-2">
                            <i class="bi bi-house-door"></i>
                            <p class="">Home</p>
-                  </div>
+                  </a>
                   <div class="w-full flex items-center gap-x-2 text-lg mt-2">
                            <i class="bi bi-clock-history"></i>
                            <p class="">Account History</p>
@@ -20,10 +20,10 @@
          </div>
          <div class="px-4 text-bold">
                   <p>Fund Transfer</p>
-                  <div class="w-full flex items-center gap-x-2 text-lg mt-2">
+                  <a href="<?php echo $domain ?>design/user/transfer/" class="w-full flex items-center gap-x-2 text-lg mt-2">
                            <i class="bi bi-house-door"></i>
                            <p class="text-bold">International Transfer</p>
-                  </div>
+                  </a>
                   <div class="w-full flex items-center gap-x-2 text-lg mt-2">
                            <i class="bi bi-house-door"></i>
                            <p class="">Transfer History</p>
