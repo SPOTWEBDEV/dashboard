@@ -101,7 +101,7 @@ if (isset($_POST['transfer'])) {
                         $amounts = $row['amount'];
                     }
 
-                    $nebal = $bal - $amounts;
+                    // $nebal = $bal - $amounts;
 
                     if ($nebal < 0) {
                         echo "<script>alert('AMOUNT_LESS');</script>";
@@ -110,66 +110,6 @@ if (isset($_POST['transfer'])) {
                         echo "Generated PIN: $randomPin";
 
                         echo "generateTransferId: $randomUniqueCode";
-
-
-
-
-
-                        // $updatingBal = mysqli_query($connection, "UPDATE `clients` SET `balance`='$nebal' WHERE `id`='$id'");
-
-
-
-                        // // Function to generate a random PIN
-                        // function generateRandomPin($length = 8)
-                        // {
-                        //     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-                        //     $randomPin = '';
-
-                        //     for ($i = 0; $i < $length; $i++) {
-                        //         $randomPin .= $characters[rand(0, strlen($characters) - 1)];
-                        //     }
-
-                        //     return $randomPin;
-                        // }
-
-                        // // Function to check if a PIN is in the database
-                        // function isPinInDatabase($pin, $database)
-                        // {
-                        //     // Replace this with your actual database check logic
-                        //     return in_array($pin, $database);
-                        // }
-
-                        // // Example usage
-                        // $database = ['abc123', 'def456', 'ghi789']; // Replace with your actual database
-
-                        // do {
-                        //     $randomPin = generateRandomPin();
-                        // } while (isPinInDatabase($randomPin, $database));
-
-                        // // At this point, $randomPin contains a unique PIN not in the database
-                        // echo "Generated PIN: $randomPin";
-
-                        // // You can now add $randomPin to your database or use it as needed.
-
-
-
-
-                        // function generateRandomPin($length = 5)
-                        // {
-                        //     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-                        //     $randomString = '';
-
-                        //     for ($i = 0; $i < $length; $i++) {
-                        //         $randomString .= $characters[rand(0, strlen($characters) - 1)];
-                        //     }
-
-                        //     return $randomString;
-                        // }
-
-                        // // Example: Generate a random PIN of length 10
-                        // $randomPin = generateRandomPin(5);
-                        // echo "Random PIN: $randomPin";
-                        // echo $randomPin;
 
                     }
                 }
