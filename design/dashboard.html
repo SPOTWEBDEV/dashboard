@@ -154,7 +154,7 @@
                     </ol>
                 </nav>
 
-                <section class="flex  flex-col gap-x-6 gap-y-6  px-6 w-full py-2 mt-3">
+                <section class="hidden  flex-col gap-x-6 gap-y-6  px-6 w-full py-2 mt-3">
                      <div class="w-full">
                         <small class="text-lg capitalize">Processing Transfer</small>
                         <div class="border-2 w-96 border-blue-400"></div>
@@ -185,7 +185,7 @@
                      </div>
                 </section>
 
-                <section class="flex flex-col gap-x-6 gap-y-6 px-2  sm:px-6 w-full py-2 mt-3">
+                <section class=" hidden  flex-col gap-x-6 gap-y-6 px-2  sm:px-6 w-full py-2 mt-3">
                     <div class="w-full flex flex-col justify-center items-center small:items-start">
                         <small class="text-sm small:text-lg capitalize ">Transfer Verification</small>
                         <div class="border-2 w-full sm:w-96 border-blue-400"></div>
@@ -217,6 +217,37 @@
                         </div>
                     </div>
                 </section>
+
+                <section class="flex flex-col gap-x-6 gap-y-6 px-2  sm:px-6 w-full py-2 mt-3">
+                    <div class="w-full ">
+                        <div class="relative p-4 w-full max-w-lg h-full md:h-auto">
+                            <div class="relative p-4 bg-white rounded-lg drop-shadow-2xl  dark:bg-gray-800 md:p-8">
+                                <div class="mb-4 text-sm font-light text-gray-500 dark:text-gray-400">
+                                    <h3 class="mb-3 text-sm  small:text-xl  bold text-gray-900  uppercase">Transfer Completed</h3>
+
+                                    <div class="h-16 w-16  rounded-full bg-color flex items-center justify-center">
+<i class="bi bi-send-check text-2xl text-white"></i>
+                                    </div>
+                
+                                    <p class="mt-2 text-sm  text-green-300">You have Successfully Transfered $1000,000 TO micheal </p>
+                                    <p class="mt-2 text-sm  color">Transaction initiated successfully. we are Processign your Transaction </p>
+                                </div>
+                                <div class="justify-end items-center pt-0 space-y-4 sm:flex sm:space-y-0">
+                
+                                    <div class="items-center  space-y-4 sm:space-x-4 sm:flex sm:space-y-0">
+                                        <a href=""><button id="confirm-button" type="button"
+                                            class="py-2 px-4  text-sm font-medium text-center text-white rounded-lg bg-color uppercase">View Recipt</button></a>
+                                       <a href=""><button id="confirm-button" type="button"
+                                        class="py-2 px-4 text-sm font-medium text-center  border-2 rounded-lg border-blue-500 uppercase">Back TO
+                                        HOME</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
                
             </main>
         </section>
