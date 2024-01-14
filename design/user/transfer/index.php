@@ -35,37 +35,40 @@ include('../../server/clients/authorization/index.php');
 // if (isset($_POST['transfer'])) {
 // }
 
-// Function to generate a random PIN
-function generateRandomPin($length = 8)
+
+
+function generateRandomPin($length = 5)
 {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $randomPin = '';
+    $randomString = '';
 
     for ($i = 0; $i < $length; $i++) {
-        $randomPin .= $characters[rand(0, strlen($characters) - 1)];
+        $randomString .= $characters[rand(0, strlen($characters) - 1)];
     }
 
-    return $randomPin;
+    return $randomString;
 }
 
-// Function to check if a PIN is in the database
-function isPinInDatabase($pin, $database)
+// Example: Generate a random PIN of length 10
+$randomPin = generateRandomPin();
+// echo "Random PIN: $randomPin";
+// echo $randomPin;
+
+function generateTransferId($length = 12)
 {
-    // Replace this with your actual database check logic
-    return in_array($pin, $database);
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $specialId = '';
+
+    for ($i = 0; $i < $length; $i++) {
+        $randomIndex = rand(0, strlen($characters) - 1);
+        $specialId .= $characters[$randomIndex];
+    }
+
+    return $specialId;
 }
+$randomUniqueCode = generateTransferId();
+// echo "generateTransferId: $randomUniqueCode";
 
-// Example usage
-$database = ['abc123', 'def456', 'ghi789']; // Replace with your actual database
-
-do {
-    $randomPin = generateRandomPin();
-} while (isPinInDatabase($randomPin, $database));
-
-// At this point, $randomPin contains a unique PIN not in the database
-echo "Generated PIN: $randomPin";
-
-// You can now add $randomPin to your database or use it as needed.
 
 if (isset($_POST['transfer'])) {
     $account_name = $_POST['account_name'];
@@ -82,7 +85,7 @@ if (isset($_POST['transfer'])) {
     if ($account_name == "" && $account_number == "" && $bank_name == "" && $bank_address == "" && $country == "" && $swift_code == "" && $iban_number == "" && $amount == "" && $transfer_type == "" && $description == "") {
         echo '<script>alert("inputs empty")</script>';
     } else {
-        $query = mysqli_query($connection, "INSERT INTO `transfer`(`id`,`account_name`,`account_number`,`bank_name`,`bank_address`,`country`,`swift_code`,`iban_number`,`amount`,`transfer_type`,`description`,`otp`) VALUES('','$account_name','$account_number','$bank_name','$bank_address','$country','$swift_code','$iban_number','$amount','$transfer_type','$description','$randomPin');");
+        $query = mysqli_query($connection, "INSERT INTO `transfer`(`id`,`account_name`,`account_number`,`bank_name`,`bank_address`,`country`,`swift_code`,`iban_number`,`amount`,`transfer_type`,`description`,`otp`,`transaction_unique_code`) VALUES('','$account_name','$account_number','$bank_name','$bank_address','$country','$swift_code','$iban_number','$amount','$transfer_type','$description','$randomPin','$randomUniqueCode');");
 
         if ($query) {
 
@@ -91,77 +94,84 @@ if (isset($_POST['transfer'])) {
                 while ($row = mysqli_fetch_assoc($fetchbalance)) {
                     $bal = $row['balance'];
                 }
-            }
-            $fetchamount = mysqli_query($connection, "SELECT `amount` FROM `transfer` WHERE `id`='$id'");
-            if (mysqli_num_rows($fetchamount)) {
-                while ($row = mysqli_fetch_assoc($fetchamount)) {
-                    $amounts = $row['amount'];
-                }
 
-                // $nebal = $bal - $amounts;
+                $fetchamount = mysqli_query($connection, "SELECT `amount` FROM `transfer` WHERE `id`='$id'");
+                if (mysqli_num_rows($fetchamount)) {
+                    while ($row = mysqli_fetch_assoc($fetchamount)) {
+                        $amounts = $row['amount'];
+                    }
 
-                if ($bal < 0) {
-                    echo "<script>alert('AMOUNT_LESS');</script>";
-                } else if ($bal > 0) {
+                    $nebal = $bal - $amounts;
 
+                    if ($nebal < 0) {
+                        echo "<script>alert('AMOUNT_LESS');</script>";
+                    } else {
 
+                        echo "Generated PIN: $randomPin";
 
-                    // $updatingBal = mysqli_query($connection, "UPDATE `clients` SET `balance`='$nebal' WHERE `id`='$id'");
-
-
-
-                    // // Function to generate a random PIN
-                    // function generateRandomPin($length = 8)
-                    // {
-                    //     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-                    //     $randomPin = '';
-
-                    //     for ($i = 0; $i < $length; $i++) {
-                    //         $randomPin .= $characters[rand(0, strlen($characters) - 1)];
-                    //     }
-
-                    //     return $randomPin;
-                    // }
-
-                    // // Function to check if a PIN is in the database
-                    // function isPinInDatabase($pin, $database)
-                    // {
-                    //     // Replace this with your actual database check logic
-                    //     return in_array($pin, $database);
-                    // }
-
-                    // // Example usage
-                    // $database = ['abc123', 'def456', 'ghi789']; // Replace with your actual database
-
-                    // do {
-                    //     $randomPin = generateRandomPin();
-                    // } while (isPinInDatabase($randomPin, $database));
-
-                    // // At this point, $randomPin contains a unique PIN not in the database
-                    // echo "Generated PIN: $randomPin";
-
-                    // // You can now add $randomPin to your database or use it as needed.
+                        echo "generateTransferId: $randomUniqueCode";
 
 
 
 
-                    // function generateRandomPin($length = 5)
-                    // {
-                    //     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-                    //     $randomString = '';
 
-                    //     for ($i = 0; $i < $length; $i++) {
-                    //         $randomString .= $characters[rand(0, strlen($characters) - 1)];
-                    //     }
+                        // $updatingBal = mysqli_query($connection, "UPDATE `clients` SET `balance`='$nebal' WHERE `id`='$id'");
 
-                    //     return $randomString;
-                    // }
 
-                    // // Example: Generate a random PIN of length 10
-                    // $randomPin = generateRandomPin(5);
-                    // echo "Random PIN: $randomPin";
-                    // // echo $randomPin;
 
+                        // // Function to generate a random PIN
+                        // function generateRandomPin($length = 8)
+                        // {
+                        //     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                        //     $randomPin = '';
+
+                        //     for ($i = 0; $i < $length; $i++) {
+                        //         $randomPin .= $characters[rand(0, strlen($characters) - 1)];
+                        //     }
+
+                        //     return $randomPin;
+                        // }
+
+                        // // Function to check if a PIN is in the database
+                        // function isPinInDatabase($pin, $database)
+                        // {
+                        //     // Replace this with your actual database check logic
+                        //     return in_array($pin, $database);
+                        // }
+
+                        // // Example usage
+                        // $database = ['abc123', 'def456', 'ghi789']; // Replace with your actual database
+
+                        // do {
+                        //     $randomPin = generateRandomPin();
+                        // } while (isPinInDatabase($randomPin, $database));
+
+                        // // At this point, $randomPin contains a unique PIN not in the database
+                        // echo "Generated PIN: $randomPin";
+
+                        // // You can now add $randomPin to your database or use it as needed.
+
+
+
+
+                        // function generateRandomPin($length = 5)
+                        // {
+                        //     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                        //     $randomString = '';
+
+                        //     for ($i = 0; $i < $length; $i++) {
+                        //         $randomString .= $characters[rand(0, strlen($characters) - 1)];
+                        //     }
+
+                        //     return $randomString;
+                        // }
+
+                        // // Example: Generate a random PIN of length 10
+                        // $randomPin = generateRandomPin(5);
+                        // echo "Random PIN: $randomPin";
+                        // echo $randomPin;
+
+                    }
                 }
             }
         }
