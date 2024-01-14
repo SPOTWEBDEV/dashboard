@@ -7,9 +7,9 @@ p{
                   font-family: 'Roboto', sans-serif;
                   font-weight: 500;
 }
-h1{
+h1,small,h3{
          font-family: 'IBM Plex Sans', sans-serif;
-         font-weight:800;
+
 }
 span{
          font-family: 'Inconsolata', monospace;
@@ -20,6 +20,9 @@ span{
 }
 .background{
          background: #014760
+}
+.color{
+         color: #f15075;
 }
 .credit-card{
          background-image: linear-gradient(to right bottom, #fd696b, #fa616e, #f65871, #f15075, #ec4879);
