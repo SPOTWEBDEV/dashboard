@@ -23,7 +23,7 @@ if(isset($_SESSION['new_login_id'])){
 }
 
 
-$clients = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM ` clients`"));
+$clients = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `clients`"));
 $pending_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transfer` WHERE `status`=0"));
 $accepted_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transfer` WHERE `status`=1"));
 $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transfer` WHERE `status`!=1 AND `status`!=0"));
@@ -207,7 +207,7 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
                         <div class="row align-items-center">
                             <div class="col-sm-6 col-12 mb-4 mb-sm-0">
                                 <!-- Title -->
-                                <h1 class="h2 mb-0 ls-tight">Application</h1>
+                                <h1 class="h2 mb-0 ls-tight">Indusind Bank</h1>
                             </div>
                             <!-- Actions -->
                             <div class="col-sm-6 col-12 text-sm-end">
@@ -252,8 +252,8 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <span class="h6 font-semibold text-muted text-sm d-block mb-2">Budget</span>
-                                            <span class="h3 font-bold mb-0">$750.90</span
+                                            <span class="h6 font-semibold text-muted text-sm d-block mb-2">Clients</span>
+                                            <span class="h3 font-bold mb-0"><?php echo $clients ?></span>
                                         </div>
                                         <div class="col-auto">
                                             <div class="icon icon-shape bg-tertiary text-white text-lg rounded-circle">
@@ -275,8 +275,8 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <span class="h6 font-semibold text-muted text-sm d-block mb-2">New projects</span>
-                                            <span class="h3 font-bold mb-0">215</span>
+                                            <span class="h6 font-semibold text-muted text-sm d-block mb-2">Pending transfer</span>
+                                            <span class="h3 font-bold mb-0"><?php echo $pending_transfer ?></span>
                                         </div>
                                         <div class="col-auto">
                                             <div class="icon icon-shape bg-primary text-white text-lg rounded-circle">
@@ -298,8 +298,8 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <span class="h6 font-semibold text-muted text-sm d-block mb-2">Total hours</span>
-                                            <span class="h3 font-bold mb-0">1.400</span>
+                                            <span class="h6 font-semibold text-muted text-sm d-block mb-2">Active transfer</span>
+                                            <span class="h3 font-bold mb-0"><?php echo $accepted_transfer ?></span>
                                         </div>
                                         <div class="col-auto">
                                             <div class="icon icon-shape bg-info text-white text-lg rounded-circle">
@@ -321,8 +321,8 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <span class="h6 font-semibold text-muted text-sm d-block mb-2">Work load</span>
-                                            <span class="h3 font-bold mb-0">95%</span>
+                                            <span class="h6 font-semibold text-muted text-sm d-block mb-2">Declined transfer</span>
+                                            <span class="h3 font-bold mb-0"><?php echo $declined_transfer ?></span>
                                         </div>
                                         <div class="col-auto">
                                             <div class="icon icon-shape bg-warning text-white text-lg rounded-circle">
