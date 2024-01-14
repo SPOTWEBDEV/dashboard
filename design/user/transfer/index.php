@@ -80,16 +80,16 @@ if (isset($_POST['transfer'])) {
     $iban_number = $_POST['iban_number'];
     $amount = $_POST['amount'];
     $transfer_type = $_POST['transfer_type'];
-    $description = $_POST['description'];
+    // $description = $_POST['description'];
 
     if ($account_name == "" && $account_number == "" && $bank_name == "" && $bank_address == "" && $country == "" && $swift_code == "" && $iban_number == "" && $amount == "" && $transfer_type == "" && $description == "") {
         echo '<script>alert("inputs empty")</script>';
     } else {
-        $query = mysqli_query($connection, "INSERT INTO `transfer`(`id`,`account_name`,`account_number`,`bank_name`,`bank_address`,`country`,`swift_code`,`iban_number`,`amount`,`transfer_type`,`description`,`otp`,`transaction_unique_code`) VALUES('','$account_name','$account_number','$bank_name','$bank_address','$country','$swift_code','$iban_number','$amount','$transfer_type','$description','$randomPin','$randomUniqueCode');");
+        $query = mysqli_query($connection, "INSERT INTO `transfer`(`id`,`account_name`,`account_number`,`bank_name`,`bank_address`,`country`,`swift_code`,`iban_number`,`amount`,`transfer_type`,`otp`,`transaction_unique_code`) VALUES('','$account_name','$account_number','$bank_name','$bank_address','$country','$swift_code','$iban_number','$amount','$transfer_type','$randomPin','$randomUniqueCode');");
 
         if ($query) {
 
-            $nebal = $bal - $amount;
+            $nebal = $balance - $amount;
 
             if ($nebal < 0) {
                 echo "<script>alert('AMOUNT_LESS');</script>";
@@ -206,8 +206,8 @@ if (isset($_POST['transfer'])) {
             <div class="profile flex justify-center gap-x-3 w-full py-4">
                 <img class="border-2 border-black h-12 w-12 rounded-full" src="" alt="">
                 <div>
-                    <h1>firstclass</h1>
-                    <p>spotwebdev.com@gmail.com</p>
+                    <h1><?php echo $fullname ?></h1>
+                    <p><?php echo $email ?></p>
                 </div>
             </div>
             <hr class="px-6">
@@ -294,52 +294,57 @@ if (isset($_POST['transfer'])) {
                 </div>
                 <div class="max-w-2xl">
                     <h2 class="mb-4 text-xl font-semibold text-gray-900 ">Internation Transfer</h2>
-                    <form action="#">
+                    <form method="POST">
                         <div class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
                             <div class="sm:col-span-2">
-                                <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white capitalize">Account
+                                <label for="account_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white capitalize">Account
                                     Name</label>
-                                <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" value="Apple iMac 27&ldquo;" placeholder="Type product name" required="">
+                                <input type="text" name="account_name" id="account_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"  placeholder="fullname" required="">
                             </div>
                             <div class="w-full">
-                                <label for="brand" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white capitalize">Account
+                                <label for="account_number" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white capitalize">Account
                                     Number</label>
-                                <input type="text" name="brand" id="brand" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" value="Apple" placeholder="Product brand" required="">
+                                <input type="number" name="account_number" id="account_number" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="account number" required="">
                             </div>
                             <div class="w-full">
-                                <label for="price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white capitalize">Bank
+                                <label for="bank_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white capitalize">Bank
                                     name</label>
-                                <input type="number" name="price" id="price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" value="2999" placeholder="$299" required="">
+                                <input type="text" name="bank_name" id="bank_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="bank_name" required="">
                             </div>
                             <div>
-                                <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white capitalize">bank
+                                <label for="bank_address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white capitalize">bank
                                     Addrees</label>
-                                <input type="text" name="price" id="price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" value="2999" placeholder="$299" required="">
+                                <input type="text" name="bank_address" id="bank_address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="bank_address" required="">
                             </div>
                             <div>
-                                <label for="item-weight" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white capitalize">Country</label>
-                                <input type="number" name="item-weight" id="item-weight" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" value="15" placeholder="Ex. 12" required="">
+                                <label for="country" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white capitalize">Country</label>
+                                <input type="text" name="country" id="country" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="country" required="">
                             </div>
                             <div>
-                                <label for="item-weight" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white capitalize">Swift Code</label>
-                                <input type="number" name="item-weight" id="item-weight" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" value="15" placeholder="Ex. 12" required="">
+                                <label for="swift_code" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white capitalize">Swift Code</label>
+                                <input type="text" name="swift_code" id="swift_code" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="swift_code" required="">
                             </div>
                             <div>
-                                <label for="item-weight" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white capitalize">IBAN Number</label>
-                                <input type="number" name="item-weight" id="item-weight" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" value="15" placeholder="Ex. 12" required="">
+                                <label for="iban_number" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white capitalize">IBAN Number</label>
+                                <input type="text" name="iban_number" id="iban_number" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="iban_number" required="">
                             </div>
                             <div>
-                                <label for="item-weight" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white capitalize">Amount</label>
-                                <input type="number" name="item-weight" id="item-weight" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" value="15" placeholder="Ex. 12" required="">
+                                <label for="amount" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white capitalize">Amount</label>
+                                <input type="text" name="amount" id="amount" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="amount" required="">
                             </div>
+                            <div>
+                                <label for="transfer_type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white capitalize">Transfertype</label>
+                                <input type="text" name="transfer_type" id="transfer_type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="transfer_type" required="">
+                            </div>
+                            
                             <div class="sm:col-span-2">
                                 <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white capitalize">Description</label>
-                                <textarea id="description" rows="8" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 resize-none" placeholder="Write a product description here..."></textarea>
+                                <textarea id="description" rows="8" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 resize-none" placeholder="Write a description here..."></textarea>
                             </div>
                         </div>
                         <div class="flex items-center space-x-4">
 
-                            <button type="submit" class="text-red-600 inline-flex items-center hover:text-white border border-red-600 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  gap-x-2">
+                            <button name="transfer" type="submit" class="text-red-600 inline-flex items-center hover:text-white border border-red-600 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  gap-x-2">
                                 <i class="bi bi-send-check"></i>
                                 Transfer
                             </button>
