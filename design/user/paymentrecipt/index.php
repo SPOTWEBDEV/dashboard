@@ -1,3 +1,60 @@
+<?php
+
+include('../../server/database.php');
+include('../../server/config.php');
+include('../../server/clients/authorization/index.php');
+
+if (isset($_GET['recipt'])) {
+         $recipt = $_GET['recipt'];
+         $select_transfer = mysqli_query($connection, "SELECT transfer.* 
+                                              FROM transfer, clients
+                                              WHERE transfer.transaction_unique_code = '$recipt' AND clients.id ='$id' AND transfer.user='$id'");
+
+         if (mysqli_num_rows($select_transfer) && $recipt != "") {
+                  while ($row = mysqli_fetch_assoc($select_transfer)) {
+                           $receiver_account_name = $row['account_name'];
+                           $receiver_account_number = $row['account_number'];
+                           $receiver_amount = $row['amount'];
+                           $date = $row['date'];
+                           $status = $row['status'];
+
+                           if ($status == 0) {
+                                    $status = "Pending";
+                                    $statusmsg = "OTP Not Verifed";
+                           } else if ($status == 1) {
+                                    $status = "Pending";
+                                    $statusmsg = "Transaction Processing";
+                           } else if ($status == 2) {
+                                    $statusmsg = "Processing";
+                                    $statusmsg = "Transaction Processing";
+                           } else if ($status == 3) {
+                                    $status = "Declined";
+                                    $statusmsg = "Transaction Declined";
+                           } else if ($status == 4) {
+                                    $status = "Approved";
+                                    $statusmsg = "Transaction Approved";
+                           }
+                  }
+                  $select_user = mysqli_query($connection, "SELECT clients.* 
+                                              FROM clients
+                                              WHERE  clients.id ='$id'");
+                  while ($row = mysqli_fetch_assoc($select_user)) {
+
+                           $send_account_name = $row['fullname'];
+                           $send_account_number = $row['account_number'];
+                           $send_phone = $row['phone'];
+                  }
+         } else {
+                  header('location: ../../dashboard/');
+         }
+} else {
+         header('location: ../../dashboard/');
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +102,7 @@
 
 
          <section class="w-full flex items-center justify-center py-3">
-                  <div class="w-[96%] small:w-[90%] sm:w-[70%] md:w-1/2 border border-gray-500 py-4 mt-6 px-4 flex flex-col gap-y-6">
+                  <div id="recipt" class="w-[96%] small:w-[90%] sm:w-[70%] md:w-1/2 border border-gray-500 py-4 mt-6 px-4 flex flex-col gap-y-6">
 
                            <div class="w-full flex items-center justify-center gap-x-2">
                                     <img class="h-6 cover" src="../../assets/images/favicon.ico" alt="">
@@ -69,7 +126,7 @@
 
                                                                         </div>
                                                                         <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                                                                 $320
+                                                                                 <?php echo $send_account_name  ?>
                                                                         </div>
                                                                </div>
                                                       </li>
@@ -83,7 +140,7 @@
 
                                                                         </div>
                                                                         <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                                                                 $3467
+                                                                                 <?php echo $send_account_number ?>
                                                                         </div>
                                                                </div>
                                                       </li>
@@ -97,7 +154,7 @@
 
                                                                         </div>
                                                                         <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                                                                 $67
+                                                                                 <?php echo $send_phone  ?>
                                                                         </div>
                                                                </div>
                                                       </li>
@@ -123,7 +180,7 @@
 
                                                                         </div>
                                                                         <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                                                                 $320
+                                                                                 <?php echo $receiver_account_name ?>
                                                                         </div>
                                                                </div>
                                                       </li>
@@ -137,24 +194,11 @@
 
                                                                         </div>
                                                                         <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                                                                 $3467
+                                                                                 <?php echo $receiver_account_number ?>
                                                                         </div>
                                                                </div>
                                                       </li>
-                                                      <li class="py-1">
-                                                               <div class="flex items-center">
 
-                                                                        <div class="flex-1 min-w-0 ms-4">
-                                                                                 <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                                                                          Receiver Phone Number
-                                                                                 </p>
-
-                                                                        </div>
-                                                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                                                                 $67
-                                                                        </div>
-                                                               </div>
-                                                      </li>
 
                                              </ul>
                                     </div>
@@ -177,7 +221,7 @@
 
                                                                         </div>
                                                                         <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                                                                 $320
+                                                                                 <?php echo $date ?>
                                                                         </div>
                                                                </div>
                                                       </li>
@@ -205,7 +249,7 @@
 
                                                                         </div>
                                                                         <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                                                                 $67
+                                                                                 <?php echo $statusmsg ?>
                                                                         </div>
                                                                </div>
                                                       </li>
@@ -219,7 +263,7 @@
 
                                                                         </div>
                                                                         <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                                                                 $67
+                                                                                 $<?php echo number_format($receiver_amount, 2, '.', ',') ?>
                                                                         </div>
                                                                </div>
                                                       </li>
@@ -229,14 +273,20 @@
                            </div>
 
                            <div class="flex w-full items-center justify-center uppercase bold text-xl ">
-                                    approved
+                                    <?php echo $status ?>
                            </div>
                            <div class="flex w-full items-center justify-end uppercase bold text-xl ">
-                                    <button class="uppercase bg-color text-white rounded-md p-3 text-light">Click to print</button>
+                                    <button onclick="printDiv()" class="uppercase bg-color text-white rounded-md p-3 text-light">Click to print</button>
                            </div>
 
                   </div>
          </section>
+         <script>
+                  function printDiv() {
+                           window.print()
+                  }
+         </script>
+
 
 </body>
 

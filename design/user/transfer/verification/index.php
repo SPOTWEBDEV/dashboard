@@ -1,3 +1,72 @@
+<?php
+include('../../../server/database.php');
+include('../../../server/config.php');
+include('../../../server/clients/authorization/index.php');
+
+$recipt = '';
+if (isset($_GET['transfer_verification'])) {
+         $transfer_verification = $_GET['transfer_verification'];
+         $select_transfer = mysqli_query($connection, "SELECT * FROM `transfer` WHERE `transaction_unique_code`='$transfer_verification'");
+         if (mysqli_num_rows($select_transfer) && $transfer_verification != "") {
+                  while ($row = mysqli_fetch_assoc($select_transfer)) {
+                           $amount = $row['amount'];
+                           $Receiver_account_name = $row['account_name'];
+                  }
+                  $recipt = $transfer_verification;
+         } else {
+                  header('location: ../../dashboard/');
+         }
+} else {
+         header('location: ../../dashboard/');
+}
+
+
+
+$transferverfication = false;
+
+$transfercompleted = false;
+
+$transferprocessing = true;
+
+
+
+if (isset($_POST['myButton'])) {
+         $transferverfication = true;
+         $transferprocessing = false;
+}
+
+if (isset($_POST['sendotp'])) {
+         $otp = $_POST['otp'];
+         $checkotp = mysqli_query($connection, "SELECT * FROM `transfer` WHERE `otp`='$otp'");
+
+         if (mysqli_num_rows($checkotp)) {
+                  $checkotp = mysqli_query($connection, "UPDATE `transfer` SET `status`=1 WHERE `transaction_unique_code`='$transfer_verification'");
+                  $transferverfication = false;
+                  $transferprocessing = false;
+                  $transfercompleted = true;
+         } else {
+                  $transferverfication = true;
+                  $transferprocessing = false;
+                  echo '<script>
+                                                                window.onload = function(){
+
+                                                                    Swal.fire({
+                                                                        title: "Transaction Added",
+                                                                        text: "Success! The transaction has been added to your account.",
+                                                                        icon: "error"
+                                                                        });
+                                                                    
+                                                                }
+                                                             </script>';
+         }
+}
+
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -100,95 +169,151 @@
                                     </ol>
                            </nav>
 
-                           <section class="flex  flex-col gap-x-6 gap-y-6  px-6 w-full py-2 mt-3">
-                                    <div class="w-full">
-                                             <small class="text-lg capitalize">Processing Transfer</small>
-                                             <div class="border-2 w-96 border-blue-400"></div>
-                                    </div>
-                                    <div class="w-full ">
-                                             <div class="relative p-4 w-full max-w-lg h-full md:h-auto">
-                                                      <div class="relative p-4 bg-white rounded-lg drop-shadow-2xl  dark:bg-gray-800 md:p-8">
-                                                               <div class="mb-4 text-sm font-light text-gray-500 dark:text-gray-400">
-                                                                        <h3 class="mb-3 text-xl  bold text-gray-900  uppercase">Transaction Processing</h3>
-                                                                        <div class="bg-red-400 w-full h-8">
-                                                                                 <div class="w-1/2 h-full bg-green-500 flex items-center justify-center">
-                                                                                          <span class="font-semibold uppercase text-white text-md">18%</span>
+                           <?php
+
+                           if ($transferprocessing) { ?>
+
+                                    <section class="flex  flex-col gap-x-6 gap-y-6  px-6 w-full py-2 mt-3">
+                                             <div class="w-full">
+                                                      <small class="text-lg capitalize">Processing Transfer</small>
+                                                      <div class="border-2 w-40 border-blue-400"></div>
+                                             </div>
+                                             <div class="w-full ">
+                                                      <div class="relative p-4 w-full max-w-lg h-full md:h-auto">
+                                                               <div class="relative p-4 bg-white rounded-lg drop-shadow-2xl  dark:bg-gray-800 md:p-8">
+                                                                        <div class="mb-4 text-sm font-light text-gray-500 dark:text-gray-400">
+                                                                                 <h3 class="mb-3 text-xl  bold text-gray-900  uppercase">Transaction Processing</h3>
+                                                                                 <div class=" w-full h-8">
+                                                                                          <div id="myDiv" class="h-full bg-green-500 flex items-center justify-center w-1">
+                                                                                                   <span id="myDivText" class="font-semibold uppercase text-white text-md"></span>
+                                                                                          </div>
+                                                                                 </div>
+                                                                                 <p class="mt-6 ">
+                                                                                          You are transferring <i class="bi bi-currency-exchange"></i> $<?php echo number_format($amount, 2, '.', ',') ?> To <?php echo $Receiver_account_name ?>
+                                                                                 </p>
+                                                                        </div>
+                                                                        <form method="POST" class="justify-end items-center pt-0 space-y-4 sm:flex sm:space-y-0">
+
+                                                                                 <div class="items-center space-y-4 sm:space-x-4 sm:flex sm:space-y-0">
+                                                                                          <button id="myButton" name="myButton" type="submit" disabled class="py-2 px-4 w-full text-sm font-medium text-center text-white rounded-lg bg-blue-500 uppercase cursor-not-allowed">Continue</button>
+                                                                                 </div>
+                                                                        </form>
+
+                                                               </div>
+                                                      </div>
+                                             </div>
+                                    </section>
+
+                           <?php }
+
+                           ?>
+
+                           <?php
+
+                           if ($transferverfication) { ?>
+                                    <section class="flex flex-col gap-x-6 gap-y-6 px-2  sm:px-6 w-full py-2 mt-3">
+                                             <div class="w-full flex flex-col justify-center items-center small:items-start">
+                                                      <small class="text-sm small:text-lg capitalize ">Transfer Verification</small>
+                                                      <div class="border-2 w-full sm:w-96 border-blue-400"></div>
+                                             </div>
+                                             <div class="w-full ">
+                                                      <div class="relative p-4 w-full max-w-lg h-full md:h-auto">
+                                                               <form method="POST" class="relative p-4 bg-white rounded-lg drop-shadow-2xl  dark:bg-gray-800 md:p-8">
+                                                                        <div class="mb-4 text-sm font-light text-gray-500 dark:text-gray-400">
+                                                                                 <h3 class="mb-3 text-sm  small:text-xl  bold text-gray-900  uppercase">Transfer Verification</h3>
+
+                                                                                 <div class="mt-6 ">
+                                                                                          <label for="helper-text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Enter OTP</label>
+                                                                                          <input required type="password" name="otp" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="*******">
+                                                                                          <p class="mt-2 text-sm  color">Enter digit Verification code send to your Account Email.</p>
+
+
                                                                                  </div>
                                                                         </div>
-                                                                        <p class="mt-6 ">
-                                                                                 You are transferring <i class="bi bi-currency-exchange"></i> $ 100,000 To micheal ugochukwu.
-                                                                        </p>
-                                                               </div>
-                                                               <div class="justify-end items-center pt-0 space-y-4 sm:flex sm:space-y-0">
+                                                                        <div class="justify-end items-center pt-0 space-y-4 sm:flex sm:space-y-0">
 
-                                                                        <div class="items-center space-y-4 sm:space-x-4 sm:flex sm:space-y-0">
-                                                                                 <button id="confirm-button" type="button" class="py-2 px-4 w-full text-sm font-medium text-center text-white rounded-lg bg-blue-500 uppercase">Continue</button>
+                                                                                 <div class="items-center space-y-4 sm:space-x-4 sm:flex sm:space-y-0">
+                                                                                          <button name="sendotp" id="confirm-button" type="submit" class="py-2 px-4 w-full text-sm font-medium text-center text-white rounded-lg bg-blue-500 uppercase">Continue</button>
+                                                                                 </div>
+                                                                        </div>
+                                                               </form>
+                                                      </div>
+                                             </div>
+                                    </section>
+                           <?php }
+
+                           ?>
+
+
+
+                           <?php
+
+                           if ($transfercompleted) { ?>
+                                    <section class="flex flex-col gap-x-6 gap-y-6 px-2  sm:px-6 w-full py-2 mt-3">
+                                             <div class="w-full ">
+                                                      <div class="relative p-4 w-full max-w-lg h-full md:h-auto">
+                                                               <div class="relative p-4 bg-white rounded-lg drop-shadow-2xl  dark:bg-gray-800 md:p-8">
+                                                                        <div class="mb-4 text-sm font-light text-gray-500 dark:text-gray-400">
+                                                                                 <h3 class="mb-3 text-sm  small:text-xl  bold text-gray-900  uppercase">Transfer Completed</h3>
+
+                                                                                 <div class="h-16 w-16  rounded-full bg-color flex items-center justify-center">
+                                                                                          <i class="bi bi-send-check text-2xl text-white"></i>
+                                                                                 </div>
+
+                                                                                 <p class="mt-2 text-sm  text-green-300">You have Successfully Transfered $<?php echo number_format($amount, 2, '.', ',') ?> To <?php echo $Receiver_account_name ?> </p>
+                                                                                 <p class="mt-2 text-sm  color">Transaction initiated successfully. we are Processign your Transaction </p>
+                                                                        </div>
+                                                                        <div class="justify-end items-center pt-0 space-y-4 sm:flex sm:space-y-0">
+
+                                                                                 <div class="items-center  space-y-4 sm:space-x-4 sm:flex sm:space-y-0">
+                                                                                          <a href="<?php echo $domain ?>design/user/paymentrecipt/?recipt=<?php echo $recipt?>"><button id="confirm-button" type="button" class="py-2 px-4  text-sm font-medium text-center text-white rounded-lg bg-color uppercase">View Recipt</button></a>
+                                                                                          <a href="<?php echo $domain ?>design/user/dashboard/"><button id="confirm-button" type="button" class="py-2 px-4 text-sm font-medium text-center  border-2 rounded-lg border-blue-500 uppercase">Back TO
+                                                                                                            HOME</button></a>
+                                                                                 </div>
                                                                         </div>
                                                                </div>
                                                       </div>
                                              </div>
-                                    </div>
-                           </section>
+                                    </section>
+                           <?php }
 
-                           <section class="flex flex-col gap-x-6 gap-y-6 px-2  sm:px-6 w-full py-2 mt-3">
-                                    <div class="w-full flex flex-col justify-center items-center small:items-start">
-                                             <small class="text-sm small:text-lg capitalize ">Transfer Verification</small>
-                                             <div class="border-2 w-full sm:w-96 border-blue-400"></div>
-                                    </div>
-                                    <div class="w-full ">
-                                             <div class="relative p-4 w-full max-w-lg h-full md:h-auto">
-                                                      <div class="relative p-4 bg-white rounded-lg drop-shadow-2xl  dark:bg-gray-800 md:p-8">
-                                                               <div class="mb-4 text-sm font-light text-gray-500 dark:text-gray-400">
-                                                                        <h3 class="mb-3 text-sm  small:text-xl  bold text-gray-900  uppercase">Transfer Verification</h3>
-
-                                                                        <div class="mt-6 ">
-                                                                                 <label for="helper-text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Enter OTP</label>
-                                                                                 <input type="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="*******">
-                                                                                 <p class="mt-2 text-sm  color">Enter digit Verification code send to your Account Email.</p>
+                           ?>
 
 
-                                                                        </div>
-                                                               </div>
-                                                               <div class="justify-end items-center pt-0 space-y-4 sm:flex sm:space-y-0">
 
-                                                                        <div class="items-center space-y-4 sm:space-x-4 sm:flex sm:space-y-0">
-                                                                                 <button id="confirm-button" type="button" class="py-2 px-4 w-full text-sm font-medium text-center text-white rounded-lg bg-blue-500 uppercase">Continue</button>
-                                                                        </div>
-                                                               </div>
-                                                      </div>
-                                             </div>
-                                    </div>
-                           </section>
-
-                           <section class="flex flex-col gap-x-6 gap-y-6 px-2  sm:px-6 w-full py-2 mt-3">
-                                    <div class="w-full ">
-                                             <div class="relative p-4 w-full max-w-lg h-full md:h-auto">
-                                                      <div class="relative p-4 bg-white rounded-lg drop-shadow-2xl  dark:bg-gray-800 md:p-8">
-                                                               <div class="mb-4 text-sm font-light text-gray-500 dark:text-gray-400">
-                                                                        <h3 class="mb-3 text-sm  small:text-xl  bold text-gray-900  uppercase">Transfer Completed</h3>
-
-                                                                        <div class="h-16 w-16  rounded-full bg-color flex items-center justify-center">
-                                                                                 <i class="bi bi-send-check text-2xl text-white"></i>
-                                                                        </div>
-
-                                                                        <p class="mt-2 text-sm  text-green-300">You have Successfully Transfered $1000,000 TO micheal </p>
-                                                                        <p class="mt-2 text-sm  color">Transaction initiated successfully. we are Processign your Transaction </p>
-                                                               </div>
-                                                               <div class="justify-end items-center pt-0 space-y-4 sm:flex sm:space-y-0">
-
-                                                                        <div class="items-center  space-y-4 sm:space-x-4 sm:flex sm:space-y-0">
-                                                                                 <a href=""><button id="confirm-button" type="button" class="py-2 px-4  text-sm font-medium text-center text-white rounded-lg bg-color uppercase">View Recipt</button></a>
-                                                                                 <a href=""><button id="confirm-button" type="button" class="py-2 px-4 text-sm font-medium text-center  border-2 rounded-lg border-blue-500 uppercase">Back TO
-                                                                                                   HOME</button></a>
-                                                                        </div>
-                                                               </div>
-                                                      </div>
-                                             </div>
-                                    </div>
-                           </section>
 
                   </main>
          </section>
+         <script>
+                  // JavaScript code
+                  document.addEventListener('DOMContentLoaded', function() {
+                           const myButton = document.getElementById('myButton');
+                           const myDiv = document.getElementById('myDiv');
+
+                           // Disable the button initially
+                           myButton.disabled = true;
+                           let count = 0;
+
+                           // Enable the button and increase div width after 4 seconds
+                           setInterval(function() {
+                                    if (count < 100) {
+                                             count = count + getRandomNumber(4, 10);
+                                             myDiv.style.width = count + '%';
+                                             document.querySelector('#myDivText').innerHTML = `${count}%`
+                                    } else {
+                                             myButton.disabled = false;
+                                             myButton.classList.remove('cursor-not-allowed');
+
+                                    }
+
+                           }, 1000);
+                  });
+
+                  function getRandomNumber(min, max) {
+                           // Generate a random number between min and max (inclusive)
+                           return Math.floor(Math.random() * (max - min + 1)) + min;
+                  }
+         </script>
 </body>
 
 </html>
