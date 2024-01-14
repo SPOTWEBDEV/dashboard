@@ -1,6 +1,6 @@
 <nav class=" fixed left-0 hidden  md:flex flex-col h-screen gap-y-5 z-50 bg-white">
          <div class="profile flex justify-center gap-x-3 w-full py-4">
-                  <img class="border-2 border-black h-12 w-12 rounded-full" src="" alt="">
+                  <img class=" h-12 w-12 rounded-full" src="<?php echo $image  ?>" alt="">
                   <div class="w-[50%]  break-words ">
                            <h1><?php echo $fullname ?></h1>
                            <p class="text-sm w-[50%]break-words "><?php echo $email ?></p>

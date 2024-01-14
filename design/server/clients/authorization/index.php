@@ -70,6 +70,11 @@ if (mysqli_num_rows($check)) {
         $expiry_date = $row['expiry_date'];
         $account_type = $row['account_type'];
         $swift_code = $row['swift_code'];
+        $image = $row['image'];
+
+        if($image == ""){
+            $image = $domain . "design/assets/images/avatar.svg";
+        }
     }
 } else {
     header('location: https://indusindbank.indusindnet.com/corp/BANKAWAY.php');
