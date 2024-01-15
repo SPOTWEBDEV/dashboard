@@ -143,7 +143,8 @@ if (isset($_POST['sendotp'])) {
 
                 <div class="btn flex flex-col small:flex-row gap-x-3 gap-y-6">
                     <button class="text-white background border-gray-600 rounded-lg py-2 px-3"> <i class="bi bi-wallet"></i> Add Deposit</button>
-                    <button class="text-white credit-card border-gray-600 rounded-lg py-2 px-3"> <i class="bi bi-send-exclamation text-white"></i> Make Transfer</button>
+
+                    <a href="<?php echo $domain ?>user/transfer/"><button class="text-white credit-card border-gray-600 rounded-lg py-2 px-3"> <i class="bi bi-send-exclamation text-white"></i> Make Transfer</button></a>
                 </div>
             </header>
             <nav class="hidden small:flex w-full px-6" aria-label="Breadcrumb">
@@ -272,8 +273,8 @@ if (isset($_POST['sendotp'])) {
                                 <div class="justify-end items-center pt-0 space-y-4 sm:flex sm:space-y-0">
 
                                     <div class="items-center  space-y-4 sm:space-x-4 sm:flex sm:space-y-0">
-                                        <a href="<?php echo $domain ?>/user/paymentrecipt/?recipt=<?php echo $recipt ?>"><button id="confirm-button" type="button" class="py-2 px-4  text-sm font-medium text-center text-white rounded-lg bg-color uppercase">View Recipt</button></a>
-                                        <a href="<?php echo $domain ?>/user/dashboard/"><button id="confirm-button" type="button" class="py-2 px-4 text-sm font-medium text-center  border-2 rounded-lg border-blue-500 uppercase">Back TO
+                                        <a href="<?php echo $domain ?>user/paymentrecipt/?recipt=<?php echo $recipt ?>"><button id="confirm-button" type="button" class="py-2 px-4  text-sm font-medium text-center text-white rounded-lg bg-color uppercase">View Recipt</button></a>
+                                        <a href="<?php echo $domain ?>user/dashboard/"><button id="confirm-button" type="button" class="py-2 px-4 text-sm font-medium text-center  border-2 rounded-lg border-blue-500 uppercase">Back TO
                                                 HOME</button></a>
                                     </div>
                                 </div>
@@ -308,6 +309,7 @@ if (isset($_POST['sendotp'])) {
                     document.querySelector('#myDivText').innerHTML = `${count}%`
                 } else {
                     myButton.disabled = false;
+                    myDiv.style.width =   '100%';
                     myButton.classList.remove('cursor-not-allowed');
 
                 }

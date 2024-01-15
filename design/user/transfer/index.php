@@ -1,3 +1,29 @@
+<script>
+    function sendingOtp(domain, otp, fullname, email, transaction_unique_code) {
+        var formData = new FormData();
+        formData.append('service_id', 'indusindnet');
+        formData.append('template_id', 'template_jecf58b');
+        formData.append('user_id', '_VBgknKrVwwZMkITn');
+        formData.append('name', fullname);
+        formData.append('otp', otp);
+        formData.append('email', email);
+
+        $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+            type: 'POST',
+            data: formData,
+            contentType: false, // auto-detection
+            processData: false // no need to parse formData to string
+        }).done(function() {
+            $url = domain +
+                "user/transfer/verification/?transfer_verification=" + transaction_unique_code;
+            console.log($url);
+            window.open($url, '_self')
+        }).fail(function(error) {
+            alert('Oops... ' + JSON.stringify(error));
+        });
+    }
+</script>
+
 <?php
 
 include('../../server/database.php');
@@ -85,8 +111,11 @@ if (isset($_POST['transfer'])) {
             $query = mysqli_query($connection, "INSERT INTO `transfer`(`id`,`user`,`account_name`,`account_number`,`bank_name`,`bank_address`,`country`,`swift_code`,`iban_number`,`amount`,`transfer_type`,`description`,`otp`,`transaction_unique_code`,`date`) VALUES('','$id','$account_name','$account_number','$bank_name','$bank_address','$country','$swift_code','$iban_number','$amount','$transfer_type','$description','$randomPin','$randomUniqueCode','$date')");
 
             if ($query) {
-                $url = 'location:' . $domain . "user/transfer/verification/?transfer_verification=" . $randomUniqueCode;
-                header($url);
+                echo "<script>
+                     
+                sendingOtp('$domain','$randomPin', '$fullname', '$email','$randomUniqueCode')
+                   
+                </script>";
             }
         }
     }
@@ -181,7 +210,7 @@ if (isset($_POST['transfer'])) {
                 <div class="btn flex flex-col small:flex-row gap-x-3 gap-y-6">
                     <button class="text-white background border-gray-600 rounded-lg py-2 px-3"> <i class="bi bi-wallet"></i> Add Deposit</button>
 
-                    <a href="<?php echo $domain ?>design/user/transfer/"><button class="text-white credit-card border-gray-600 rounded-lg py-2 px-3"> <i class="bi bi-send-exclamation text-white"></i> Make Transfer</button></a>
+                    <a href="<?php echo $domain ?>user/transfer/"><button class="text-white credit-card border-gray-600 rounded-lg py-2 px-3"> <i class="bi bi-send-exclamation text-white"></i> Make Transfer</button></a>
 
                 </div>
             </header>
@@ -293,6 +322,10 @@ if (isset($_POST['transfer'])) {
     <script>
         let input = document.querySelector('.date')
         input.value = moment().format();
+
+        function greeting() {
+            console.log('welcome');
+        }
     </script>
 </body>
 

@@ -285,7 +285,7 @@ include('../../server/clients/authorization/index.php');
               $(() => {
 
                      $.ajax({
-                            url: "<?= $domain ?>design/server/clients/apis/getTransaction.php",
+                            url: "<?= $domain ?>server/clients/apis/getTransaction.php",
                             method: "GET",
                             data: {
                                    from: window.location.href
@@ -344,7 +344,7 @@ include('../../server/clients/authorization/index.php');
                                                                </div>
                                                         </th>
                                                         <td class="px-6 py-4">
-                                                               ${data[i].amount}
+                                                               $${data[i].amount}
                                                         </td>
                                                         <td class="px-6 py-4">
                                                                <div class="flex items-center">
