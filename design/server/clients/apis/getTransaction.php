@@ -4,9 +4,9 @@ include('../../database.php');
 
 
 $allowedDomains = [
-         $domain . 'design/user/dashboard/',
-         $domain . 'design/user/dashboard/#',
-         $domain . 'design/user/dashboard/index.php'
+         $domain . '/user/dashboard/',
+         $domain . '/user/dashboard/#',
+         $domain . '/user/dashboard/index.php'
 ];
 
 if (in_array($_GET['from'], $allowedDomains)){

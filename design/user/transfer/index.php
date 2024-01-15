@@ -5,37 +5,6 @@ include('../../server/config.php');
 include('../../server/clients/authorization/index.php');
 
 
-// function generateOTP()
-// {
-//     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-//     $pin = '';
-
-//     for ($i = 0; $i < 5; $i++) {
-//         $randomIndex = rand(0, strlen($characters) - 1);
-//         $pin .= $characters[$randomIndex];
-//     }
-
-//     return $pin;
-// }
-// $randomPIN = generateOTP();
-// function generateTransferId()
-// {
-//     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-//     $specialId = '';
-
-//     for ($i = 0; $i < 12; $i++) {
-//         $randomIndex = rand(0, strlen($characters) - 1);
-//         $specialId .= $characters[$randomIndex];
-//     }
-
-//     return $specialId;
-// }
-// $randomPIN = generateTransferId();
-
-// if (isset($_POST['transfer'])) {
-// }
-
-
 
 function generateRandomPin($length = 5)
 {
@@ -81,23 +50,43 @@ if (isset($_POST['transfer'])) {
     $amount = $_POST['amount'];
     $transfer_type = $_POST['transfer_type'];
     $description = $_POST['description'];
+    $date = $_POST['date'];
 
     if ($account_name == "" && $account_number == "" && $bank_name == "" && $bank_address == "" && $country == "" && $swift_code == "" && $iban_number == "" && $amount == "" && $transfer_type == "" && $description == "") {
-        echo '<script>alert("inputs empty")</script>';
+        echo '<script>
+                window.onload = function(){
+
+                    Swal.fire({
+                        title: "Empty Input Error",
+                        text: "The input field must not be left empty. Please provide the required information..",
+                        icon: "error"
+                        });
+                    
+                }
+                </script>';
     } else {
-        $query = mysqli_query($connection, "INSERT INTO `transfer`(`id`,`account_name`,`account_number`,`bank_name`,`bank_address`,`country`,`swift_code`,`iban_number`,`amount`,`transfer_type`,`description`,`otp`,`transaction_unique_code`) VALUES('','$account_name','$account_number','$bank_name','$bank_address','$country','$swift_code','$iban_number','$amount','$transfer_type','$description','$randomPin','$randomUniqueCode')");
 
-        if ($query) {
+        $nebal = $balance - $amount;
 
-            $nebal = $balance - $amount;
+        if ($nebal < 0) {
+            echo '<script>
+                window.onload = function(){
 
-            if ($nebal < 0) {
-                echo "<script>alert('AMOUNT_LESS');</script>";
-            } else {
+                    Swal.fire({
+                        title: "Balance Exceeded",
+                        text: "We are unable to proceed with the transaction as the specified amount surpasses your account balance. Please verify the entered amount.",
+                        icon: "error"
+                        });
+                    
+                }
+                </script>';
+        } else {
 
-                echo "Generated PIN: $randomPin";
+            $query = mysqli_query($connection, "INSERT INTO `transfer`(`id`,`user`,`account_name`,`account_number`,`bank_name`,`bank_address`,`country`,`swift_code`,`iban_number`,`amount`,`transfer_type`,`description`,`otp`,`transaction_unique_code`,`date`) VALUES('','$id','$account_name','$account_number','$bank_name','$bank_address','$country','$swift_code','$iban_number','$amount','$transfer_type','$description','$randomPin','$randomUniqueCode','$date')");
 
-                echo "generateTransferId: $randomUniqueCode";
+            if ($query) {
+                $url = 'location:' . $domain . "user/transfer/verification/?transfer_verification=" . $randomUniqueCode;
+                header($url);
             }
         }
     }
@@ -111,26 +100,6 @@ if (isset($_POST['transfer'])) {
 
 ?>
 
-
-
-<!-- <h1>WELCOME <?= $fullname ?></h1>
-<form method="POST">
-
-    <input type="text" name="account_name"><br><br>
-    <input type="text" name="account_number">
-    <input type="text" name="bank_name">
-    <input type="text" name="bank_address"><br><br>
-    <input type="text" name="country">
-    <input type="text" name="swift_code">
-    <input type="text" name="iban_number"><br><br>
-    <input type="text" name="amount" placeholder="am">
-    <input type="text" name="transfer_type">
-    <input type="text" name="description">
-
-
-
-    <button name="transfer">submit</button>
-</form> -->
 
 
 
@@ -256,6 +225,7 @@ if (isset($_POST['transfer'])) {
                     <h2 class="mb-4 text-xl font-semibold text-gray-900 ">Internation Transfer</h2>
                     <form method="POST">
                         <div class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
+                            <input name="date" type="hidden" class="date">
                             <div class="sm:col-span-2">
                                 <label for="account_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white capitalize">Account
                                     Name</label>
@@ -320,6 +290,10 @@ if (isset($_POST['transfer'])) {
 
         </main>
     </section>
+    <script>
+        let input = document.querySelector('.date')
+        input.value = moment().format();
+    </script>
 </body>
 
 </html>

