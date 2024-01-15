@@ -69,7 +69,7 @@
                                              </a>
                                     </li>
                                     <li class="nav-item">
-                                             <a class="nav-link" href="<?php $domain ?>admin/transaction/">
+                                             <a class="nav-link" href="<?php $domain ?>admin/dashboard/transaction/">
                                                       <i class="bi bi-credit-card-2-front"></i> Transaction
                                              </a>
                                     </li>
