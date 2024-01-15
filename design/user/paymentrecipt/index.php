@@ -22,12 +22,9 @@ if (isset($_GET['recipt'])) {
                                     $status = "Pending";
                                     $statusmsg = "OTP Not Verifed";
                            } else if ($status == 1) {
-                                    $status = "Pending";
+                                    $status = "Processing";
                                     $statusmsg = "Transaction Processing";
-                           } else if ($status == 2) {
-                                    $statusmsg = "Processing";
-                                    $statusmsg = "Transaction Processing";
-                           } else if ($status == 3) {
+                           }  else if ($status == 3) {
                                     $status = "Declined";
                                     $statusmsg = "Transaction Declined";
                            } else if ($status == 4) {

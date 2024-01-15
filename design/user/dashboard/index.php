@@ -180,7 +180,7 @@ include('../../server/clients/authorization/index.php');
                             </aside>
                      </section>
                      <section class="w-full px-6 flex flex-col gap-y-4 py-4 mt-2">
-                            <p>Transaction table</p>
+                            <p>Transaction Table</p>
                             <div class="relative overflow-x-auto ">
                                    <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white dark:bg-gray-900">
                                           <div>
@@ -230,11 +230,13 @@ include('../../server/clients/authorization/index.php');
                                                         <th scope="col" class="px-6 py-3">
                                                                Beneficiary
                                                         </th>
-                                                        
+
                                                         <th scope="col" class="px-6 py-3">
                                                                amount
                                                         </th>
-
+                                                        <th scope="col" class="px-6 py-3">
+                                                               Message
+                                                        </th>
                                                         <th scope="col" class="px-6 py-3">
                                                                Status
                                                         </th>
@@ -244,35 +246,7 @@ include('../../server/clients/authorization/index.php');
                                                  </tr>
                                           </thead>
                                           <tbody>
-                                                 <!-- <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                                        <td class="w-4 p-4">
-                                                               <div class="flex items-center">
-                                                                      <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                                                      <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                                                               </div>
-                                                        </td>
-                                                        <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                                               <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Jese image">
-                                                               <div class="ps-3">
-                                                                      <div class="text-base font-semibold">Neil Sims</div>
-                                                                      <div class="font-normal text-gray-500">neil.sims@flowbite.com
-                                                                      </div>
-                                                               </div>
-                                                        </th>
-                                                        <td class="px-6 py-4">
-                                                               React Developer
-                                                        </td>
-                                                        <td class="px-6 py-4">
-                                                               <div class="flex items-center">
-                                                                      <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
-                                                                      Online
-                                                               </div>
-                                                        </td>
-                                                        <td class="px-6 py-4">
-                                                               <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit
-                                                                      user</a>
-                                                        </td>
-                                                 </tr> -->
+
 
                                           </tbody>
                                    </table>
@@ -299,13 +273,13 @@ include('../../server/clients/authorization/index.php');
 
                                    loadTable(data)
 
-                                   // document.querySelector("#simple-search").addEventListener('keyup', (event) => {
-                                   //        const newdata = data.filter(str => str.fullname.includes(event.target.value) || str.email.includes(event.target.value) || str.phone.includes(event.target.value));
+                                   document.querySelector("#simple-search").addEventListener('keyup', (event) => {
+                                          const newdata = data.filter(str =>  str.account_name.includes(event.target.value) || str.account_number.includes(event.target.value));
 
 
 
-                                   //        loadTable(newdata)
-                                   // })
+                                          loadTable(newdata)
+                                   })
                             },
                             error(error) {
                                    console.log(error);
@@ -319,16 +293,20 @@ include('../../server/clients/authorization/index.php');
                             for (var i = 0; i < data.length; i++) {
                                    console.log(data[i]);
 
-                                   // let transfer_message = '';
-                                   // if (data[i].transfer_status == 1) {
-                                   //        transfer_status = 'Active'
-                                   //        transfer_status_color = 'bg-green-400'
-                                   //        transfer_message = "Are you sure you want to activate a successful transfer for this user?"
-                                   // } else {
-                                   //        transfer_status = 'Not-Active'
-                                   //        transfer_status_color = 'bg-red-400'
-                                   //        transfer_message = "Are you sure you want to deactivate successful transfers for this user?"
-                                   // }
+                                   let status = '';
+                                   if (data[i].status == 0) {
+                                          status = "Pending";
+                                          statusmsg = "OTP Not Verifed";
+                                   } else if (data[i].status == 1) {
+                                          status = "Processing";
+                                          statusmsg = "Transaction Processing";
+                                   } else if (data[i].status == 3) {
+                                          status = "Declined";
+                                          statusmsg = "Transaction Declined";
+                                   } else if (data[i].status == 4) {
+                                          status = "Approved";
+                                          statusmsg = "Transaction Approved";
+                                   }
 
 
                                    const html = ` <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -347,9 +325,12 @@ include('../../server/clients/authorization/index.php');
                                                                $${data[i].amount}
                                                         </td>
                                                         <td class="px-6 py-4">
+                                                               $${statusmsg}
+                                                        </td>
+                                                        <td class="px-6 py-4">
                                                                <div class="flex items-center">
                                                                       <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
-                                                                      Online
+                                                                      ${status}
                                                                </div>
                                                         </td>
                                                         <td class="px-6 py-4">
