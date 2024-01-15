@@ -73,7 +73,7 @@ if (mysqli_num_rows($check)) {
         $image = $row['image'];
 
         if($image == ""){
-            $image = $domain . "design/assets/images/avatar.svg";
+            $image = $domain . "assets/images/avatar.svg";
         }
     }
 } else {

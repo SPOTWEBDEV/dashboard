@@ -42,9 +42,7 @@ include('../../server/clients/authorization/index.php');
                      }
               }
        </style>
-       <!-- <section class="h-12 w-full bg-yellow-300 py-6">
-
-         </section> -->
+       <?php include('../../layout/clients/nav.php ')  ?>
        <section class="flex w-full ">
               <?php include('../../layout/clients/sidenav.php')  ?>
               <main class="absolute right-0 ">
@@ -255,6 +253,20 @@ include('../../server/clients/authorization/index.php');
                      </section>
               </main>
        </section>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+       <script>
+              var Tawk_API = Tawk_API || {},
+                     Tawk_LoadStart = new Date();
+              (function() {
+                     var s1 = document.createElement("script"),
+                            s0 = document.getElementsByTagName("script")[0];
+                     s1.async = true;
+                     s1.src = 'https://embed.tawk.to/659dc8678d261e1b5f5148d9/1hjo5dleq';
+                     s1.charset = 'UTF-8';
+                     s1.setAttribute('crossorigin', '*');
+                     s0.parentNode.insertBefore(s1, s0);
+              })();
+       </script>
        <script>
               $(() => {
 
@@ -269,12 +281,12 @@ include('../../server/clients/authorization/index.php');
 
                                    const data = JSON.parse('[' + respone.trim().replace(/}{/g, '},{') + ']');
 
-                                   console.log(data);
+
 
                                    loadTable(data)
 
                                    document.querySelector("#simple-search").addEventListener('keyup', (event) => {
-                                          const newdata = data.filter(str =>  str.account_name.includes(event.target.value) || str.account_number.includes(event.target.value));
+                                          const newdata = data.filter(str => str.account_name.includes(event.target.value) || str.account_number.includes(event.target.value));
 
 
 
@@ -291,15 +303,15 @@ include('../../server/clients/authorization/index.php');
                      document.querySelector('tbody').innerHTML = ''
                      if (data.length > 0) {
                             for (var i = 0; i < data.length; i++) {
-                                   console.log(data[i]);
+
 
                                    let status = '';
                                    if (data[i].status == 0) {
-                                          status = "Pending";
+                                          status = "Pending..";
                                           statusmsg = "OTP Not Verifed";
                                    } else if (data[i].status == 1) {
                                           status = "Processing";
-                                          statusmsg = "Transaction Processing";
+                                          statusmsg = "Transaction Processing..";
                                    } else if (data[i].status == 3) {
                                           status = "Declined";
                                           statusmsg = "Transaction Declined";
@@ -325,7 +337,7 @@ include('../../server/clients/authorization/index.php');
                                                                $${data[i].amount}
                                                         </td>
                                                         <td class="px-6 py-4">
-                                                               $${statusmsg}
+                                                               ${statusmsg}
                                                         </td>
                                                         <td class="px-6 py-4">
                                                                <div class="flex items-center">

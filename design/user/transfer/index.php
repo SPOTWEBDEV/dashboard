@@ -196,9 +196,7 @@ if (isset($_POST['transfer'])) {
             font-family: 600;
         }
     </style>
-    <!-- <section class="h-12 w-full bg-yellow-300 py-6">
-
-         </section> -->
+    <?php include('../../layout/clients/nav.php ')  ?>
     <section class="flex w-full ">
         <?php include('../../layout/clients/sidenav.php') ?>
         <main class="absolute right-0 ">
