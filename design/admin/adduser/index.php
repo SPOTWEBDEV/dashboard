@@ -92,6 +92,21 @@ if (isset($_POST['submit'])) {
 
 
     echo $name;
+    
+    if (!empty($name) && !empty($email) && !empty($phone) && !empty($country) && !empty($address) && !empty($city) && !empty($zip)) {
+
+        $statement = "INSERT INTO  `clients`(`id`,`firstname`,`email`,`phone`,`country`,`address`,`city`,`zip`) VALUES('','$name', '$email', '$phone', '$country', '$address', '$city', '$zip')";
+
+        $query = mysqli_query($connection,$statement);
+
+        if ($query) {
+            echo '<script>alert("inserted")</script>';
+        } else {
+            echo '<script>alert("not inserted")</script>';
+        }
+    } else {
+        echo '<script>alert("empty")</script>';
+    }
 
 
 
@@ -113,35 +128,35 @@ if (isset($_POST['submit'])) {
 
     //     $statement->close();
     // } else {
-    //     echo '<script>alert("Please fill in all fields")</script>';
-    // }
+        //     echo '<script>alert("Please fill in all fields")</script>';
+        // }
+        
 
-
-
-
-
-    // Assuming $connection is your database connection object
-    // and $id is the user ID (you should set these values appropriately before using this script)
-
-    // if (!empty($name) && !empty($email) && !empty($phone) && !empty($country) && !empty($address) && !empty($city) && !empty($zip)) {
+        
+        
+        
+        // Assuming $connection is your database connection object
+        // and $id is the user ID (you should set these values appropriately before using this script)
+        
+        // if (!empty($name) && !empty($email) && !empty($phone) && !empty($country) && !empty($address) && !empty($city) && !empty($zip)) {
     //     // Use prepared statements to prevent SQL injection
     //     $statement = "INSERT INTO `clients`(`user_id`, `firstname`, `email`, `phone`, `country`, `address`, `city`, `zip`) VALUES ('$id','$name', '$email', '$phone', '$country', '$address', '$city', '$zip')";
 
     //     // Prepare the statement
     //     $stmt = mysqli_prepare($connection, $statement);
-
+    
     //     // Bind parameters
     //     mysqli_stmt_bind_param($stmt, "isssssss", $id, $name, $email, $phone, $country, $address, $city, $zip);
-
+    
     //     // Execute the statement
     //     $query = mysqli_stmt_execute($stmt);
-
+    
     //     if ($query) {
-    //         echo '<script>alert("Inserted successfully")</script>';
-    //     } else {
-    //         echo '<script>alert("Error inserting data: ' . mysqli_error($connection) . '")</script>';
-    //     }
-
+        //         echo '<script>alert("Inserted successfully")</script>';
+        //     } else {
+            //         echo '<script>alert("Error inserting data: ' . mysqli_error($connection) . '")</script>';
+            //     }
+            
     //     // Close the statement
     //     mysqli_stmt_close($stmt);
     // } else {
@@ -152,20 +167,6 @@ if (isset($_POST['submit'])) {
 
 
 
-    if (!empty($name) && !empty($email) && !empty($phone) && !empty($country) && !empty($address) && !empty($city) && !empty($zip)) {
-
-        $statement = "INSERT INTO  `clients`(`id`,`firstname`,`email`,`phone`,`country`,`address`,`city`,`zip`) VALUES('','$name', '$email', '$phone', '$country', '$address', '$city', '$zip')";
-
-        $query = mysqli_query($connection,$statement);
-
-        if ($query) {
-            echo '<script>alert("inserted")</script>';
-        } else {
-            echo '<script>alert("not inserted")</script>';
-        }
-    } else {
-        echo '<script>alert("empty")</script>';
-    }
 }
 
 

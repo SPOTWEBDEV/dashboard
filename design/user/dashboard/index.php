@@ -60,12 +60,12 @@ include('../../server/clients/authorization/index.php');
                                    <div class="flex flex-col gap-y-6 sm:flex-row gap-x-4">
                                           <div class="h-fit flex flex-col py-4 w-full sm:w-[200px] ">
                                                  <p class="capitalize tracking-wide">total balance</p>
-                                                 <span class="text-3xl tracking-wide"><?php echo number_format($balance, 2, '.', ',')  ?></span>
+                                                 <span class="text-3xl tracking-wide">$<?php echo number_format($balance, 2, '.', ',')  ?></span>
                                                  <a href="" class="tracking-wide capitalize">view Statement <i class="bi bi-arrow-right-short"></i></a>
                                           </div>
                                           <div class="h-fit flex flex-col text-semibold py-4 w-full sm:w-[200px] ">
                                                  <p class="capitalize tracking-wide">Available balance</p>
-                                                 <span class="text-3xl tracking-wide"><?php echo number_format($balance, 2, '.', ',') ?></span>
+                                                 <span class="text-3xl tracking-wide">$<?php echo number_format($balance, 2, '.', ',') ?></span>
                                                  <a class="capitalize tracking-wide" href="">Transfer Funds <i class="bi bi-arrow-right-short"></i></a>
                                           </div>
                                    </div>
@@ -76,7 +76,7 @@ include('../../server/clients/authorization/index.php');
                                                         <img src="" alt="">
                                                         <p></p>
                                                  </div>
-                                                 <span class="text-xl text-semibold"><?php echo number_format($balance, 2, '.', ',')  ?></span>
+                                                 <span class="text-xl text-semibold">$<?php echo number_format($balance, 2, '.', ',')  ?></span>
                                           </div>
                                           <div class="w-full mt-3  flex items-center justify-center">
                                                  <p class="bold text-lg"><?php echo $account_number ?></p>
@@ -154,7 +154,7 @@ include('../../server/clients/authorization/index.php');
 
                                                                       </div>
                                                                       <div class="inline-flex items-center text-base font-semibold text-gray-900 ">
-                                                                             <?php echo number_format($balance, 2, '.', ',')  ?>
+                                                                             $<?php echo number_format($balance, 2, '.', ',')  ?>
                                                                       </div>
                                                                </div>
                                                         </li>
