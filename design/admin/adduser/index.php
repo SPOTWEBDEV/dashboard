@@ -95,26 +95,26 @@ if (isset($_POST['submit'])) {
 
 
 
-    if (!empty($name) && !empty($email) && !empty($phone) && !empty($country) && !empty($address) && !empty($city) && !empty($zip)) {
+    // if (!empty($name) && !empty($email) && !empty($phone) && !empty($country) && !empty($address) && !empty($city) && !empty($zip)) {
 
-        // Assuming $connection is your database connection
+    //     // Assuming $connection is your database connection
 
-        $statement = $connection->prepare("INSERT INTO `clients`(`id`,`firstname`,`email`,`phone`,`country`,`address`,`city`,`zip`) VALUES('','$name', '$email', '$phone', '$country', '$address', '$city', '$zip')");
+    //     $statement = $connection->prepare("INSERT INTO `clients`(`id`,`firstname`,`email`,`phone`,`country`,`address`,`city`,`zip`) VALUES('','$name', '$email', '$phone', '$country', '$address', '$city', '$zip')");
 
-        // Assuming $id, $name, $email, $phone, $country, $address, $city, $zip are your variables
+    //     // Assuming $id, $name, $email, $phone, $country, $address, $city, $zip are your variables
 
-        $statement->bind_param("sssssss", $name, $email, $phone, $country, $address, $city, $zip);
+    //     $statement->bind_param("sssssss", $name, $email, $phone, $country, $address, $city, $zip);
 
-        if ($statement->execute()) {
-            echo '<script>alert("Inserted successfully")</script>';
-        } else {
-            echo '<script>alert("Not inserted. Error: ' . $statement->error . '")</script>';
-        }
+    //     if ($statement->execute()) {
+    //         echo '<script>alert("Inserted successfully")</script>';
+    //     } else {
+    //         echo '<script>alert("Not inserted. Error: ' . $statement->error . '")</script>';
+    //     }
 
-        $statement->close();
-    } else {
-        echo '<script>alert("Please fill in all fields")</script>';
-    }
+    //     $statement->close();
+    // } else {
+    //     echo '<script>alert("Please fill in all fields")</script>';
+    // }
 
 
 
@@ -152,20 +152,20 @@ if (isset($_POST['submit'])) {
 
 
 
-    // if (!empty($name) && !empty($email) && !empty($phone) && !empty($country) && !empty($address) && !empty($city) && !empty($zip)) {
+    if (!empty($name) && !empty($email) && !empty($phone) && !empty($country) && !empty($address) && !empty($city) && !empty($zip)) {
 
-    //     $statement = "INSERT INTO `clients`(`user_id`,`firstname`,`email`,`phone`,`country`,`address`,`city`,`zip`) VALUES('$id','$name','$email','$phone','$country','$address','$city','$zip')";
+        $statement = "INSERT INTO  `clients`(`id`,`firstname`,`email`,`phone`,`country`,`address`,`city`,`zip`) VALUES('','$name', '$email', '$phone', '$country', '$address', '$city', '$zip')";
 
-    //     $query = mysqli_query($connection,$statement);
+        $query = mysqli_query($connection,$statement);
 
-    //     if ($query) {
-    //         echo '<script>alert("inserted")</script>';
-    //     } else {
-    //         echo '<script>alert("not inserted")</script>';
-    //     }
-    // } else {
-    //     echo '<script>alert("empty")</script>';
-    // }
+        if ($query) {
+            echo '<script>alert("inserted")</script>';
+        } else {
+            echo '<script>alert("not inserted")</script>';
+        }
+    } else {
+        echo '<script>alert("empty")</script>';
+    }
 }
 
 
