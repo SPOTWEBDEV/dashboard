@@ -14,7 +14,7 @@ include('../../server/clients/authorization/index.php');
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>Document</title>
-       <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"  rel="stylesheet" />
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
        <script src="https://cdn.tailwindcss.com"></script>
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> -->
@@ -94,24 +94,24 @@ include('../../server/clients/authorization/index.php');
                                    </div>
                             </div>
                             <aside class="w-full lg:w-1/2">
-                                   <div class="w-full  p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+                                   <div class="w-full  p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8">
                                           <div class="flex items-center justify-between mb-4">
-                                                 <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Account Details
+                                                 <h5 class="text-xl font-bold leading-none text-gray-900 ">Account Details
                                                  </h5>
 
                                           </div>
                                           <div class="flow-root">
-                                                 <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
+                                                 <ul role="list" class="divide-y divide-gray-200 ">
                                                         <li class="py-3 sm:py-4">
                                                                <div class="flex items-center">
 
                                                                       <div class="flex-1 min-w-0 ms-4">
-                                                                             <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                                                             <p class="text-sm font-medium text-gray-900 truncate ">
                                                                                     Account Name
                                                                              </p>
 
                                                                       </div>
-                                                                      <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                                                      <div class="inline-flex items-center text-base font-semibold text-gray-900 ">
                                                                              <?php echo $fullname ?>
                                                                       </div>
                                                                </div>
@@ -120,12 +120,12 @@ include('../../server/clients/authorization/index.php');
                                                                <div class="flex items-center ">
 
                                                                       <div class="flex-1 min-w-0 ms-4">
-                                                                             <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                                                             <p class="text-sm font-medium text-gray-900 truncate ">
                                                                                     Account Number
                                                                              </p>
 
                                                                       </div>
-                                                                      <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                                                      <div class="inline-flex items-center text-base font-semibold text-gray-900 ">
                                                                              <?php echo $account_number ?>
                                                                       </div>
                                                                </div>
@@ -134,12 +134,12 @@ include('../../server/clients/authorization/index.php');
                                                                <div class="flex items-center">
 
                                                                       <div class="flex-1 min-w-0 ms-4">
-                                                                             <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                                                             <p class="text-sm font-medium text-gray-900 truncate ">
                                                                                     Account Type
                                                                              </p>
 
                                                                       </div>
-                                                                      <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                                                      <div class="inline-flex items-center text-base font-semibold text-gray-900 ">
                                                                              <?php echo $account_type ?>
                                                                       </div>
                                                                </div>
@@ -148,12 +148,12 @@ include('../../server/clients/authorization/index.php');
                                                                <div class="flex items-center ">
 
                                                                       <div class="flex-1 min-w-0 ms-4">
-                                                                             <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                                                             <p class="text-sm font-medium text-gray-900 truncate ">
                                                                                     Balance
                                                                              </p>
 
                                                                       </div>
-                                                                      <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                                                      <div class="inline-flex items-center text-base font-semibold text-gray-900 ">
                                                                              <?php echo number_format($balance, 2, '.', ',')  ?>
                                                                       </div>
                                                                </div>
@@ -162,12 +162,12 @@ include('../../server/clients/authorization/index.php');
                                                                <div class="flex items-center ">
 
                                                                       <div class="flex-1 min-w-0 ms-4">
-                                                                             <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                                                             <p class="text-sm font-medium text-gray-900 truncate ">
                                                                                     Swift code
                                                                              </p>
 
                                                                       </div>
-                                                                      <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                                                      <div class="inline-flex items-center text-base font-semibold text-gray-900 ">
                                                                              <?php echo $swift_code ?>
                                                                       </div>
                                                                </div>
@@ -181,9 +181,9 @@ include('../../server/clients/authorization/index.php');
                      <section class="w-full px-6 flex flex-col gap-y-4 py-4 mt-2">
                             <p>Transaction Table</p>
                             <div class="relative overflow-x-auto ">
-                                   <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white dark:bg-gray-900">
+                                   <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white ">
                                           <div>
-                                                 <button id="dropdownActionButton" data-dropdown-toggle="dropdownAction" class="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
+                                                 <button id="dropdownActionButton" data-dropdown-toggle="dropdownAction" class="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5 " type="button">
                                                         <span class="sr-only">Action button</span>
                                                         Action
                                                         <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -191,21 +191,21 @@ include('../../server/clients/authorization/index.php');
                                                         </svg>
                                                  </button>
                                                  <!-- Dropdown menu -->
-                                                 <div id="dropdownAction" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownActionButton">
+                                                 <div id="dropdownAction" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
+                                                        <ul class="py-1 text-sm text-gray-700 " aria-labelledby="dropdownActionButton">
                                                                <li>
-                                                                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Reward</a>
+                                                                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Reward</a>
                                                                </li>
                                                                <li>
-                                                                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Promote</a>
+                                                                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Promote</a>
                                                                </li>
                                                                <li>
-                                                                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Activate
+                                                                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Activate
                                                                              account</a>
                                                                </li>
                                                         </ul>
                                                         <div class="py-1">
-                                                               <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete
+                                                               <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ">Delete
                                                                       User</a>
                                                         </div>
                                                  </div>
@@ -213,11 +213,11 @@ include('../../server/clients/authorization/index.php');
                                           <label for="table-search" class="sr-only">Search</label>
                                           <div class="relative">
                                                  <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
-                                                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                                        <svg class="w-4 h-4 text-gray-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                                                         </svg>
                                                  </div>
-                                                 <input type="text" id="simple-search" class="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for users">
+                                                 <input type="text" id="simple-search" class="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 " placeholder="Search for users">
                                           </div>
                                    </div>
                                    <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
@@ -330,11 +330,11 @@ include('../../server/clients/authorization/index.php');
                                    }
 
 
-                                   const html = ` <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                   const html = ` <tr class="bg-white border-b  hover:bg-gray-50 ">
                                                 <td class="w-4 p-4">
                                                                ${data[i].transaction_unique_code}
                                                         </td>
-                                                        <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                                        <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap ">
                                                                
                                                                <div class="ps-3">
                                                                       <div class="text-base font-semibold">${data[i].account_name}</div>
@@ -355,7 +355,7 @@ include('../../server/clients/authorization/index.php');
                                                                </div>
                                                         </td>
                                                         <td class="px-6 py-4">
-                                                               <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">${data[i].date}
+                                                               <a href="#" class="font-medium text-blue-600  hover:underline">${data[i].date}
                                                                       </a>
                                                         </td>
                                                         

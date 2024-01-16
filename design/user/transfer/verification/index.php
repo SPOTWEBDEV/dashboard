@@ -213,7 +213,7 @@ if (isset($_POST['sendotp'])) {
                             <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
                             </svg>
-                            <a href="#" class="ms-1 text-sm font-medium text-gray-700 hover:text-color md:ms-2 dark:text-gray-400 dark:hover:text-white">Transfer</a>
+                            <a href="#" class="ms-1 text-sm font-medium text-gray-700 hover:text-color md:ms-2 ">Transfer</a>
                         </div>
                     </li>
                     <li aria-current="page">
@@ -238,8 +238,8 @@ if (isset($_POST['sendotp'])) {
                     </div>
                     <div class="w-full ">
                         <div class="relative p-4 w-full max-w-lg h-full md:h-auto">
-                            <div class="relative p-4 bg-white rounded-lg drop-shadow-2xl  dark:bg-gray-800 md:p-8">
-                                <div class="mb-4 text-sm font-light text-gray-500 dark:text-gray-400">
+                            <div class="relative p-4 bg-white rounded-lg drop-shadow-2xl   md:p-8">
+                                <div class="mb-4 text-sm font-light text-gray-500 ">
                                     <h3 class="mb-3 text-xl  bold text-gray-900  uppercase">Transaction Processing</h3>
                                     <div class=" w-full h-8">
                                         <div id="myDiv" class="h-full bg-green-500 flex items-center justify-center w-1">
@@ -276,13 +276,13 @@ if (isset($_POST['sendotp'])) {
                     </div>
                     <div class="w-full ">
                         <div class="relative p-4 w-full max-w-lg h-full md:h-auto">
-                            <form method="POST" class="relative p-4 bg-white rounded-lg drop-shadow-2xl  dark:bg-gray-800 md:p-8">
-                                <div class="mb-4 text-sm font-light text-gray-500 dark:text-gray-400">
+                            <form method="POST" class="relative p-4 bg-white rounded-lg drop-shadow-2xl   md:p-8">
+                                <div class="mb-4 text-sm font-light text-gray-500 ">
                                     <h3 class="mb-3 text-sm  small:text-xl  bold text-gray-900  uppercase">Transfer Verification</h3>
 
                                     <div class="mt-6 ">
-                                        <label for="helper-text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Enter OTP</label>
-                                        <input required type="password" name="otp" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="*******">
+                                        <label for="helper-text" class="block mb-2 text-sm font-medium text-gray-900 ">Enter OTP</label>
+                                        <input required type="password" name="otp" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  " placeholder="*******">
                                         <p class="mt-2 text-sm  color">Enter digit Verification code send to your Account Email.</p>
 
 
@@ -310,8 +310,8 @@ if (isset($_POST['sendotp'])) {
                 <section class="flex flex-col gap-x-6 gap-y-6 px-2  sm:px-6 w-full py-2 mt-3">
                     <div class="w-full ">
                         <div class="relative p-4 w-full max-w-lg h-full md:h-auto">
-                            <div class="relative p-4 bg-white rounded-lg drop-shadow-2xl  dark:bg-gray-800 md:p-8">
-                                <div class="mb-4 text-sm font-light text-gray-500 dark:text-gray-400">
+                            <div class="relative p-4 bg-white rounded-lg drop-shadow-2xl  md:p-8">
+                                <div class="mb-4 text-sm font-light text-gray-500 ">
                                     <h3 class="mb-3 text-sm  small:text-xl  bold text-gray-900  uppercase">Transfer Completed</h3>
 
                                     <div class="h-16 w-16  rounded-full bg-color flex items-center justify-center">

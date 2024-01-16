@@ -4,7 +4,7 @@ include('../../server/database.php');
 include('../../server/admin/config/index.php');
 
 if (isset($_POST['submit'])) {
-    $id = $_POST['id'];
+    // $id = $_POST['id'];
     $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
@@ -14,18 +14,158 @@ if (isset($_POST['submit'])) {
     $zip = $_POST['zip'];
 
 
+
+
+
+    // // Function to generate a random card number
+    // function generateCardNumber()
+    // {
+    //     // Replace this with your actual logic for generating a card number
+    //     return sprintf('%04d-%04d-%04d-%04d', rand(1000, 9999), rand(1000, 9999), rand(1000, 9999), rand(1000, 9999));
+    // }
+
+    // // Function to generate a random account number
+    // function generateAccountNumber()
+    // {
+    //     // Replace this with your actual logic for generating an account number
+    //     return sprintf('%08d-%08d-%08d', rand(1, 99999999), rand(1, 99999999), rand(1, 99999999));
+    // }
+
+    // // Function to generate an expiry date based on the world clock
+    // function generateExpiryDate()
+    // {
+    //     $currentDate = new DateTime('now', new DateTimeZone('UTC'));
+    //     $expiryDate = $currentDate->add(new DateInterval('P5Y')); // Expires in 5 years
+
+    //     return $expiryDate->format('m/Y'); // Format as MM/YYYY
+    // }
+
+    // // Example usage
+    // $cardNumber = generateCardNumber();
+    // $accountNumber = generateAccountNumber();
+    // $expiryDate = generateExpiryDate();
+
+    // echo "Card Number: $cardNumber\n";
+    // echo "Account Number: $accountNumber\n";
+    // echo "Expiry Date: $expiryDate\n";
+
+
+
+
+    function generateCardData()
+    {
+        $cardNumber = generateRandomNumber(16);
+        $accountNumber = generateRandomNumber(10);
+        $expiryDate = generateExpiryDate();
+
+        return [
+            'cardNumber' => $cardNumber,
+            'accountNumber' => $accountNumber,
+            'expiryDate' => $expiryDate,
+        ];
+    }
+
+    function generateRandomNumber($length)
+    {
+        $number = '';
+        for ($i = 0; $i < $length; $i++) {
+            $number .= mt_rand(0, 9);
+        }
+        return $number;
+    }
+
+    function generateExpiryDate()
+    {
+        $currentYear = date('Y');
+        $expiryYear = $currentYear + mt_rand(1, 5); // Generate expiry year between current year and next 5 years
+        $expiryMonth = str_pad(mt_rand(1, 12), 2, '0', STR_PAD_LEFT); // Ensure two digits for month
+        return "$expiryMonth/$expiryYear";
+    }
+
+    // Example usage
+    $generatedData = generateCardData();
+
+    echo "Card Number: {$generatedData['cardNumber']}\n";
+    echo "Account Number: {$generatedData['accountNumber']}\n";
+    echo "Expiry Date: {$generatedData['expiryDate']}\n";
+
+
+
+    echo $name;
+
+
+
     if (!empty($name) && !empty($email) && !empty($phone) && !empty($country) && !empty($address) && !empty($city) && !empty($zip)) {
 
-        $query = mysqli_query($connection, "INSERT INTO `clients`(`user_id`,`firstname`,`email`,`phone`,`country`,`address`,`city`,`zip`) VALUES('$id','$name','$email','$phone','$country','$address','$city','$zip')");
+        // Assuming $connection is your database connection
 
-        if ($query) {
-            echo '<script>alert("inserted")</script>';
+        $statement = $connection->prepare("INSERT INTO `clients`(`id`,`firstname`,`email`,`phone`,`country`,`address`,`city`,`zip`) VALUES('','$name', '$email', '$phone', '$country', '$address', '$city', '$zip')");
+
+        // Assuming $id, $name, $email, $phone, $country, $address, $city, $zip are your variables
+
+        $statement->bind_param("sssssss", $name, $email, $phone, $country, $address, $city, $zip);
+
+        if ($statement->execute()) {
+            echo '<script>alert("Inserted successfully")</script>';
         } else {
-            echo '<script>alert("not inserted")</script>';
+            echo '<script>alert("Not inserted. Error: ' . $statement->error . '")</script>';
         }
+
+        $statement->close();
     } else {
-        echo '<script>alert("empty")</script>';
+        echo '<script>alert("Please fill in all fields")</script>';
     }
+
+
+
+
+
+    // Assuming $connection is your database connection object
+    // and $id is the user ID (you should set these values appropriately before using this script)
+
+    // if (!empty($name) && !empty($email) && !empty($phone) && !empty($country) && !empty($address) && !empty($city) && !empty($zip)) {
+    //     // Use prepared statements to prevent SQL injection
+    //     $statement = "INSERT INTO `clients`(`user_id`, `firstname`, `email`, `phone`, `country`, `address`, `city`, `zip`) VALUES ('$id','$name', '$email', '$phone', '$country', '$address', '$city', '$zip')";
+
+    //     // Prepare the statement
+    //     $stmt = mysqli_prepare($connection, $statement);
+
+    //     // Bind parameters
+    //     mysqli_stmt_bind_param($stmt, "isssssss", $id, $name, $email, $phone, $country, $address, $city, $zip);
+
+    //     // Execute the statement
+    //     $query = mysqli_stmt_execute($stmt);
+
+    //     if ($query) {
+    //         echo '<script>alert("Inserted successfully")</script>';
+    //     } else {
+    //         echo '<script>alert("Error inserting data: ' . mysqli_error($connection) . '")</script>';
+    //     }
+
+    //     // Close the statement
+    //     mysqli_stmt_close($stmt);
+    // } else {
+    //     echo '<script>alert("One or more fields are empty")</script>';
+    // }
+
+
+
+
+
+    // if (!empty($name) && !empty($email) && !empty($phone) && !empty($country) && !empty($address) && !empty($city) && !empty($zip)) {
+
+    //     $statement = "INSERT INTO `clients`(`user_id`,`firstname`,`email`,`phone`,`country`,`address`,`city`,`zip`) VALUES('$id','$name','$email','$phone','$country','$address','$city','$zip')";
+
+    //     $query = mysqli_query($connection,$statement);
+
+    //     if ($query) {
+    //         echo '<script>alert("inserted")</script>';
+    //     } else {
+    //         echo '<script>alert("not inserted")</script>';
+    //     }
+    // } else {
+    //     echo '<script>alert("empty")</script>';
+    // }
 }
 
 

@@ -107,22 +107,22 @@ if (isset($_GET['recipt'])) {
                            </div>
                            <div class="w-full  py-2 bg-white border-dashed border-b-2 border-gray-200 rounded-lg ">
                                     <div class="flex items-center justify-between mb-4">
-                                             <h5 class="text-xl bold leading-none text-gray-900 dark:text-white">Account Details
+                                             <h5 class="text-xl bold leading-none text-gray-900 ">Account Details
                                              </h5>
 
                                     </div>
                                     <div class="flow-root">
-                                             <ul role="list" class=" dark:divide-gray-700">
+                                             <ul role="list" class=" ">
                                                       <li class="py-1">
                                                                <div class="flex items-center">
 
                                                                         <div class="flex-1 min-w-0 ms-4">
-                                                                                 <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                                                                 <p class="text-sm font-medium text-gray-900 truncate ">
                                                                                           Account Name
                                                                                  </p>
 
                                                                         </div>
-                                                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 ">
                                                                                  <?php echo $send_account_name  ?>
                                                                         </div>
                                                                </div>
@@ -131,12 +131,12 @@ if (isset($_GET['recipt'])) {
                                                                <div class="flex items-center ">
 
                                                                         <div class="flex-1 min-w-0 ms-4">
-                                                                                 <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                                                                 <p class="text-sm font-medium text-gray-900 truncate ">
                                                                                           Account Number
                                                                                  </p>
 
                                                                         </div>
-                                                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 ">
                                                                                  <?php echo $send_account_number ?>
                                                                         </div>
                                                                </div>
@@ -145,12 +145,12 @@ if (isset($_GET['recipt'])) {
                                                                <div class="flex items-center">
 
                                                                         <div class="flex-1 min-w-0 ms-4">
-                                                                                 <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                                                                 <p class="text-sm font-medium text-gray-900 truncate ">
                                                                                           Phone Number
                                                                                  </p>
 
                                                                         </div>
-                                                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 ">
                                                                                  <?php echo $send_phone  ?>
                                                                         </div>
                                                                </div>
@@ -161,7 +161,7 @@ if (isset($_GET['recipt'])) {
                            </div>
                            <div class="w-full py-2   bg-white border-dashed border-b-2 border-gray-200 rounded-lg ">
                                     <div class="flex items-center justify-between mb-4">
-                                             <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white ">Receiver Details
+                                             <h5 class="text-xl font-bold leading-none text-gray-900  ">Receiver Details
                                              </h5>
 
                                     </div>
@@ -171,12 +171,12 @@ if (isset($_GET['recipt'])) {
                                                                <div class="flex items-center">
 
                                                                         <div class="flex-1 min-w-0 ms-4">
-                                                                                 <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                                                                 <p class="text-sm font-medium text-gray-900 truncate ">
                                                                                           Receiver Account Name
                                                                                  </p>
 
                                                                         </div>
-                                                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 ">
                                                                                  <?php echo $receiver_account_name ?>
                                                                         </div>
                                                                </div>
@@ -185,12 +185,12 @@ if (isset($_GET['recipt'])) {
                                                                <div class="flex items-center ">
 
                                                                         <div class="flex-1 min-w-0 ms-4">
-                                                                                 <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                                                                 <p class="text-sm font-medium text-gray-900 truncate ">
                                                                                           Receiver Account Number
                                                                                  </p>
 
                                                                         </div>
-                                                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 ">
                                                                                  <?php echo $receiver_account_number ?>
                                                                         </div>
                                                                </div>
@@ -202,7 +202,7 @@ if (isset($_GET['recipt'])) {
                            </div>
                            <div class="w-full py-2   bg-white border-dashed border-b-2 border-gray-200 rounded-lg ">
                                     <div class="flex items-center justify-between mb-4">
-                                             <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white ">Transaction Details
+                                             <h5 class="text-xl font-bold leading-none text-gray-900  ">Transaction Details
                                              </h5>
 
                                     </div>
@@ -212,12 +212,12 @@ if (isset($_GET['recipt'])) {
                                                                <div class="flex items-center">
 
                                                                         <div class="flex-1 min-w-0 ms-4">
-                                                                                 <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                                                                 <p class="text-sm font-medium text-gray-900 truncate ">
                                                                                           Date/Time
                                                                                  </p>
 
                                                                         </div>
-                                                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 ">
                                                                                  <?php echo $date ?>
                                                                         </div>
                                                                </div>
@@ -226,12 +226,12 @@ if (isset($_GET['recipt'])) {
                                                                <div class="flex items-center ">
 
                                                                         <div class="flex-1 min-w-0 ms-4">
-                                                                                 <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                                                                 <p class="text-sm font-medium text-gray-900 truncate ">
                                                                                           Response Code
                                                                                  </p>
 
                                                                         </div>
-                                                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 ">
                                                                                  00
                                                                         </div>
                                                                </div>
@@ -240,12 +240,12 @@ if (isset($_GET['recipt'])) {
                                                                <div class="flex items-center">
 
                                                                         <div class="flex-1 min-w-0 ms-4">
-                                                                                 <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                                                                 <p class="text-sm font-medium text-gray-900 truncate ">
                                                                                           Response Message
                                                                                  </p>
 
                                                                         </div>
-                                                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 ">
                                                                                  <?php echo $statusmsg ?>
                                                                         </div>
                                                                </div>
@@ -254,12 +254,12 @@ if (isset($_GET['recipt'])) {
                                                                <div class="flex items-center">
 
                                                                         <div class="flex-1 min-w-0 ms-4">
-                                                                                 <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                                                                 <p class="text-sm font-medium text-gray-900 truncate ">
                                                                                           Transaction Amount
                                                                                  </p>
 
                                                                         </div>
-                                                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 ">
                                                                                  $<?php echo number_format($receiver_amount, 2, '.', ',') ?>
                                                                         </div>
                                                                </div>
