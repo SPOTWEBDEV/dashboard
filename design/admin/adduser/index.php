@@ -5,7 +5,7 @@ include('../../server/admin/config/index.php');
 
 if (isset($_POST['submit'])) {
     $id = $_POST['id'];
-    $firstname = $_POST['firstname'];
+    $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $country = $_POST['country'];
@@ -14,16 +14,17 @@ if (isset($_POST['submit'])) {
     $zip = $_POST['zip'];
 
 
-    if ($firstname == "" && $email == "" && $phone == "" && $country == "" && $address == "" && $city == "" && $zip == "") {
-        echo 'empty';
-    } else {
-        $query = mysqli_query($connection, "INSERT INTO `clients`(`user_id`,`firstname`,`email`,`phone`,`country`,`address`,`city`,`zip`) VALUES('$id','$firstname','$email','$phone','$country','$address','$city','$zip')");
+    if (!empty($name) && !empty($email) && !empty($phone) && !empty($country) && !empty($address) && !empty($city) && !empty($zip)) {
+
+        $query = mysqli_query($connection, "INSERT INTO `clients`(`user_id`,`firstname`,`email`,`phone`,`country`,`address`,`city`,`zip`) VALUES('$id','$name','$email','$phone','$country','$address','$city','$zip')");
 
         if ($query) {
-            echo 'inserted';
+            echo '<script>alert("inserted")</script>';
         } else {
-            echo 'not inserted';
+            echo '<script>alert("not inserted")</script>';
         }
+    } else {
+        echo '<script>alert("empty")</script>';
     }
 }
 
@@ -60,7 +61,7 @@ if (isset($_POST['submit'])) {
                             <!-- Actions -->
                             <div class="col-sm-6 col-12 text-sm-end">
                                 <div class="mx-n1">
-                                    
+
                                     <a href="#" class="btn d-inline-flex btn-sm btn-primary mx-1">
                                         <span class=" pe-2">
                                             <i class="bi bi-plus"></i>
@@ -90,7 +91,7 @@ if (isset($_POST['submit'])) {
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-7 mx-auto">
-                            
+
                             <!-- Form -->
                             <div class="mb-5">
                                 <h5 class="mb-0">Contact Information</h5>
@@ -106,7 +107,7 @@ if (isset($_POST['submit'])) {
                                     <div class="col-md-6">
                                         <div class="">
                                             <label class="form-label" for="first_name">Fullname</label>
-                                            <input name="firstname" type="text" class="form-control" id="first_name">
+                                            <input name="name" type="text" class="form-control" id="first_name">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -153,15 +154,15 @@ if (isset($_POST['submit'])) {
                                             <input name="zip" type="tel" class="form-control" id="zip">
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                                 <div class="text-end mt-3">
-                                    <button type="button" class="btn btn-sm btn-neutral me-2">Cancel</button>
+                                    <button class="btn btn-sm btn-neutral me-2">Cancel</button>
                                     <button name="submit" type="submit" class="btn btn-sm btn-primary">Save</button>
                                 </div>
                             </form>
                             <hr class="my-10" />
-                            
+
                         </div>
                     </div>
                 </div>

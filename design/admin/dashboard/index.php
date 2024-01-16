@@ -176,15 +176,52 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
                                 <thead class="table-light">
                                     <tr>
                                         <th scope="col">Name</th>
-                                        <th scope="col">Date</th>
-                                        <th scope="col">Company</th>
-                                        <th scope="col">Offer</th>
-                                        <th scope="col">Meeting</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Account Number</th>
+                                        <th scope="col">Balance</th>
+                                        <th scope="col">Card_Number</th>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Date Of Birth</th>
+                                        <th scope="col">Account Type</th>
+                                        <th scope="col">Address</th>
+                                        <th scope="col">Action</th>
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    <?php
+                                    $statement = "SELECT * FROM `clients`";
+
+                                    $query = mysqli_query($connection, $statement);
+                                    if (mysqli_num_rows($query)) {
+                                        while ($row = mysqli_fetch_assoc($query)) { ?>
+
+                                            <tr>
+                                                <td><?Php echo $row['fullname'] ?></td>
+                                                <td><?Php echo $row['email'] ?></td>
+                                                <td><?Php echo $row['account_number'] ?></td>
+                                                <td>$<?Php echo $row['balance'] ?></td>
+                                                <td><?Php echo $row['card_number'] ?></td>
+                                                <td><?Php echo $row['country'] ?></td>
+                                                <td><?Php echo $row['date_of_birth'] ?></td>
+                                                <td><?Php echo $row['account_type'] ?></td>
+                                                <td><?Php echo $row['address'] ?></td>
+                                                <td>
+                                                    <?php
+                                                    if ($row['transfer_status'] == 0) { ?>
+                                                        <button type="button" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 ">Pending</button>
+                                                    <?php } else if ($row['transfer_status'] == 1) { ?>
+                                                        <button type="button" class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 ">Approved</button>
+
+                                                    <?php } else if ($row['transfer_status'] == 2) { ?>
+                                                        <button type="button" class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 ">Declined</button>
+                                                    <?php } ?>
+                                                </td>
+                                            </tr>
+                                    <?php }
+                                    }
+                                    ?>
+                                    <!-- <tr>
                                         <td>
                                             <img alt="..." src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" class="avatar avatar-sm rounded-circle me-2">
                                             <a class="text-heading font-semibold" href="#">
@@ -493,7 +530,7 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
                                                 <i class="bi bi-trash"></i>
                                             </button>
                                         </td>
-                                    </tr>
+                                    </tr> -->
                                 </tbody>
                             </table>
                         </div>
