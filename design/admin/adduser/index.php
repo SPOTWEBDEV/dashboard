@@ -8,6 +8,7 @@ if (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
+    $password = $_POST['password'];
     $country = $_POST['country'];
     $address = $_POST['address'];
     $city = $_POST['city'];
@@ -17,56 +18,10 @@ if (isset($_POST['submit'])) {
 
 
 
-    // // Function to generate a random card number
-    // function generateCardNumber()
-    // {
-    //     // Replace this with your actual logic for generating a card number
-    //     return sprintf('%04d-%04d-%04d-%04d', rand(1000, 9999), rand(1000, 9999), rand(1000, 9999), rand(1000, 9999));
-    // }
-
-    // // Function to generate a random account number
-    // function generateAccountNumber()
-    // {
-    //     // Replace this with your actual logic for generating an account number
-    //     return sprintf('%08d-%08d-%08d', rand(1, 99999999), rand(1, 99999999), rand(1, 99999999));
-    // }
-
-    // // Function to generate an expiry date based on the world clock
-    // function generateExpiryDate()
-    // {
-    //     $currentDate = new DateTime('now', new DateTimeZone('UTC'));
-    //     $expiryDate = $currentDate->add(new DateInterval('P5Y')); // Expires in 5 years
-
-    //     return $expiryDate->format('m/Y'); // Format as MM/YYYY
-    // }
-
-    // // Example usage
-    // $cardNumber = generateCardNumber();
-    // $accountNumber = generateAccountNumber();
-    // $expiryDate = generateExpiryDate();
-
-    // echo "Card Number: $cardNumber\n";
-    // echo "Account Number: $accountNumber\n";
-    // echo "Expiry Date: $expiryDate\n";
-
-
-
-
-    function generateCardData()
+    // Function to generate a random card number
+    function generateCardNumber($length = 16)
     {
-        $cardNumber = generateRandomNumber(16);
-        $accountNumber = generateRandomNumber(10);
-        $expiryDate = generateExpiryDate();
-
-        return [
-            'cardNumber' => $cardNumber,
-            'accountNumber' => $accountNumber,
-            'expiryDate' => $expiryDate,
-        ];
-    }
-
-    function generateRandomNumber($length)
-    {
+        // Replace this with your actual logic for generating a card number
         $number = '';
         for ($i = 0; $i < $length; $i++) {
             $number .= mt_rand(0, 9);
@@ -74,30 +29,87 @@ if (isset($_POST['submit'])) {
         return $number;
     }
 
+    // Function to generate a random account number
+    function generateAccountNumber($length = 10)
+    {
+        // Replace this with your actual logic for generating an account number
+        $date = '';
+        for ($i = 0; $i < $length; $i++) {
+            $date .= mt_rand(0, 9);
+        }
+        return $date;
+    }
+
+    // Function to generate an expiry date based on the world clock
     function generateExpiryDate()
     {
-        $currentYear = date('Y');
-        $expiryYear = $currentYear + mt_rand(1, 5); // Generate expiry year between current year and next 5 years
-        $expiryMonth = str_pad(mt_rand(1, 12), 2, '0', STR_PAD_LEFT); // Ensure two digits for month
-        return "$expiryMonth/$expiryYear";
+        $currentDate = new DateTime('now', new DateTimeZone('UTC'));
+        $expiryDate = $currentDate->add(new DateInterval('P5Y')); // Expires in 5 years
+
+        return $expiryDate->format('m/Y'); // Format as MM/YYYY
     }
 
     // Example usage
-    $generatedData = generateCardData();
+    $cardNumber = generateCardNumber();
+    $accountNumber = generateAccountNumber();
+    $expiryDate = generateExpiryDate();
 
-    echo "Card Number: {$generatedData['cardNumber']}\n";
-    echo "Account Number: {$generatedData['accountNumber']}\n";
-    echo "Expiry Date: {$generatedData['expiryDate']}\n";
+    echo "Card Number: $cardNumber\n";
+    echo "Account Number: $accountNumber\n";
+    echo "Expiry Date: $expiryDate\n";
+
+
+
+
+    // function generateCardData()
+    // {
+    //     $cardNumber = generateRandomNumber(16);
+    //     $accountNumber = generateRandomNumber(10);
+    //     $expiryDate = generateExpiryDate();
+
+    //     return [
+    //         'cardNumber' => $cardNumber,
+    //         'accountNumber' => $accountNumber,
+    //         'expiryDate' => $expiryDate,
+    //     ];
+    // }
+
+    // function generateRandomNumber($length)
+    // {
+    //     $number = '';
+    //     for ($i = 0; $i < $length; $i++) {
+    //         $number .= mt_rand(0, 9);
+    //     }
+    //     return $number;
+    // }
+
+    // function generateExpiryDate()
+    // {
+    //     $currentYear = date('Y');
+    //     $expiryYear = $currentYear + mt_rand(1, 5); // Generate expiry year between current year and next 5 years
+    //     $expiryMonth = str_pad(mt_rand(1, 12), 2, '0', STR_PAD_LEFT); // Ensure two digits for month
+    //     return "$expiryMonth/$expiryYear";
+    // }
+
+    // $cardNumber = 
+
+    // // // Example usage
+    // echo $cardNumber
+    // $generatedData = generateCardData();
+
+    // echo "Card Number: {$generatedData['cardNumber']}\n";
+    // echo "Account Number: {$generatedData['accountNumber']}\n";
+    // echo "Expiry Date: {$generatedData['expiryDate']}\n";
 
 
 
     echo $name;
-    
+
     if (!empty($name) && !empty($email) && !empty($phone) && !empty($country) && !empty($address) && !empty($city) && !empty($zip)) {
 
-        $statement = "INSERT INTO  `clients`(`id`,`firstname`,`email`,`phone`,`country`,`address`,`city`,`zip`) VALUES('','$name', '$email', '$phone', '$country', '$address', '$city', '$zip')";
+        $statement = "INSERT INTO  `clients`(`id`,`fullname`,`email`,`phone`,`password`,`account_number`,`card_number`,`country`,`expiry_date`,`address`,`city`,`zip`) VALUES('','$name', '$email', '$phone','$password','$accountNumber','$cardNumber', '$country','$expiryDate','$address', '$city', '$zip')";
 
-        $query = mysqli_query($connection,$statement);
+        $query = mysqli_query($connection, $statement);
 
         if ($query) {
             echo '<script>alert("inserted")</script>';
@@ -128,35 +140,35 @@ if (isset($_POST['submit'])) {
 
     //     $statement->close();
     // } else {
-        //     echo '<script>alert("Please fill in all fields")</script>';
-        // }
-        
+    //     echo '<script>alert("Please fill in all fields")</script>';
+    // }
 
-        
-        
-        
-        // Assuming $connection is your database connection object
-        // and $id is the user ID (you should set these values appropriately before using this script)
-        
-        // if (!empty($name) && !empty($email) && !empty($phone) && !empty($country) && !empty($address) && !empty($city) && !empty($zip)) {
+
+
+
+
+    // Assuming $connection is your database connection object
+    // and $id is the user ID (you should set these values appropriately before using this script)
+
+    // if (!empty($name) && !empty($email) && !empty($phone) && !empty($country) && !empty($address) && !empty($city) && !empty($zip)) {
     //     // Use prepared statements to prevent SQL injection
     //     $statement = "INSERT INTO `clients`(`user_id`, `firstname`, `email`, `phone`, `country`, `address`, `city`, `zip`) VALUES ('$id','$name', '$email', '$phone', '$country', '$address', '$city', '$zip')";
 
     //     // Prepare the statement
     //     $stmt = mysqli_prepare($connection, $statement);
-    
+
     //     // Bind parameters
     //     mysqli_stmt_bind_param($stmt, "isssssss", $id, $name, $email, $phone, $country, $address, $city, $zip);
-    
+
     //     // Execute the statement
     //     $query = mysqli_stmt_execute($stmt);
-    
+
     //     if ($query) {
-        //         echo '<script>alert("Inserted successfully")</script>';
-        //     } else {
-            //         echo '<script>alert("Error inserting data: ' . mysqli_error($connection) . '")</script>';
-            //     }
-            
+    //         echo '<script>alert("Inserted successfully")</script>';
+    //     } else {
+    //         echo '<script>alert("Error inserting data: ' . mysqli_error($connection) . '")</script>';
+    //     }
+
     //     // Close the statement
     //     mysqli_stmt_close($stmt);
     // } else {
@@ -239,12 +251,6 @@ if (isset($_POST['submit'])) {
                             </div>
                             <form method="POST" class="mb-6">
                                 <div class="row mb-5">
-                                    <div class="col-md-6" hidden>
-                                        <div class="">
-                                            <label class="form-label" for="id">Fullname</label>
-                                            <input name="id" type="text" class="form-control" id="id">
-                                        </div>
-                                    </div>
                                     <div class="col-md-6">
                                         <div class="">
                                             <label class="form-label" for="first_name">Fullname</label>
@@ -261,11 +267,17 @@ if (isset($_POST['submit'])) {
                                 <div class="row g-5">
                                     <div class="col-md-6">
                                         <div class="">
+                                            <label class="form-label" for="password">Password</label>
+                                            <input name="password" type="password" class="form-control" id="password">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="">
                                             <label class="form-label" for="phone_number">Phone number</label>
                                             <input name="phone" type="number" class="form-control" id="phone_number">
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 w-full">
                                         <div class="">
                                             <label class="form-label" for="country">Country</label>
                                             <select name="country" class="form-select" id="country" placeholder="Your email" aria-label="Default select example">
