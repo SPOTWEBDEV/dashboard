@@ -1,6 +1,6 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
 
-<nav class=" fixed left-0 hidden  md:flex flex-col h-screen gap-y-5 z-50 bg-white">
+<nav id="client-nav" class=" fixed left-0  hidden  md:flex flex-col h-screen gap-y-5 z-50 bg-white">
     <div class="profile flex justify-center gap-x-3 w-full py-4">
         <img class=" h-12 w-12 rounded-full" src="<?php echo $image  ?>" alt="">
         <div class="w-[50%]  break-words ">

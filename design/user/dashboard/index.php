@@ -33,14 +33,19 @@ include('../../server/clients/authorization/index.php');
                      width: 300px;
               }
 
+              /* section nav.active {
+                     display: flex;
+              } */
+
               section main {
                      width: calc(100% - 300px);
               }
 
-              @media(max-width:700px) {
+              @media(max-width:770px) {
                      section main {
                             width: 100%;
                      }
+
               }
        </style>
        <?php include('../../layout/clients/nav.php ')  ?>
@@ -363,6 +368,24 @@ include('../../server/clients/authorization/index.php');
                                    document.querySelector('tbody').insertAdjacentHTML("beforeend", html)
                             }
                      }
+              }
+       </script>
+
+       <script>
+              let client_nav = document.querySelector('#client-nav');
+              let nav = document.querySelector('#click-client-nav');
+              console.log(nav);
+              nav.onclick = function() {
+
+                     if (!client_nav.classList.contains('active')) {
+                            client_nav.classList.remove('hidden')
+                            client_nav.classList.add('active')
+                     } else {
+                            client_nav.classList.add('hidden')
+                            client_nav.classList.remove('active')
+                     }
+
+                     
               }
        </script>
 </body>
