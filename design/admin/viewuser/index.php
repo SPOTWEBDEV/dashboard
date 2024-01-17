@@ -215,7 +215,7 @@ if (isset($_POST['submit'])) {
                                                 </a>
                                                 <div class="ms-4">
                                                     <span class="h4 d-block mb-0">Julianne Moore</span>
-                                                    <a href="#" class="text-sm font-semibold text-muted">View Profile</a>
+                                                    <a href="#" class="text-sm font-semibold text-muted">View Users</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -229,129 +229,19 @@ if (isset($_POST['submit'])) {
                             <div class="mb-5">
                                 <h5 class="mb-0">Contact Information</h5>
                             </div>
-                            <form method="POST" class="mb-6">
-                                <div class="row mb-5">
-                                    <div class="col-md-6" hidden>
-                                        <div class="">
-                                            <label class="form-label" for="id">Fullname</label>
-                                            <input name="id" type="text" class="form-control" id="id">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="">
-                                            <label class="form-label" for="first_name">Fullname</label>
-                                            <input name="firstname" type="text" class="form-control" id="first_name">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="">
-                                            <label class="form-label" for="email">Email</label>
-                                            <input name="email" type="email" class="form-control" id="email">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row g-5">
-                                    <div class="col-md-6">
-                                        <div class="">
-                                            <label class="form-label" for="phone_number">Phone number</label>
-                                            <input name="phone" type="number" class="form-control" id="phone_number">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="">
-                                            <label class="form-label" for="country">Country</label>
-                                            <select name="country" class="form-select" id="country" placeholder="Your email" aria-label="Default select example">
-                                                <option selected>Country</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="">
-                                            <label class="form-label" for="address">Address</label>
-                                            <input name="address" type="text" class="form-control" id="address">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="">
-                                            <label class="form-label" for="city">City</label>
-                                            <input name="city" type="text" class="form-control" id="city">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2">
-                                        <div class="">
-                                            <label class="form-label" for="zip">ZIP</label>
-                                            <input name="zip" type="tel" class="form-control" id="zip">
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="check_primary_address" id="check_primary_address">
-                                            <label class="form-check-label" for="check_primary_address">
-                                                Make this my default address
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="text-end">
-                                    <button type="button" class="btn btn-sm btn-neutral me-2">Cancel</button>
-                                    <button name="submit" type="submit" class="btn btn-sm btn-primary">Save</button>
-                                </div>
-                            </form>
                             <hr class="my-10" />
                             <!-- Individual switch cards -->
-                            <div class="row g-6">
-                                <div class="col-md-6">
-                                    <div class="card shadow border-0">
-                                        <div class="card-body">
-                                            <h5 class="mb-2">Public profile</h5>
-                                            <p class="text-sm text-muted mb-6">
-                                                Making your profile public means that anyone on the network will be able to find you.
-                                            </p>
-                                            <div class="form-check form-switch">
-                                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card shadow border-0">
-                                        <div class="card-body">
-                                            <h5 class="mb-2">Show my email</h5>
-                                            <p class="text-sm text-muted mb-6">
-                                                Showing your e-mail adresses means that anyone on the network will be able to find you.
-                                            </p>
-                                            <div class="form-check form-switch">
-                                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="card shadow border-0">
-                                        <div class="card-body d-flex align-items-center">
-                                            <div>
-                                                <h5 class="text-danger mb-2">Deactivate account</h5>
-                                                <p class="text-sm text-muted">
-                                                    Once you delete your account, there is no going back. Please be certain.
-                                                </p>
-                                            </div>
-                                            <div class="ms-auto">
-                                                <button type="button" class="btn btn-sm btn-danger">Deactivate</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
             </main>
         </div>
     </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
 
 </body>
 
