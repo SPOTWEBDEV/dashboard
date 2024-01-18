@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .section_card_holder {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card_box {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        height: 60vh;
+        background: blue;
+        border-radius: 20px;
+        box-shadow: 0em 0em 0.7em black;
+    }
+    @media screen and (max-width: 1020px) {
+        .card_box{
+            height: 50vh;
+        }
+        .cb_head{
+            padding-top: 0;
+            margin-top: -20px;
+        }
+        .p1{
+            margin-left: -40px;
+        }
+        .circle{
+            margin-right: -40px;
+        }
+        .div1{
+            width: 20px;
+            height: 20px;
+        }
+        .cb_icon{
+            margin-left: -40px;
+        }
+        .p2{
+            margin-left: -40px;
+        }
+        .p4_holder{
+            margin-left: -40px;
+        }
+        .p7_holder{
+            margin-left: -40px;
+        }
+    }
+    @media screen and (max-width: 796px) {
+        .card_box{
+            height: 20vh;
+        }
+    }
+
+    .cb_head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 30px;
+        /* padding-right: 20px;
+        padding-left: 20px; */
+    }
+
+    .p1 {
+        font-size: 2vw;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding-left: 53px;
+    }
+
+    .circle {
+        display: flex;
+        padding-right: 53px;
+    }
+
+    .div1 {
+        width: 50px;
+        height: 50px;
+        background: rgb(255, 72, 0);
+        border-radius: 50px;
+        border: none;
+        margin-right: -15px;
+        z-index: 50;
+    }
+
+    .div2 {
+        width: 50px;
+        height: 50px;
+        background: rgb(255, 166, 0);
+        border-radius: 50px;
+    }
+
+
+
+    .cb_icon {
+        width: 100%;
+        padding-top: 25px;
+        padding-left: 53px;
+    }
+
+    .card_scan {
+        width: 70px;
+        height: 50px;
+        background: yellow;
+    }
+
+
+
+
+
+
+    .card_number{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 30px;
+    }
+    .p2{
+        font-size: 1.7vw;
+        padding-left: 53px;
+    }
+    .p3{
+        font-size: 3.5vw;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    .p4_holder{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.7vw;
+        padding: 0px 53px;
+    }
+    .p7_holder{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 2.4vw;
+        padding: 0px 53px;
+    }
+</style>
+
+<body>
+    <section class="section">
+        <div class="section_card_holder">
+            <div class="card_box">
+                <div class="cb_head">
+                    <p class="p1">CreditCard</p>
+
+                    <div class="circle">
+                        <div class="div1"></div>
+                        <div class="div2"></div>
+                    </div>
+                </div>
+                <div class="cb_icon">
+                    <div class="card_scan"></div>
+                </div>
+
+                <div class="card_number">
+                    <p class="p2">CARD NUMBER</p>
+                    <p class="p3">1234 5678 9101 1213</p>
+                    <div class="p4_holder">
+                        <p class="p4">CARD HOLDER</p>
+                        <p class="p5">VALID TILL</p>
+                    </div>
+                    <div class="p7_holder">
+                        <p class="p7">Max Mustermann</p>
+                        <p class="p8">2/3/24</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
