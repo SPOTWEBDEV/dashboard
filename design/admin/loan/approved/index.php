@@ -1,7 +1,7 @@
 <?php
 
-include('../../server/database.php');
-include('../../server/admin/config/index.php');
+include('../../../server/database.php');
+include('../../../server/admin/config/index.php');
 
 // session_start();
 
@@ -43,7 +43,7 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
 <body>
     <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
         <!-- Vertical Navbar -->
-        <?php include('../../layout/admin/sidenav.php') ?>
+        <?php include('../../../layout/admin/sidenav.php') ?>
         <!-- Main content -->
         <div class="h-screen flex-grow-1 overflow-y-lg-auto">
             <!-- Header -->
@@ -94,52 +94,25 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
                     <!-- Card stats -->
                     <div class="card mb-7">
                         <div class="card-header">
-                            <h5 class="mb-0">Applications</h5>
+                            <h5 class="mb-0">Approved Loan</h5>
                         </div>
                         <div class="table-responsive">
                             <table class="table table-hover table-nowrap">
                                 <thead class="table-light">
                                     <tr>
+                                        <th scope="col">ID</th>
                                         <th scope="col">Amount</th>
                                         <th scope="col">Payback</th>
                                         <th scope="col">Reason</th>
                                         <th scope="col">Date</th>
-                                        <th scope="col">Status</th>
+
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
-                                    $fetch = "SELECT * FROM `loan` WHERE `id`='$id'";
-
-                                    $query = mysqli_query($connection, $fetch);
 
 
-                                    if (mysqli_num_rows($query)) {
-                                        while ($row = mysqli_fetch_assoc($query)) { ?>
-                                            <tr>
-                                                <td><?php echo $row['amount'] ?></td>
-                                                <td><?php echo $row['payback'] ?></td>
-                                                <td><?php echo $row['reason'] ?></td>
-                                                <td><?php echo $row['date'] ?></td>
-                                                <td>
-                                                    <?php
-                                                    if ($row['status'] == 0) { ?>
-                                                        <button style="background: yellow; padding: 9px 28px;font-size:20px;">Pending</button>
 
-                                                    <?php  } else if ($row['status'] == 1) { ?>
-                                                        <button style="background: green; padding: 9px 28px;font-size:20px;">Approved</button>
-
-                                                    <?php } else { ?>
-                                                        <button style="background: red; padding: 5px 17px;font-size:20px;">Declined</button>
-                                                    <?php }
-                                                    ?>
-                                                </td>
-                                            </tr>
-                                    <?php   }
-                                    }
-
-                                    ?>
 
                                 </tbody>
                             </table>
@@ -152,6 +125,66 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
             </main>
         </div>
     </div>
+
+    <script>
+        $(() => {
+            $.ajax({
+                url: '<?php echo $domain ?>' + 'server/admin/apis/getApprovedLoan.php',
+                method: "GET",
+                data: {
+                    from: window.location.href
+                },
+                success: function(respone) {
+                    const data = JSON.parse('[' + respone.trim().replace(/}{/g, '},{') + ']');
+                    loadTable(data)
+
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            })
+        })
+
+        function loadTable(data) {
+            document.querySelector('tbody').innerHTML = ''
+            if (data.length > 0) {
+                for (var i = 0; i < data.length; i++) {
+
+
+
+                    const html = ` <tr class="bg-white border-b  hover:bg-gray-50 ">
+                                                <td class="w-4 p-4">
+                                                               ${i + 1}
+                                                        </td>
+                                                        <td class="px-6 py-4">
+                                                               ${data[i].amount}
+                                                        </td>
+                                                        <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap ">
+                                                               
+                                                               <div class="ps-3">
+                                                                      
+                                                                      <div class="font-normal text-gray-500">${data[i].payback}
+                                                                      </div>
+                                                               </div>
+                                                        </th>
+                                                        <td class="px-6 py-4">
+                                                               ${data[i].reason}
+                                                        </td>
+                                                        
+                                                        <td class="px-6 py-4">
+                                                        <time class="timeago" datetime="${data[i].date}"></time>
+                                                               
+                                                        </td>
+                                                        
+                                            </tr>`;
+                    document.querySelector('tbody').insertAdjacentHTML("beforeend", html)
+                    jQuery(document).ready(function() {
+                        jQuery("time.timeago").timeago();
+                    });
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>

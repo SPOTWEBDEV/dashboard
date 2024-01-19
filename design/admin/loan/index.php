@@ -19,6 +19,8 @@ if (isset($_SESSION['new_login_id'])) {
             $password = $row['password'];
         }
     }
+}else{
+    header('location: ../login/');
 }
 
 
@@ -125,13 +127,13 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
                                                 <td>
                                                     <?php
                                                     if ($row['status'] == 0) { ?>
-                                                        <button style="background: yellow; padding: 9px 28px;font-size:20px;">Pending</button>
+                                                        <button class="btn d-inline-flex btn-sm btn-primary mx-1" style="background: yellow; ">Pending</button>
 
                                                     <?php  } else if ($row['status'] == 1) { ?>
-                                                        <button style="background: green; padding: 9px 28px;font-size:20px;">Approved</button>
+                                                        <button class="btn d-inline-flex btn-sm btn-primary mx-1" style="background: green; ">Approved</button>
 
                                                     <?php } else { ?>
-                                                        <button style="background: red; padding: 5px 17px;font-size:20px;">Declined</button>
+                                                        <button class="btn d-inline-flex btn-sm btn-primary mx-1" style="background: red; ">Declined</button>
                                                     <?php }
                                                     ?>
                                                 </td>

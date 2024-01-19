@@ -21,7 +21,7 @@ if (isset($_POST['sign_in'])) {
                 $id = $row['id'];
                 $_SESSION['new_login_id'] = $id;
                 // echo '<script>alert("welcome")</script>';
-                header('location: ../home/');
+                header('location: ../dashboard/');
 
             }else{
                 echo'<></>';
