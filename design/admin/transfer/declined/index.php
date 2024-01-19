@@ -19,13 +19,36 @@ if (isset($_SESSION['new_login_id'])) {
             $password = $row['password'];
         }
     }
+} else {
+    // header('location: ../login/');
 }
 
+if (isset($_GET['pending'])) {
+    $pending  = $_GET['pending'];
 
-$clients = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `clients`"));
-$pending_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transfer` WHERE `status`=0"));
-$accepted_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transfer` WHERE `status`=1"));
-$declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transfer` WHERE `status`!=1 AND `status`!=0"));
+
+    $statement = "UPDATE `loan` SET `status`=1 WHERE `id`='$pending'";
+    $query = mysqli_query($connection, $statement);
+
+    if ($query) {
+        header('location: ./index.php');
+    } else {
+        echo 'could not work';
+    }
+}
+
+if (isset($_GET['delete'])) {
+    $delete = $_GET['delete'];
+
+    $statement = "DELETE FROM `clients` WHERE `id`='$delete'";
+    $delete = mysqli_query($connection, $statement);
+
+    if ($delete) {
+        header('location: ./index.php');
+    } else {
+        echo '<script>alert("not available")</script>';
+    }
+}
 
 
 
@@ -76,16 +99,16 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
                         <!-- Nav -->
                         <ul class="nav nav-tabs mt-4 overflow-x border-0">
                             <li class="nav-item ">
-                                <a href="<?php echo $domain ?>admin/loan/" class="nav-link font-regular">Loan</a>
+                                <a href="<?php echo $domain ?>admin/transfer/" class="nav-link font-regular">Transfer</a>
                             </li>
                             <li class="nav-item ">
-                                <a href="<?php echo $domain ?>admin/loan/pending" class="nav-link active">Pending Loan</a>
+                                <a href="<?php echo $domain ?>admin/transfer/pending/" class="nav-link font-regular">Pending Transfer</a>
                             </li>
                             <li class="nav-item">
-                                <a href="<?php echo $domain ?>admin/loan/approved" class="nav-link font-regular">Approved loan</a>
+                                <a href="<?php echo $domain ?>admin/transfer/approved/" class="nav-link font-regular">Approved Transfer</a>
                             </li>
                             <li class="nav-item">
-                                <a href="<?php echo $domain ?>admin/loan/declined" class="nav-link font-regular">Declined loan</a>
+                                <a href="<?php echo $domain ?>admin/transfer/declined/" class="nav-link active">Declined Transfer</a>
                             </li>
                         </ul>
                     </div>
@@ -97,23 +120,29 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
                     <!-- Card stats -->
                     <div class="card mb-7">
                         <div class="card-header w-100 d-flex justify-content-between align-items-center">
-                            <h5 class="mb-0">Pending Loan</h5>
-                            <input type="text" style="border: 1px solid black;" class="loan_inputs">
+                            <h5 class="mb-0">All User</h5>
+
+                            <div class=" mb-3 w-30">
+                                <input type="text" class="form-control loan_inputs" id="floatingInput" placeholder="Search">
+
+                            </div>
+
                         </div>
                         <div class="table-responsive">
                             <table class="table table-hover table-nowrap">
                                 <thead class="table-light">
                                     <tr>
                                         <th scope="col">Id</th>
-                                        <th scope="col">Amount</th>
-                                        <th scope="col">Payback</th>
-                                        <th scope="col">Reason</th>
-                                        <th scope="col">Date</th>
+                                        <th scope="col">Fullname</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Phone</th>
+                                        <th scope="col">Account Number</th>
+                                        <th scope="col">Status</th>
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                   
+
 
                                 </tbody>
                             </table>
@@ -131,7 +160,7 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
     <script>
         $(() => {
             $.ajax({
-                url: '<?php echo $domain ?>' + 'server/admin/apis/getPendingLoan.php',
+                url: '<?php echo $domain ?>' + 'server/admin/apis/FetchAllUsers.php',
                 method: "GET",
                 data: {
                     from: window.location.href
@@ -139,6 +168,14 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
                 success: function(respone) {
                     const data = JSON.parse('[' + respone.trim().replace(/}{/g, '},{') + ']');
                     loadTable(data)
+
+                    document.querySelector(".loan_inputs").addEventListener('keyup', (event) => {
+                        const newdata = data.filter(str => str.fullname.includes(event.target.value) || str.email.includes(event.target.value) || str.account_number.includes(event.target.value) || str.phone.includes(event.target.value));
+
+
+
+                        loadTable(newdata)
+                    })
 
                 },
                 error: function(error) {
@@ -155,28 +192,35 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
 
 
                     const html = ` <tr class="bg-white border-b  hover:bg-gray-50 ">
-                                                <td class="w-4 p-4">
+                                                        <td class="w-4 p-4">
                                                                ${i + 1}
                                                         </td>
                                                         <td class="px-6 py-4">
-                                                               ${data[i].amount}
+                                                               ${data[i].fullname}
                                                         </td>
                                                         <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap ">
                                                                
                                                                <div class="ps-3">
                                                                       
-                                                                      <div class="font-normal text-gray-500">${data[i].payback}
+                                                                      <div class="font-normal text-gray-500">${data[i].email}
                                                                       </div>
                                                                </div>
                                                         </th>
                                                         <td class="px-6 py-4">
-                                                               ${data[i].reason}
+                                                               ${data[i].phone}
                                                         </td>
-                                                        
+
                                                         <td class="px-6 py-4">
-                                                        <time class="timeago" datetime="${data[i].date}"></time>
-                                                               
+                                                               ${data[i].account_number}
                                                         </td>
+
+                                                <td>
+
+                                                    <a onclick="return confirm('Are you sure')" href="./index.php?delete=${data[i].id}">
+                                                        <button class="btn d-inline-flex btn-sm btn-primary mx-1" style="background: red; ">Delete User</button>
+                                                    </a>
+                                                </td>
+
                                                         
                                             </tr>`;
                     document.querySelector('tbody').insertAdjacentHTML("beforeend", html)

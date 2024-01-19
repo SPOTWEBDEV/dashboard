@@ -76,13 +76,7 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
                         <!-- Nav -->
                         <ul class="nav nav-tabs mt-4 overflow-x border-0">
                             <li class="nav-item ">
-                                <a href="#" class="nav-link active">All files</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link font-regular">Shared</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link font-regular">File requests</a>
+                                <a href="#" class="nav-link active">Dashboard</a>
                             </li>
                         </ul>
                     </div>

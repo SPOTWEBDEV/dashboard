@@ -49,28 +49,33 @@
             <!-- Navigation -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php $domain ?>../../admin/dashboard/index.php">
+                    <a class="nav-link" href="<?php echo $domain ?>admin/dashboard/">
                         <i class="bi bi-house"></i> Dashboard
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="<?php echo $domain ?>admin/clients/">
                         <i class="bi bi-people"></i> Clients
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php $domain ?>../../admin/adduser/index.php">
+                    <a class="nav-link" href="<?php echo $domain ?>admin/adduser/">
                         <i class="bi bi-person-plus"></i> Create User
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php $domain ?>../../admin/viewuser/index.php">
-                        <i class="bi bi-person-gear"></i> Edit User
+                    <a class="nav-link" href="<?php echo $domain ?>admin/loan/">
+                        <i class="bi bi-person-gear"></i> Loan
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php $domain ?>../../admin/transaction/index.php">
+                    <a class="nav-link" href="<?php echo $domain ?>admin/transaction/">
                         <i class="bi bi-credit-card-2-front"></i> Transaction
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo $domain ?>admin/transfer/">
+                        <i class="bi bi-credit-card-2-front"></i> Transfer
                     </a>
                 </li>
                 <a href="../../admin/dashboard/index.php"></a>

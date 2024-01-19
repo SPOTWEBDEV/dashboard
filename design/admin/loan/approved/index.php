@@ -21,14 +21,6 @@ if (isset($_SESSION['new_login_id'])) {
     }
 }
 
-
-$clients = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `clients`"));
-$pending_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transfer` WHERE `status`=0"));
-$accepted_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transfer` WHERE `status`=1"));
-$declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transfer` WHERE `status`!=1 AND `status`!=0"));
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -76,13 +68,16 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
                         <!-- Nav -->
                         <ul class="nav nav-tabs mt-4 overflow-x border-0">
                             <li class="nav-item ">
-                                <a href="#" class="nav-link active">All files</a>
+                                <a href="<?php echo $domain ?>admin/loan/" class="nav-link font-regular">Loan</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="<?php echo $domain ?>admin/loan/pending" class="nav-link font-regular">Pending Loan</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link font-regular">Shared</a>
+                                <a href="<?php echo $domain ?>admin/loan/approved" class="nav-link active">Approved loan</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link font-regular">File requests</a>
+                                <a href="<?php echo $domain ?>admin/loan/declined" class="nav-link font-regular">Declined loan</a>
                             </li>
                         </ul>
                     </div>
@@ -93,8 +88,9 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
                 <div class="container-fluid">
                     <!-- Card stats -->
                     <div class="card mb-7">
-                        <div class="card-header">
+                        <div class="card-header w-100 d-flex justify-content-between align-items-center">
                             <h5 class="mb-0">Approved Loan</h5>
+                            <input type="text" style="border: 1px solid black;" class="loan_inputs">
                         </div>
                         <div class="table-responsive">
                             <table class="table table-hover table-nowrap">

@@ -10,7 +10,7 @@ if (isset($_GET['from'])) {
     // ];
 
     // if (in_array($_GET['from'], $allowedDomains)) {
-    $select = mysqli_query($connection, "SELECT * FROM `clients`");
+    $select = mysqli_query($connection, "SELECT * FROM `loan` WHERE `status`=0");
     while ($row = mysqli_fetch_assoc($select)) {
         echo json_encode($row, JSON_PRETTY_PRINT);
     }

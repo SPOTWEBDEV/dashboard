@@ -227,13 +227,7 @@ if (isset($_POST['submit'])) {
                         <!-- Nav -->
                         <ul class="nav nav-tabs mt-4 overflow-x border-0">
                             <li class="nav-item ">
-                                <a href="#" class="nav-link active">All files</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link font-regular">Shared</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link font-regular">File requests</a>
+                                <a href="#" class="nav-link active">Create user</a>
                             </li>
                         </ul>
                     </div>
@@ -292,19 +286,6 @@ if (isset($_POST['submit'])) {
                                         <div class="">
                                             <label class="form-label" for="address">Address</label>
                                             <input name="address" type="text" class="form-control" id="address">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="">
-                                            <label class="form-label" for="city">City</label>
-                                            <input name="city" type="text" class="form-control" id="city">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2">
-                                        <div class="">
-                                            <label class="form-label" for="zip">ZIP</label>
-                                            <input name="zip" type="tel" class="form-control" id="zip">
                                         </div>
                                     </div>
 

@@ -19,15 +19,36 @@ if (isset($_SESSION['new_login_id'])) {
             $password = $row['password'];
         }
     }
-}else{
+} else {
     header('location: ../login/');
 }
 
+if (isset($_GET['pending'])) {
+    $pending  = $_GET['pending'];
 
-$clients = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `clients`"));
-$pending_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transfer` WHERE `status`=0"));
-$accepted_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transfer` WHERE `status`=1"));
-$declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transfer` WHERE `status`!=1 AND `status`!=0"));
+
+    $statement = "UPDATE `loan` SET `status`=1 WHERE `id`='$pending'";
+    $query = mysqli_query($connection, $statement);
+
+    if ($query) {
+        header('location: ./index.php');
+    } else {
+        echo 'could not work';
+    }
+}
+
+if (isset($_GET['decline'])) {
+    $decline = $_GET['decline'];
+
+    $statement = "UPDATE `loan` SET `status` = 2 WHERE `id`='$decline'";
+    $update = mysqli_query($connection, $statement);
+
+    if ($update) {
+        header('location: ./index.php');
+    } else {
+        echo '<script>alert("not available")</script>';
+    }
+}
 
 
 
@@ -78,13 +99,16 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
                         <!-- Nav -->
                         <ul class="nav nav-tabs mt-4 overflow-x border-0">
                             <li class="nav-item ">
-                                <a href="#" class="nav-link active">All files</a>
+                                <a href="<?php echo $domain ?>admin/loan/" class="nav-link active">Loan</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="<?php echo $domain ?>admin/loan/pending" class="nav-link font-regular">Pending Loan</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link font-regular">Shared</a>
+                                <a href="<?php echo $domain ?>admin/loan/approved" class="nav-link font-regular">Approved loan</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link font-regular">File requests</a>
+                                <a href="<?php echo $domain ?>admin/loan/declined" class="nav-link font-regular">Declined loan</a>
                             </li>
                         </ul>
                     </div>
@@ -95,13 +119,20 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
                 <div class="container-fluid">
                     <!-- Card stats -->
                     <div class="card mb-7">
-                        <div class="card-header">
-                            <h5 class="mb-0">Applications</h5>
+                        <div class="card-header w-100 d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">Request Loan</h5>
+
+                            <div class=" mb-3 w-30">
+                                <input type="text" class="form-control loan_inputs" id="floatingInput" placeholder="Search">
+
+                            </div>
+
                         </div>
                         <div class="table-responsive">
                             <table class="table table-hover table-nowrap">
                                 <thead class="table-light">
                                     <tr>
+                                        <th scope="col">Id</th>
                                         <th scope="col">Amount</th>
                                         <th scope="col">Payback</th>
                                         <th scope="col">Reason</th>
@@ -111,37 +142,7 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
-                                    $fetch = "SELECT * FROM `loan` WHERE `id`='$id'";
 
-                                    $query = mysqli_query($connection, $fetch);
-
-
-                                    if (mysqli_num_rows($query)) {
-                                        while ($row = mysqli_fetch_assoc($query)) { ?>
-                                            <tr>
-                                                <td><?php echo $row['amount'] ?></td>
-                                                <td><?php echo $row['payback'] ?></td>
-                                                <td><?php echo $row['reason'] ?></td>
-                                                <td><?php echo $row['date'] ?></td>
-                                                <td>
-                                                    <?php
-                                                    if ($row['status'] == 0) { ?>
-                                                        <button class="btn d-inline-flex btn-sm btn-primary mx-1" style="background: yellow; ">Pending</button>
-
-                                                    <?php  } else if ($row['status'] == 1) { ?>
-                                                        <button class="btn d-inline-flex btn-sm btn-primary mx-1" style="background: green; ">Approved</button>
-
-                                                    <?php } else { ?>
-                                                        <button class="btn d-inline-flex btn-sm btn-primary mx-1" style="background: red; ">Declined</button>
-                                                    <?php }
-                                                    ?>
-                                                </td>
-                                            </tr>
-                                    <?php   }
-                                    }
-
-                                    ?>
 
                                 </tbody>
                             </table>
@@ -154,6 +155,86 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
             </main>
         </div>
     </div>
+
+
+    <script>
+        $(() => {
+            $.ajax({
+                url: '<?php echo $domain ?>' + 'server/admin/apis/getPendingLoan.php',
+                method: "GET",
+                data: {
+                    from: window.location.href
+                },
+                success: function(respone) {
+                    const data = JSON.parse('[' + respone.trim().replace(/}{/g, '},{') + ']');
+                    loadTable(data)
+
+                    document.querySelector(".loan_inputs").addEventListener('keyup', (event) => {
+                        const newdata = data.filter(str => str.amount.includes(event.target.value) || str.reason.includes(event.target.value) || str.payback.includes(event.target.value));
+
+
+
+                        loadTable(newdata)
+                    })
+
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            })
+        })
+
+        function loadTable(data) {
+            document.querySelector('tbody').innerHTML = ''
+            if (data.length > 0) {
+                for (var i = 0; i < data.length; i++) {
+
+
+
+                    const html = ` <tr class="bg-white border-b  hover:bg-gray-50 ">
+                                                <td class="w-4 p-4">
+                                                               ${i + 1}
+                                                        </td>
+                                                        <td class="px-6 py-4">
+                                                               ${data[i].amount}
+                                                        </td>
+                                                        <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap ">
+                                                               
+                                                               <div class="ps-3">
+                                                                      
+                                                                      <div class="font-normal text-gray-500">${data[i].payback}
+                                                                      </div>
+                                                               </div>
+                                                        </th>
+                                                        <td class="px-6 py-4">
+                                                               ${data[i].reason}
+                                                        </td>
+                                                        
+                                                        <td class="px-6 py-4">
+                                                        <time class="timeago" datetime="${data[i].date}"></time>
+                                                               
+                                                        </td>
+                                                        <td>
+
+                                                    <a href="./index.php?pending=${data[i].id}">
+                                                        <button class="btn d-inline-flex btn-sm btn-primary mx-1" style="background: green; ">Approve</button>
+                                                    </a>
+
+                                                    <a href="./index.php?decline=${data[i].id}">
+                                                        <button class="btn d-inline-flex btn-sm btn-primary mx-1" style="background: red; ">Decline</button>
+                                                    </a>
+                                                </td>
+
+                                                        
+                                            </tr>`;
+                    document.querySelector('tbody').insertAdjacentHTML("beforeend", html)
+                    jQuery(document).ready(function() {
+                        jQuery("time.timeago").timeago();
+                    });
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>
