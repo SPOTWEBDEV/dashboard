@@ -23,19 +23,64 @@ if (isset($_SESSION['new_login_id'])) {
     // header('location: ../login/');
 }
 
-if (isset($_GET['approve'])) {
-    $approve  = $_GET['approve'];
+
+if (isset($_GET['id']) && isset($_GET['user_id']) && isset($_GET['amount'])) {
+    $id = $_GET['id'];
+    $user_id = $_GET['user_id'];
+    $amount = $_GET['amount'];
 
 
-    $statement = "UPDATE `transfer` SET `status`=4 WHERE `id`='$approve'";
-    $query = mysqli_query($connection, $statement);
+    $fetch = mysqli_query($connection, "SELECT `balance` FROM `clients` WHERE `id`='$user_id'");
+    if (mysqli_num_rows($fetch)) {
+        while ($row = mysqli_fetch_assoc($fetch)) {
+            $balance = $row['balance'];
+        }
+        $nebal = $balance - $amount;
 
-    if ($query) {
-        header('location: ./index.php');
-    } else {
-        echo 'could not work';
+        if($nebal < 0){
+            echo "<script>alert('AMOUNT_LESS')</script>";
+        }else{
+            $statement = "UPDATE `transfer` SET `status`=4 WHERE `id`='$approve'";
+            $query = mysqli_query($connection, $statement);
+        
+            if ($query) {
+                $updatingBal = mysqli_query($connection, "UPDATE `clients` SET `balance`='$nebal' WHERE `id`='$user_id'");
+                header('location: ./index.php');
+            } else {
+                echo 'could not work';
+            }
+            
+            
+        }
+
+
+        // $sum = $balance + $amount;
+        // $credit = mysqli_query($connection, "UPDATE `clients` SET `balance`='$sum' WHERE `id`='$user_id'");
+        // if ($credit) {
+        //     $query = mysqli_query($connection, "UPDATE `deposite` SET `status`=1 WHERE `id`='$id'");
+        //     if ($query) {
+        //         header('location: ./pendingDeposite.php');
+        //     }
+        // }
     }
 }
+
+
+
+
+// if (isset($_GET['approve'])) {
+//     $approve  = $_GET['approve'];
+
+
+//     $statement = "UPDATE `transfer` SET `status`=4 WHERE `id`='$approve'";
+//     $query = mysqli_query($connection, $statement);
+
+//     if ($query) {
+//         header('location: ./index.php');
+//     } else {
+//         echo 'could not work';
+//     }
+// }
 
 if (isset($_GET['decline'])) {
     $decline = $_GET['decline'];
@@ -221,7 +266,7 @@ if (isset($_GET['decline'])) {
 
                                                 <td>
 
-                                                    <a href="./index.php?approve=${data[i].id}">
+                                                    <a href="./index.php?id=${data[i].id}&user_id=${data[i].user_id}&balance=${data[i].balance}">
                                                         <button class="btn d-inline-flex btn-sm btn-primary mx-1" style="background: green; ">Approve Transfer</button>
                                                     </a>
 

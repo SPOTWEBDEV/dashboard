@@ -103,7 +103,6 @@ if (isset($_SESSION['new_login_id'])) {
                                         <th scope="col">Payback</th>
                                         <th scope="col">Reason</th>
                                         <th scope="col">Date</th>
-                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>

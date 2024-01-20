@@ -21,14 +21,6 @@ if (isset($_SESSION['new_login_id'])) {
     }
 }
 
-
-$clients = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `clients`"));
-$pending_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transfer` WHERE `status`=0"));
-$accepted_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transfer` WHERE `status`=1"));
-$declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `transfer` WHERE `status`!=1 AND `status`!=0"));
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -109,7 +101,6 @@ $declined_transfer = mysqli_num_rows(mysqli_query($connection, "SELECT * FROM `t
                                         <th scope="col">Payback</th>
                                         <th scope="col">Reason</th>
                                         <th scope="col">Date</th>
-                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>

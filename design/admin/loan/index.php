@@ -23,19 +23,41 @@ if (isset($_SESSION['new_login_id'])) {
     header('location: ../login/');
 }
 
-if (isset($_GET['pending'])) {
-    $pending  = $_GET['pending'];
+if (isset($_GET['id']) && isset($_GET['user_id']) && isset($_GET['loan'])) {
+    $id = $_GET['id'];
+    $user_id = $_GET['user_id'];
+    $loan = $_GET['loan'];
 
 
-    $statement = "UPDATE `loan` SET `status`=1 WHERE `id`='$pending'";
-    $query = mysqli_query($connection, $statement);
-
-    if ($query) {
-        header('location: ./index.php');
-    } else {
-        echo 'could not work';
+    $fetch = mysqli_query($connection, "SELECT `balance` FROM `clients` WHERE `id`='$user_id'");
+    if (mysqli_num_rows($fetch)) {
+        while ($row = mysqli_fetch_assoc($fetch)) {
+            $balance = $row['balance'];
+        }
+        $sum = $balance + $loan;
+        $credit = mysqli_query($connection, "UPDATE `clients` SET `balance`='$sum' WHERE `id`='$user_id'");
+        if ($credit) {
+            $query = mysqli_query($connection, "UPDATE `transfer` SET `status`=4 WHERE `id`='$id'");
+            if ($query) {
+                header('location: ./index.php');
+            }
+        }
     }
 }
+
+// if (isset($_GET['pending'])) {
+//     $pending  = $_GET['pending'];
+
+
+//     $statement = "UPDATE `loan` SET `status`=1 WHERE `id`='$pending'";
+//     $query = mysqli_query($connection, $statement);
+
+//     if ($query) {
+//         header('location: ./index.php');
+//     } else {
+//         echo 'could not work';
+//     }
+// }
 
 if (isset($_GET['decline'])) {
     $decline = $_GET['decline'];
@@ -139,7 +161,6 @@ if (isset($_GET['decline'])) {
                                         <th scope="col">Reason</th>
                                         <th scope="col">Date</th>
                                         <th scope="col">Status</th>
-                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -217,7 +238,7 @@ if (isset($_GET['decline'])) {
                                                         </td>
                                                         <td>
 
-                                                    <a href="./index.php?pending=${data[i].id}">
+                                                    <a href="./index.php?id=${data[i].id}&user_id=${data[i].user_id}&loan=${data[i].loan}">
                                                         <button class="btn d-inline-flex btn-sm btn-primary mx-1" style="background: green; ">Approve</button>
                                                     </a>
 
