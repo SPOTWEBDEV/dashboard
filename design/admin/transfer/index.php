@@ -23,11 +23,11 @@ if (isset($_SESSION['new_login_id'])) {
     // header('location: ../login/');
 }
 
-if (isset($_GET['pending'])) {
-    $pending  = $_GET['pending'];
+if (isset($_GET['approve'])) {
+    $approve  = $_GET['approve'];
 
 
-    $statement = "UPDATE `loan` SET `status`=1 WHERE `id`='$pending'";
+    $statement = "UPDATE `transfer` SET `status`=4 WHERE `id`='$approve'";
     $query = mysqli_query($connection, $statement);
 
     if ($query) {
@@ -37,13 +37,13 @@ if (isset($_GET['pending'])) {
     }
 }
 
-if (isset($_GET['delete'])) {
-    $delete = $_GET['delete'];
+if (isset($_GET['decline'])) {
+    $decline = $_GET['decline'];
 
-    $statement = "DELETE FROM `clients` WHERE `id`='$delete'";
-    $delete = mysqli_query($connection, $statement);
+    $statement = "UPDATE `transfer` SET `status` = 3 WHERE `id`='$decline'";
+    $decline = mysqli_query($connection, $statement);
 
-    if ($delete) {
+    if ($decline) {
         header('location: ./index.php');
     } else {
         echo '<script>alert("not available")</script>';
@@ -120,7 +120,7 @@ if (isset($_GET['delete'])) {
                     <!-- Card stats -->
                     <div class="card mb-7">
                         <div class="card-header w-100 d-flex justify-content-between align-items-center">
-                            <h5 class="mb-0">All User</h5>
+                            <h5 class="mb-0">Transfer</h5>
 
                             <div class=" mb-3 w-30">
                                 <input type="text" class="form-control loan_inputs" id="floatingInput" placeholder="Search">
@@ -133,11 +133,12 @@ if (isset($_GET['delete'])) {
                                 <thead class="table-light">
                                     <tr>
                                         <th scope="col">Id</th>
-                                        <th scope="col">Fullname</th>
-                                        <th scope="col">Email</th>
-                                        <th scope="col">Phone</th>
+                                        <th scope="col">Account Name</th>
                                         <th scope="col">Account Number</th>
-                                        <th scope="col">Status</th>
+                                        <th scope="col">Bank Name</th>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Amount</th>
+                                        <th scope="col">Action</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -160,7 +161,7 @@ if (isset($_GET['delete'])) {
     <script>
         $(() => {
             $.ajax({
-                url: '<?php echo $domain ?>' + 'server/admin/apis/FetchAllUsers.php',
+                url: '<?php echo $domain ?>' + 'server/admin/apis/getApprovedTransfer.php',
                 method: "GET",
                 data: {
                     from: window.location.href
@@ -170,7 +171,7 @@ if (isset($_GET['delete'])) {
                     loadTable(data)
 
                     document.querySelector(".loan_inputs").addEventListener('keyup', (event) => {
-                        const newdata = data.filter(str => str.fullname.includes(event.target.value) || str.email.includes(event.target.value) || str.account_number.includes(event.target.value) || str.phone.includes(event.target.value));
+                        const newdata = data.filter(str => str.account_name.includes(event.target.value) || str.account_number.includes(event.target.value) || str.bank_name.includes(event.target.value) || str.amount.includes(event.target.value));
 
 
 
@@ -196,28 +197,36 @@ if (isset($_GET['delete'])) {
                                                                ${i + 1}
                                                         </td>
                                                         <td class="px-6 py-4">
-                                                               ${data[i].fullname}
+                                                               ${data[i].account_name}
                                                         </td>
                                                         <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap ">
                                                                
                                                                <div class="ps-3">
                                                                       
-                                                                      <div class="font-normal text-gray-500">${data[i].email}
+                                                                      <div class="font-normal text-gray-500">${data[i].account_number}
                                                                       </div>
                                                                </div>
                                                         </th>
                                                         <td class="px-6 py-4">
-                                                               ${data[i].phone}
+                                                               ${data[i].bank_name}
                                                         </td>
 
                                                         <td class="px-6 py-4">
-                                                               ${data[i].account_number}
+                                                               ${data[i].country}
+                                                        </td>
+
+                                                        <td class="px-6 py-4">
+                                                               $${data[i].amount}
                                                         </td>
 
                                                 <td>
 
-                                                    <a onclick="return confirm('Are you sure')" href="./index.php?delete=${data[i].id}">
-                                                        <button class="btn d-inline-flex btn-sm btn-primary mx-1" style="background: red; ">Delete User</button>
+                                                    <a href="./index.php?approve=${data[i].id}">
+                                                        <button class="btn d-inline-flex btn-sm btn-primary mx-1" style="background: green; ">Approve Transfer</button>
+                                                    </a>
+
+                                                    <a href="./index.php?decline=${data[i].id}">
+                                                        <button class="btn d-inline-flex btn-sm btn-primary mx-1" style="background: red; ">Declined</button>
                                                     </a>
                                                 </td>
 

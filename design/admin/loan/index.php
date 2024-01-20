@@ -97,6 +97,7 @@ if (isset($_GET['decline'])) {
                             </div>
                         </div>
                         <!-- Nav -->
+
                         <ul class="nav nav-tabs mt-4 overflow-x border-0">
                             <li class="nav-item ">
                                 <a href="<?php echo $domain ?>admin/loan/" class="nav-link active">Loan</a>
