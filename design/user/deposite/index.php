@@ -195,10 +195,10 @@ if (isset($_POST['deposit'])) {
                             </div>
                             <div>
                                 <label for="image" class="block mb-2 text-sm font-medium text-gray-900  capitalize">Image</label>
-                                <input type="text" name="image" id="image" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Image" required="">
+                                <input type="file" name="image" id="image" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Image" required="">
                             </div>
-                            <div>
-                                <label for="date" class="block mb-2 text-sm font-medium text-gray-900  capitalize">Date</label>
+                            <div hidden>
+                                <label for="date"  class="block mb-2 text-sm font-medium text-gray-900  capitalize">Date</label>
                                 <input type="text" name="date" id="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Date" required="">
                             </div>
                         </div>

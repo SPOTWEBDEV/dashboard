@@ -10,8 +10,6 @@
     * {
         margin: 0;
         padding: 0;
-        /* width: 100%;
-        height: 100vh; */
     }
 
     body {
@@ -25,49 +23,43 @@
     }
 
     .section {
-        width: 50%;
+        width: 80%;
         height: 100vh;
         border: 1px solid black;
-        /* padding: 0px 10px; */
     }
 
     .reciept_holder {
         width: 100%;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        column-gap: 100px;
-        /* flex-direction: column; */
+        justify-content: space-around;
     }
 
     .status {
         padding-top: 30px;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        
-        
+        flex-direction: column;
+    }
+    .status2 {
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
     }
 
     .amount {
-        padding-top: 30px;
-        /* width: 100%; */
+        padding-top: 60px;
+        display: flex;
+        row-gap: 50px;
+        flex-direction: column;
+    }
+
+    .transaction{
+        padding-top: 50px;
         display: flex;
         flex-direction: column;
         row-gap: 10px;
     }
 
-    /* .amount p{
-        font-size: 20px;
-    } */
-    .status_holders1 {
-        display: flex;
-        flex-direction: column;
-        row-gap: 10px;
-    }
-
-    .amount_holders1 {
+    .status_holder{
         display: flex;
         flex-direction: column;
         row-gap: 10px;
@@ -85,71 +77,79 @@
     <section class="section">
         <div class="reciept_holder">
             <div class="status">
-                <div class="status_holders1">
+                <div class="status_holder">
                     <p>status:</p>
                     <p>reference number:</p>
                     <p>transaction date:</p>
                 </div>
 
-                <div class="amount_holders1">
-                    <p style="color: rgb(5, 255, 5);">successful</p>
-                    <p>reference number</p>
-                    <p>transaction date</p>
+                <div class="amount">
+                    <div class="amount1">
+                        <p>amount:</p>
+                    </div>
+
+                    <div class="amount1">
+                        <p>from account:</p>
+                    </div>
+                </div>
+
+                <div class="transaction">
+                    <div class="amount1">
+                        <p>transaction type:</p>
+                    </div>
+
+                    <div class="amount1">
+                        <p>beneficiary name:</p>
+                    </div>
+
+                    <div class="amount1">
+                        <p>receiving bank:</p>
+                    </div>
+
+                    <div class="amount1">
+                        <p>beneficiary account number:</p>
+                    </div>
                 </div>
 
             </div>
-            <!-- <div class="status_holders2" style="margin-top: 30px;">
-                <p>amount:</p>
-            </div> -->
 
-            <!-- <div class="status_holders2">
-                    <p>from account:</p>
+            <div class="status2">
+                <div class="status_holder">
+                    <p style="color: rgb(0, 255, 0);">successful</p>
+                    <p>2247032946</p>
+                    <p>29 dec 2014  13:38:59</p>
                 </div>
 
-                <div class="status_holders2">
-                    <p>transaction type:</p>
+                <div class="amount">
+                    <div class="amount1">
+                        <p>rm135.00</p>
+                    </div>
+
+                    <div class="amount1" style="text-transform: uppercase;">
+                        <p>157111613877 wsa</p>
+                    </div>
                 </div>
 
-                <div class="status_holders2">
-                    <p>beneficiary name:</p>
+                <div class="transaction">
+                    <div class="amount1" style="text-transform: uppercase;">
+                        <p>funds transfer interbank</p>
+                    </div>
+
+                    <div class="amount1" style="text-transform: uppercase;">
+                        <p>animnaime shoppe</p>
+                    </div>
+
+                    <div class="amount1" style="text-transform: uppercase;">
+                        <p>cimb bank berhad</p>
+                    </div>
+
+                    <div class="amount1" style="text-transform: uppercase;">
+                        <p>8007315973</p>
+                    </div>
                 </div>
 
-                <div class="status_holders2">
-                    <p>recieving bank:</p>
-                </div>
-
-                <div class="status_holders2">
-                    <p>beneficiary account number:</p>
-                </div> -->
-
-            <div class="amount">
-
-
-
-                <!-- <div class="amount_holder" style="margin-top: 30px;">
-                    <p style="text-transform: uppercase;">rm135.00</p>
-                </div>
-
-                <div class="amount_holder">
-                    <p style="text-transform: uppercase;">157111613877 wsa</p>
-                </div>
-
-                <div class="amount_holder">
-                    <p>funds transfer interbank</p>
-                </div>
-
-                <div class="amount_holder">
-                    <p style="text-transform: uppercase;">animmain shoppe</p>
-                </div>
-
-                <div class="amount_holder">
-                    <p style="text-transform: uppercase;">cimb bank berhad</p>
-                </div>
-
-                <div class="amount_holder">
-                    <p style="text-transform: uppercase;">8007315973</p>
-                </div> -->
             </div>
+
         </div>
     </section>
 </body>
