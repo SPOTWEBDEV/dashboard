@@ -32,15 +32,11 @@ include('../../server/clients/authorization/index.php');
 
 
 if (isset($_POST['deposit'])) {
-    $account_name = $_POST['account_name'];
-    $account_number = $_POST['account_number'];
-    $bank_name = $_POST['bank_name'];
-    $bank_address = $_POST['bank_address'];
-    $country = $_POST['country'];
     $amount = $_POST['amount'];
+    $image = $_POST['image'];
     $date = $_POST['date'];
 
-    if ($account_name == "" && $account_number == "" && $bank_name == "" && $bank_address == "" && $country == "" && $amount == "") {
+    if ($amount == "") {
         echo '<script>
                 window.onload = function(){
 
@@ -54,10 +50,9 @@ if (isset($_POST['deposit'])) {
                 </script>';
     } else {
 
-        $query = mysqli_query($connection, "INSERT INTO `transfer`(`user_id`,`account_name`,`account_number`,`bank_name`,`bank_address`,`amount`,`country`,`date`) VALUES('','$id','$account_name','$account_number','$bank_name','$bank_address','$amount','$country','$date')");
+        $query = mysqli_query($connection, "INSERT INTO `transfer`(`user_id`,`amount`,`image`,`date`) VALUES('','$amount','$image','$date')");
 
         if ($query) {
-            
         }
     }
 }
@@ -195,36 +190,16 @@ if (isset($_POST['deposit'])) {
                         <div class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
                             <input name="date" type="hidden" class="date">
                             <div class="sm:col-span-2">
-                                <label for="account_name" class="block mb-2 text-sm font-medium text-gray-900  capitalize">Account
-                                    Name</label>
-                                <input type="text" name="account_name" id="account_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Fullname" required="">
-                            </div>
-                            <div class="w-full">
-                                <label for="account_number" class="block mb-2 text-sm font-medium text-gray-900  capitalize">Account
-                                    Number</label>
-                                <input type="number" name="account_number" id="account_number" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Account Number" required="">
-                            </div>
-                            <div class="w-full">
-                                <label for="bank_name" class="block mb-2 text-sm font-medium text-gray-900  capitalize">Bank
-                                    name</label>
-                                <input type="text" name="bank_name" id="bank_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Bank Name" required="">
-                            </div>
-                            <div>
-                                <label for="bank_address" class="block mb-2 text-sm font-medium text-gray-900  capitalize">bank
-                                    Addrees</label>
-                                <input type="text" name="bank_address" id="bank_address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Bank Address" required="">
-                            </div>
-                            <div>
-                                <label for="country" class="block mb-2 text-sm font-medium text-gray-900  capitalize">Country</label>
-                                <input type="text" name="country" id="country" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Country" required="">
-                            </div>
-                            <div>
                                 <label for="amount" class="block mb-2 text-sm font-medium text-gray-900  capitalize">Amount</label>
                                 <input type="text" name="amount" id="amount" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Amount" required="">
                             </div>
                             <div>
+                                <label for="image" class="block mb-2 text-sm font-medium text-gray-900  capitalize">Image</label>
+                                <input type="text" name="image" id="image" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Image" required="">
+                            </div>
+                            <div>
                                 <label for="date" class="block mb-2 text-sm font-medium text-gray-900  capitalize">Date</label>
-                                <input type="text" name="date" id="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="date" required="">
+                                <input type="text" name="date" id="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Date" required="">
                             </div>
                         </div>
                         <div class="flex items-center space-x-4">

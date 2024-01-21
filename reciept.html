@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        /* width: 100%;
+        height: 100vh; */
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section {
+        width: 50%;
+        height: 100vh;
+        border: 1px solid black;
+        /* padding: 0px 10px; */
+    }
+
+    .reciept_holder {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 100px;
+        /* flex-direction: column; */
+    }
+
+    .status {
+        padding-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        
+        
+    }
+
+    .amount {
+        padding-top: 30px;
+        /* width: 100%; */
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    /* .amount p{
+        font-size: 20px;
+    } */
+    .status_holders1 {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .amount_holders1 {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    p {
+        text-transform: capitalize;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 25px;
+        font-weight: 600;
+    }
+</style>
+
+<body>
+    <section class="section">
+        <div class="reciept_holder">
+            <div class="status">
+                <div class="status_holders1">
+                    <p>status:</p>
+                    <p>reference number:</p>
+                    <p>transaction date:</p>
+                </div>
+
+                <div class="amount_holders1">
+                    <p style="color: rgb(5, 255, 5);">successful</p>
+                    <p>reference number</p>
+                    <p>transaction date</p>
+                </div>
+
+            </div>
+            <!-- <div class="status_holders2" style="margin-top: 30px;">
+                <p>amount:</p>
+            </div> -->
+
+            <!-- <div class="status_holders2">
+                    <p>from account:</p>
+                </div>
+
+                <div class="status_holders2">
+                    <p>transaction type:</p>
+                </div>
+
+                <div class="status_holders2">
+                    <p>beneficiary name:</p>
+                </div>
+
+                <div class="status_holders2">
+                    <p>recieving bank:</p>
+                </div>
+
+                <div class="status_holders2">
+                    <p>beneficiary account number:</p>
+                </div> -->
+
+            <div class="amount">
+
+
+
+                <!-- <div class="amount_holder" style="margin-top: 30px;">
+                    <p style="text-transform: uppercase;">rm135.00</p>
+                </div>
+
+                <div class="amount_holder">
+                    <p style="text-transform: uppercase;">157111613877 wsa</p>
+                </div>
+
+                <div class="amount_holder">
+                    <p>funds transfer interbank</p>
+                </div>
+
+                <div class="amount_holder">
+                    <p style="text-transform: uppercase;">animmain shoppe</p>
+                </div>
+
+                <div class="amount_holder">
+                    <p style="text-transform: uppercase;">cimb bank berhad</p>
+                </div>
+
+                <div class="amount_holder">
+                    <p style="text-transform: uppercase;">8007315973</p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
