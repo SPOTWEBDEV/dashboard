@@ -37,20 +37,22 @@ if (isset($_GET['id']) && isset($_GET['user_id']) && isset($_GET['amount'])) {
         }
         $nebal = $balance - $amount;
 
-        if($nebal < 0){
-            echo "<script>alert('AMOUNT_LESS')</script>";
-        }else{
-            $statement = "UPDATE `transfer` SET `status`=4 WHERE `id`='$approve'";
+        if ($nebal < 0) {
+            echo '<script>alert("AMOUNT_LESS")</script>';
+        } else {
+            $statement = "UPDATE `transfer` SET `status`=4 WHERE `id`='$id'";
             $query = mysqli_query($connection, $statement);
-        
+
             if ($query) {
                 $updatingBal = mysqli_query($connection, "UPDATE `clients` SET `balance`='$nebal' WHERE `id`='$user_id'");
-                header('location: ./index.php');
+                if ($updatingBal) {
+                    header('location: ./index.php');
+                } else {
+                    echo 'could not work';
+                }
             } else {
                 echo 'could not work';
             }
-            
-            
         }
 
 
@@ -266,12 +268,12 @@ if (isset($_GET['decline'])) {
 
                                                 <td>
 
-                                                    <a href="./index.php?id=${data[i].id}&user_id=${data[i].user_id}&balance=${data[i].balance}">
+                                                    <a href="./index.php?id=${data[i].id}&user_id=${data[i].user_id}&amount=${data[i].amount}">
                                                         <button class="btn d-inline-flex btn-sm btn-primary mx-1" style="background: green; ">Approve Transfer</button>
                                                     </a>
 
                                                     <a href="./index.php?decline=${data[i].id}">
-                                                        <button class="btn d-inline-flex btn-sm btn-primary mx-1" style="background: red; ">Declined</button>
+                                                        <button class="btn d-inline-flex btn-sm btn-primary mx-1" style="background: red; ">Decline</button>
                                                     </a>
                                                 </td>
 

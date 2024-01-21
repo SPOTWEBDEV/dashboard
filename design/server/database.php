@@ -14,6 +14,6 @@ session_start();
 
 // $domain = "https://indusind.indusindnet.com/";
 $domain = "http://localhost/dashboards/design/";
-$redirects = "https://indusindbank.indusindnet.com/corp/BANKAWAY.php";
+// $redirects = "https://indusindbank.indusindnet.com/corp/BANKAWAY.php";
 ?>
 

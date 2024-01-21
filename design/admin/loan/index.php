@@ -23,10 +23,10 @@ if (isset($_SESSION['new_login_id'])) {
     header('location: ../login/');
 }
 
-if (isset($_GET['id']) && isset($_GET['user_id']) && isset($_GET['loan'])) {
+if (isset($_GET['id']) && isset($_GET['user_id']) && isset($_GET['amount'])) {
     $id = $_GET['id'];
     $user_id = $_GET['user_id'];
-    $loan = $_GET['loan'];
+    $amount = $_GET['amount'];
 
 
     $fetch = mysqli_query($connection, "SELECT `balance` FROM `clients` WHERE `id`='$user_id'");
@@ -34,12 +34,14 @@ if (isset($_GET['id']) && isset($_GET['user_id']) && isset($_GET['loan'])) {
         while ($row = mysqli_fetch_assoc($fetch)) {
             $balance = $row['balance'];
         }
-        $sum = $balance + $loan;
+        $sum = $balance + $amount;
         $credit = mysqli_query($connection, "UPDATE `clients` SET `balance`='$sum' WHERE `id`='$user_id'");
         if ($credit) {
-            $query = mysqli_query($connection, "UPDATE `transfer` SET `status`=4 WHERE `id`='$id'");
+            $query = mysqli_query($connection, "UPDATE `loan` SET `status`=1 WHERE `id`='$id'");
             if ($query) {
-                header('location: ./index.php');
+                header('location: ../../admin/loan/index.php');
+            } else {
+                echo 'could not work';
             }
         }
     }
@@ -75,6 +77,7 @@ if (isset($_GET['decline'])) {
 
 
 ?>
+<!-- <a href="../../admin/loan/index.php"></a> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -238,7 +241,7 @@ if (isset($_GET['decline'])) {
                                                         </td>
                                                         <td>
 
-                                                    <a href="./index.php?id=${data[i].id}&user_id=${data[i].user_id}&loan=${data[i].loan}">
+                                                    <a href="./index.php?id=${data[i].id}&user_id=${data[i].user_id}&amount=${data[i].amount}">
                                                         <button class="btn d-inline-flex btn-sm btn-primary mx-1" style="background: green; ">Approve</button>
                                                     </a>
 

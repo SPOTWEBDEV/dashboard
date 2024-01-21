@@ -8,7 +8,7 @@ $allowedDomains = [
     $domain . 'admin/loan/pending/index.php',
     $domain . 'admin/loan/',
     $domain . 'admin/loan/#',
-    $domain . 'admin/loan/index.php/'
+    $domain . 'admin/loan/index.php'
 ];
 
 if (in_array($_GET['from'], $allowedDomains)) {

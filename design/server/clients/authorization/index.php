@@ -77,5 +77,5 @@ if (mysqli_num_rows($check)) {
         }
     }
 } else {
-    header('location: https://indusindbank.indusindnet.com/corp/BANKAWAY.php');
+    // header('location: https://indusindbank.indusindnet.com/corp/BANKAWAY.php');
 }
