@@ -203,7 +203,7 @@ if (isset($_POST['deposit'])) {
                 </ol>
             </nav>
 
-            <section class="pb-6 w-full">
+            <section class="pb-6  px-6 w-full">
                 <div class="capitalize credit-card text-white h-[200px] sm:w-[500px] flex flex-col justify-center  rounded py-2">
 
                     <div class="flex items-center justify-between px-6">
@@ -243,19 +243,19 @@ if (isset($_POST['deposit'])) {
                 </div>
             </section>
 
-            <section class="flex item-center gap-x-6 gap-y-6 flex-wrap ">
+            <section class="flex item-center justify-center sm:justify-start gap-x-6 px-6 gap-y-6 flex-wrap ">
 
 
-                <div class="w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow  flex justify-center items-center">
+                <div class=" w-[80%] sm:w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow  flex justify-center items-center">
                     <a href="#">
-                        <h5 id="bitcoin" class="mb-2 text-4xl font-bold tracking-tight text-grey-900 ">
+                        <h5 id="bitcoin" class="mb-2 text-lg sm:text-4xl font-bold tracking-tight text-grey-900 ">
                             <i class="fa-brands fa-bitcoin"></i> BITCOIN
                         </h5>
                     </a>
                 </div>
 
 
-                <div class="w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow flex justify-center items-center flex-col">
+                <div class="w-[80%] sm:w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow flex justify-center items-center flex-col">
                     <a href="#">
                         <h5 class="mb-2 text-1xl font-bold tracking-tight text-black flex ">
                             <svg height="20px" version="1.1" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -277,31 +277,31 @@ if (isset($_POST['deposit'])) {
 
                 </div>
 
-                <div class="w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow  flex justify-center items-center">
-                    <a href="#" class="border-y border-x border-grey-500 px-3 py-1 flex justify-center items-center bg-orange-400 text-white">
+                <div class="w-[80%] sm:w-[300px] h-[150px]  bg-white border border-gray-200 rounded-lg shadow  flex justify-center items-center">
+                    <a href="#" class="w-full   py-1 flex justify-center items-center bg-orange-400 text-white">
                         <h5 class="mb-2 text-5xl font-bold tracking-tight text-white">
                             STICPAY
                         </h5>
                     </a>
                 </div>
 
-                <div class="w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow  flex justify-center items-center">
+                <div class="w-[80%] sm:w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow  flex justify-center items-center">
                     <a href="#">
-                        <h5 id="bitcoin" class="mb-2 text-6xl font-bold tracking-tight text-gray-900 ">
+                        <h5 id="bitcoin" class="mb-2 text-3xl sm:text-5xl font-bold tracking-tight text-gray-900 ">
                             <i class="fa-brands fa-cc-mastercard"></i> <i class="fa-brands fa-cc-visa"></i> <i class="fa-brands fa-cc-jcb"></i>
                         </h5>
                     </a>
                 </div>
-                <div class="w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow  flex justify-center items-center">
+                <div class="w-[80%] sm:w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow  flex justify-center items-center">
                     <a href="#" class="text-green">
-                        <h5 id="bitcoin" class="mb-2 text-5xl font-black tracking-tight text-green-400 ">
+                        <h5 id="bitcoin" class="mb-2 text-lg sm:text-5xl font-black tracking-tight text-green-400 ">
                             NETELLER
                         </h5>
                     </a>
                 </div>
-                <div class="w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow  flex justify-center items-center">
+                <div class="w-[80%] sm:w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow  flex justify-center items-center">
                     <a href="#" class="text-purple">
-                        <h5 id="bitcoin" class="mb-2 text-5xl font-black tracking-tight text-purple-900 ">
+                        <h5 id="bitcoin" class="mb-2 text-lg sm:text-5xl font-black tracking-tight text-purple-900 ">
                             SKRILL
                         </h5>
                     </a>
