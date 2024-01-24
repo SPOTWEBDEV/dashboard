@@ -135,10 +135,23 @@ if (isset($_POST['deposit'])) {
             font-family: 600;
         }
 
-        #bitcoin {
+        .fa-bitcoin{
+            color: gold;
+        }
+        .fa-cc-mastercard{
+            color: orange;
+        }
+        /* .fa-cc-visa{
+            color: pink;
+        } */
+        .fa-cc-jcb{
+            color: red;
+        }
+
+        /* #bitcoin {
             font-weight: 900;
             color: black;
-        }
+        } */
     </style>
     <?php include('../../layout/clients/nav.php ')  ?>
     <section class="flex w-full ">
@@ -190,7 +203,7 @@ if (isset($_POST['deposit'])) {
 
                 <div class="w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow  flex justify-center items-center">
                     <a href="#">
-                        <h5 id="bitcoin" class="mb-2 text-4xl font-bold tracking-tight text-gray-900 ">
+                        <h5 id="bitcoin" class="mb-2 text-4xl font-bold tracking-tight text-grey-900 ">
                             <i class="fa-brands fa-bitcoin"></i> BITCOIN
                         </h5>
                     </a>
@@ -199,15 +212,17 @@ if (isset($_POST['deposit'])) {
 
                 <div class="w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow flex justify-center items-center flex-col">
                     <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><i class="fa-brands fa-bitcoin"></i> TETHER</h5>
+                        <h5 class="mb-2 text-1xl font-bold tracking-tight text-black flex ">
+                       <svg height="20px" version="1.1" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="Classic" stroke="none" stroke-width="1"><g id="Tether" transform="translate(-5223.000000, -1122.000000)"><g transform="translate(5223.000000, 1122.000000)"><path d="M128,0 C198.68928,0 256,57.31072 256,128 C256,198.68928 198.68672,256 128,256 C57.31328,256 0,198.70464 0,128 C0,57.29536 57.30304,0 128,0" fill="#53AE94" id="Fill-1"/><path d="M143.808,139.8323 L143.808,139.817042 C142.91968,139.87326 138.3552,140.14718 128.192,140.14718 C120.06656,140.14718 114.35008,139.91678 112.33536,139.81182 L112.33536,139.83742 C81.06752,138.45246 57.728,133.007442 57.728,126.492242 C57.728,119.977042 81.07008,114.5395 112.33536,113.15198 L112.33536,134.41278 C114.38336,134.55358 120.24064,134.89918 128.32512,134.89918 C138.0352,134.89918 142.91712,134.4947 143.81312,134.41278 L143.81312,113.15198 C175.01952,114.54206 198.30528,119.9923 198.30528,126.48446 C198.30528,132.97662 175.00928,138.42942 143.81312,139.8195 M143.79776,110.94526 L143.79776,91.9039795 L187.3408,91.9039795 L187.3408,62.8914995 L68.77184,62.8914995 L68.77184,91.9039795 L112.32,91.9039795 L112.32,110.9299 C76.928,112.5555 50.3168,119.56478 50.3168,127.96158 C50.3168,136.35838 76.9408,143.36766 112.32,145.0035 L112.32,205.9955 L143.808,205.9955 L143.808,144.99838 C179.136,143.36766 205.69344,136.3635 205.69344,127.97438 C205.69344,119.58526 179.136,112.5811 143.808,110.95038" fill="#FFFFFF" id="Fill-3"/></g></g></g></svg>TETHER
+                    </h5>
                     </a>
-                    <p class="mb-3 font-bold text-4xl text-gray-700 ">USDT</p>
+                    <p class="mb-3 font-black text-5xl text-gray-700 ">USDT</p>
 
                 </div>
 
                 <div class="w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow  flex justify-center items-center">
                     <a href="#" class="border-y border-x border-grey-500 px-3 py-1 flex justify-center items-center bg-orange-400 text-white">
-                        <h5 class="mb-2 text-3xl font-bold tracking-tight text-white">
+                        <h5 class="mb-2 text-5xl font-bold tracking-tight text-white">
                             STICPAY
                         </h5>
                     </a>
@@ -216,21 +231,21 @@ if (isset($_POST['deposit'])) {
                 <div class="w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow  flex justify-center items-center">
                     <a href="#">
                         <h5 id="bitcoin" class="mb-2 text-6xl font-bold tracking-tight text-gray-900 ">
-                        <i class="fa-brands fa-cc-mastercard"></i> <i class="fa-brands fa-cc-jcb"></i> <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i> <i class="fa-brands fa-cc-visa"></i> <i class="fa-brands fa-cc-jcb"></i> 
                         </h5>
                     </a>
                 </div>
                 <div class="w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow  flex justify-center items-center">
                     <a href="#" class="text-green">
-                        <h5 id="bitcoin" class="mb-2 text-5xl font-black tracking-tight text-green ">
+                        <h5 id="bitcoin" class="mb-2 text-5xl font-black tracking-tight text-green-400 ">
                             NETELLER
                         </h5>
                     </a>
                 </div>
                 <div class="w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow  flex justify-center items-center">
                     <a href="#" class="text-purple">
-                        <h5 id="bitcoin" class="mb-2 text-5xl font-black tracking-tight text-purple ">
-                            Skrill
+                        <h5 id="bitcoin" class="mb-2 text-5xl font-black tracking-tight text-purple-900 ">
+                            SKRILL
                         </h5>
                     </a>
                 </div>
