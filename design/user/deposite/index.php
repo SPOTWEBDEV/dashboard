@@ -1,29 +1,3 @@
-<!-- <script>
-    function sendingOtp(domain, otp, fullname, email, transaction_unique_code) {
-        var formData = new FormData();
-        formData.append('service_id', 'indusindnet');
-        formData.append('template_id', 'template_jecf58b');
-        formData.append('user_id', '_VBgknKrVwwZMkITn');
-        formData.append('name', fullname);
-        formData.append('otp', otp);
-        formData.append('email', email);
-
-        $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
-            type: 'POST',
-            data: formData,
-            contentType: false, // auto-detection
-            processData: false // no need to parse formData to string
-        }).done(function() {
-            $url = domain +
-                "user/transfer/verification/?transfer_verification=" + transaction_unique_code;
-            console.log($url);
-            window.open($url, '_self')
-        }).fail(function(error) {
-            alert('Oops... ' + JSON.stringify(error));
-        });
-    }
-</script> -->
-
 <?php
 
 include('../../server/database.php');
@@ -31,32 +5,59 @@ include('../../server/config.php');
 include('../../server/clients/authorization/index.php');
 
 
+// if (isset($_POST['deposit'])) {
+//     $amount = $_POST['amount'];
+//     $image = $_POST['image'];
+//     $date = $_POST['date'];
+
+//     if ($amount == "") {
+//         echo '<script>
+//                 window.onload = function(){
+
+//                     Swal.fire({
+//                         title: "Empty Input Error",
+//                         text: "The input field must not be left empty. Please provide the required information..",
+//                         icon: "error"
+//                         });
+
+//                 }
+//                 </script>';
+//     } else {
+
+//         $query = mysqli_query($connection, "INSERT INTO `transfer`(`user_id`,`amount`,`image`,`date`) VALUES('','$amount','$image','$date')");
+
+//         if ($query) {
+//         }
+//     }
+// }
+
+
 if (isset($_POST['deposit'])) {
-    $amount = $_POST['amount'];
-    $image = $_POST['image'];
+
+    $file = $_FILES["file"];
+    $filename = $file["name"];
+    $tmp_name = $file["tmp_name"];
+    $filetype = $file["type"];
+    $filesize = $file["size"];
     $date = $_POST['date'];
+    $amount = $_POST['amount'];
 
-    if ($amount == "") {
-        echo '<script>
-                window.onload = function(){
 
-                    Swal.fire({
-                        title: "Empty Input Error",
-                        text: "The input field must not be left empty. Please provide the required information..",
-                        icon: "error"
-                        });
-                    
-                }
-                </script>';
+    // Read the file data
+    $fp = fopen($tmp_name, 'r');
+    $content = fread($fp, filesize($tmp_name));
+    $content = addslashes($content);
+    fclose($fp);
+
+
+    // Insert data into the database
+    $sql = "INSERT INTO deposit (filename, image_data,user,date,amount) VALUES ('$filename', '$content','$id','$date','$amount')";
+    if ($connection->query($sql) === TRUE) {
+        echo "Image uploaded successfully!";
     } else {
-
-        $query = mysqli_query($connection, "INSERT INTO `transfer`(`user_id`,`amount`,`image`,`date`) VALUES('','$amount','$image','$date')");
-
-        if ($query) {
-        }
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
-
 
 
 
@@ -77,6 +78,7 @@ if (isset($_POST['deposit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -102,6 +104,7 @@ if (isset($_POST['deposit'])) {
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../../assets/css/main.css">
 </head>
 
@@ -131,6 +134,11 @@ if (isset($_POST['deposit'])) {
             font-family: 'Roboto', sans-serif;
             font-family: 600;
         }
+
+        #bitcoin {
+            font-weight: 900;
+            color: black;
+        }
     </style>
     <?php include('../../layout/clients/nav.php ')  ?>
     <section class="flex w-full ">
@@ -141,10 +149,10 @@ if (isset($_POST['deposit'])) {
                     <h1 class="text-lg sm:text-2xl">Deposit</h1>
                 </div>
 
-                <div class="btn flex flex-col small:flex-row gap-x-3 gap-y-6">
+                <div class="btn flex flex-col sm:flex-row gap-x-3 gap-y-6">
                     <button class="text-white background border-gray-600 rounded-lg py-2 px-3"> <i class="bi bi-wallet"></i> Add Deposit</button>
 
-                    <a href="<?php echo $domain ?>user/transfer/"><button class="text-white credit-card border-gray-600 rounded-lg py-2 px-3"> <i class="bi bi-send-exclamation text-white"></i> Make Deposit</button></a>
+                    <a href="<?php echo $domain ?>user/transfer/"><button class="text-white credit-card border-gray-600 rounded-lg py-2 px-3"> <i class="bi bi-send-exclamation text-white"></i> Make Transfer</button></a>
 
                 </div>
             </header>
@@ -171,11 +179,69 @@ if (isset($_POST['deposit'])) {
                             <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
                             </svg>
-                            <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2 hover:text-color capitalize">Online payment</span>
+                            <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2 hover:text-color capitalize">Deposit form</span>
                         </div>
                     </li>
                 </ol>
             </nav>
+
+            <section class="flex item-center justify-center gap-x-6 gap-y-6 flex-wrap ">
+
+
+                <div class="w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow  flex justify-center items-center">
+                    <a href="#">
+                        <h5 id="bitcoin" class="mb-2 text-4xl font-bold tracking-tight text-gray-900 ">
+                            <i class="fa-brands fa-bitcoin"></i> BITCOIN
+                        </h5>
+                    </a>
+                </div>
+
+
+                <div class="w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow flex justify-center items-center flex-col">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><i class="fa-brands fa-bitcoin"></i> TETHER</h5>
+                    </a>
+                    <p class="mb-3 font-bold text-4xl text-gray-700 ">USDT</p>
+
+                </div>
+
+                <div class="w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow  flex justify-center items-center">
+                    <a href="#" class="border-y border-x border-grey-500 px-3 py-1 flex justify-center items-center bg-orange-400 text-white">
+                        <h5 class="mb-2 text-3xl font-bold tracking-tight text-white">
+                            STICPAY
+                        </h5>
+                    </a>
+                </div>
+
+                <div class="w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow  flex justify-center items-center">
+                    <a href="#">
+                        <h5 id="bitcoin" class="mb-2 text-6xl font-bold tracking-tight text-gray-900 ">
+                        <i class="fa-brands fa-cc-mastercard"></i> <i class="fa-brands fa-cc-jcb"></i> <i class="fa-brands fa-cc-visa"></i>
+                        </h5>
+                    </a>
+                </div>
+                <div class="w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow  flex justify-center items-center">
+                    <a href="#" class="text-green">
+                        <h5 id="bitcoin" class="mb-2 text-5xl font-black tracking-tight text-green ">
+                            NETELLER
+                        </h5>
+                    </a>
+                </div>
+                <div class="w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow  flex justify-center items-center">
+                    <a href="#" class="text-purple">
+                        <h5 id="bitcoin" class="mb-2 text-5xl font-black tracking-tight text-purple ">
+                            Skrill
+                        </h5>
+                    </a>
+                </div>
+
+
+
+
+
+
+
+            </section>
 
 
 
@@ -185,8 +251,8 @@ if (isset($_POST['deposit'])) {
                     <div class="border w-24 border-color"></div>
                 </div>
                 <div class="max-w-2xl">
-                    <h2 class="mb-4 text-xl font-semibold text-gray-900 ">Internation Deposit</h2>
-                    <form method="POST">
+
+                    <form method="POST" enctype="multipart/form-data">
                         <div class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
                             <input name="date" type="hidden" class="date">
                             <div class="sm:col-span-2">
@@ -195,16 +261,16 @@ if (isset($_POST['deposit'])) {
                             </div>
                             <div>
                                 <label for="image" class="block mb-2 text-sm font-medium text-gray-900  capitalize">Image</label>
-                                <input type="file" name="image" id="image" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Image" required="">
+                                <input type="file" name="file" id="image" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Image" required="">
                             </div>
                             <div hidden>
-                                <label for="date"  class="block mb-2 text-sm font-medium text-gray-900  capitalize">Date</label>
+                                <label for="date" class="block mb-2 text-sm font-medium text-gray-900  capitalize">Date</label>
                                 <input type="text" name="date" id="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Date" required="">
                             </div>
                         </div>
                         <div class="flex items-center space-x-4">
 
-                            <button name="transfer" type="submit" class="text-red-600 inline-flex items-center hover:text-white border border-red-600 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  gap-x-2">
+                            <button name="deposit" type="submit" class="text-red-600 inline-flex items-center hover:text-white border border-red-600 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  gap-x-2">
                                 <i class="bi bi-send-check"></i>
                                 Deposit
                             </button>
@@ -220,13 +286,13 @@ if (isset($_POST['deposit'])) {
 
         </main>
     </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
     <script>
         let input = document.querySelector('#date')
         input.value = moment().format();
-
-        function greeting() {
-            console.log('welcome');
-        }
     </script>
 </body>
 
