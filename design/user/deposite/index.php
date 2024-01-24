@@ -138,15 +138,15 @@ if (isset($_POST['deposit'])) {
         .fa-bitcoin{
             color: gold;
         }
-        .fa-cc-mastercard{
+        /* .fa-cc-mastercard{
             color: orange;
-        }
+        } */
         /* .fa-cc-visa{
             color: pink;
         } */
-        .fa-cc-jcb{
+        /* .fa-cc-jcb{
             color: red;
-        }
+        } */
 
         /* #bitcoin {
             font-weight: 900;
