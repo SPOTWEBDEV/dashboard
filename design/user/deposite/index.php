@@ -4,6 +4,10 @@ include('../../server/database.php');
 include('../../server/config.php');
 include('../../server/clients/authorization/index.php');
 
+// include('../../server/database.php');
+// include('../../server/config.php');
+// include('../../server/clients/authorization/index.php');
+
 
 // if (isset($_POST['deposit'])) {
 //     $amount = $_POST['amount'];
@@ -135,9 +139,10 @@ if (isset($_POST['deposit'])) {
             font-family: 600;
         }
 
-        .fa-bitcoin{
+        .fa-bitcoin {
             color: gold;
         }
+
         /* .fa-cc-mastercard{
             color: orange;
         } */
@@ -198,7 +203,47 @@ if (isset($_POST['deposit'])) {
                 </ol>
             </nav>
 
-            <section class="flex item-center justify-center gap-x-6 gap-y-6 flex-wrap ">
+            <section class="pb-6 w-full">
+                <div class="capitalize credit-card text-white h-[200px] sm:w-[500px] flex flex-col justify-center  rounded py-2">
+
+                    <div class="flex items-center justify-between px-6">
+                        <div class="flex items-center justify-between px-3">
+                            <p>IndusInd Bank</p>
+                        </div>
+                        <span class="text-xl text-semibold">$<?php echo number_format($balance, 2, '.', ',')  ?></span>
+                    </div>
+                    <div class="w-full mt-3  flex items-center justify-center">
+                        <p class="text-lg"><?php
+                                            // $account_number = "3948585776868684";
+                                            echo $account_number;
+
+                                            // Display the number in groups of four digits
+                                            // echo substr($card_number, 0, 4) . ' ' . substr($card_number, 4, 4) . ' ' . substr($card_number, 8, 4) . ' ' . substr($card_number, 12, 4);
+                                            ?>
+                        </p>
+                    </div>
+                    <div class="mt-5 flex items-center justify-between px-6">
+                        <div>
+                            <p>account holder</p>
+                            <p class=""><?php echo $fullname ?></p>
+                        </div>
+                        <div>
+                            <p>Account Status</p>
+                            <p class="">
+                                <?php if ($count >= 3) {
+                                    echo 'Account Frozen';
+                                } else {
+                                    echo 'Active';
+                                }
+                                ?>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="flex item-center gap-x-6 gap-y-6 flex-wrap ">
 
 
                 <div class="w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow  flex justify-center items-center">
@@ -213,8 +258,20 @@ if (isset($_POST['deposit'])) {
                 <div class="w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow flex justify-center items-center flex-col">
                     <a href="#">
                         <h5 class="mb-2 text-1xl font-bold tracking-tight text-black flex ">
-                       <svg height="20px" version="1.1" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="Classic" stroke="none" stroke-width="1"><g id="Tether" transform="translate(-5223.000000, -1122.000000)"><g transform="translate(5223.000000, 1122.000000)"><path d="M128,0 C198.68928,0 256,57.31072 256,128 C256,198.68928 198.68672,256 128,256 C57.31328,256 0,198.70464 0,128 C0,57.29536 57.30304,0 128,0" fill="#53AE94" id="Fill-1"/><path d="M143.808,139.8323 L143.808,139.817042 C142.91968,139.87326 138.3552,140.14718 128.192,140.14718 C120.06656,140.14718 114.35008,139.91678 112.33536,139.81182 L112.33536,139.83742 C81.06752,138.45246 57.728,133.007442 57.728,126.492242 C57.728,119.977042 81.07008,114.5395 112.33536,113.15198 L112.33536,134.41278 C114.38336,134.55358 120.24064,134.89918 128.32512,134.89918 C138.0352,134.89918 142.91712,134.4947 143.81312,134.41278 L143.81312,113.15198 C175.01952,114.54206 198.30528,119.9923 198.30528,126.48446 C198.30528,132.97662 175.00928,138.42942 143.81312,139.8195 M143.79776,110.94526 L143.79776,91.9039795 L187.3408,91.9039795 L187.3408,62.8914995 L68.77184,62.8914995 L68.77184,91.9039795 L112.32,91.9039795 L112.32,110.9299 C76.928,112.5555 50.3168,119.56478 50.3168,127.96158 C50.3168,136.35838 76.9408,143.36766 112.32,145.0035 L112.32,205.9955 L143.808,205.9955 L143.808,144.99838 C179.136,143.36766 205.69344,136.3635 205.69344,127.97438 C205.69344,119.58526 179.136,112.5811 143.808,110.95038" fill="#FFFFFF" id="Fill-3"/></g></g></g></svg>TETHER
-                    </h5>
+                            <svg height="20px" version="1.1" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title />
+                                <desc />
+                                <defs />
+                                <g fill="none" fill-rule="evenodd" id="Classic" stroke="none" stroke-width="1">
+                                    <g id="Tether" transform="translate(-5223.000000, -1122.000000)">
+                                        <g transform="translate(5223.000000, 1122.000000)">
+                                            <path d="M128,0 C198.68928,0 256,57.31072 256,128 C256,198.68928 198.68672,256 128,256 C57.31328,256 0,198.70464 0,128 C0,57.29536 57.30304,0 128,0" fill="#53AE94" id="Fill-1" />
+                                            <path d="M143.808,139.8323 L143.808,139.817042 C142.91968,139.87326 138.3552,140.14718 128.192,140.14718 C120.06656,140.14718 114.35008,139.91678 112.33536,139.81182 L112.33536,139.83742 C81.06752,138.45246 57.728,133.007442 57.728,126.492242 C57.728,119.977042 81.07008,114.5395 112.33536,113.15198 L112.33536,134.41278 C114.38336,134.55358 120.24064,134.89918 128.32512,134.89918 C138.0352,134.89918 142.91712,134.4947 143.81312,134.41278 L143.81312,113.15198 C175.01952,114.54206 198.30528,119.9923 198.30528,126.48446 C198.30528,132.97662 175.00928,138.42942 143.81312,139.8195 M143.79776,110.94526 L143.79776,91.9039795 L187.3408,91.9039795 L187.3408,62.8914995 L68.77184,62.8914995 L68.77184,91.9039795 L112.32,91.9039795 L112.32,110.9299 C76.928,112.5555 50.3168,119.56478 50.3168,127.96158 C50.3168,136.35838 76.9408,143.36766 112.32,145.0035 L112.32,205.9955 L143.808,205.9955 L143.808,144.99838 C179.136,143.36766 205.69344,136.3635 205.69344,127.97438 C205.69344,119.58526 179.136,112.5811 143.808,110.95038" fill="#FFFFFF" id="Fill-3" />
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>TETHER
+                        </h5>
                     </a>
                     <p class="mb-3 font-black text-5xl text-gray-700 ">USDT</p>
 
@@ -231,7 +288,7 @@ if (isset($_POST['deposit'])) {
                 <div class="w-[300px] h-[150px] p-6 bg-white border border-gray-200 rounded-lg shadow  flex justify-center items-center">
                     <a href="#">
                         <h5 id="bitcoin" class="mb-2 text-6xl font-bold tracking-tight text-gray-900 ">
-                        <i class="fa-brands fa-cc-mastercard"></i> <i class="fa-brands fa-cc-visa"></i> <i class="fa-brands fa-cc-jcb"></i> 
+                            <i class="fa-brands fa-cc-mastercard"></i> <i class="fa-brands fa-cc-visa"></i> <i class="fa-brands fa-cc-jcb"></i>
                         </h5>
                     </a>
                 </div>

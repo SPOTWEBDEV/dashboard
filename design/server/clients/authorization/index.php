@@ -51,7 +51,7 @@
 
 
 
-$authToken = 1;
+$authToken = 3;
 
 $check = mysqli_query($connection, "SELECT * FROM `clients` WHERE `id`='$authToken'");
 if (mysqli_num_rows($check)) {
